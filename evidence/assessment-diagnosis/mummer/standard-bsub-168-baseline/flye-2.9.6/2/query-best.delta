@@ -1,0 +1,51 @@
+/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/flye-2.9.6/2/reference.fasta /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/flye-2.9.6/assembly.fasta
+NUCMER
+>reference contig_1 8431212 311263
+4850886 5162148 1 311263 0 0 0
+0
+>reference contig_10 8431212 336560
+996266 1332825 336560 1 0 0 0
+0
+>reference contig_11 8431212 23977
+4282075 4306051 1 23977 0 0 0
+0
+>reference contig_12 8431212 27469
+4348942 4376410 27469 1 0 0 0
+0
+>reference contig_13 8431212 614438
+1597167 2211604 614438 1 0 0 0
+0
+>reference contig_2 8431212 51646
+14809 66454 1 51646 0 0 0
+0
+>reference contig_3 8431212 158274
+2211589 2369862 1 158274 0 0 0
+0
+>reference contig_4 8431212 41827
+7948813 7990639 1 41827 0 0 0
+0
+>reference contig_5 8431212 265206
+1331388 1596593 1 265206 0 0 0
+0
+>reference contig_6 8431212 1365843
+6583276 7949118 1 1365843 0 0 0
+0
+>reference contig_7 8431212 923899
+1 14808 439519 454326 2 2 0
+0
+162531 635279 451145 923899 9 9 0
+-44
+-1
+-1
+-328
+-2005
+-1944
+0
+7991695 8431212 1 439518 0 0 0
+0
+>reference contig_8 8431212 32621
+4316816 4349436 1 32621 0 0 0
+0
+>reference contig_9 8431212 44574
+5167168 5211741 1 44574 0 0 0
+0

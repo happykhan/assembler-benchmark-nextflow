@@ -153,6 +153,21 @@ on the shared execution filesystem. Reference preparation remains a separate
 checksummed cache step. Environment provisioning is recorded separately from
 assembly/assessment time.
 
+## Interpret the completion criterion
+
+The original `incomplete` outcome means that no single alignment spans 99% of
+the reference. It is a contiguity endpoint, separate from total reference
+coverage. The report now states this explicitly and shows assembly contig counts.
+Identity and maximum indel describe the selected longest alignment, rather than
+every contig in the assembly.
+
+An [independent audit of the first Standard baseline](docs/assessment-diagnosis.md)
+reproduced all four original scores with a different aligner. The saved outputs
+cover over 99% of each reference across multiple contigs; some Bacillus contigs
+also have structural discontinuities. The [workflow review](docs/fragmentation-review.md)
+records input coverage, read-spanning checks and configuration concerns without
+claiming an experimentally established cause. No assembly or simulation was rerun.
+
 ## Run the admitted Standard baseline
 
 The baseline uses the full native circular chromosomes of *B. subtilis* 168 and

@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "method": "Read-only summaries of retained execution metadata, logs and graph topology; sequence outputs unchanged",
+  "results": [
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "flye-2.9.6",
+      "command": [
+        "flye",
+        "--nano-raw",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/8d/dac1d9a5f6457d560d411792f3cef3/reads.fastq",
+        "--out-dir",
+        "tool-output",
+        "--threads",
+        "4"
+      ],
+      "version": "2.9.6-b1802",
+      "execution_sha256": "5b8fb4c9d13d791ec0fc9c725d265a2c96d816c7b34148e9117802730de85c96",
+      "graph_sha256": "8b51b031f0cb29f092b117231042823d32a12bfdf53274fbbbf2147f9f429642",
+      "stderr_sha256": "36522ee9f59b5c2c4d50c9070540ee4f73b4d70489fb2981a52e14f34a6605af",
+      "read_statistics": {
+        "max_length": 19647,
+        "mean_length": 9981.703235990528,
+        "min_length": 1999,
+        "n50": 10248,
+        "read_count": 12670,
+        "short_mode_base_fraction": 0.0,
+        "short_mode_read_fraction": 0.0,
+        "total_bases": 126468180
+      },
+      "selected_log_lines": [
+        "[2026-11-11 15:30:41] INFO: Reads N50/N90: 10248 / 7878",
+        "[2026-11-11 15:30:41] INFO: Minimum overlap set to 8000",
+        "[2026-11-11 15:33:05] INFO: Overlap-based coverage: 20",
+        "[2026-11-11 15:33:05] INFO: Median overlap divergence: 0.0321466",
+        "[2026-11-11 15:35:24] INFO: Median overlap divergence: 0",
+        "[2026-11-11 15:35:51] INFO: Median overlap divergence: 7.08103e-05",
+        "[2026-11-11 15:35:51] INFO: Mean edge coverage: 26",
+        "[2026-11-11 15:37:36] INFO: Final assembly: /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/0c/643c2b1e1905d18ad2dc53d2e9846b/tool-output/tool-output/assembly.fasta"
+      ],
+      "graph_segments": [
+        {
+          "id": "edge_1",
+          "sequence_length": 311263,
+          "tags": [
+            "dp:i:31"
+          ]
+        },
+        {
+          "id": "edge_2",
+          "sequence_length": 51646,
+          "tags": [
+            "dp:i:32"
+          ]
+        },
+        {
+          "id": "edge_3",
+          "sequence_length": 158274,
+          "tags": [
+            "dp:i:30"
+          ]
+        },
+        {
+          "id": "edge_4",
+          "sequence_length": 41827,
+          "tags": [
+            "dp:i:27"
+          ]
+        },
+        {
+          "id": "edge_5",
+          "sequence_length": 265206,
+          "tags": [
+            "dp:i:29"
+          ]
+        },
+        {
+          "id": "edge_6",
+          "sequence_length": 1365843,
+          "tags": [
+            "dp:i:30"
+          ]
+        },
+        {
+          "id": "edge_7",
+          "sequence_length": 923899,
+          "tags": [
+            "dp:i:30"
+          ]
+        },
+        {
+          "id": "edge_8",
+          "sequence_length": 32621,
+          "tags": [
+            "dp:i:30"
+          ]
+        },
+        {
+          "id": "edge_9",
+          "sequence_length": 44574,
+          "tags": [
+            "dp:i:34"
+          ]
+        },
+        {
+          "id": "edge_10",
+          "sequence_length": 336560,
+          "tags": [
+            "dp:i:31"
+          ]
+        },
+        {
+          "id": "edge_11",
+          "sequence_length": 23977,
+          "tags": [
+            "dp:i:34"
+          ]
+        },
+        {
+          "id": "edge_12",
+          "sequence_length": 27469,
+          "tags": [
+            "dp:i:29"
+          ]
+        },
+        {
+          "id": "edge_13",
+          "sequence_length": 614438,
+          "tags": [
+            "dp:i:30"
+          ]
+        }
+      ],
+      "graph_links": [
+        [
+          "edge_1",
+          "+",
+          "edge_1",
+          "+",
+          "0M",
+          "RC:i:23"
+        ],
+        [
+          "edge_1",
+          "-",
+          "edge_7",
+          "-",
+          "0M",
+          "RC:i:27"
+        ]
+      ]
+    },
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "raven-1.8.3",
+      "command": [
+        "raven",
+        "--threads",
+        "4",
+        "--graphical-fragment-assembly",
+        "assembly.gfa",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/8d/dac1d9a5f6457d560d411792f3cef3/reads.fastq"
+      ],
+      "version": "1.8.3",
+      "execution_sha256": "100dd4c6bc6f9c54b49354fc545370345d26a3e0cee44fa1ef3c7c0c1c8d2219",
+      "graph_sha256": "5bf48262db8e09ff1e61596a681a2625ccad1cbfaab68a86b0904abc39c9aad1",
+      "stderr_sha256": "5f1ad8c1190865fbbe6e6d2bb9b18023a9b8c03b4f73828b9ff2080ebab82b6b",
+      "read_statistics": {
+        "max_length": 19647,
+        "mean_length": 9981.703235990528,
+        "min_length": 1999,
+        "n50": 10248,
+        "read_count": 12670,
+        "short_mode_base_fraction": 0.0,
+        "short_mode_read_fraction": 0.0,
+        "total_bases": 126468180
+      },
+      "selected_log_lines": [],
+      "graph_segments": [
+        {
+          "id": "Utg5536",
+          "sequence_length": 4148777,
+          "tags": [
+            "LN:i:4148777",
+            "RC:i:2707",
+            "dp:f:270"
+          ]
+        },
+        {
+          "id": "Utg5538",
+          "sequence_length": 80133,
+          "tags": [
+            "LN:i:80133",
+            "RC:i:58",
+            "dp:f:24"
+          ]
+        }
+      ],
+      "graph_links": [
+        [
+          "Utg5538",
+          "+",
+          "Utg5538",
+          "+",
+          "0M"
+        ]
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "flye-2.9.6",
+      "command": [
+        "flye",
+        "--nano-raw",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/df/d3e3ba314266db89fd05585888d538/reads.fastq",
+        "--out-dir",
+        "tool-output",
+        "--threads",
+        "4"
+      ],
+      "version": "2.9.6-b1802",
+      "execution_sha256": "4075ea9c00095b9298f15f94ac7138d922abb4d6f11c0ab961a2d26f2d917ba7",
+      "graph_sha256": "8bc126b5461047138b2f51245805b4489a9dbe48dc5a20344714700171fefec4",
+      "stderr_sha256": "1f4dd990f2f5561d3834940497bc0da0d463f88b9a4f065eb5b55a43a2a68a62",
+      "read_statistics": {
+        "max_length": 19647,
+        "mean_length": 9975.775934776497,
+        "min_length": 4473,
+        "n50": 10238,
+        "read_count": 7114,
+        "short_mode_base_fraction": 0.0,
+        "short_mode_read_fraction": 0.0,
+        "total_bases": 70967670
+      },
+      "selected_log_lines": [
+        "[2026-11-11 15:28:09] INFO: Reads N50/N90: 10238 / 7865",
+        "[2026-11-11 15:28:09] INFO: Minimum overlap set to 8000",
+        "[2026-11-11 15:30:32] INFO: Overlap-based coverage: 23",
+        "[2026-11-11 15:30:32] INFO: Median overlap divergence: 0.0364834",
+        "[2026-11-11 15:31:29] INFO: Median overlap divergence: 0",
+        "[2026-11-11 15:31:47] INFO: Median overlap divergence: 8.06451e-05",
+        "[2026-11-11 15:31:47] INFO: Mean edge coverage: 26",
+        "[2026-11-11 15:32:36] INFO: Final assembly: /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/e8/5eee6404c547407197a1cdc0100e8f/tool-output/tool-output/assembly.fasta"
+      ],
+      "graph_segments": [
+        {
+          "id": "edge_1",
+          "sequence_length": 356516,
+          "tags": [
+            "dp:i:32"
+          ]
+        },
+        {
+          "id": "edge_2",
+          "sequence_length": 463660,
+          "tags": [
+            "dp:i:30"
+          ]
+        },
+        {
+          "id": "edge_3",
+          "sequence_length": 561974,
+          "tags": [
+            "dp:i:31"
+          ]
+        },
+        {
+          "id": "edge_4",
+          "sequence_length": 983425,
+          "tags": [
+            "dp:i:30"
+          ]
+        }
+      ],
+      "graph_links": []
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "raven-1.8.3",
+      "command": [
+        "raven",
+        "--threads",
+        "4",
+        "--graphical-fragment-assembly",
+        "assembly.gfa",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/df/d3e3ba314266db89fd05585888d538/reads.fastq"
+      ],
+      "version": "1.8.3",
+      "execution_sha256": "5402ea1fe9ce6539918489dc3c5fd87ebaf045885373ba43b13e2e9d1f7da5cf",
+      "graph_sha256": "e979cbcc0a58777a242a301482f9b31b2d0f5029408ff9fb5f3519ca992f364d",
+      "stderr_sha256": "4785f3ea057b6395748029947b2495cc7ef460d7358d62bc27f9e2f450e21526",
+      "read_statistics": {
+        "max_length": 19647,
+        "mean_length": 9975.775934776497,
+        "min_length": 4473,
+        "n50": 10238,
+        "read_count": 7114,
+        "short_mode_base_fraction": 0.0,
+        "short_mode_read_fraction": 0.0,
+        "total_bases": 70967670
+      },
+      "selected_log_lines": [],
+      "graph_segments": [
+        {
+          "id": "Utg3194",
+          "sequence_length": 818930,
+          "tags": [
+            "LN:i:818930",
+            "RC:i:575",
+            "dp:f:43"
+          ]
+        },
+        {
+          "id": "Utg3196",
+          "sequence_length": 996606,
+          "tags": [
+            "LN:i:996606",
+            "RC:i:650",
+            "dp:f:57"
+          ]
+        },
+        {
+          "id": "Utg3198",
+          "sequence_length": 560972,
+          "tags": [
+            "LN:i:560972",
+            "RC:i:356",
+            "dp:f:36"
+          ]
+        }
+      ],
+      "graph_links": []
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "method": "Independent256bp exact anchor vote, followed by direct base-by-base comparison at candidate circular coordinates; no PAF or pipeline parser",
+  "results": [
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_length_bp": 4215606,
+      "contigs": [
+        {
+          "id": "contig_1",
+          "length_bp": 311263,
+          "exact": true,
+          "placement": {
+            "start_0based": 635279,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                635279,
+                946542
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_10",
+          "length_bp": 336560,
+          "exact": true,
+          "placement": {
+            "start_0based": 996265,
+            "strands": [
+              "-"
+            ],
+            "reference_intervals": [
+              [
+                996265,
+                1332825
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_11",
+          "length_bp": 23977,
+          "exact": true,
+          "placement": {
+            "start_0based": 66468,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                66468,
+                90445
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_12",
+          "length_bp": 27469,
+          "exact": true,
+          "placement": {
+            "start_0based": 133335,
+            "strands": [
+              "-"
+            ],
+            "reference_intervals": [
+              [
+                133335,
+                160804
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_13",
+          "length_bp": 614438,
+          "exact": true,
+          "placement": {
+            "start_0based": 1597166,
+            "strands": [
+              "-"
+            ],
+            "reference_intervals": [
+              [
+                1597166,
+                2211604
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_2",
+          "length_bp": 51646,
+          "exact": true,
+          "placement": {
+            "start_0based": 14808,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                14808,
+                66454
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_3",
+          "length_bp": 158274,
+          "exact": true,
+          "placement": {
+            "start_0based": 2211588,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                2211588,
+                2369862
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_4",
+          "length_bp": 41827,
+          "exact": true,
+          "placement": {
+            "start_0based": 3733206,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                3733206,
+                3775033
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_5",
+          "length_bp": 265206,
+          "exact": true,
+          "placement": {
+            "start_0based": 1331387,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                1331387,
+                1596593
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_6",
+          "length_bp": 1365843,
+          "exact": true,
+          "placement": {
+            "start_0based": 2367669,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                2367669,
+                3733512
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_7",
+          "length_bp": 923899,
+          "exact": false,
+          "best_same_length_placement": {
+            "start_0based": 3926986,
+            "strand": "+",
+            "anchor_offsets": [
+              461949,
+              692924,
+              923643
+            ],
+            "reference_intervals": [
+              [
+                3926986,
+                4215606
+              ],
+              [
+                0,
+                635279
+              ]
+            ],
+            "hamming_distance": 340150,
+            "mismatches": null
+          }
+        },
+        {
+          "id": "contig_8",
+          "length_bp": 32621,
+          "exact": true,
+          "placement": {
+            "start_0based": 101209,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                101209,
+                133830
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_9",
+          "length_bp": 44574,
+          "exact": true,
+          "placement": {
+            "start_0based": 951561,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                951561,
+                996135
+              ]
+            ]
+          }
+        }
+      ],
+      "coverage_from_exact_or_single_substitution_placements": {
+        "covered_bp": 3269250,
+        "coverage_fraction": 0.7755112788054671,
+        "depth_histogram_bp": {
+          "0": 946356,
+          "1": 3264802,
+          "2": 4448
+        },
+        "gaps": [
+          {
+            "start_0based": 0,
+            "end_0based_exclusive": 14808,
+            "length_bp": 14808
+          },
+          {
+            "start_0based": 66454,
+            "end_0based_exclusive": 66468,
+            "length_bp": 14
+          },
+          {
+            "start_0based": 90445,
+            "end_0based_exclusive": 101209,
+            "length_bp": 10764
+          },
+          {
+            "start_0based": 160804,
+            "end_0based_exclusive": 635279,
+            "length_bp": 474475
+          },
+          {
+            "start_0based": 946542,
+            "end_0based_exclusive": 951561,
+            "length_bp": 5019
+          },
+          {
+            "start_0based": 996135,
+            "end_0based_exclusive": 996265,
+            "length_bp": 130
+          },
+          {
+            "start_0based": 1596593,
+            "end_0based_exclusive": 1597166,
+            "length_bp": 573
+          },
+          {
+            "start_0based": 3775033,
+            "end_0based_exclusive": 4215606,
+            "length_bp": 440573
+          }
+        ],
+        "overlap_excess_bp": 4448
+      }
+    },
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_length_bp": 4215606,
+      "contigs": [
+        {
+          "id": "Utg5536",
+          "length_bp": 4148777,
+          "exact": true,
+          "placement": {
+            "start_0based": 165180,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                165180,
+                4215606
+              ],
+              [
+                0,
+                98351
+              ]
+            ]
+          }
+        },
+        {
+          "id": "Utg5538",
+          "length_bp": 80133,
+          "exact": false,
+          "best_same_length_placement": {
+            "start_0based": 87025,
+            "strand": "+",
+            "anchor_offsets": [
+              20033,
+              40066
+            ],
+            "reference_intervals": [
+              [
+                87025,
+                167158
+              ]
+            ],
+            "hamming_distance": 31804,
+            "mismatches": null
+          }
+        }
+      ],
+      "coverage_from_exact_or_single_substitution_placements": {
+        "covered_bp": 4148777,
+        "coverage_fraction": 0.9841472376687954,
+        "depth_histogram_bp": {
+          "1": 4148777,
+          "0": 66829
+        },
+        "gaps": [
+          {
+            "start_0based": 98351,
+            "end_0based_exclusive": 165180,
+            "length_bp": 66829
+          }
+        ],
+        "overlap_excess_bp": 0
+      }
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_length_bp": 2365589,
+      "contigs": [
+        {
+          "id": "contig_1",
+          "length_bp": 356516,
+          "exact": true,
+          "placement": {
+            "start_0based": 1986322,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                1986322,
+                2342838
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_2",
+          "length_bp": 463660,
+          "exact": true,
+          "placement": {
+            "start_0based": 1520380,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                1520380,
+                1984040
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_3",
+          "length_bp": 561974,
+          "exact": true,
+          "placement": {
+            "start_0based": 2340954,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                2340954,
+                2365589
+              ],
+              [
+                0,
+                537339
+              ]
+            ]
+          }
+        },
+        {
+          "id": "contig_4",
+          "length_bp": 983425,
+          "exact": true,
+          "placement": {
+            "start_0based": 538743,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                538743,
+                1522168
+              ]
+            ]
+          }
+        }
+      ],
+      "coverage_from_exact_or_single_substitution_placements": {
+        "covered_bp": 2361903,
+        "coverage_fraction": 0.9984418256933051,
+        "depth_histogram_bp": {
+          "1": 2358231,
+          "0": 3686,
+          "2": 3672
+        },
+        "gaps": [
+          {
+            "start_0based": 537339,
+            "end_0based_exclusive": 538743,
+            "length_bp": 1404
+          },
+          {
+            "start_0based": 1984040,
+            "end_0based_exclusive": 1986322,
+            "length_bp": 2282
+          }
+        ],
+        "overlap_excess_bp": 3672
+      }
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_length_bp": 2365589,
+      "contigs": [
+        {
+          "id": "Utg3194",
+          "length_bp": 818930,
+          "exact": true,
+          "placement": {
+            "start_0based": 1446794,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                1446794,
+                2265724
+              ]
+            ]
+          }
+        },
+        {
+          "id": "Utg3196",
+          "length_bp": 996606,
+          "exact": true,
+          "placement": {
+            "start_0based": 453836,
+            "strands": [
+              "+"
+            ],
+            "reference_intervals": [
+              [
+                453836,
+                1450442
+              ]
+            ]
+          }
+        },
+        {
+          "id": "Utg3198",
+          "length_bp": 560972,
+          "exact": true,
+          "placement": {
+            "start_0based": 2257577,
+            "strands": [
+              "-"
+            ],
+            "reference_intervals": [
+              [
+                2257577,
+                2365589
+              ],
+              [
+                0,
+                452960
+              ]
+            ]
+          }
+        }
+      ],
+      "coverage_from_exact_or_single_substitution_placements": {
+        "covered_bp": 2364713,
+        "coverage_fraction": 0.9996296905337317,
+        "depth_histogram_bp": {
+          "1": 2352918,
+          "0": 876,
+          "2": 11795
+        },
+        "gaps": [
+          {
+            "start_0based": 452960,
+            "end_0based_exclusive": 453836,
+            "length_bp": 876
+          }
+        ],
+        "overlap_excess_bp": 11795
+      }
+    }
+  ]
+}

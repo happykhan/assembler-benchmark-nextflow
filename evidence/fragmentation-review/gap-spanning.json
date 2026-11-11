@@ -1,0 +1,49 @@
+{
+  "case_id": "standard-llactis-il1403-baseline",
+  "gap_basis": "Independently exact-placed source assembly contigs;0based half-open reference gaps.",
+  "limitations": [
+    "Flanks are geometric distances, not verified unique anchors; repeat resolvability and assembler-internal filtering are not established."
+  ],
+  "read_count": 7114,
+  "reads_sha256": "40ea6598b91b97078c333f2aaf3426b9f8ede61703d6ef2c4351f212ef317f84",
+  "reference_length": 2365589,
+  "results": [
+    {
+      "assembler": "flye-2.9.6",
+      "gap": [
+        537339,
+        538743
+      ],
+      "gap_length": 1404,
+      "spanning_reads": {
+        "0": 22,
+        "1000": 17
+      }
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "gap": [
+        1984040,
+        1986322
+      ],
+      "gap_length": 2282,
+      "spanning_reads": {
+        "0": 17,
+        "1000": 14
+      }
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "gap": [
+        452960,
+        453836
+      ],
+      "gap_length": 876,
+      "spanning_reads": {
+        "0": 36,
+        "1000": 24
+      }
+    }
+  ],
+  "schema_version": 1
+}

@@ -490,5 +490,5 @@
   ],
   "code_commit": "136631f",
   "repository": "https://github.com/happykhan/assembler-benchmark-nextflow",
-  "repository_visibility": "private"
+  "repository_visibility": "public"
 }

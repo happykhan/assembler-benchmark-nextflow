@@ -1,0 +1,11 @@
+/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/raven-1.8.3/2/reference.fasta /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/raven-1.8.3/assembly.fasta
+NUCMER
+>reference Utg3194 4731178 818930
+1446795 2265724 1 818930 0 0 0
+0
+>reference Utg3196 4731178 996606
+453837 1450442 1 996606 0 0 0
+0
+>reference Utg3198 4731178 560972
+2257578 2818549 560972 1 0 0 0
+0

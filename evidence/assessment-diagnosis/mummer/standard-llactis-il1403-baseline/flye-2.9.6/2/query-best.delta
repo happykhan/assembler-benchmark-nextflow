@@ -1,0 +1,14 @@
+/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/flye-2.9.6/2/reference.fasta /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/flye-2.9.6/assembly.fasta
+NUCMER
+>reference contig_1 4731178 356516
+1986323 2342838 1 356516 0 0 0
+0
+>reference contig_2 4731178 463660
+3885970 4349629 1 463660 0 0 0
+0
+>reference contig_3 4731178 561974
+2340955 2902928 1 561974 0 0 0
+0
+>reference contig_4 4731178 983425
+538744 1522168 1 983425 0 0 0
+0

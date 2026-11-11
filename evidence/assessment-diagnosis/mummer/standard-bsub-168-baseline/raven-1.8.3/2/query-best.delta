@@ -1,0 +1,41 @@
+/gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/raven-1.8.3/2/reference.fasta /gpfs3/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/raven-1.8.3/assembly.fasta
+NUCMER
+>reference Utg5536 8431212 4148777
+165181 4313957 1 4148777 0 0 0
+0
+>reference Utg5538 8431212 80133
+4306018 4310971 4213 9165 29 29 0
+-30
+-1
+-1
+-1
+-278
+-850
+3
+1
+1
+443
+1861
+147
+-25
+22
+38
+0
+4311795 4382763 9164 80133 10 10 0
+37315
+1
+1
+1
+-31399
+-1004
+-1
+-1
+-1
+0
+4382764 4391920 1 9154 8 8 0
+7678
+147
+-25
+22
+38
+0

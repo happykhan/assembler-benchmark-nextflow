@@ -55,7 +55,7 @@ Version-specific isolated environments are verified in the subsequent checkpoint
 below. Additional assembler adapters remain future work.
 
 The initial GitHub upload was blocked by an expired command-line credential.
-After sign-in was restored, the verified project was published to the private
+After sign-in was restored, the verified project was published to the public
 [GitHub repository](https://github.com/happykhan/assembler-benchmark-nextflow).
 The full report bundles remain local/on-cluster; compact verification evidence
 and reproducible source definitions are committed.
@@ -125,3 +125,21 @@ the full local report bundle is under the ignored directory
 - [Reference admission](reference-admission.md)
 - [Baseline verification](../evidence/standard-baseline-verification.json)
 - [Full-input audit](../evidence/standard-input-contract-audit.json)
+
+## Independent assessment diagnosis and clearer reporting
+
+The repository is now public. A direct circular-sequence audit and independent
+NUCmer checks reproduced the four longest-alignment scores exactly. Gap-aware
+whole-reference coverage is 99.5426%, 99.999905%, 99.8442% and 99.9630%, while the
+outputs contain 13, 2, 4 and 3 contigs. The strict contiguity criterion is correct;
+the earlier short label obscured its difference from genome breadth.
+
+The HTML now says “Contiguity criterion” and “Below 99% in one alignment”, shows
+contig counts, and clarifies the scope of identity measurements. TSV includes
+the contig count and endpoint identifier. Original result objects and numerical
+scores remain unchanged. All 86 tests pass; report regeneration reused all 13
+compute tasks and submitted only the export.
+
+Evidence and interpretation are in [assessment diagnosis](assessment-diagnosis.md),
+[fragmentation review](fragmentation-review.md) and
+[`report-clarity-check.json`](../evidence/assessment-diagnosis/report-clarity-check.json).

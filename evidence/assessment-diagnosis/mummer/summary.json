@@ -1,0 +1,1506 @@
+{
+  "method": "Independent NUCmer4 alignments; single-copy unique-reference anchors and doubled-reference maxmatch; best-query delta filtering; coordinates modulo native reference length",
+  "nucmer_version": "4.0.0rc1",
+  "nucmer_binary_sha256": "c453d1deac3475f3edc9a61e6b02a4a11f7f72783d0aaad5d1f6900a3878e2aa",
+  "source_results_sha256": "6b59bef51f3cbbea3e97c098fce9a986833a03155ac2518e5259b9c95adb057f",
+  "results": [
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_length_bp": 4215606,
+      "assembly_sha256": "6618e4ecdccb82a444eac025e9ea57bdb719a6acf8c1e479b5b5d68f75358408",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/flye-2.9.6/1/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/flye-2.9.6/1/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/flye-2.9.6/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                1,
+                14808
+              ],
+              "query_interval_1based_inclusive": [
+                439519,
+                454326
+              ],
+              "reference_span_bp": 14808,
+              "query_span_bp": 14808,
+              "identity_percent": 99.99,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  0,
+                  14808
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                14809,
+                66454
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                51646
+              ],
+              "reference_span_bp": 51646,
+              "query_span_bp": 51646,
+              "identity_percent": 100.0,
+              "query": "contig_2",
+              "modulo_reference_intervals": [
+                [
+                  14808,
+                  66454
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                66469,
+                90445
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                23977
+              ],
+              "reference_span_bp": 23977,
+              "query_span_bp": 23977,
+              "identity_percent": 100.0,
+              "query": "contig_11",
+              "modulo_reference_intervals": [
+                [
+                  66468,
+                  90445
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                101210,
+                133830
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                32621
+              ],
+              "reference_span_bp": 32621,
+              "query_span_bp": 32621,
+              "identity_percent": 100.0,
+              "query": "contig_8",
+              "modulo_reference_intervals": [
+                [
+                  101209,
+                  133830
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                133336,
+                160804
+              ],
+              "query_interval_1based_inclusive": [
+                27469,
+                1
+              ],
+              "reference_span_bp": 27469,
+              "query_span_bp": 27469,
+              "identity_percent": 100.0,
+              "query": "contig_12",
+              "modulo_reference_intervals": [
+                [
+                  133335,
+                  160804
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                162531,
+                635279
+              ],
+              "query_interval_1based_inclusive": [
+                451145,
+                923899
+              ],
+              "reference_span_bp": 472749,
+              "query_span_bp": 472755,
+              "identity_percent": 99.99,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  162530,
+                  635279
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                635280,
+                946542
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                311263
+              ],
+              "reference_span_bp": 311263,
+              "query_span_bp": 311263,
+              "identity_percent": 100.0,
+              "query": "contig_1",
+              "modulo_reference_intervals": [
+                [
+                  635279,
+                  946542
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                951562,
+                996135
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                44574
+              ],
+              "reference_span_bp": 44574,
+              "query_span_bp": 44574,
+              "identity_percent": 100.0,
+              "query": "contig_9",
+              "modulo_reference_intervals": [
+                [
+                  951561,
+                  996135
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                996266,
+                1332825
+              ],
+              "query_interval_1based_inclusive": [
+                336560,
+                1
+              ],
+              "reference_span_bp": 336560,
+              "query_span_bp": 336560,
+              "identity_percent": 100.0,
+              "query": "contig_10",
+              "modulo_reference_intervals": [
+                [
+                  996265,
+                  1332825
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1331388,
+                1596593
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                265206
+              ],
+              "reference_span_bp": 265206,
+              "query_span_bp": 265206,
+              "identity_percent": 100.0,
+              "query": "contig_5",
+              "modulo_reference_intervals": [
+                [
+                  1331387,
+                  1596593
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1597167,
+                2211604
+              ],
+              "query_interval_1based_inclusive": [
+                614438,
+                1
+              ],
+              "reference_span_bp": 614438,
+              "query_span_bp": 614438,
+              "identity_percent": 100.0,
+              "query": "contig_13",
+              "modulo_reference_intervals": [
+                [
+                  1597166,
+                  2211604
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2211589,
+                2369862
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                158274
+              ],
+              "reference_span_bp": 158274,
+              "query_span_bp": 158274,
+              "identity_percent": 100.0,
+              "query": "contig_3",
+              "modulo_reference_intervals": [
+                [
+                  2211588,
+                  2369862
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2367670,
+                3733512
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                1365843
+              ],
+              "reference_span_bp": 1365843,
+              "query_span_bp": 1365843,
+              "identity_percent": 100.0,
+              "query": "contig_6",
+              "modulo_reference_intervals": [
+                [
+                  2367669,
+                  3733512
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                3733207,
+                3775033
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                41827
+              ],
+              "reference_span_bp": 41827,
+              "query_span_bp": 41827,
+              "identity_percent": 100.0,
+              "query": "contig_4",
+              "modulo_reference_intervals": [
+                [
+                  3733206,
+                  3775033
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                3776089,
+                4215606
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                439518
+              ],
+              "reference_span_bp": 439518,
+              "query_span_bp": 439518,
+              "identity_percent": 100.0,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  3776088,
+                  4215606
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              66454
+            ],
+            [
+              66468,
+              90445
+            ],
+            [
+              101209,
+              160804
+            ],
+            [
+              162530,
+              946542
+            ],
+            [
+              951561,
+              996135
+            ],
+            [
+              996265,
+              1596593
+            ],
+            [
+              1597166,
+              3775033
+            ],
+            [
+              3776088,
+              4215606
+            ]
+          ],
+          "reference_covered_bp": 4196325,
+          "reference_coverage_fraction": 0.9954262803497291,
+          "uncovered_intervals": [
+            [
+              66454,
+              66468
+            ],
+            [
+              90445,
+              101209
+            ],
+            [
+              160804,
+              162530
+            ],
+            [
+              946542,
+              951561
+            ],
+            [
+              996135,
+              996265
+            ],
+            [
+              1596593,
+              1597166
+            ],
+            [
+              3775033,
+              3776088
+            ]
+          ],
+          "coordinates_sha256": "504794a3b9b79438bc41a04999f243c8bf5265aaeab6c2316c348d935907c0a5",
+          "delta_sha256": "263c82c900dd1472137bf4c1643597d6c7832143cb4f87c62109bce0fe2f9d59"
+        },
+        {
+          "reference_copies": 2,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "--maxmatch",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/flye-2.9.6/2/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/flye-2.9.6/2/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/flye-2.9.6/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                1,
+                14808
+              ],
+              "query_interval_1based_inclusive": [
+                439519,
+                454326
+              ],
+              "reference_span_bp": 14808,
+              "query_span_bp": 14808,
+              "identity_percent": 99.99,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  0,
+                  14808
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                14809,
+                66454
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                51646
+              ],
+              "reference_span_bp": 51646,
+              "query_span_bp": 51646,
+              "identity_percent": 100.0,
+              "query": "contig_2",
+              "modulo_reference_intervals": [
+                [
+                  14808,
+                  66454
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                162531,
+                635279
+              ],
+              "query_interval_1based_inclusive": [
+                451145,
+                923899
+              ],
+              "reference_span_bp": 472749,
+              "query_span_bp": 472755,
+              "identity_percent": 99.99,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  162530,
+                  635279
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                996266,
+                1332825
+              ],
+              "query_interval_1based_inclusive": [
+                336560,
+                1
+              ],
+              "reference_span_bp": 336560,
+              "query_span_bp": 336560,
+              "identity_percent": 100.0,
+              "query": "contig_10",
+              "modulo_reference_intervals": [
+                [
+                  996265,
+                  1332825
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1331388,
+                1596593
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                265206
+              ],
+              "reference_span_bp": 265206,
+              "query_span_bp": 265206,
+              "identity_percent": 100.0,
+              "query": "contig_5",
+              "modulo_reference_intervals": [
+                [
+                  1331387,
+                  1596593
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1597167,
+                2211604
+              ],
+              "query_interval_1based_inclusive": [
+                614438,
+                1
+              ],
+              "reference_span_bp": 614438,
+              "query_span_bp": 614438,
+              "identity_percent": 100.0,
+              "query": "contig_13",
+              "modulo_reference_intervals": [
+                [
+                  1597166,
+                  2211604
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2211589,
+                2369862
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                158274
+              ],
+              "reference_span_bp": 158274,
+              "query_span_bp": 158274,
+              "identity_percent": 100.0,
+              "query": "contig_3",
+              "modulo_reference_intervals": [
+                [
+                  2211588,
+                  2369862
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4282075,
+                4306051
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                23977
+              ],
+              "reference_span_bp": 23977,
+              "query_span_bp": 23977,
+              "identity_percent": 100.0,
+              "query": "contig_11",
+              "modulo_reference_intervals": [
+                [
+                  66468,
+                  90445
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4316816,
+                4349436
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                32621
+              ],
+              "reference_span_bp": 32621,
+              "query_span_bp": 32621,
+              "identity_percent": 100.0,
+              "query": "contig_8",
+              "modulo_reference_intervals": [
+                [
+                  101209,
+                  133830
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4348942,
+                4376410
+              ],
+              "query_interval_1based_inclusive": [
+                27469,
+                1
+              ],
+              "reference_span_bp": 27469,
+              "query_span_bp": 27469,
+              "identity_percent": 100.0,
+              "query": "contig_12",
+              "modulo_reference_intervals": [
+                [
+                  133335,
+                  160804
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4850886,
+                5162148
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                311263
+              ],
+              "reference_span_bp": 311263,
+              "query_span_bp": 311263,
+              "identity_percent": 100.0,
+              "query": "contig_1",
+              "modulo_reference_intervals": [
+                [
+                  635279,
+                  946542
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                5167168,
+                5211741
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                44574
+              ],
+              "reference_span_bp": 44574,
+              "query_span_bp": 44574,
+              "identity_percent": 100.0,
+              "query": "contig_9",
+              "modulo_reference_intervals": [
+                [
+                  951561,
+                  996135
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                6583276,
+                7949118
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                1365843
+              ],
+              "reference_span_bp": 1365843,
+              "query_span_bp": 1365843,
+              "identity_percent": 100.0,
+              "query": "contig_6",
+              "modulo_reference_intervals": [
+                [
+                  2367669,
+                  3733512
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                7948813,
+                7990639
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                41827
+              ],
+              "reference_span_bp": 41827,
+              "query_span_bp": 41827,
+              "identity_percent": 100.0,
+              "query": "contig_4",
+              "modulo_reference_intervals": [
+                [
+                  3733206,
+                  3775033
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                7991695,
+                8431212
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                439518
+              ],
+              "reference_span_bp": 439518,
+              "query_span_bp": 439518,
+              "identity_percent": 100.0,
+              "query": "contig_7",
+              "modulo_reference_intervals": [
+                [
+                  3776088,
+                  4215606
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              66454
+            ],
+            [
+              66468,
+              90445
+            ],
+            [
+              101209,
+              160804
+            ],
+            [
+              162530,
+              946542
+            ],
+            [
+              951561,
+              996135
+            ],
+            [
+              996265,
+              1596593
+            ],
+            [
+              1597166,
+              3775033
+            ],
+            [
+              3776088,
+              4215606
+            ]
+          ],
+          "reference_covered_bp": 4196325,
+          "reference_coverage_fraction": 0.9954262803497291,
+          "uncovered_intervals": [
+            [
+              66454,
+              66468
+            ],
+            [
+              90445,
+              101209
+            ],
+            [
+              160804,
+              162530
+            ],
+            [
+              946542,
+              951561
+            ],
+            [
+              996135,
+              996265
+            ],
+            [
+              1596593,
+              1597166
+            ],
+            [
+              3775033,
+              3776088
+            ]
+          ],
+          "coordinates_sha256": "0d7b08e77e1446811cc88660cbcae6d4c40fe52d79a1473c3eec4293fba4d610",
+          "delta_sha256": "9e539d0d1b815a6beaa5eb39e92443c640ddc640b6de512ad21fd074b9b0ec85"
+        }
+      ]
+    },
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_length_bp": 4215606,
+      "assembly_sha256": "737265ee551683222ecbefbca7b62f3aea2ad6d0c67e5016343dd11c91643b51",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/raven-1.8.3/1/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/raven-1.8.3/1/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/raven-1.8.3/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                1,
+                98351
+              ],
+              "query_interval_1based_inclusive": [
+                4050427,
+                4148777
+              ],
+              "reference_span_bp": 98351,
+              "query_span_bp": 98351,
+              "identity_percent": 100.0,
+              "query": "Utg5536",
+              "modulo_reference_intervals": [
+                [
+                  0,
+                  98351
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                96189,
+                167157
+              ],
+              "query_interval_1based_inclusive": [
+                9164,
+                80133
+              ],
+              "reference_span_bp": 70969,
+              "query_span_bp": 70970,
+              "identity_percent": 99.99,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  96188,
+                  167157
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                165181,
+                4215606
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                4050426
+              ],
+              "reference_span_bp": 4050426,
+              "query_span_bp": 4050426,
+              "identity_percent": 100.0,
+              "query": "Utg5536",
+              "modulo_reference_intervals": [
+                [
+                  165180,
+                  4215606
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                167158,
+                176314
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                9154
+              ],
+              "reference_span_bp": 9157,
+              "query_span_bp": 9154,
+              "identity_percent": 99.91,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  167157,
+                  176314
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                3173807,
+                3178798
+              ],
+              "query_interval_1based_inclusive": [
+                9165,
+                4246
+              ],
+              "reference_span_bp": 4992,
+              "query_span_bp": 4920,
+              "identity_percent": 98.1,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  3173806,
+                  3178798
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              4215606
+            ]
+          ],
+          "reference_covered_bp": 4215606,
+          "reference_coverage_fraction": 1.0,
+          "uncovered_intervals": [],
+          "coordinates_sha256": "d4a2e7776965e41af035f0a081a44c8287c67955c6ede341cc8ccdbca78834ee",
+          "delta_sha256": "6926d98300306bb5d7b463d00e3e404e3db320cf12c13406334f186e8778c5cf"
+        },
+        {
+          "reference_copies": 2,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "--maxmatch",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/raven-1.8.3/2/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-bsub-168-baseline/raven-1.8.3/2/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-bsub-168-baseline/raven-1.8.3/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                165181,
+                4313957
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                4148777
+              ],
+              "reference_span_bp": 4148777,
+              "query_span_bp": 4148777,
+              "identity_percent": 100.0,
+              "query": "Utg5536",
+              "modulo_reference_intervals": [
+                [
+                  165180,
+                  4215606
+                ],
+                [
+                  0,
+                  98351
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4306018,
+                4310971
+              ],
+              "query_interval_1based_inclusive": [
+                4213,
+                9165
+              ],
+              "reference_span_bp": 4954,
+              "query_span_bp": 4953,
+              "identity_percent": 99.42,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  90411,
+                  95365
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4311795,
+                4382763
+              ],
+              "query_interval_1based_inclusive": [
+                9164,
+                80133
+              ],
+              "reference_span_bp": 70969,
+              "query_span_bp": 70970,
+              "identity_percent": 99.99,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  96188,
+                  167157
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                4382764,
+                4391920
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                9154
+              ],
+              "reference_span_bp": 9157,
+              "query_span_bp": 9154,
+              "identity_percent": 99.91,
+              "query": "Utg5538",
+              "modulo_reference_intervals": [
+                [
+                  167157,
+                  176314
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              4215606
+            ]
+          ],
+          "reference_covered_bp": 4215606,
+          "reference_coverage_fraction": 1.0,
+          "uncovered_intervals": [],
+          "coordinates_sha256": "20243a2ae064a9e7b19f349858764931ff2acef984ee9d689173038cb36dbc67",
+          "delta_sha256": "fec2f4e01914ad2e04f403dc64080b96387e538079d644434912432bb2670ced"
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_length_bp": 2365589,
+      "assembly_sha256": "f8572c21fe62308a5a891a5bca15851305aebf399575219fd434b46fd67ed70d",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/flye-2.9.6/1/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/flye-2.9.6/1/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/flye-2.9.6/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                1,
+                537339
+              ],
+              "query_interval_1based_inclusive": [
+                24636,
+                561974
+              ],
+              "reference_span_bp": 537339,
+              "query_span_bp": 537339,
+              "identity_percent": 100.0,
+              "query": "contig_3",
+              "modulo_reference_intervals": [
+                [
+                  0,
+                  537339
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                538744,
+                1522168
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                983425
+              ],
+              "reference_span_bp": 983425,
+              "query_span_bp": 983425,
+              "identity_percent": 100.0,
+              "query": "contig_4",
+              "modulo_reference_intervals": [
+                [
+                  538743,
+                  1522168
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1520381,
+                1984040
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                463660
+              ],
+              "reference_span_bp": 463660,
+              "query_span_bp": 463660,
+              "identity_percent": 100.0,
+              "query": "contig_2",
+              "modulo_reference_intervals": [
+                [
+                  1520380,
+                  1984040
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1986323,
+                2342838
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                356516
+              ],
+              "reference_span_bp": 356516,
+              "query_span_bp": 356516,
+              "identity_percent": 100.0,
+              "query": "contig_1",
+              "modulo_reference_intervals": [
+                [
+                  1986322,
+                  2342838
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2340955,
+                2365589
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                24635
+              ],
+              "reference_span_bp": 24635,
+              "query_span_bp": 24635,
+              "identity_percent": 100.0,
+              "query": "contig_3",
+              "modulo_reference_intervals": [
+                [
+                  2340954,
+                  2365589
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              537339
+            ],
+            [
+              538743,
+              1984040
+            ],
+            [
+              1986322,
+              2365589
+            ]
+          ],
+          "reference_covered_bp": 2361903,
+          "reference_coverage_fraction": 0.9984418256933051,
+          "uncovered_intervals": [
+            [
+              537339,
+              538743
+            ],
+            [
+              1984040,
+              1986322
+            ]
+          ],
+          "coordinates_sha256": "9d3b0963e5a34d5fd28630b86c4680ad63aa12ec01c9c6eabb9294f32ae8db3f",
+          "delta_sha256": "bbb630ad8cfb8da7313982ec50d3b85f702b217c2805fa3fe90f9c3f6d5baef7"
+        },
+        {
+          "reference_copies": 2,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "--maxmatch",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/flye-2.9.6/2/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/flye-2.9.6/2/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/flye-2.9.6/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                538744,
+                1522168
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                983425
+              ],
+              "reference_span_bp": 983425,
+              "query_span_bp": 983425,
+              "identity_percent": 100.0,
+              "query": "contig_4",
+              "modulo_reference_intervals": [
+                [
+                  538743,
+                  1522168
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1986323,
+                2342838
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                356516
+              ],
+              "reference_span_bp": 356516,
+              "query_span_bp": 356516,
+              "identity_percent": 100.0,
+              "query": "contig_1",
+              "modulo_reference_intervals": [
+                [
+                  1986322,
+                  2342838
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2340955,
+                2902928
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                561974
+              ],
+              "reference_span_bp": 561974,
+              "query_span_bp": 561974,
+              "identity_percent": 100.0,
+              "query": "contig_3",
+              "modulo_reference_intervals": [
+                [
+                  2340954,
+                  2365589
+                ],
+                [
+                  0,
+                  537339
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                3885970,
+                4349629
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                463660
+              ],
+              "reference_span_bp": 463660,
+              "query_span_bp": 463660,
+              "identity_percent": 100.0,
+              "query": "contig_2",
+              "modulo_reference_intervals": [
+                [
+                  1520380,
+                  1984040
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              537339
+            ],
+            [
+              538743,
+              1984040
+            ],
+            [
+              1986322,
+              2365589
+            ]
+          ],
+          "reference_covered_bp": 2361903,
+          "reference_coverage_fraction": 0.9984418256933051,
+          "uncovered_intervals": [
+            [
+              537339,
+              538743
+            ],
+            [
+              1984040,
+              1986322
+            ]
+          ],
+          "coordinates_sha256": "dc610556b63c28ad8e110398e0573e9ed978890c3605d597b101dd5b064593a8",
+          "delta_sha256": "870765f98dca46a6f2ffae8d8b3c3ff6da3ccd4d7a619fe7c0abd769f32339f7"
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_length_bp": 2365589,
+      "assembly_sha256": "82bfdb153a33f3986c7924233e6562a66b157cd2e2d87c07ad6ff1c6164b243e",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/raven-1.8.3/1/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/raven-1.8.3/1/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/raven-1.8.3/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                1,
+                452960
+              ],
+              "query_interval_1based_inclusive": [
+                452960,
+                1
+              ],
+              "reference_span_bp": 452960,
+              "query_span_bp": 452960,
+              "identity_percent": 100.0,
+              "query": "Utg3198",
+              "modulo_reference_intervals": [
+                [
+                  0,
+                  452960
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                453837,
+                1450442
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                996606
+              ],
+              "reference_span_bp": 996606,
+              "query_span_bp": 996606,
+              "identity_percent": 100.0,
+              "query": "Utg3196",
+              "modulo_reference_intervals": [
+                [
+                  453836,
+                  1450442
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1446795,
+                2265724
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                818930
+              ],
+              "reference_span_bp": 818930,
+              "query_span_bp": 818930,
+              "identity_percent": 100.0,
+              "query": "Utg3194",
+              "modulo_reference_intervals": [
+                [
+                  1446794,
+                  2265724
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2257578,
+                2365589
+              ],
+              "query_interval_1based_inclusive": [
+                560972,
+                452961
+              ],
+              "reference_span_bp": 108012,
+              "query_span_bp": 108012,
+              "identity_percent": 100.0,
+              "query": "Utg3198",
+              "modulo_reference_intervals": [
+                [
+                  2257577,
+                  2365589
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              452960
+            ],
+            [
+              453836,
+              2365589
+            ]
+          ],
+          "reference_covered_bp": 2364713,
+          "reference_coverage_fraction": 0.9996296905337317,
+          "uncovered_intervals": [
+            [
+              452960,
+              453836
+            ]
+          ],
+          "coordinates_sha256": "4062c49b784051fcd549bef3528b1f56caae3573f2ab833d0a35c3cef879ad2a",
+          "delta_sha256": "782c756bec898740353644bb8ef1bfcff02b68165791f5bc72b5805da272a099"
+        },
+        {
+          "reference_copies": 2,
+          "command": [
+            "/well/aanensen/users/rva470/.cache/rattler/cached-envs-v0/mummer4-2eeacd5d28a50228/bin/nucmer",
+            "--maxmatch",
+            "-p",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/raven-1.8.3/2/alignment",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/evidence/assessment-diagnosis/mummer/standard-llactis-il1403-baseline/raven-1.8.3/2/reference.fasta",
+            "/well/aanensen/users/rva470/assembler-benchmark-nextflow/results/standard-baseline-v1/bundle/assemblies/standard-llactis-il1403-baseline/raven-1.8.3/assembly.fasta"
+          ],
+          "blocks": [
+            {
+              "reference_interval_1based_inclusive": [
+                453837,
+                1450442
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                996606
+              ],
+              "reference_span_bp": 996606,
+              "query_span_bp": 996606,
+              "identity_percent": 100.0,
+              "query": "Utg3196",
+              "modulo_reference_intervals": [
+                [
+                  453836,
+                  1450442
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                1446795,
+                2265724
+              ],
+              "query_interval_1based_inclusive": [
+                1,
+                818930
+              ],
+              "reference_span_bp": 818930,
+              "query_span_bp": 818930,
+              "identity_percent": 100.0,
+              "query": "Utg3194",
+              "modulo_reference_intervals": [
+                [
+                  1446794,
+                  2265724
+                ]
+              ]
+            },
+            {
+              "reference_interval_1based_inclusive": [
+                2257578,
+                2818549
+              ],
+              "query_interval_1based_inclusive": [
+                560972,
+                1
+              ],
+              "reference_span_bp": 560972,
+              "query_span_bp": 560972,
+              "identity_percent": 100.0,
+              "query": "Utg3198",
+              "modulo_reference_intervals": [
+                [
+                  2257577,
+                  2365589
+                ],
+                [
+                  0,
+                  452960
+                ]
+              ]
+            }
+          ],
+          "coverage_intervals": [
+            [
+              0,
+              452960
+            ],
+            [
+              453836,
+              2365589
+            ]
+          ],
+          "reference_covered_bp": 2364713,
+          "reference_coverage_fraction": 0.9996296905337317,
+          "uncovered_intervals": [
+            [
+              452960,
+              453836
+            ]
+          ],
+          "coordinates_sha256": "0447e2a5902c297f051ea3234b3c888cc124c52c64880b8571f5f47864a99d8a",
+          "delta_sha256": "37dadb7a7d70fcf9ce7ac2d294464ccaf38eacc7784e6c3ee0bc2739c4d8e8b1"
+        }
+      ]
+    }
+  ]
+}

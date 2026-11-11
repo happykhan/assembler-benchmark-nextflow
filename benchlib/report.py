@@ -151,6 +151,8 @@ def rows(records):
                    'execution_status': record['execution']['status'],
                    'assessment_status': record['assessment']['status'],
                    'sequence_outcome': record['sequence_outcome'],
+                   'assembly_contig_count': record['assessment'].get('query_count'),
+                   'completion_endpoint': record['assessment'].get('method'),
                    'workflow_wall_seconds': record['resources']['workflow_wall_seconds'],
                    'assembler_process_tree_peak_rss_bytes': record['resources']['assembler_process_tree_peak_rss_bytes'],
                    'assessment_mapper_wall_seconds': record['resources'].get('assessment_mapper_wall_seconds'),
@@ -184,7 +186,12 @@ def render_html(records, expected_slots, run_id):
     body = []
     for record in records:
         case_id, assembler = record['case']['id'], record['assembler']
-        sequence = record['sequence_outcome'] or 'No sequence verdict'
+        sequence = {
+            'incomplete': 'Below 99% in one alignment',
+            'fully_complete': 'All molecules reach 99% in one alignment',
+            'chromosome_complete': 'Chromosomes reach 99%; some plasmids below threshold',
+            'empty': 'Empty assembly',
+        }.get(record['sequence_outcome'], record['sequence_outcome'] or 'No sequence verdict')
         molecules = record['replicons']
         details = '; '.join(f"{m['accession']}: {display(m['contiguity'], 100, '%')} contiguity, "
                             f"{display(m['identity'], 100, '%')} identity, "
@@ -197,7 +204,8 @@ def render_html(records, expected_slots, run_id):
         evidence = record['evidence_directory'] + '/result.json'
         body.append('<tr>' + ''.join(f'<td>{escape(str(v))}</td>' for v in
                     (case_id, record['case']['group'], assembler,
-                     record['execution']['status'], sequence, details,
+                     record['execution']['status'], sequence,
+                     record['assessment'].get('query_count', 'Not measured'), details,
                      display(record['resources']['workflow_wall_seconds'], suffix=' s'),
                      display(record['resources']['assembler_process_tree_peak_rss_bytes'], 1 / 1024**2, ' MiB'),
                      display(record['resources'].get('assessment_mapper_wall_seconds'), suffix=' s'),
@@ -216,8 +224,9 @@ def render_html(records, expected_slots, run_id):
 <body><main><h1>Assembly benchmark</h1><p>{escape(run_id)} · {len(records)}/{expected_slots} recorded slots</p>
 <p class="scope"><strong>{label}</strong>. No overall winner score is calculated.</p>
 <p><a href="results.tsv">Download TSV</a> · <a href="results.json">Results JSON</a> · <a href="manifest.json">Checksums and completion gate</a></p>
-<div class="scroll"><table><thead><tr><th>Case</th><th>Group</th><th>Assembler</th><th>Execution</th><th>Sequence outcome</th><th>Measured replicon metrics</th><th>Workflow time</th><th>Assembler peak RAM</th><th>Mapper time</th><th>Mapper peak RAM</th><th>Files</th></tr></thead><tbody>{''.join(body)}</tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Case</th><th>Group</th><th>Assembler</th><th>Execution</th><th>Contiguity criterion</th><th>Assembly contigs</th><th>Measured replicon metrics</th><th>Workflow time</th><th>Assembler peak RAM</th><th>Mapper time</th><th>Mapper peak RAM</th><th>Files</th></tr></thead><tbody>{''.join(body)}</tbody></table></div>
 <h2>Measurement scope</h2><p>Completeness is the longest single alignment span against a tripled reference divided by the original molecule length. Completion requires at least 99%; contiguity is uncapped. Identity and maximum indel are reported only when that alignment spans more than 100,000 bp or one quarter of the reference. Structural correctness is not measured by this assessment. An execution or assessment failure does not establish sequence absence.</p>
+<p>Falling below the contiguity threshold does not mean that most reference sequence is absent: it may be spread across multiple contigs. Total reference coverage is a separate measurement. Identity and maximum indel describe only the selected longest alignment; other contigs can contain additional errors.</p>
 <p>Workflow time includes assembler verification/execution and exact assessment; downloads, environment provisioning, simulation and scheduler waiting are excluded. Assembler and assessment mapper RAM are separate sampled process-tree sums; shared pages may be counted more than once. Separate molecule types are reported only where provided by reference provenance.</p>
 <p>Method attribution: <a href="https://github.com/rrwick/Long-read-assembler-comparison">Wick and Holt long-read assembler comparison</a>; alignment with <a href="https://github.com/lh3/minimap2">minimap2</a>. Reference accessions, input hashes, simulator settings and software versions are retained in the evidence files.</p>
 </main></body></html>'''

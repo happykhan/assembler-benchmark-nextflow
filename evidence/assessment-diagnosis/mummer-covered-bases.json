@@ -1,0 +1,269 @@
+{
+  "method": "Union reference positions aligned to query bases, excluding query gaps.",
+  "source_summary_sha256": "d2d6004c9f22d9181dbb30b281ef95c46000df6b98d58fc35721a9b4d591688d",
+  "delta_convention": "Positive delta is a gap in query; coordinate consumption independently checked against every alignment endpoint.",
+  "results": [
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "flye-2.9.6",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "delta_sha256": "7b76d383e2ab71b5407dfca2c92909e1dbb3f79290387dd357d8160180844c17",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 4196325,
+            "coverage_fraction": 0.9954262803497291,
+            "depth_histogram_bp": {
+              "1": 4191877,
+              "0": 19281,
+              "2": 4448
+            },
+            "gaps": [
+              {
+                "start_0based": 66454,
+                "end_0based_exclusive": 66468,
+                "length_bp": 14
+              },
+              {
+                "start_0based": 90445,
+                "end_0based_exclusive": 101209,
+                "length_bp": 10764
+              },
+              {
+                "start_0based": 160804,
+                "end_0based_exclusive": 162530,
+                "length_bp": 1726
+              },
+              {
+                "start_0based": 946542,
+                "end_0based_exclusive": 951561,
+                "length_bp": 5019
+              },
+              {
+                "start_0based": 996135,
+                "end_0based_exclusive": 996265,
+                "length_bp": 130
+              },
+              {
+                "start_0based": 1596593,
+                "end_0based_exclusive": 1597166,
+                "length_bp": 573
+              },
+              {
+                "start_0based": 3775033,
+                "end_0based_exclusive": 3776088,
+                "length_bp": 1055
+              }
+            ],
+            "overlap_excess_bp": 4448
+          }
+        },
+        {
+          "reference_copies": 2,
+          "delta_sha256": "dbcfb6f0b635e944e03a56f05cec791eae65caa9028c75c0d961d9b64cde0c93",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 4196325,
+            "coverage_fraction": 0.9954262803497291,
+            "depth_histogram_bp": {
+              "1": 4191877,
+              "0": 19281,
+              "2": 4448
+            },
+            "gaps": [
+              {
+                "start_0based": 66454,
+                "end_0based_exclusive": 66468,
+                "length_bp": 14
+              },
+              {
+                "start_0based": 90445,
+                "end_0based_exclusive": 101209,
+                "length_bp": 10764
+              },
+              {
+                "start_0based": 160804,
+                "end_0based_exclusive": 162530,
+                "length_bp": 1726
+              },
+              {
+                "start_0based": 946542,
+                "end_0based_exclusive": 951561,
+                "length_bp": 5019
+              },
+              {
+                "start_0based": 996135,
+                "end_0based_exclusive": 996265,
+                "length_bp": 130
+              },
+              {
+                "start_0based": 1596593,
+                "end_0based_exclusive": 1597166,
+                "length_bp": 573
+              },
+              {
+                "start_0based": 3775033,
+                "end_0based_exclusive": 3776088,
+                "length_bp": 1055
+              }
+            ],
+            "overlap_excess_bp": 4448
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "raven-1.8.3",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "delta_sha256": "0e644dc7da301b92a1237a3eae494fa09a2e4d25f9151a5431a0c7cf0bed86ad",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 4215602,
+            "coverage_fraction": 0.9999990511447228,
+            "depth_histogram_bp": {
+              "1": 4197392,
+              "2": 18210,
+              "0": 4
+            },
+            "gaps": [
+              {
+                "start_0based": 133502,
+                "end_0based_exclusive": 133506,
+                "length_bp": 4
+              }
+            ],
+            "overlap_excess_bp": 18210
+          }
+        },
+        {
+          "reference_copies": 2,
+          "delta_sha256": "e5c1ad3b0099c2138b56eb3de23f346c7ff921b74c08b74138dcf4a510e99f14",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 4215602,
+            "coverage_fraction": 0.9999990511447228,
+            "depth_histogram_bp": {
+              "1": 4197363,
+              "2": 18239,
+              "0": 4
+            },
+            "gaps": [
+              {
+                "start_0based": 133502,
+                "end_0based_exclusive": 133506,
+                "length_bp": 4
+              }
+            ],
+            "overlap_excess_bp": 18239
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "flye-2.9.6",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "delta_sha256": "8ade8e4265f1173c505412b7a294035010cb3f7ca055decd4fa685e5585c3edb",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 2361903,
+            "coverage_fraction": 0.9984418256933051,
+            "depth_histogram_bp": {
+              "1": 2358231,
+              "0": 3686,
+              "2": 3672
+            },
+            "gaps": [
+              {
+                "start_0based": 537339,
+                "end_0based_exclusive": 538743,
+                "length_bp": 1404
+              },
+              {
+                "start_0based": 1984040,
+                "end_0based_exclusive": 1986322,
+                "length_bp": 2282
+              }
+            ],
+            "overlap_excess_bp": 3672
+          }
+        },
+        {
+          "reference_copies": 2,
+          "delta_sha256": "d7aeae48f7ddd21f264fbc4ad3e6750e62896224ec701dec3f878755687f6f2a",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 2361903,
+            "coverage_fraction": 0.9984418256933051,
+            "depth_histogram_bp": {
+              "1": 2358231,
+              "0": 3686,
+              "2": 3672
+            },
+            "gaps": [
+              {
+                "start_0based": 537339,
+                "end_0based_exclusive": 538743,
+                "length_bp": 1404
+              },
+              {
+                "start_0based": 1984040,
+                "end_0based_exclusive": 1986322,
+                "length_bp": 2282
+              }
+            ],
+            "overlap_excess_bp": 3672
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "raven-1.8.3",
+      "checks": [
+        {
+          "reference_copies": 1,
+          "delta_sha256": "66e5671f81569f4e9d2d8217d6c89fac2535b723ccee328c5c1d4dc3ebf39d4d",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 2364713,
+            "coverage_fraction": 0.9996296905337317,
+            "depth_histogram_bp": {
+              "1": 2352918,
+              "0": 876,
+              "2": 11795
+            },
+            "gaps": [
+              {
+                "start_0based": 452960,
+                "end_0based_exclusive": 453836,
+                "length_bp": 876
+              }
+            ],
+            "overlap_excess_bp": 11795
+          }
+        },
+        {
+          "reference_copies": 2,
+          "delta_sha256": "ec538d4426098253453d625100761e87a675ff224d022f04867dfd2fcb9a4f97",
+          "aligned_reference_base_coverage": {
+            "covered_bp": 2364713,
+            "coverage_fraction": 0.9996296905337317,
+            "depth_histogram_bp": {
+              "1": 2352918,
+              "0": 876,
+              "2": 11795
+            },
+            "gaps": [
+              {
+                "start_0based": 452960,
+                "end_0based_exclusive": 453836,
+                "length_bp": 876
+              }
+            ],
+            "overlap_excess_bp": 11795
+          }
+        }
+      ]
+    }
+  ]
+}

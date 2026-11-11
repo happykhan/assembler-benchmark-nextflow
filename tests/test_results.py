@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 
 from benchlib.assessment import outcome, parse_paf, sha256, summarise, write_json
-from benchlib.report import export_results
+from benchlib.report import export_results, render_html, rows
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('assess_cli', ROOT / 'bin/assess-assembly.py')
@@ -144,6 +144,24 @@ class FailureAndExportTests(unittest.TestCase):
         assess_cli.assess(self.args)
         manifest = export_results([self.args.out], self.directory / 'bundle', 2, 'run')
         self.assertFalse(manifest['complete'])
+
+    def test_fragmented_output_is_labelled_as_a_contiguity_result(self):
+        record = assess_cli.assess(self.args)
+        record['execution']['status'] = 'completed'
+        record['assessment'].update(status='completed', query_count=4)
+        record['sequence_outcome'] = 'incomplete'
+        record['replicons'] = [{'accession': 'reference', 'contiguity': .42,
+                               'identity': 1.0, 'max_indel_bp': 0,
+                               'molecule_type': 'chromosome', 'length_bp': 1000,
+                               'complete': False, 'identity_measured': True}]
+        html = render_html([record], 1, 'run')
+        self.assertIn('Below 99% in one alignment', html)
+        self.assertIn('Contiguity criterion', html)
+        self.assertIn('Total reference coverage is a separate measurement', html)
+        self.assertIn('other contigs can contain additional errors', html)
+        row = next(rows([record]))
+        self.assertEqual(row['assembly_contig_count'], 4)
+        self.assertEqual(row['sequence_outcome'], 'incomplete')
 
     def test_changed_evidence_cannot_be_exported(self):
         assess_cli.assess(self.args)

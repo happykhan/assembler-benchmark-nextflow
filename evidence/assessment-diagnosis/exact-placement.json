@@ -1,0 +1,740 @@
+{
+  "schema_version": 1,
+  "method": "Direct exact string matching to both orientations of doubled native circular references; no aligner or pipeline PAF parser used",
+  "source_results_sha256": "6b59bef51f3cbbea3e97c098fce9a986833a03155ac2518e5259b9c95adb057f",
+  "reference_registry_sha256": "9e9c92b9a1647727079263a8abd045223acd747edd01c0ae97f88e6d837ac6c6",
+  "results": [
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_id": "bsub-168-whole",
+      "reference_accession": "NC_000964.3",
+      "reference_length_bp": 4215606,
+      "reference_sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
+      "assembly_sha256": "6618e4ecdccb82a444eac025e9ea57bdb719a6acf8c1e479b5b5d68f75358408",
+      "contig_count": 13,
+      "assembly_total_bp": 4197597,
+      "longest_contig_bp": 1365843,
+      "n50_bp": 923899,
+      "longest_contig_reference_fraction": 0.323996834618795,
+      "all_contigs_exact_substrings": false,
+      "all_contigs_unambiguously_placed": false,
+      "unique_placement_coverage": {
+        "covered_bp": 3269250,
+        "coverage_fraction": 0.7755112788054671,
+        "depth_histogram_bp": {
+          "0": 946356,
+          "1": 3264802,
+          "2": 4448
+        },
+        "gaps": [
+          {
+            "start_0based": 0,
+            "end_0based_exclusive": 14808,
+            "length_bp": 14808
+          },
+          {
+            "start_0based": 66454,
+            "end_0based_exclusive": 66468,
+            "length_bp": 14
+          },
+          {
+            "start_0based": 90445,
+            "end_0based_exclusive": 101209,
+            "length_bp": 10764
+          },
+          {
+            "start_0based": 160804,
+            "end_0based_exclusive": 635279,
+            "length_bp": 474475
+          },
+          {
+            "start_0based": 946542,
+            "end_0based_exclusive": 951561,
+            "length_bp": 5019
+          },
+          {
+            "start_0based": 996135,
+            "end_0based_exclusive": 996265,
+            "length_bp": 130
+          },
+          {
+            "start_0based": 1596593,
+            "end_0based_exclusive": 1597166,
+            "length_bp": 573
+          },
+          {
+            "start_0based": 3775033,
+            "end_0based_exclusive": 4215606,
+            "length_bp": 440573
+          }
+        ],
+        "overlap_excess_bp": 4448
+      },
+      "possible_placement_coverage_upper_bound": {
+        "covered_bp": 3269250,
+        "coverage_fraction": 0.7755112788054671,
+        "depth_histogram_bp": {
+          "0": 946356,
+          "1": 3264802,
+          "2": 4448
+        },
+        "gaps": [
+          {
+            "start_0based": 0,
+            "end_0based_exclusive": 14808,
+            "length_bp": 14808
+          },
+          {
+            "start_0based": 66454,
+            "end_0based_exclusive": 66468,
+            "length_bp": 14
+          },
+          {
+            "start_0based": 90445,
+            "end_0based_exclusive": 101209,
+            "length_bp": 10764
+          },
+          {
+            "start_0based": 160804,
+            "end_0based_exclusive": 635279,
+            "length_bp": 474475
+          },
+          {
+            "start_0based": 946542,
+            "end_0based_exclusive": 951561,
+            "length_bp": 5019
+          },
+          {
+            "start_0based": 996135,
+            "end_0based_exclusive": 996265,
+            "length_bp": 130
+          },
+          {
+            "start_0based": 1596593,
+            "end_0based_exclusive": 1597166,
+            "length_bp": 573
+          },
+          {
+            "start_0based": 3775033,
+            "end_0based_exclusive": 4215606,
+            "length_bp": 440573
+          }
+        ],
+        "overlap_excess_bp": 4448
+      },
+      "existing_assessment_longest_alignment_bp": 1365843,
+      "existing_contiguity": 0.323996834618795,
+      "existing_sequence_outcome": "incomplete",
+      "longest_contig_equals_reported_alignment_span": true,
+      "can_any_contig_meet_99_percent_length": false,
+      "contigs": [
+        {
+          "id": "contig_1",
+          "length_bp": 311263,
+          "sequence_sha256": "1409bcaee00fb6bc7c1246d4bf08201748ad3dff320afad9ef607923be2120f2",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 635279,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  635279,
+                  946542
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_10",
+          "length_bp": 336560,
+          "sequence_sha256": "4832a0c902bc4297c6dc340517b32e6f115f22dc4f0b55a84371eef23c535682",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 996265,
+              "strands": [
+                "-"
+              ],
+              "reference_intervals": [
+                [
+                  996265,
+                  1332825
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_11",
+          "length_bp": 23977,
+          "sequence_sha256": "e41d3e0610a256a7bba65672a0338b9b4b08a12135cd025f9704592e8307e61b",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 66468,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  66468,
+                  90445
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_12",
+          "length_bp": 27469,
+          "sequence_sha256": "429243bd349cb475ef55775209edc5c17459add11105f412209dc8a71b7cb38b",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 133335,
+              "strands": [
+                "-"
+              ],
+              "reference_intervals": [
+                [
+                  133335,
+                  160804
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_13",
+          "length_bp": 614438,
+          "sequence_sha256": "03b84724b00fe69ab8fa65d30f51deb7bed723bbd71b1de293867ad97037b90a",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 1597166,
+              "strands": [
+                "-"
+              ],
+              "reference_intervals": [
+                [
+                  1597166,
+                  2211604
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_2",
+          "length_bp": 51646,
+          "sequence_sha256": "ca9e51164c3720371ca72daf1d0d1dad42056c539bf90bc0686404b46b447bc5",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 14808,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  14808,
+                  66454
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_3",
+          "length_bp": 158274,
+          "sequence_sha256": "8a84ae6384aeebf3381df4359cd85e30d6e1026eceac6bab9b32c1e0d12346bf",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 2211588,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  2211588,
+                  2369862
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_4",
+          "length_bp": 41827,
+          "sequence_sha256": "5a1a00fcbffd7d31e8d796a2c624f185aab2a02044d01bfca237bdea81e6cc43",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 3733206,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  3733206,
+                  3775033
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_5",
+          "length_bp": 265206,
+          "sequence_sha256": "1560acab8a1c93ea8265f6370f93b917af646a6358f9f5eabb6dfd81c54df279",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 1331387,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  1331387,
+                  1596593
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_6",
+          "length_bp": 1365843,
+          "sequence_sha256": "81907731f245c78fa5392bba41162d71b697f094a91524a48e2c8f2835b5e9ce",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 2367669,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  2367669,
+                  3733512
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_7",
+          "length_bp": 923899,
+          "sequence_sha256": "c18d03926a8545ab5da2b31073933f7e0e4658676f0b2a259e9aae8be7281730",
+          "exact_placement_count": 0,
+          "placements": []
+        },
+        {
+          "id": "contig_8",
+          "length_bp": 32621,
+          "sequence_sha256": "da14ab000b39837e537ed242e2ef54f14f5bae1fb8f24c4b39a8e04b58e148b3",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 101209,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  101209,
+                  133830
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_9",
+          "length_bp": 44574,
+          "sequence_sha256": "593c20624ec47a3d8e883681e4f0e925236fe2a8e65eab314165761b5f45f389",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 951561,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  951561,
+                  996135
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "standard-bsub-168-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_id": "bsub-168-whole",
+      "reference_accession": "NC_000964.3",
+      "reference_length_bp": 4215606,
+      "reference_sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
+      "assembly_sha256": "737265ee551683222ecbefbca7b62f3aea2ad6d0c67e5016343dd11c91643b51",
+      "contig_count": 2,
+      "assembly_total_bp": 4228910,
+      "longest_contig_bp": 4148777,
+      "n50_bp": 4148777,
+      "longest_contig_reference_fraction": 0.9841472376687954,
+      "all_contigs_exact_substrings": false,
+      "all_contigs_unambiguously_placed": false,
+      "unique_placement_coverage": {
+        "covered_bp": 4148777,
+        "coverage_fraction": 0.9841472376687954,
+        "depth_histogram_bp": {
+          "1": 4148777,
+          "0": 66829
+        },
+        "gaps": [
+          {
+            "start_0based": 98351,
+            "end_0based_exclusive": 165180,
+            "length_bp": 66829
+          }
+        ],
+        "overlap_excess_bp": 0
+      },
+      "possible_placement_coverage_upper_bound": {
+        "covered_bp": 4148777,
+        "coverage_fraction": 0.9841472376687954,
+        "depth_histogram_bp": {
+          "1": 4148777,
+          "0": 66829
+        },
+        "gaps": [
+          {
+            "start_0based": 98351,
+            "end_0based_exclusive": 165180,
+            "length_bp": 66829
+          }
+        ],
+        "overlap_excess_bp": 0
+      },
+      "existing_assessment_longest_alignment_bp": 4148777,
+      "existing_contiguity": 0.9841472376687954,
+      "existing_sequence_outcome": "incomplete",
+      "longest_contig_equals_reported_alignment_span": true,
+      "can_any_contig_meet_99_percent_length": false,
+      "contigs": [
+        {
+          "id": "Utg5536",
+          "length_bp": 4148777,
+          "sequence_sha256": "1e866374d0d1a54bc48aea6aba0860dd40cc606b31a9158a38a3a9004af5a809",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 165180,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  165180,
+                  4215606
+                ],
+                [
+                  0,
+                  98351
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Utg5538",
+          "length_bp": 80133,
+          "sequence_sha256": "127aa763e807e321015f92721b28a61a73d61528a0c58fabad5b0ad1f7b72227",
+          "exact_placement_count": 0,
+          "placements": []
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "flye-2.9.6",
+      "reference_id": "llactis-il1403-whole",
+      "reference_accession": "AE005176.1",
+      "reference_length_bp": 2365589,
+      "reference_sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
+      "assembly_sha256": "f8572c21fe62308a5a891a5bca15851305aebf399575219fd434b46fd67ed70d",
+      "contig_count": 4,
+      "assembly_total_bp": 2365575,
+      "longest_contig_bp": 983425,
+      "n50_bp": 561974,
+      "longest_contig_reference_fraction": 0.4157209895717303,
+      "all_contigs_exact_substrings": true,
+      "all_contigs_unambiguously_placed": true,
+      "unique_placement_coverage": {
+        "covered_bp": 2361903,
+        "coverage_fraction": 0.9984418256933051,
+        "depth_histogram_bp": {
+          "1": 2358231,
+          "0": 3686,
+          "2": 3672
+        },
+        "gaps": [
+          {
+            "start_0based": 537339,
+            "end_0based_exclusive": 538743,
+            "length_bp": 1404
+          },
+          {
+            "start_0based": 1984040,
+            "end_0based_exclusive": 1986322,
+            "length_bp": 2282
+          }
+        ],
+        "overlap_excess_bp": 3672
+      },
+      "possible_placement_coverage_upper_bound": {
+        "covered_bp": 2361903,
+        "coverage_fraction": 0.9984418256933051,
+        "depth_histogram_bp": {
+          "1": 2358231,
+          "0": 3686,
+          "2": 3672
+        },
+        "gaps": [
+          {
+            "start_0based": 537339,
+            "end_0based_exclusive": 538743,
+            "length_bp": 1404
+          },
+          {
+            "start_0based": 1984040,
+            "end_0based_exclusive": 1986322,
+            "length_bp": 2282
+          }
+        ],
+        "overlap_excess_bp": 3672
+      },
+      "existing_assessment_longest_alignment_bp": 983425,
+      "existing_contiguity": 0.4157209895717303,
+      "existing_sequence_outcome": "incomplete",
+      "longest_contig_equals_reported_alignment_span": true,
+      "can_any_contig_meet_99_percent_length": false,
+      "contigs": [
+        {
+          "id": "contig_1",
+          "length_bp": 356516,
+          "sequence_sha256": "06d2313ea1d6edff0f74e397b31f08715b8f5670f11e9715dae2351549e0a9a1",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 1986322,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  1986322,
+                  2342838
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_2",
+          "length_bp": 463660,
+          "sequence_sha256": "dc4aa78c9f2ba50fe5f5a6d770b4fa9d5aa47d3c48f89861db4215e0d824df6a",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 1520380,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  1520380,
+                  1984040
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_3",
+          "length_bp": 561974,
+          "sequence_sha256": "46c872b9c9345412bc122d4688f6e1fe6f3f832e8f2b61dcb68e48f912fd7358",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 2340954,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  2340954,
+                  2365589
+                ],
+                [
+                  0,
+                  537339
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contig_4",
+          "length_bp": 983425,
+          "sequence_sha256": "c36d128c49760eac29e50dbde5e7985b4fa8cdaf9a0bea1ce4ddde828cbc35ae",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 538743,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  538743,
+                  1522168
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "standard-llactis-il1403-baseline",
+      "assembler": "raven-1.8.3",
+      "reference_id": "llactis-il1403-whole",
+      "reference_accession": "AE005176.1",
+      "reference_length_bp": 2365589,
+      "reference_sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
+      "assembly_sha256": "82bfdb153a33f3986c7924233e6562a66b157cd2e2d87c07ad6ff1c6164b243e",
+      "contig_count": 3,
+      "assembly_total_bp": 2376508,
+      "longest_contig_bp": 996606,
+      "n50_bp": 818930,
+      "longest_contig_reference_fraction": 0.4212929634015038,
+      "all_contigs_exact_substrings": true,
+      "all_contigs_unambiguously_placed": true,
+      "unique_placement_coverage": {
+        "covered_bp": 2364713,
+        "coverage_fraction": 0.9996296905337317,
+        "depth_histogram_bp": {
+          "1": 2352918,
+          "0": 876,
+          "2": 11795
+        },
+        "gaps": [
+          {
+            "start_0based": 452960,
+            "end_0based_exclusive": 453836,
+            "length_bp": 876
+          }
+        ],
+        "overlap_excess_bp": 11795
+      },
+      "possible_placement_coverage_upper_bound": {
+        "covered_bp": 2364713,
+        "coverage_fraction": 0.9996296905337317,
+        "depth_histogram_bp": {
+          "1": 2352918,
+          "0": 876,
+          "2": 11795
+        },
+        "gaps": [
+          {
+            "start_0based": 452960,
+            "end_0based_exclusive": 453836,
+            "length_bp": 876
+          }
+        ],
+        "overlap_excess_bp": 11795
+      },
+      "existing_assessment_longest_alignment_bp": 996606,
+      "existing_contiguity": 0.4212929634015038,
+      "existing_sequence_outcome": "incomplete",
+      "longest_contig_equals_reported_alignment_span": true,
+      "can_any_contig_meet_99_percent_length": false,
+      "contigs": [
+        {
+          "id": "Utg3194",
+          "length_bp": 818930,
+          "sequence_sha256": "2dc7dceb42c6f0fa14a86e10f1c5fbf61a79702076a57e2f8a14459edb88715e",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 1446794,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  1446794,
+                  2265724
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Utg3196",
+          "length_bp": 996606,
+          "sequence_sha256": "2cae206c749303f6f4a5d3811b154709dd4df7c24188d28d2470e00694e5d1c4",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 453836,
+              "strands": [
+                "+"
+              ],
+              "reference_intervals": [
+                [
+                  453836,
+                  1450442
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Utg3198",
+          "length_bp": 560972,
+          "sequence_sha256": "4a3b5bfbd1b38feb68a801c669f81d00252371c64244cdea9fa6b38bd351b031",
+          "exact_placement_count": 1,
+          "placements": [
+            {
+              "start_0based": 2257577,
+              "strands": [
+                "-"
+              ],
+              "reference_intervals": [
+                [
+                  2257577,
+                  2365589
+                ],
+                [
+                  0,
+                  452960
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

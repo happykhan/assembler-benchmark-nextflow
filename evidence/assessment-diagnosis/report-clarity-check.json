@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "verified_date": "2026-11-11",
+  "purpose": "Clarify single-alignment endpoint without changing original measurements",
+  "original_results_unchanged": true,
+  "bundle_manifest_sha256": "320fca74263fc2adbf8a4975018a8aa33ada3d3a8a20c013a994faa269173285",
+  "files_verified": 44,
+  "python_tests_passed": 86,
+  "compute_tasks_cached": 13,
+  "new_export_tasks": 1,
+  "new_assembly_or_read_simulation_runs": 0,
+  "contig_counts": {
+    "standard-bsub-168-baseline/flye-2.9.6": 13,
+    "standard-bsub-168-baseline/raven-1.8.3": 2,
+    "standard-llactis-il1403-baseline/flye-2.9.6": 4,
+    "standard-llactis-il1403-baseline/raven-1.8.3": 3
+  },
+  "repository_visibility": "public"
+}

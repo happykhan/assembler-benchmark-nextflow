@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "jobs": [
+    {
+      "job_id": "35272657",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 2,
+      "batch_max_rss": "43664K",
+      "cpus": 1,
+      "memory": "2G",
+      "script": "read_geometry.py",
+      "source_sha256": "fdd65c9331e118f434ce56190c1af0c2516c925b7754e881cd83ce3167b5e98b",
+      "output_sha256": "2ecdd2e2c0ed3236fe965b9d31c40da27f71a9d5bd3f20ce437723420ad68385"
+    },
+    {
+      "job_id": "35273557",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 1,
+      "batch_max_rss": "41828K",
+      "cpus": 1,
+      "memory": "2G",
+      "script": "gap_spanning.py",
+      "source_sha256": "a32b09135ffb12c1a378a1487a7210e6d7ce1c220ec082a59dc09a9de77bd8ab",
+      "output_sha256": "720ac4b23c6f076033b5bdfe065d56fcf1c28297eb6e2c9fcd9704da27db60f6"
+    }
+  ],
+  "new_reads_or_assemblies": false,
+  "input_files_modified": false
+}

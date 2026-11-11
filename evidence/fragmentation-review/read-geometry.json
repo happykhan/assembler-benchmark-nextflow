@@ -1,0 +1,179 @@
+{
+  "limitations": [
+    "Approximate/repeat overlaps and graph heuristics are not modelled; this does not prove individual break causes."
+  ],
+  "method": "Exact-coordinate interval geometry. Threshold M uses transformed intervals [start,end-M] for reads length>=M on the reference circle. M=0 measures base coverage; M=8000 diagnoses strict overlap connectivity, not Flye internals.",
+  "results": [
+    {
+      "accession": "AE005176.1",
+      "case_id": "standard-llactis-il1403-baseline",
+      "read_bases": 70967670,
+      "read_count": 7114,
+      "reads_sha256": "40ea6598b91b97078c333f2aaf3426b9f8ede61703d6ef2c4351f212ef317f84",
+      "reference_length": 2365589,
+      "thresholds": {
+        "0": {
+          "circular_gap_count": 0,
+          "covered_bases": 2365589,
+          "eligible_reads": 7114,
+          "linearised_gaps": [],
+          "mean_transformed_interval_depth": 30.0,
+          "uncovered_bases": 0
+        },
+        "8000": {
+          "circular_gap_count": 9,
+          "covered_bases": 2361447,
+          "eligible_reads": 5977,
+          "linearised_gaps": [
+            [
+              1027098,
+              1028198
+            ],
+            [
+              1097549,
+              1097866
+            ],
+            [
+              1138877,
+              1139065
+            ],
+            [
+              1175143,
+              1175345
+            ],
+            [
+              1177306,
+              1177323
+            ],
+            [
+              1795655,
+              1795957
+            ],
+            [
+              1983251,
+              1983928
+            ],
+            [
+              2032676,
+              2033000
+            ],
+            [
+              2332118,
+              2333133
+            ]
+          ],
+          "mean_transformed_interval_depth": 6.35366244939421,
+          "uncovered_bases": 4142
+        }
+      }
+    },
+    {
+      "accession": "NC_000964.3",
+      "case_id": "standard-bsub-168-baseline",
+      "read_bases": 126468180,
+      "read_count": 12670,
+      "reads_sha256": "9be39d89a7bf6e3bc803026b0fd000622a816fbdd4b30231ae23b74d3a8b3c5f",
+      "reference_length": 4215606,
+      "thresholds": {
+        "0": {
+          "circular_gap_count": 0,
+          "covered_bases": 4215606,
+          "eligible_reads": 12670,
+          "linearised_gaps": [],
+          "mean_transformed_interval_depth": 30.0,
+          "uncovered_bases": 0
+        },
+        "8000": {
+          "circular_gap_count": 20,
+          "covered_bases": 4209903,
+          "eligible_reads": 10678,
+          "linearised_gaps": [
+            [
+              309402,
+              309859
+            ],
+            [
+              1041162,
+              1041251
+            ],
+            [
+              1041334,
+              1041455
+            ],
+            [
+              1106458,
+              1106849
+            ],
+            [
+              1308660,
+              1309546
+            ],
+            [
+              1330805,
+              1331112
+            ],
+            [
+              1448516,
+              1448712
+            ],
+            [
+              1448759,
+              1448799
+            ],
+            [
+              1746715,
+              1746949
+            ],
+            [
+              2048752,
+              2048811
+            ],
+            [
+              2207586,
+              2207957
+            ],
+            [
+              2388048,
+              2388641
+            ],
+            [
+              2388837,
+              2389657
+            ],
+            [
+              2699365,
+              2699657
+            ],
+            [
+              2759399,
+              2759474
+            ],
+            [
+              2821317,
+              2821474
+            ],
+            [
+              2925812,
+              2925835
+            ],
+            [
+              3076579,
+              3076793
+            ],
+            [
+              3076851,
+              3076972
+            ],
+            [
+              3812482,
+              3812739
+            ]
+          ],
+          "mean_transformed_interval_depth": 6.368006640089231,
+          "uncovered_bases": 5703
+        }
+      }
+    }
+  ],
+  "schema_version": 1
+}
