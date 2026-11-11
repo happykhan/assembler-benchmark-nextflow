@@ -51,8 +51,8 @@ path; `quick-v3` verifies the corrected integration.
 Only Linux Pixi/Slurm was integration-tested. Docker and Apptainer profile
 definitions are present but have not been run. Standard is not admitted, real
 data are not implemented, and structural correctness remains unmeasured.
-Version-specific isolated environments and additional assembler adapters follow
-this initial slice.
+Version-specific isolated environments are verified in the subsequent checkpoint
+below. Additional assembler adapters remain future work.
 
 The code and report are available locally. GitHub repository creation/upload was
 attempted, but the command-line credential returned HTTP401 and was confirmed
@@ -61,3 +61,28 @@ invalid. Browser access was unavailable. No GitHub publication is claimed.
 The compact machine-readable verification record is
 [`evidence/quick-verification.json`](../evidence/quick-verification.json).
 Full local run files are under `evidence/quick-run/v3/` and are ignored by Git.
+
+## Version modules and frozen planning
+
+The subsequent implementation is committed as `778e754`. All 69 focused tests
+pass on the cluster. `quick-versioned-v2` completed 13 tasks, including independent
+plan validation, four executions and four assessments using immutable IDs
+`flye-2.9.6` and `raven-1.8.3`. Each version selected its own locked environment.
+All four expected slots and all 44 retained-file checksums were verified.
+
+`quick-selection-v1` then selected just `quick-bimodal` and the `raven` alias.
+The frozen plan resolved that alias to `raven-1.8.3`; all six tasks and the single
+execution/assessment completed. Compute-side environment installation was
+disabled with `--no-install`. Both named environments and the tooling environment
+also passed direct version checks with installation disabled.
+
+The first version-module attempt is preserved as `quick-versioned-v1`. Pixi
+failed in its path resolver before assembler invocation. Environments are now
+prepared serially under a provisioning lock before any Nextflow jobs are
+submitted. Successful or failed setup receipts are retained; assembler jobs
+remain parallel, with queue capacity 1,000. No failed sequence outcome was
+inferred from that infrastructure failure.
+
+See [`evidence/modular-verification.json`](../evidence/modular-verification.json)
+for plans, task accounting and checksums. Standard remains a sourced proposal;
+the five-group catalogue does not represent those candidate cases as executable.
