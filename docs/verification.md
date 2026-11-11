@@ -1,7 +1,7 @@
 # Quick development verification
 
 Verified on 11 November 2026 using Nextflow 25.10.2, the locked Linux64 Pixi
-environment and the BMRC Cluster3 Slurm executor. This is a workflow check;
+environment and the BMRC Cluster 3 Slurm executor. This is a workflow check;
 the fixture results establish no scientific ranking.
 
 ## Successful end-to-end run
@@ -84,5 +84,42 @@ remain parallel, with queue capacity 1,000. No failed sequence outcome was
 inferred from that infrastructure failure.
 
 See [`evidence/modular-verification.json`](../evidence/modular-verification.json)
-for plans, task accounting and checksums. Standard remains a sourced proposal;
-the five-group catalogue does not represent those candidate cases as executable.
+for plans, task accounting and checksums. At that checkpoint, Standard remained
+a sourced proposal; the following checkpoint admits only its small baseline.
+
+## Admitted whole-genome Standard baseline
+
+`standard-baseline-v1` completed all 14 Nextflow tasks on Cluster 3: plan
+validation, two whole-reference preparations, two simulations, four executions,
+four assessments and export. The two original whole circular chromosomes are
+admitted with archive, accession, molecule, sequence and canonical FASTA bindings.
+Quick remains a separate, unchanged 200 kb linear fixture.
+
+The independent read-only input audit checked every realised read against its
+declared strand-specific circular source coordinates, including budget trimming.
+All 19,784 reads / 197,435,850 bases matched exactly. The datasets contain
+126,468,180 and 70,967,670 bases respectively: exactly 30× each. All 62 observed
+circular-wrap reads matched their references. The audit ran as Slurm job 35267183,
+completed exit 0:0 in 12 seconds; its source and raw result are retained.
+
+All four assembler executions and assessments completed. Every assembly was
+incomplete under the fixed 99% longest-alignment endpoint. Identity was 1.0 on the
+eligible longest alignments. These measurements are retained without parameter
+tuning or causal claims about the reasons for incompleteness. This is baseline
+validation, not the completed scientific panel or a headline ranking.
+
+A reporting-only repair added explicit purpose/headline exclusion fields to TSV
+and manifest exports. Resume reused all 13 compute tasks and submitted only a
+new export. Result objects and all numerical scores were verified unchanged.
+HTML, JSON, TSV and manifest consistently exclude the baseline from headlines.
+All 44 retained-file checksums and local report links passed; all 85 tests passed.
+
+Cleanup was checked in dry-run mode only. Work and frozen inputs remain on the
+cluster; reference caches and final assemblies/graphs are retained. Source
+receipts, the full-input audit and compact verification are tracked in Git;
+the full local report bundle is under the ignored directory
+`evidence/standard-runs/standard-baseline-v1/bundle/`.
+
+- [Reference admission](reference-admission.md)
+- [Baseline verification](../evidence/standard-baseline-verification.json)
+- [Full-input audit](../evidence/standard-input-contract-audit.json)

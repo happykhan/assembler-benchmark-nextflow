@@ -1,0 +1,104 @@
+{
+  "admission_scope": "Exact published reference sequence as simulation truth; not independently validated biological truth for a real isolate",
+  "admitted_date": "2026-11-11",
+  "assembly_accession": "GCF_000009045.1",
+  "attribution": [
+    {
+      "citation": "Barbe et al. (2009), From a consortium sequence to a unified sequence: the Bacillus subtilis 168 reference genome a decade later.",
+      "url": "https://doi.org/10.1099/mic.0.027839-0"
+    },
+    {
+      "citation": "Belda et al. (2013), An updated metabolic view of the Bacillus subtilis 168 genome.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23429746/"
+    }
+  ],
+  "canonical_fasta_sha256": "2680ee8c5663aa8de28159faa7b97b1adaa85e2547a45083ab9f6da40c45ee1d",
+  "canonicalisation": "Original accession IDs and native sequence order; uppercase DNA; circular=true header; 80-base wrapping; no slicing, rotation or sequence changes",
+  "data_usage": {
+    "dataset_specific_licence": null,
+    "policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+    "statement": "NCBI molecular data usage policy recorded; no dataset-specific Creative Commons or public-domain licence is asserted."
+  },
+  "decompressed_source_fasta_sha256": "59c09816fb55fb1a0b42d0715f627bb42018a19c6bf933c9cb37f6058ee4737e",
+  "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+  "molecules": [
+    {
+      "accession": "NC_000964.3",
+      "aliases": [
+        "AL009126.3"
+      ],
+      "ambiguous_bases": 0,
+      "gc_bases": 1834396,
+      "gc_fraction": 0.43514408130171556,
+      "length_bp": 4215606,
+      "sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
+      "topology": "circular",
+      "type": "chromosome"
+    }
+  ],
+  "reference_id": "bsub-168-whole",
+  "schema_version": 1,
+  "source_payloads": [
+    {
+      "bytes": 1248396,
+      "cache_file": "references/admission-evidence/bsub-168-whole_genomic.fna.gz",
+      "publisher_md5": "87378255941a61ec4b4384af8ba28ff5",
+      "publisher_md5_verified": true,
+      "role": "genomic.fna.gz",
+      "sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz"
+    },
+    {
+      "bytes": 1318,
+      "cache_file": "references/admission-evidence/bsub-168-whole_assembly_report.txt",
+      "publisher_md5": "a0f5297942bdd4743b0594ee0dfd5f94",
+      "publisher_md5_verified": true,
+      "role": "assembly_report.txt",
+      "sha256": "2db5c1fe3c907e9ee6e4a85ffce4b94b7325464313761dc5e3f60501d3a44836",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_assembly_report.txt"
+    },
+    {
+      "bytes": 3391532,
+      "cache_file": "references/admission-evidence/bsub-168-whole_genomic.gbff.gz",
+      "publisher_md5": "ae52d340b0822757c619f3cde152e785",
+      "publisher_md5_verified": true,
+      "role": "genomic.gbff.gz",
+      "sha256": "cf958f2c986289f4edc7c94b7cd6f625a4a4af16a3f0f67620fc9de67e670c0e",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.gbff.gz"
+    },
+    {
+      "bytes": 5355,
+      "cache_file": "references/admission-evidence/bsub-168-whole_assembly_stats.txt",
+      "publisher_md5": "13e783b93906890563382166af5b7d08",
+      "publisher_md5_verified": true,
+      "role": "assembly_stats.txt",
+      "sha256": "1f9c363403ebbde169b5e5651de95f9934b2b051b99bf728c9c9536e05b6319b",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_assembly_stats.txt"
+    },
+    {
+      "bytes": 1167,
+      "cache_file": "references/admission-evidence/bsub-168-whole_md5checksums.txt",
+      "role": "publisher_md5_index",
+      "sha256": "42b6ae208e865fdd53f64e7485d258f2960e37a3f1eafa2da7d7d19075e8f829",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/md5checksums.txt"
+    },
+    {
+      "bytes": 1248416,
+      "cache_file": "references/admission-evidence/bsub-168-whole_alias_genomic.fna.gz",
+      "role": "independent_accession_alias_fasta",
+      "sha256": "1d38ed5332ad33d7a47bb99ac5364344834130b2c40153c2a9343fe0f574391a",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/009/045/GCA_000009045.1_ASM904v1/GCA_000009045.1_ASM904v1_genomic.fna.gz"
+    }
+  ],
+  "status": "admitted",
+  "validation": {
+    "assembly_report_sequence_rows": 2,
+    "fasta_record_count": 1,
+    "genbank_locus": "LOCUS       NC_000964            4215606 bp    DNA     circular CON 12-FEB-2021",
+    "genbank_record_count": 1,
+    "independent_alias_sequence_equal": true,
+    "inventory_note": "B.subtilis report contains two alias representations of one independently sequence-matched chromosome.",
+    "source_fasta_equals_genbank_origin": true,
+    "unique_admitted_molecules": 1
+  }
+}

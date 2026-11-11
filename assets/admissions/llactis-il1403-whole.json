@@ -1,0 +1,104 @@
+{
+  "admission_scope": "Exact published reference sequence as simulation truth; not independently validated biological truth for a real isolate",
+  "admitted_date": "2026-11-11",
+  "assembly_accession": "GCA_000006865.1",
+  "attribution": [
+    {
+      "citation": "Bolotin et al. (2001), The complete genome sequence of the lactic acid bacterium Lactococcus lactis ssp. lactis IL1403.",
+      "url": "https://doi.org/10.1101/gr.169701"
+    },
+    {
+      "citation": "NCBI BioProject PRJNA72, original plasmid-free laboratory derivative and assembly GCA_000006865.1.",
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/72"
+    }
+  ],
+  "canonical_fasta_sha256": "e79b9aa32f75879924d05b193e7ad3f5e52ed1fcdfbad039f3da162405990e74",
+  "canonicalisation": "Original accession IDs and native sequence order; uppercase DNA; circular=true header; 80-base wrapping; no slicing, rotation or sequence changes",
+  "data_usage": {
+    "dataset_specific_licence": null,
+    "policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+    "statement": "NCBI molecular data usage policy recorded; no dataset-specific Creative Commons or public-domain licence is asserted."
+  },
+  "decompressed_source_fasta_sha256": "6bcef9b77ef2ced034a32176bc6a6142430b24287facf6aa9d83cc3478194d7a",
+  "download_sha256": "e6e445dfc5b9171523b3e5c7afb521bf5adbac7d2f6e6ed27cc5a3eddd19c4c7",
+  "molecules": [
+    {
+      "accession": "AE005176.1",
+      "aliases": [
+        "NC_002662.1"
+      ],
+      "ambiguous_bases": 0,
+      "gc_bases": 835748,
+      "gc_fraction": 0.3532938308387467,
+      "length_bp": 2365589,
+      "sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
+      "topology": "circular",
+      "type": "chromosome"
+    }
+  ],
+  "reference_id": "llactis-il1403-whole",
+  "schema_version": 1,
+  "source_payloads": [
+    {
+      "bytes": 689890,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_genomic.fna.gz",
+      "publisher_md5": "dc0c0640f4642915fad2f8c5e243a012",
+      "publisher_md5_verified": true,
+      "role": "genomic.fna.gz",
+      "sha256": "e6e445dfc5b9171523b3e5c7afb521bf5adbac7d2f6e6ed27cc5a3eddd19c4c7",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_genomic.fna.gz"
+    },
+    {
+      "bytes": 1150,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_assembly_report.txt",
+      "publisher_md5": "9a751e3ba1455c34b8fdcd266c899fe5",
+      "publisher_md5_verified": true,
+      "role": "assembly_report.txt",
+      "sha256": "17f019a851c8a8af788d4aff3b01c2920d0fe9e69bbb572383068725327f29f7",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_assembly_report.txt"
+    },
+    {
+      "bytes": 1678273,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_genomic.gbff.gz",
+      "publisher_md5": "48add509c1aa89f486b78e5bec130b57",
+      "publisher_md5_verified": true,
+      "role": "genomic.gbff.gz",
+      "sha256": "7aa0eb42d086cf91bee99e040955dd813a8e313e89d2a323b73ca13a1069a29a",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_genomic.gbff.gz"
+    },
+    {
+      "bytes": 5260,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_assembly_stats.txt",
+      "publisher_md5": "6651de1b34d7bca528b35a3ccb3f1d9c",
+      "publisher_md5_verified": true,
+      "role": "assembly_stats.txt",
+      "sha256": "c76cd5361326c556a70f6fc42ca4b2e061d98148fc0d4d7cf7582f7032cc580d",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_assembly_stats.txt"
+    },
+    {
+      "bytes": 1082,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_md5checksums.txt",
+      "role": "publisher_md5_index",
+      "sha256": "352146e8782939950adc38ea4d065c329f7f0a53dcd07c7ef02e420da28ec33c",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/md5checksums.txt"
+    },
+    {
+      "bytes": 689895,
+      "cache_file": "references/admission-evidence/llactis-il1403-whole_alias_genomic.fna.gz",
+      "role": "independent_accession_alias_fasta",
+      "sha256": "8bca93773083175003aade7a4b82dbb2fae16e167940f3a69249a754ea3bbb86",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/865/GCF_000006865.1_ASM686v1/GCF_000006865.1_ASM686v1_genomic.fna.gz"
+    }
+  ],
+  "status": "admitted",
+  "validation": {
+    "assembly_report_sequence_rows": 1,
+    "fasta_record_count": 1,
+    "genbank_locus": "LOCUS       AE005176             2365589 bp    DNA     circular BCT 30-JAN-2014",
+    "genbank_record_count": 1,
+    "independent_alias_sequence_equal": true,
+    "inventory_note": "Original assembly report, FASTA and GenBank contain one chromosome; BioProject72 identifies a plasmid-free laboratory derivative.",
+    "source_fasta_equals_genbank_origin": true,
+    "unique_admitted_molecules": 1
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "limitations": [
+    "Coordinate and strand conventions are those of installed Badread0.4.2; mismatch positions are direct comparison, not inferred edit-operation counts.",
+    "This audit verifies input sequences, not the cause of any assembly outcome."
+  ],
+  "method": "Every realised read compared byte-for-byte with the prefix of its declared Badread source fragment, using strand-specific circular reference coordinates; budget-trimmed final reads handled explicitly.",
+  "results": [
+    {
+      "base_budget_matches_simulation": true,
+      "case_id": "standard-llactis-il1403-baseline",
+      "circular_wrap_reads": 33,
+      "coverage": 30.0,
+      "directory": "/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/df/d3e3ba314266db89fd05585888d538",
+      "exact_reference_prefix_reads": 7114,
+      "examples": [],
+      "minus_strand_reads": 3606,
+      "nonidentical_positions": 0,
+      "nonidentical_reads": 0,
+      "plus_strand_reads": 3508,
+      "read_count": 7114,
+      "read_count_matches_simulation": true,
+      "reads_hash_matches_simulation": true,
+      "reads_sha256": "40ea6598b91b97078c333f2aaf3426b9f8ede61703d6ef2c4351f212ef317f84",
+      "reference_hash_matches_simulation": true,
+      "reference_sha256": "e79b9aa32f75879924d05b193e7ad3f5e52ed1fcdfbad039f3da162405990e74",
+      "total_bases": 70967670,
+      "trimmed_budget_reads": 1,
+      "verified_error_free": true
+    },
+    {
+      "base_budget_matches_simulation": true,
+      "case_id": "standard-bsub-168-baseline",
+      "circular_wrap_reads": 29,
+      "coverage": 30.0,
+      "directory": "/well/aanensen/users/rva470/assembler-benchmark-nextflow/work/standard-baseline-v1/8d/dac1d9a5f6457d560d411792f3cef3",
+      "exact_reference_prefix_reads": 12670,
+      "examples": [],
+      "minus_strand_reads": 6303,
+      "nonidentical_positions": 0,
+      "nonidentical_reads": 0,
+      "plus_strand_reads": 6367,
+      "read_count": 12670,
+      "read_count_matches_simulation": true,
+      "reads_hash_matches_simulation": true,
+      "reads_sha256": "9be39d89a7bf6e3bc803026b0fd000622a816fbdd4b30231ae23b74d3a8b3c5f",
+      "reference_hash_matches_simulation": true,
+      "reference_sha256": "2680ee8c5663aa8de28159faa7b97b1adaa85e2547a45083ab9f6da40c45ee1d",
+      "total_bases": 126468180,
+      "trimmed_budget_reads": 1,
+      "verified_error_free": true
+    }
+  ],
+  "schema_version": 1,
+  "status": "verified"
+}

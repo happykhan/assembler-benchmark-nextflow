@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run pinned Badread and preserve exact-base, reproducible Quick fixtures."""
+"""Run pinned Badread with exact base budgets and verified reference bindings."""
 import argparse
 import json
 import math
@@ -79,9 +79,35 @@ def mix_modes(sources, output, seed):
         remaining[index] -= 1
 
 
-def simulate(reference, case, destination, metadata):
+def verify_reference(reference, case, provenance_path=None):
+    """Whole-genome baselines cannot silently consume a Quick fragment."""
+    if provenance_path is None:
+        if case.get('preset') == 'standard':
+            raise ValueError('Standard simulation requires verified reference provenance')
+        return None
+    provenance = json.loads(Path(provenance_path).read_text())
+    if provenance.get('reference_sha256') != digest(reference):
+        raise ValueError('Simulation reference differs from its preparation hash')
+    if provenance.get('id') != case.get('reference_id'):
+        raise ValueError('Simulation reference ID differs from the selected case')
+    if case.get('preset') == 'standard':
+        if provenance.get('mode') != 'whole_genome' or provenance.get('status') != 'admitted':
+            raise ValueError('Standard simulation requires an admitted whole-genome reference')
+        molecules = provenance.get('molecules', [])
+        if len(molecules) != 1 or molecules[0].get('type') != 'chromosome':
+            raise ValueError('Initial Standard baseline supports one verified chromosome only')
+        if molecules[0].get('topology') != 'circular':
+            raise ValueError('Initial Standard baseline requires verified native circular topology')
+        records = [line.strip() for line in Path(reference).read_text().splitlines() if line.startswith('>')]
+        if len(records) != 1 or 'circular=true' not in records[0].split():
+            raise ValueError('Whole-genome FASTA does not declare native circular topology')
+    return provenance
+
+
+def simulate(reference, case, destination, metadata, reference_provenance=None):
     validate_case(case)
     reference = Path(reference).resolve()
+    provenance = verify_reference(reference, case, reference_provenance)
     destination = Path(destination).resolve()
     metadata = Path(metadata).resolve()
     if destination.exists() or metadata.exists():
@@ -129,6 +155,9 @@ def simulate(reference, case, destination, metadata):
                   'simulator_source_sha256': digest(Path(__file__)),
                   'reference_sha256': digest(reference), 'reads_sha256': digest(destination),
                   'reference_bases': genome_bases, 'target_bases': target,
+                  'reference_provenance_sha256': digest(reference_provenance) if reference_provenance else None,
+                  'reference_mode': provenance.get('mode', 'quick_fragment') if provenance else 'quick_fixture',
+                  'reference_topology': [m['topology'] for m in provenance.get('molecules', [])] if provenance else [],
                   'observed': measured, 'modes': observed_modes, 'commands': commands,
                   'simulator': 'Badread', 'version': version,
                   'method': 'Error-free uniformly sampled reference reads; separate seeded length modes, uniformly interleaved using the case seed; final read per mode trimmed to exact base budget',
@@ -146,5 +175,6 @@ if __name__ == '__main__':
     parser.add_argument('--case-json', required=True)
     parser.add_argument('--out', required=True)
     parser.add_argument('--metadata', required=True)
+    parser.add_argument('--reference-provenance')
     args = parser.parse_args()
-    simulate(args.reference, json.loads(args.case_json), args.out, args.metadata)
+    simulate(args.reference, json.loads(args.case_json), args.out, args.metadata, args.reference_provenance)

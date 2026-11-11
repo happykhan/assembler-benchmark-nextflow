@@ -93,6 +93,8 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None):
     manifest = {'schema_version': 1, 'run_id': run_id, 'complete': complete,
                 'expected_slots': expected_slots, 'result_count': len(records),
                 'presets': sorted({r['preset'] for r in records}),
+                'purposes': sorted({r['case'].get('purpose', 'unspecified') for r in records}),
+                'headline_eligible': all(r.get('headline_eligible', False) for r in records),
                 'retention': {'assemblies': sorted(assemblies), 'graphs': sorted(graphs)},
                 'files': {p.relative_to(output).as_posix(): sha256(p)
                           for p in sorted(output.rglob('*')) if p.is_file()}}
@@ -144,6 +146,8 @@ def rows(records):
         for molecule in molecules:
             row = {'case_id': record['case']['id'], 'group': record['case']['group'],
                    'preset': record['preset'], 'assembler': record['assembler'],
+                   'purpose': record['case'].get('purpose', 'unspecified'),
+                   'headline_eligible': record.get('headline_eligible', False),
                    'execution_status': record['execution']['status'],
                    'assessment_status': record['assessment']['status'],
                    'sequence_outcome': record['sequence_outcome'],
@@ -200,7 +204,11 @@ def render_html(records, expected_slots, run_id):
                      display(record['resources'].get('assessment_mapper_process_tree_peak_rss_bytes'), 1 / 1024**2, ' MiB')))
                     + f'<td>{link}<a href="{escape(evidence, quote=True)}">Evidence</a></td></tr>')
     quick = any(r['preset'] == 'quick' for r in records)
-    label = 'Quick workflow check — excluded from headline comparisons' if quick else 'Standard benchmark'
+    baseline = any(r['case'].get('purpose') == 'baseline_validation' for r in records)
+    label = ('Quick workflow check — excluded from headline comparisons' if quick else
+             'Standard whole-genome baseline validation — excluded from headline comparisons' if baseline else
+             'Standard benchmark' if all(r.get('headline_eligible') for r in records) else
+             'Standard validation — excluded from headline comparisons')
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Assembly benchmark: {escape(run_id)}</title>

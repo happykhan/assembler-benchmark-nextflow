@@ -16,13 +16,13 @@ Read modes are deterministically interleaved.
 first 200,000 bases of the checksummed *Bacillus subtilis* 168 chromosome
 NC_000964.3, treated as a linear fixture. It is neither a whole-genome benchmark
 nor part of a scientific ranking. Uniform error-free simulation does not model
-Nanopore sequencing bias. Standard is deliberately rejected until its scientific
-panel is curated and admitted.
+Nanopore sequencing bias. A small Standard whole-genome baseline is now admitted
+for two checked chromosomes; the full scientific panel remains unadmitted.
 
 The five agreed groups for Standard are plasmids, GC/composition, repeats/genome
 structure, read quality/sampling, and reproducibility. Currently only the Quick
-read-quality fixtures are implemented. Real-data admission follows the simulated
-end-to-end implementation.
+read-quality fixtures and the two-reference Standard baseline are implemented.
+Real-data admission follows the simulated end-to-end implementation.
 
 ## Run Quick
 
@@ -79,7 +79,7 @@ Copy the `references` directory to the execution host, then add `--offline` to t
 Nextflow arguments and point the launcher at `--reference-dir /shared/references`.
 Offline preparation rechecks the source checksum; missing or modified files stop
 the workflow. Online mode runs the same preparation stage on the compute executor.
-Python preparation requires Python 3.10 or later; the Pixi environment provides it.
+Python preparation requires Python 3.11 or later; the Pixi environment provides it.
 
 ## Outputs and cleanup
 
@@ -93,7 +93,7 @@ Completeness, measured identity/indels, execution state, time and RAM remain
 separate. Structural correctness is explicitly unmeasured in this first slice.
 Software errors, infrastructure errors and assessment errors are distinguished;
 none establishes sequence absence. Assembly time includes verification; downloads,
-simulation and scheduler waiting are excluded. RAM is sampled process-tree RSS,
+environment provisioning, simulation and scheduler waiting are excluded. RAM is sampled process-tree RSS,
 which can double-count shared pages; mapper RAM is reported separately.
 
 Inspect cleanup only after a complete, verified export:
@@ -141,12 +141,34 @@ resource policy and expected result slots. Typos, duplicate versions, changed
 plans and unadmitted groups stop before assembly scheduling. A dedicated first
 Nextflow task independently validates the plan before any reference preparation.
 
-The [Standard proposal](docs/standard-panel-design.md) describes four candidate
-whole-genome references across the five groups. Candidates are not admitted
-cases, and Standard execution remains blocked until its evidence gates pass.
+The [Standard proposal](docs/standard-panel-design.md) describes the larger
+five-group panel. Two references are now admitted for a small whole-genome
+baseline; the remaining candidates and scenario contrasts are not admitted. See
+[reference admission](docs/reference-admission.md) and
+[the Standard baseline](docs/standard-baseline.md).
 
 To prepare software before using compute nodes without network access, freeze a
 plan and run `python bin/prepare-environments.py --plan selected-plan.json --out environment-preparation.json`
 on the shared execution filesystem. Reference preparation remains a separate
 checksummed cache step. Environment provisioning is recorded separately from
 assembly/assessment time.
+
+## Run the admitted Standard baseline
+
+The baseline uses the full native circular chromosomes of *B. subtilis* 168 and
+*L. lactis* IL1403, with exact 30× error-free read budgets and four result slots
+for the initial two assembler versions. It is baseline validation, excluded from
+headline comparisons; structural correctness remains unmeasured.
+
+```bash
+pixi run --locked --manifest-path environments/pixi.toml python bin/launch.py \
+  --run-id standard-001 --preset standard \
+  --outdir results/standard-001 --work-dir work/standard-001 \
+  -- -profile bmrc,pixi
+```
+
+Online mode downloads and validates the admitted source archives. For offline
+nodes, run the preparation command above once for each ID `bsub-168-whole` and
+`llactis-il1403-whole`, copy the cache to the shared filesystem, and add `--offline`.
+Whole preparation rejects changed hashes, molecule inventories, truncation and
+Quick fragments. Raw sources and admission metadata remain retained.

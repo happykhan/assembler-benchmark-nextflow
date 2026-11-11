@@ -14,6 +14,13 @@ RESOURCE_POLICY = {
     'assembly': {'cpus': 2, 'time_minutes': 30, 'default_memory_gb': 4,
                  'memory_gb_by_tool': {'flye': 16, 'raven': 4}},
 }
+STANDARD_RESOURCE_POLICY = {
+    'queue_capacity': 1000,
+    'assembly': {'cpus': 4, 'time_minutes': 240, 'default_memory_gb': 16,
+                 'memory_gb_by_tool': {'flye': 16, 'raven': 16}},
+    'simulation': {'cpus': 1, 'time_minutes': 120},
+}
+
 
 
 def identifier(value, label):
@@ -50,14 +57,59 @@ def unique_rows(rows, label):
     return indexed
 
 
-def validate_case(case, groups, references):
+def validate_standard_reference(reference):
+    """The first Standard slice only admits checked whole chromosomes."""
+    from .references import validate_reference_definition
+
+    validate_reference_definition(reference)
+    if reference.get('status') != 'admitted' or reference.get('preparation') != 'whole_genome':
+        raise ValueError('Standard reference is not admitted as a whole genome')
+    if 'quick_slice_bases' in reference or reference.get('purpose') == 'workflow_check':
+        raise ValueError('Quick fragments cannot be Standard references')
+    molecules = reference.get('molecules', [])
+    if len(molecules) != 1 or molecules[0].get('type') != 'chromosome':
+        raise ValueError('Initial Standard baseline admits one chromosome per isolate')
+    if molecules[0].get('topology') != 'circular':
+        raise ValueError('Initial Standard baseline requires admitted native circular topology')
+    if molecules[0].get('ambiguous_bases') != 0:
+        raise ValueError('Initial Standard baseline requires an unambiguous reference chromosome')
+    return reference
+
+
+def admission_sources(project, reference):
+    """Bind the retained admission receipt; it is evidence, not a live lookup."""
+    name = reference.get('admission_receipt')
+    checksum = reference.get('admission_receipt_sha256')
+    if not isinstance(name, str):
+        raise ValueError('Standard reference has no admission receipt')
+    relative = Path(name)
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('Admission receipt must be a project-relative path')
+    path = Path(project) / relative
+    if not path.resolve().is_relative_to(Path(project).resolve()) or not path.is_file():
+        raise ValueError('Admission receipt is missing or escapes the project')
+    if not isinstance(checksum, str) or digest(path) != checksum:
+        raise ValueError('Reference admission receipt checksum mismatch')
+    receipt = load(path)
+    if receipt.get('reference_id') != reference['id']:
+        raise ValueError('Admission receipt belongs to a different reference')
+    for field in ('download_sha256', 'canonical_fasta_sha256', 'molecules'):
+        if receipt.get(field) != reference.get(field):
+            raise ValueError('Reference admission receipt binding mismatch: ' + field)
+    return name
+
+
+def validate_case(case, groups, references, preset='quick'):
     identifier(case.get('id'), 'case ID')
     if case.get('group') not in groups:
         raise ValueError('Case uses an unknown group: ' + case['id'])
     if case.get('reference_id') not in references:
         raise ValueError('Case uses an unknown reference: ' + case['id'])
-    if case.get('preset') != 'quick' or case.get('purpose') != 'workflow_check' or case.get('headline_eligible') is not False:
-        raise ValueError('Quick case must remain an excluded workflow check: ' + case['id'])
+    purpose = 'workflow_check' if preset == 'quick' else 'baseline_validation'
+    if case.get('preset') != preset or case.get('purpose') != purpose or case.get('headline_eligible') is not False:
+        raise ValueError(preset.title() + ' case must retain its declared non-headline purpose: ' + case['id'])
+    if preset == 'standard':
+        validate_standard_reference(references[case['reference_id']])
     for field in ('coverage', 'length_mean', 'length_sd'):
         value = case.get(field)
         if (not isinstance(value, (float, int)) or isinstance(value, bool)
@@ -85,18 +137,24 @@ def validate_case(case, groups, references):
                  'coverage', 'seed', 'length_mean', 'length_sd', 'short_fraction',
                  'short_length_mean', 'short_length_sd'}
     if set(case) - supported:
-        raise ValueError('Unsupported Quick simulation fields: ' + ', '.join(sorted(set(case) - supported)))
+        raise ValueError('Unsupported ' + preset + ' simulation fields: ' + ', '.join(sorted(set(case) - supported)))
 
 
-def catalogues(project):
+def catalogues(project, preset='quick'):
     project = Path(project)
     groups = unique_rows(load(project / 'assets/groups.json')['groups'], 'group')
     references = unique_rows(load(project / 'assets/references.json')['references'], 'reference')
-    cases = unique_rows(load(project / 'assets/quick.json'), 'case')
+    manifest = project / ('assets/' + preset + '.json')
+    if not manifest.is_file():
+        raise ValueError(preset.title() + ' manifest is not admitted')
+    cases = unique_rows(load(manifest), 'case')
     for case in cases.values():
-        validate_case(case, groups, references)
-        if groups[case['group']].get('quick_status') != 'implemented':
-            raise ValueError('Quick case belongs to an unimplemented group: ' + case['id'])
+        validate_case(case, groups, references, preset)
+        if preset == 'standard':
+            admission_sources(project, references[case['reference_id']])
+        admitted_status = 'implemented' if preset == 'quick' else 'baseline_admitted'
+        if groups[case['group']].get(preset + '_status') != admitted_status:
+            raise ValueError(preset.title() + ' case belongs to an unadmitted group: ' + case['id'])
     registry = load_registry(project / 'assets/assemblers.json')
     return groups, references, cases, registry
 
@@ -104,9 +162,18 @@ def catalogues(project):
 def catalogue(project):
     """List choices without creating a run or downloading any data."""
     groups, references, cases, registry = catalogues(project)
+    standard_status, standard_cases, admission_error = 'not_admitted', [], None
+    try:
+        _, _, standard, _ = catalogues(project, 'standard')
+        standard_cases = list(standard.values())
+        standard_status = 'baseline_admitted'
+    except (ValueError, OSError, KeyError) as error:
+        admission_error = str(error)
     return {'schema_version': 1, 'scope': 'single_isolate_bacterial_long_read',
-            'presets': {'quick': 'workflow_check', 'standard': 'not_admitted'},
-            'groups': list(groups.values()), 'cases': list(cases.values()),
+            'presets': {'quick': 'workflow_check', 'standard': standard_status},
+            'standard_scope': 'Small simulated baseline validation; full scientific panel is not admitted',
+            'standard_admission_error': admission_error,
+            'groups': list(groups.values()), 'cases': list(cases.values()) + standard_cases,
             'references': list(references.values()), 'aliases': registry['aliases'],
             'assemblers': list(registry['assemblers'].values())}
 
@@ -118,19 +185,18 @@ def plan_digest(plan):
 
 def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None):
     project = Path(project).resolve()
-    if preset != 'quick':
-        if preset == 'standard':
-            raise ValueError('Standard is not admitted yet; curate and validate its scientific panel first')
+    if preset not in ('quick', 'standard'):
         raise ValueError('Unknown preset: ' + str(preset))
-    group_rows, reference_rows, case_rows, registry = catalogues(project)
+    group_rows, reference_rows, case_rows, registry = catalogues(project, preset)
     selected_groups, selected_cases = tokens(groups, 'group'), tokens(cases, 'case')
     for requested, known, label in ((selected_groups, group_rows, 'group'), (selected_cases, case_rows, 'case')):
         unknown = set(requested) - set(known)
         if unknown:
             raise ValueError('Unknown ' + label + ' selection: ' + ', '.join(sorted(unknown)))
-    unavailable = [g for g in selected_groups if group_rows[g].get('quick_status') != 'implemented']
+    admitted_status = 'implemented' if preset == 'quick' else 'baseline_admitted'
+    unavailable = [g for g in selected_groups if group_rows[g].get(preset + '_status') != admitted_status]
     if unavailable:
-        raise ValueError('Groups are not implemented in Quick: ' + ', '.join(unavailable))
+        raise ValueError('Groups are not admitted in ' + preset.title() + ': ' + ', '.join(unavailable))
     selected = [row for row in case_rows.values()
                 if (not selected_groups or row['group'] in selected_groups)
                 and (not selected_cases or row['id'] in selected_cases)]
@@ -145,8 +211,10 @@ def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None
         raise ValueError('Assembler selections resolve to the same immutable version ID')
     if any(row.get('status') != 'admitted' for row in definitions):
         raise ValueError('Selected assembler version is not admitted')
-    source_names = {'assets/quick.json', 'assets/groups.json', 'assets/references.json', 'assets/assemblers.json',
+    source_names = {'assets/' + preset + '.json', 'assets/groups.json', 'assets/references.json', 'assets/assemblers.json',
                     'environments/pixi.toml', 'environments/pixi.lock'}
+    if preset == 'standard':
+        source_names.update(admission_sources(project, reference_rows[case['reference_id']]) for case in selected)
     for definition in definitions:
         name = Path(definition['manifest'])
         if name.is_absolute() or '..' in name.parts:
@@ -157,14 +225,15 @@ def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None
     for definition in definitions:
         validate_environment(definition, project)
     reference_ids = sorted({row['reference_id'] for row in selected})
-    plan = {'schema_version': 1, 'preset': preset, 'purpose': 'workflow_check', 'headline_eligible': False,
+    purpose = 'workflow_check' if preset == 'quick' else 'baseline_validation'
+    plan = {'schema_version': 1, 'preset': preset, 'purpose': purpose, 'headline_eligible': False,
             'selection': {'groups': selected_groups, 'cases': selected_cases, 'assemblers': assembler_ids},
             'cases': selected, 'assemblers': assembler_ids,
             'assembler_definitions': {row['id']: row for row in definitions},
             'reference_ids': reference_ids,
             'references': {key: reference_rows[key] for key in reference_ids},
             'slots': [{'case_id': case['id'], 'assembler': assembler} for case in selected for assembler in assembler_ids],
-            'resource_policy': RESOURCE_POLICY,
+            'resource_policy': RESOURCE_POLICY if preset == 'quick' else STANDARD_RESOURCE_POLICY,
             'source_file_sha256': {name: digest(project / name) for name in sorted(source_names)}}
     plan['expected_slots'] = len(plan['slots'])
     # Isolate callers from shared constants and return a JSON-only snapshot.

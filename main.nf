@@ -48,10 +48,12 @@ process PREPARE_REFERENCE {
 
 process SIMULATE_READS {
     tag "${meta.id}"
-    cpus 1
+    cpus { simulationPolicy.cpus }
+    time { "${simulationPolicy.time_minutes} min" }
     input:
     tuple val(meta), path(reference), path(provenance)
     val sourceFingerprint
+    val simulationPolicy
     output:
     tuple val(meta), path(reference), path(provenance), path('reads.fastq'), path('simulation.json')
     script:
@@ -59,7 +61,7 @@ process SIMULATE_READS {
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
     bench-run python ${shellQuote(projectDir.toString() + '/bin/simulate-reads.py')} --reference ${shellQuote(reference)} \
-      --case-json ${spec} --out reads.fastq --metadata simulation.json
+      --case-json ${spec} --reference-provenance ${shellQuote(provenance)} --out reads.fastq --metadata simulation.json
     """
 }
 
@@ -124,7 +126,7 @@ process EXPORT_RESULTS {
 
 workflow {
     // A reporting repair must not rerun a cached assembler on unchanged inputs.
-    def referenceSource = sourceHash(projectDir, ['bin/prepare-reference.py', 'assets/references.json'])
+    def referenceSource = sourceHash(projectDir, ['bin/prepare-reference.py', 'benchlib/references.py', 'assets/references.json'])
     def simulationSource = sourceHash(projectDir, ['bin/simulate-reads.py', 'benchlib/io.py'])
     def assemblySource = sourceHash(projectDir, ['bin/run-assembler.py', 'benchlib/io.py', 'benchlib/process.py', 'benchlib/adapters.py', 'assets/assemblers.json'])
     def assessmentSource = sourceHash(projectDir, ['bin/assess-assembly.py', 'benchlib/assessment.py', 'benchlib/process.py'])
@@ -148,13 +150,13 @@ workflow {
     if (runtimeProfiles.any { it in ['docker', 'apptainer'] } && assemblerDefinitions.any { !it.container })
         error 'Selected versions have no admitted container images. Use the verified Pixi profile.'
     def validationSource = sourceHash(projectDir, ['bin/plan.py', 'benchlib/planning.py', 'benchlib/adapters.py',
-        'assets/assemblers.json', 'assets/quick.json', 'assets/references.json', 'assets/groups.json'])
+        'benchlib/references.py', 'assets/assemblers.json', 'assets/quick.json', 'assets/standard.json', 'assets/references.json', 'assets/groups.json'])
     VALIDATE_PLAN(plan, validationSource)
     def admittedReferences = Channel.fromList(spec.reference_ids).combine(VALIDATE_PLAN.out).map { id, admitted -> id }
     PREPARE_REFERENCE(admittedReferences, file("${projectDir}/assets/references.json"), referenceSource)
     def inputs = Channel.fromList(cases).map { tuple(it.reference_id, it) }
         .combine(PREPARE_REFERENCE.out, by: 0).map { id, meta, reference, provenance -> tuple(meta, reference, provenance) }
-    SIMULATE_READS(inputs, simulationSource)
+    SIMULATE_READS(inputs, simulationSource, spec.resource_policy.simulation ?: [cpus: 1, time_minutes: 30])
     ASSEMBLE(SIMULATE_READS.out.combine(Channel.fromList(assemblerDefinitions)), assemblySource)
     ASSESS(ASSEMBLE.out, assessmentSource)
     EXPORT_RESULTS(ASSESS.out.results.collect(), ASSESS.out.evidence.collect(), spec.expected_slots, plan, exportSource)

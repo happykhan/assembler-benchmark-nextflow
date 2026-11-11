@@ -67,7 +67,10 @@ def assess(args):
               'resources': {'assembler_wall_seconds': execution.get('elapsed_seconds'),
                             'assembler_process_tree_peak_rss_bytes': execution.get('process_tree_peak_rss_bytes'),
                             'memory_scope': 'Sampled sum of resident memory across the assembler process tree; shared pages may be counted more than once.'},
-              'limitations': ['Quick is a workflow check, excluded from headline comparisons.'] if case.get('preset', 'quick') == 'quick' else []}
+              'limitations': (['Quick is a workflow check, excluded from headline comparisons.']
+                             if case.get('preset', 'quick') == 'quick' else
+                             ['Initial whole-genome baseline validation, excluded from headline comparisons.']
+                             if case.get('purpose') == 'baseline_validation' else [])}
     try:
         result['provenance']['retained_graphs'] = retain_tool_evidence(execution, args.execution.parent, evidence)
         if execution.get('assembler') != args.assembler:
@@ -78,6 +81,11 @@ def assess(args):
             raise ValueError('Simulation/case binding differs or simulation is incomplete')
         if simulation.get('reference_sha256') != result['provenance']['reference_sha256']:
             raise ValueError('Simulation/reference hash binding differs')
+        if case.get('preset') == 'standard':
+            if provenance.get('mode') != 'whole_genome' or provenance.get('status') != 'admitted':
+                raise ValueError('Standard assessment requires an admitted whole-genome reference')
+            if simulation.get('reference_provenance_sha256') != sha256(args.reference_provenance):
+                raise ValueError('Standard simulation/preparation provenance binding differs')
         if execution.get('reads_sha256') != simulation.get('reads_sha256') or not execution.get('reads_sha256'):
             raise ValueError('Execution/simulation read hash binding differs')
         if execution.get('status') == 'completed':

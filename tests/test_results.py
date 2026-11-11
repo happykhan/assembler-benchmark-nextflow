@@ -1,5 +1,6 @@
 import importlib.util
 from contextlib import chdir
+import csv
 import json
 from pathlib import Path
 import tempfile
@@ -75,6 +76,56 @@ class FailureAndExportTests(unittest.TestCase):
                               execution=self.execution, simulation=self.simulation, reference_provenance=self.provenance,
                               case_json=json.dumps(self.case),
                               assembler='flye', cpus=1, out=self.directory / 'test.result.json')
+
+    def standard_baseline(self, reference_headline_eligible=False):
+        self.case.update(preset='standard', purpose='baseline_validation', headline_eligible=False)
+        self.args.case_json = json.dumps(self.case)
+        write_json(self.provenance, {'accession': 'test', 'reference_sha256': sha256(self.reference),
+                                    'mode': 'whole_genome', 'status': 'admitted',
+                                    'headline_eligible': reference_headline_eligible})
+        write_json(self.simulation, {'status': 'completed', 'case': self.case,
+                                    'reference_sha256': sha256(self.reference), 'reads_sha256': 'a' * 64,
+                                    'reference_provenance_sha256': sha256(self.provenance)})
+
+    def test_standard_baseline_scope_survives_tsv_roundtrip(self):
+        self.standard_baseline()
+        result = assess_cli.assess(self.args)
+        self.assertIs(result['headline_eligible'], False)
+        export_results([self.args.out], self.directory / 'bundle', 1, 'baseline')
+        with (self.directory / 'bundle/results.tsv').open() as stream:
+            table = csv.DictReader(stream, delimiter='\t')
+            self.assertIn('purpose', table.fieldnames)
+            self.assertIn('headline_eligible', table.fieldnames)
+            rows = list(table)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['preset'], 'standard')
+        self.assertEqual(rows[0]['purpose'], 'baseline_validation')
+        self.assertEqual(rows[0]['headline_eligible'].lower(), 'false')
+
+    def test_standard_baseline_is_not_promoted_by_preset_or_reference(self):
+        self.standard_baseline(reference_headline_eligible=True)
+        result = assess_cli.assess(self.args)
+        self.assertEqual(result['assessment']['status'], 'not_run')
+        self.assertIs(result['headline_eligible'], False)
+        self.assertIsNone(result['sequence_outcome'])
+        self.assertIn('baseline validation', ' '.join(result['limitations']))
+        export_results([self.args.out], self.directory / 'bundle', 1, 'baseline')
+        html = (self.directory / 'bundle/index.html').read_text()
+        self.assertIn('Standard whole-genome baseline validation', html)
+        self.assertIn('excluded from headline comparisons', html)
+
+    def test_standard_preparation_binding_failure_has_no_sequence_verdict(self):
+        self.standard_baseline()
+        simulation = json.loads(self.simulation.read_text())
+        simulation['reference_provenance_sha256'] = 'f' * 64
+        write_json(self.simulation, simulation)
+        result = assess_cli.assess(self.args)
+        self.assertEqual(result['assessment']['status'], 'error')
+        self.assertIn('preparation provenance binding differs', result['assessment']['error'])
+        self.assertIsNone(result['sequence_outcome'])
+        self.assertEqual(result['replicons'], [])
+        manifest = export_results([self.args.out], self.directory / 'bundle', 1, 'baseline')
+        self.assertFalse(manifest['complete'])
 
     def test_software_failure_is_accounted_without_sequence_absence(self):
         result = assess_cli.assess(self.args)
