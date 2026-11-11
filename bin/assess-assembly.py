@@ -121,7 +121,7 @@ def assess(args):
     result['resources']['assessment_wall_seconds'] = elapsed
     assembly_wall = execution.get('elapsed_seconds')
     result['resources']['workflow_wall_seconds'] = assembly_wall + elapsed if isinstance(assembly_wall, (int, float)) else None
-    result['resources']['wall_time_scope'] = 'Assembler verification/execution plus exact assessment; excludes downloads, simulation and scheduler waiting.'
+    result['resources']['wall_time_scope'] = 'Assembler verification/execution plus exact assessment; excludes downloads, environment provisioning, simulation and scheduler waiting.'
     write_json(output, result)
     return result
 

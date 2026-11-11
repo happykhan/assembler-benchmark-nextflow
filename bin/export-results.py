@@ -18,3 +18,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     manifest = export_results(args.results, args.out_dir, args.expected_slots, args.run_id, args.plan)
     print(f"Exported {manifest['result_count']}/{manifest['expected_slots']} slots; complete={manifest['complete']}")
+    sys.exit(0 if manifest['complete'] else 2)

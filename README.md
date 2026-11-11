@@ -37,7 +37,10 @@ pixi run --locked --manifest-path environments/pixi.toml python bin/launch.py \
   -- -profile local,pixi
 ```
 
-The launcher creates owned work markers and prevents concurrent cleanup. For
+The launcher freezes and validates the run plan, prepares selected locked Pixi
+environments serially, creates owned work markers and prevents concurrent cleanup.
+Compute tasks use already prepared environments with installation disabled; this
+does not throttle assembler jobs. Setup receipts are saved beside the report. For
 Cluster 3, use `-profile bmrc,pixi`; generic Slurm users use `slurm,pixi` plus their
 site account/partition configuration. Queue capacity is 1,000. No failed assembler
 is automatically retried. Use a distinct run ID/output/work directory for a new
@@ -48,17 +51,18 @@ Select existing cases and assemblers independently:
 ```bash
 pixi run --locked --manifest-path environments/pixi.toml python bin/launch.py \
   --run-id selected-001 --outdir results/selected-001 --work-dir work/selected-001 \
-  -- -profile local,pixi --cases quick-bimodal --assemblers raven
+  --cases quick-bimodal --assemblers raven-1.8.3 -- -profile local,pixi
 ```
 
-`--groups read-quality` selects the currently implemented group. Unsupported
+`--groups read-quality` (before the `--` separator) selects the currently implemented group. Unsupported
 selections fail rather than silently running a different panel. Add `-resume` to
 the same launch command to reuse verified Nextflow tasks. Source code, input bytes
 and the dependency lock participate in cache keys. Purging work prevents resume.
 
 Docker and Apptainer profiles are provided separately from executor profiles.
-They require building/publishing the included image and setting `--container_image`;
-these container paths have not yet been integration-tested. The verified initial
+They remain unadmitted until each selected assembler has a digest-pinned image
+in the registry. The pipeline rejects these profiles before scheduling when an
+image is absent; these container paths have not yet been integration-tested. The verified initial
 runtime is Linux Pixi on Slurm. Do not combine multiple runtime profiles.
 
 ## Prepare references before an offline run
@@ -111,11 +115,38 @@ python3 -m unittest discover -s tests -v
 
 Scientific dependencies are pinned in `environments/pixi.toml` and fully resolved
 in `environments/pixi.lock`. `assets/assemblers.json` lists the admitted initial
-versions; adapters validate actual executable versions before running. Adding a
-new assembler currently requires a tested adapter and environment/registry entry;
-arbitrary user-supplied commands are not accepted. Isolated per-version runtimes
-and Standard-panel expansion are subsequent work, not completed features.
+versions; adapters validate actual executable versions before running. Each immutable version has its own locked named environment. Adding a new
+version of an existing adapter requires a registry entry and pinned environment,
+without editing the pipeline; adding a new tool also requires a tested adapter.
+Arbitrary user-supplied commands are not accepted. See
+[adding assemblers](docs/adding-assemblers.md). Standard-panel expansion remains
+subsequent work.
 
 See [the literature review](docs/literature-review.md) for Wick/Holt, recent isolate
 long-read studies, multi-assembler workflows and engineering precedents, and
 [development verification](docs/verification.md) for actual run evidence.
+
+## Inspect and freeze a selection
+
+```bash
+python3 bin/plan.py --list
+python3 bin/plan.py --cases quick-bimodal --assemblers flye-2.9.6,raven-1.8.3 --out selected-plan.json
+```
+
+The launcher automatically creates the same frozen plan. Selections belong before
+the `--` separator; Nextflow options such as `-profile`, `-resume` and `--offline`
+belong after it. Alternatively, pass `--plan selected-plan.json` to the launcher.
+Plans bind exact version IDs, case/reference metadata, manifest/lock hashes,
+resource policy and expected result slots. Typos, duplicate versions, changed
+plans and unadmitted groups stop before assembly scheduling. A dedicated first
+Nextflow task independently validates the plan before any reference preparation.
+
+The [Standard proposal](docs/standard-panel-design.md) describes four candidate
+whole-genome references across the five groups. Candidates are not admitted
+cases, and Standard execution remains blocked until its evidence gates pass.
+
+To prepare software before using compute nodes without network access, freeze a
+plan and run `python bin/prepare-environments.py --plan selected-plan.json --out environment-preparation.json`
+on the shared execution filesystem. Reference preparation remains a separate
+checksummed cache step. Environment provisioning is recorded separately from
+assembly/assessment time.

@@ -135,6 +135,10 @@ def validate_bundle(bundle):
         elif assessment != 'not_run':
             raise ValueError('Software failure has an inconsistent assessment status')
     retention = manifest.get('retention', {})
+    if 'expected_slot_plan' in manifest:
+        expected = [(row.get('case_id'), row.get('assembler')) for row in manifest['expected_slot_plan']]
+        if len(expected) != len(set(expected)) or set(expected) != keys:
+            raise ValueError('Result identities differ from frozen expected slots')
     assemblies, graphs = retention.get('assemblies'), retention.get('graphs')
     if not isinstance(assemblies, list) or not isinstance(graphs, list):
         raise ValueError('Final assembly and graph retention must be explicit')

@@ -2,6 +2,10 @@ nextflow.enable.dsl = 2
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 
+def shellQuote(value) {
+    "'" + value.toString().replace("'", "'\"'\"'") + "'"
+}
+
 def sourceHash(project, names) {
     def digest = java.security.MessageDigest.getInstance('SHA-256')
     (names + ['environments/pixi.toml', 'environments/pixi.lock', 'bin/bench-run']).unique().sort().each { name ->
@@ -9,6 +13,19 @@ def sourceHash(project, names) {
         digest.update(file("${project}/${name}").bytes)
     }
     digest.digest().encodeHex().toString()
+}
+
+process VALIDATE_PLAN {
+    cpus 1
+    input:
+    path frozenPlan
+    val sourceFingerprint
+    output:
+    path 'admitted-plan.json'
+    script:
+    """
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/plan.py')} --validate ${shellQuote(frozenPlan)} --out admitted-plan.json
+    """
 }
 
 process PREPARE_REFERENCE {
@@ -24,8 +41,8 @@ process PREPARE_REFERENCE {
     def offline = params.offline ? '--offline' : ''
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${projectDir}/bin/prepare-reference.py --registry ${registry} \
-      --id '${referenceId}' --reference-dir '${params.reference_dir}' ${offline}
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/prepare-reference.py')} --registry ${shellQuote(registry)} \
+      --id '${referenceId}' --reference-dir ${shellQuote(params.reference_dir)} ${offline}
     """
 }
 
@@ -38,47 +55,51 @@ process SIMULATE_READS {
     output:
     tuple val(meta), path(reference), path(provenance), path('reads.fastq'), path('simulation.json')
     script:
-    def spec = JsonOutput.toJson(meta)
+    def spec = shellQuote(JsonOutput.toJson(meta))
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${projectDir}/bin/simulate-reads.py --reference ${reference} \
-      --case-json '${spec}' --out reads.fastq --metadata simulation.json
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/simulate-reads.py')} --reference ${shellQuote(reference)} \
+      --case-json ${spec} --out reads.fastq --metadata simulation.json
     """
 }
 
 process ASSEMBLE {
-    tag "${meta.id}/${assembler}"
-    memory { assembler == 'flye' ? '16 GB' : '4 GB' }
+    tag "${meta.id}/${assemblerDef.id}"
+    cpus { assemblerDef.resources.cpus }
+    memory { "${assemblerDef.resources.memory_gb} GB" }
+    time { "${assemblerDef.resources.time_minutes} min" }
     input:
-    tuple val(meta), path(reference), path(provenance), path(reads), path(simulation), val(assembler)
+    tuple val(meta), path(reference), path(provenance), path(reads), path(simulation), val(assemblerDef)
     val sourceFingerprint
     output:
-    tuple val(meta), path(reference), path(provenance), path(simulation), val(assembler), path('tool-output')
+    tuple val(meta), path(reference), path(provenance), path(simulation), val(assemblerDef), path('tool-output')
     script:
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${projectDir}/bin/run-assembler.py --assembler '${assembler}' \
-      --reads ${reads} --out-dir tool-output --cpus ${task.cpus}
+    export BENCH_PIXI_ENV='${assemblerDef.environment}'
+    export BENCH_PIXI_MANIFEST=${shellQuote(projectDir.toString() + '/' + assemblerDef.manifest)}
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/run-assembler.py')} --assembler '${assemblerDef.id}' \
+      --reads ${shellQuote(reads)} --out-dir tool-output --cpus ${task.cpus}
     """
 }
 
 process ASSESS {
-    tag "${meta.id}/${assembler}"
+    tag "${meta.id}/${assemblerDef.id}"
     cpus 1
     input:
-    tuple val(meta), path(reference), path(provenance), path(simulation), val(assembler), path(toolOutput)
+    tuple val(meta), path(reference), path(provenance), path(simulation), val(assemblerDef), path(toolOutput)
     val sourceFingerprint
     output:
     path '*.result.json', emit: results
     path '*.result.evidence', emit: evidence
     script:
-    def spec = JsonOutput.toJson(meta)
+    def spec = shellQuote(JsonOutput.toJson(meta))
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${projectDir}/bin/assess-assembly.py --reference ${reference} \
-      --assembly ${toolOutput}/assembly.fasta --execution ${toolOutput}/execution.json \
-      --simulation ${simulation} --reference-provenance ${provenance} \
-      --case-json '${spec}' --assembler '${assembler}' --out '${meta.id}__${assembler}.result.json'
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/assess-assembly.py')} --reference ${shellQuote(reference)} \
+      --assembly ${shellQuote(toolOutput.toString() + '/assembly.fasta')} --execution ${shellQuote(toolOutput.toString() + '/execution.json')} \
+      --simulation ${shellQuote(simulation)} --reference-provenance ${shellQuote(provenance)} \
+      --case-json ${spec} --assembler '${assemblerDef.id}' --out '${meta.id}__${assemblerDef.id}.result.json'
     """
 }
 
@@ -96,43 +117,45 @@ process EXPORT_RESULTS {
     script:
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${projectDir}/bin/export-results.py --results ${results.join(' ')} \
-      --out-dir bundle --expected-slots ${expectedSlots} --run-id '${params.run_id}' --plan ${plan}
+    bench-run python ${shellQuote(projectDir.toString() + '/bin/export-results.py')} --results ${results.collect { shellQuote(it) }.join(' ')} \
+      --out-dir bundle --expected-slots ${expectedSlots} --run-id '${params.run_id}' --plan ${shellQuote(plan)}
     """
 }
 
 workflow {
-    // Helper source and locked dependencies participate in every resume key.
-    def digest = java.security.MessageDigest.getInstance('SHA-256')
-    def sources = (file("${projectDir}/bin/*").findAll { it.isFile() } +
-                   file("${projectDir}/benchlib/*.py") + file("${projectDir}/assets/*.json") +
-                   [file("${projectDir}/main.nf"), file("${projectDir}/nextflow.config"),
-                    file("${projectDir}/environments/pixi.toml"), file("${projectDir}/environments/pixi.lock")])
-    sources.sort { it.toString() }.each { digest.update(it.getName().getBytes('UTF-8')); digest.update(it.bytes) }
-    def fingerprint = digest.digest().encodeHex().toString()
     // A reporting repair must not rerun a cached assembler on unchanged inputs.
     def referenceSource = sourceHash(projectDir, ['bin/prepare-reference.py', 'assets/references.json'])
     def simulationSource = sourceHash(projectDir, ['bin/simulate-reads.py', 'benchlib/io.py'])
-    def assemblySource = sourceHash(projectDir, ['bin/run-assembler.py', 'benchlib/io.py', 'benchlib/process.py'])
+    def assemblySource = sourceHash(projectDir, ['bin/run-assembler.py', 'benchlib/io.py', 'benchlib/process.py', 'benchlib/adapters.py', 'assets/assemblers.json'])
     def assessmentSource = sourceHash(projectDir, ['bin/assess-assembly.py', 'benchlib/assessment.py', 'benchlib/process.py'])
     def exportSource = sourceHash(projectDir, ['bin/export-results.py', 'benchlib/assessment.py', 'benchlib/report.py'])
-    if (params.preset != 'quick') error 'Standard is not admitted yet. Develop and validate Quick first.'
-    def cases = new JsonSlurper().parse(file("${projectDir}/assets/quick.json").toFile())
-    def registry = new JsonSlurper().parse(file("${projectDir}/assets/assemblers.json").toFile())
-    def selectedGroups = params.groups ? params.groups.tokenize(',') : []
-    def selectedCases = params.cases ? params.cases.tokenize(',') : []
-    cases = cases.findAll { (!selectedGroups || it.group in selectedGroups) && (!selectedCases || it.id in selectedCases) }
-    if (!cases) error 'No implemented Quick cases match this selection.'
-    def assemblers = params.assemblers.tokenize(',').unique()
-    if (!assemblers || assemblers.any { !registry.containsKey(it) }) error 'Unknown assembler; see assets/assemblers.json.'
-    def plan = file("${params.outdir}/selected-plan.json")
-    plan.parent.mkdirs()
-    plan.text = JsonOutput.prettyPrint(JsonOutput.toJson([schema_version: 1, cases: cases, assemblers: assemblers, workflow_source_sha256: fingerprint]))
-    PREPARE_REFERENCE(Channel.fromList(cases.collect { it.reference_id }.unique()), file("${projectDir}/assets/references.json"), referenceSource)
+    if (!params.plan) error 'Use bin/launch.py to freeze a plan, or provide --plan from bin/plan.py.'
+    def plan = file(params.plan, checkIfExists: true)
+    def spec = new JsonSlurper().parse(plan.toFile())
+    def cases = spec.cases
+    def assemblerDefinitions = spec.assemblers.collect { id ->
+        def definition = new LinkedHashMap(spec.assembler_definitions[id])
+        definition.resources = [cpus: spec.resource_policy.assembly.cpus,
+            memory_gb: spec.resource_policy.assembly.memory_gb_by_tool.get(definition.tool, spec.resource_policy.assembly.default_memory_gb),
+            time_minutes: spec.resource_policy.assembly.time_minutes]
+        def lockName = java.nio.file.Paths.get(definition.manifest).resolveSibling('pixi.lock').toString()
+        definition.manifest_sha256 = spec.source_file_sha256[definition.manifest]
+        definition.lock_sha256 = spec.source_file_sha256[lockName]
+        definition
+    }
+    def runtimeProfiles = workflow.profile.tokenize(',').findAll { it in ['pixi', 'docker', 'apptainer'] }
+    if (runtimeProfiles.size() > 1) error 'Choose exactly one runtime profile.'
+    if (runtimeProfiles.any { it in ['docker', 'apptainer'] } && assemblerDefinitions.any { !it.container })
+        error 'Selected versions have no admitted container images. Use the verified Pixi profile.'
+    def validationSource = sourceHash(projectDir, ['bin/plan.py', 'benchlib/planning.py', 'benchlib/adapters.py',
+        'assets/assemblers.json', 'assets/quick.json', 'assets/references.json', 'assets/groups.json'])
+    VALIDATE_PLAN(plan, validationSource)
+    def admittedReferences = Channel.fromList(spec.reference_ids).combine(VALIDATE_PLAN.out).map { id, admitted -> id }
+    PREPARE_REFERENCE(admittedReferences, file("${projectDir}/assets/references.json"), referenceSource)
     def inputs = Channel.fromList(cases).map { tuple(it.reference_id, it) }
         .combine(PREPARE_REFERENCE.out, by: 0).map { id, meta, reference, provenance -> tuple(meta, reference, provenance) }
     SIMULATE_READS(inputs, simulationSource)
-    ASSEMBLE(SIMULATE_READS.out.combine(Channel.fromList(assemblers)), assemblySource)
+    ASSEMBLE(SIMULATE_READS.out.combine(Channel.fromList(assemblerDefinitions)), assemblySource)
     ASSESS(ASSEMBLE.out, assessmentSource)
-    EXPORT_RESULTS(ASSESS.out.results.collect(), ASSESS.out.evidence.collect(), cases.size() * assemblers.size(), plan, exportSource)
+    EXPORT_RESULTS(ASSESS.out.results.collect(), ASSESS.out.evidence.collect(), spec.expected_slots, plan, exportSource)
 }

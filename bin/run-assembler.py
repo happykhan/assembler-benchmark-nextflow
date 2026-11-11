@@ -11,38 +11,44 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from benchlib.io import digest, fasta_lengths, save
 from benchlib.process import measured_run
+from benchlib.adapters import ADAPTERS, load_registry, resolve_assembler, validate_environment
 
 
-VERSIONS = {'flye': '2.9.6', 'raven': '1.8.3'}
+PROJECT = Path(__file__).resolve().parents[1]
+REGISTRY = PROJECT / 'assets/assemblers.json'
 
 
-def run(assembler, reads, directory, cpus):
+def run(assembler, reads, directory, cpus, registry_path=REGISTRY):
     if cpus < 1:
         raise ValueError('cpus must be positive')
+    definition = resolve_assembler(load_registry(registry_path), assembler)
+    adapter = ADAPTERS[definition['adapter']]
     reads = Path(reads).resolve()
     directory = Path(directory).resolve()
     directory.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
     record_path = directory / 'execution.json'
-    record = {'schema_version': 1, 'status': 'infrastructure_error', 'assembler': assembler,
-              'expected_version': VERSIONS[assembler], 'cpus': cpus,
+    record = {'schema_version': 1, 'status': 'infrastructure_error', 'assembler': definition['id'],
+              'tool': definition['tool'], 'adapter': definition['adapter'],
+              'environment': definition['environment'], 'manifest': definition['manifest'],
+              'expected_version': definition['version'], 'cpus': cpus,
               'started_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'automatic_retries': 0}
     try:
-        project = Path(__file__).resolve().parents[1]
-        record['environment_lock_sha256'] = digest(project / 'environments/pixi.lock')
+        project = PROJECT
+        manifest = validate_environment(definition, project)
+        record['environment_lock_sha256'] = digest(manifest.with_suffix('.lock'))
+        record['environment_manifest_sha256'] = digest(manifest)
+        record['registry_sha256'] = digest(registry_path)
         record['adapter_source_sha256'] = digest(Path(__file__).resolve())
         record['support_source_sha256'] = {
-            name: digest(project / name) for name in ('benchlib/io.py', 'benchlib/process.py')}
+            name: digest(project / name) for name in ('benchlib/io.py', 'benchlib/process.py', 'benchlib/adapters.py')}
         record['reads_sha256'] = digest(reads)
-        version = subprocess.check_output([assembler, '--version'], text=True, stderr=subprocess.STDOUT).strip()
+        version = subprocess.check_output([adapter.executable, '--version'], text=True, stderr=subprocess.STDOUT).strip()
         record['version'] = version
-        if version != VERSIONS[assembler] and not version.startswith(VERSIONS[assembler] + '-'):
+        if version != definition['version'] and not version.startswith(definition['version'] + '-'):
             raise ValueError('Pinned version mismatch: ' + version)
-        if assembler == 'flye':
-            command = ['flye', '--nano-raw', str(reads), '--out-dir', 'tool-output', '--threads', str(cpus)]
-        else:
-            command = ['raven', '--threads', str(cpus), '--graphical-fragment-assembly', 'assembly.gfa', str(reads)]
+        command = adapter.command(reads, cpus)
         record['command'] = command
         save(record_path, dict(record, status='running'))
         measurement = measured_run(command, directory / 'stdout.log', directory / 'stderr.log', directory)
@@ -53,7 +59,7 @@ def run(assembler, reads, directory, cpus):
             record['status'] = 'software_error'
             record['error'] = 'Assembler exited with non-zero status; original attempt retained without retry'
         else:
-            source = directory / ('tool-output/assembly.fasta' if assembler == 'flye' else 'stdout.log')
+            source = directory / adapter.assembly_relative
             assembly = directory / 'assembly.fasta'
             if source.is_file():
                 empty = source.stat().st_size == 0
@@ -62,9 +68,9 @@ def run(assembler, reads, directory, cpus):
                 shutil.copyfile(source, assembly)
                 record.update(status='completed', assembly_path='assembly.fasta', assembly_sha256=digest(assembly),
                               assembly_state='empty' if empty else 'nonempty')
-                graph = directory / ('tool-output/assembly_graph.gfa' if assembler == 'flye' else 'assembly.gfa')
+                graph = directory / adapter.graph_relative
                 if graph.is_file():
-                    if assembler == 'flye':
+                    if graph != directory / 'assembly.gfa':
                         shutil.copyfile(graph, directory / 'assembly.gfa')
                     record.update(graph_path='assembly.gfa', graph_sha256=digest(directory / 'assembly.gfa'))
             else:
@@ -83,10 +89,11 @@ def run(assembler, reads, directory, cpus):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--assembler', choices=sorted(VERSIONS), required=True)
+    parser.add_argument('--assembler', required=True, help='Admitted immutable version ID or declared alias')
+    parser.add_argument('--registry', type=Path, default=REGISTRY)
     parser.add_argument('--reads', required=True)
     parser.add_argument('--out-dir', required=True)
     parser.add_argument('--cpus', type=int, default=2)
     args = parser.parse_args()
-    result = run(args.assembler, args.reads, args.out_dir, args.cpus)
+    result = run(args.assembler, args.reads, args.out_dir, args.cpus, args.registry)
     sys.exit(1 if result['status'] == 'infrastructure_error' else 0)

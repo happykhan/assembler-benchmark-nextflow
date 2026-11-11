@@ -25,6 +25,9 @@ class LauncherTests(unittest.TestCase):
         self.outdir = self.root / 'results'
         self.reference = self.root / 'references'
         self.bundle = self.outdir / 'bundle'
+        runtime = patch.object(launch, 'prepare_environments', return_value={'status': 'prepared'})
+        self.prepare = runtime.start()
+        self.addCleanup(runtime.stop)
 
     def launch(self, extra=()):
         return launch.launch_run('quick-test', self.outdir, self.work, self.reference,
@@ -32,20 +35,24 @@ class LauncherTests(unittest.TestCase):
 
     def export_bundle(self):
         self.bundle.mkdir(parents=True)
-        results = [{'case': {'id': 'example'}, 'assembler': 'flye',
+        plan = json.loads((self.outdir / 'selected-plan.json').read_text())
+        results = [{'case': {'id': slot['case_id']}, 'assembler': slot['assembler'],
                     'execution': {'status': 'software_error'},
-                    'assessment': {'status': 'not_run'}}]
+                    'assessment': {'status': 'not_run'}} for slot in plan['slots']]
         (self.bundle / 'results.json').write_text(json.dumps(results))
         manifest = {'schema_version': 1, 'run_id': 'quick-test', 'complete': True,
-                    'expected_slots': 1, 'result_count': 1,
+                    'expected_slots': len(results), 'result_count': len(results),
+                    'expected_slot_plan': plan['slots'],
                     'retention': {'assemblies': [], 'graphs': []},
                     'files': {'results.json': cleanup.sha256(self.bundle / 'results.json')}}
+        manifest['plan_sha256'] = cleanup.sha256(self.outdir / 'selected-plan.json')
         (self.bundle / 'manifest.json').write_text(json.dumps(manifest))
 
     def test_passthrough_cannot_override_owned_settings(self):
         options = ['--run_id', '--run_id=other', '--outdir', '--outdir=/elsewhere',
                    '--reference_dir', '--reference_dir=/elsewhere', '-w', '-w=/elsewhere',
                    '-w/elsewhere', '-work-dir', '-work-dir=/elsewhere', '--work-dir']
+        options += ['--plan=other.json', '--cases=other', '--assemblers=other']
         for option in options:
             with self.subTest(option=option), patch.object(launch.subprocess, 'run') as run:
                 with self.assertRaisesRegex(ValueError, 'owned run/directory'):
@@ -110,6 +117,46 @@ class LauncherTests(unittest.TestCase):
                 self.launch()
             run.assert_not_called()
         self.assertEqual((self.work / 'original.txt').read_text(), 'retain')
+
+    def test_selection_typo_stops_before_scheduling_or_creating_work(self):
+        with patch.object(launch.subprocess, 'run') as run:
+            with self.assertRaisesRegex(ValueError, 'Unknown case'):
+                launch.launch_run('quick-test', self.outdir, self.work, self.reference, cases='typo')
+        run.assert_not_called()
+        self.assertFalse(self.work.exists())
+
+    def test_changed_selection_requires_a_new_run(self):
+        with patch.object(launch.subprocess, 'run', return_value=subprocess.CompletedProcess([], 1)):
+            self.launch()
+            with self.assertRaisesRegex(ValueError, 'Run plan changed'):
+                launch.launch_run('quick-test', self.outdir, self.work, self.reference, assemblers='raven')
+
+    def test_export_from_another_plan_does_not_clear_active_marker(self):
+        def wrong_export(command):
+            self.export_bundle()
+            p = self.bundle / 'manifest.json'
+            manifest = json.loads(p.read_text())
+            manifest['plan_sha256'] = 'a' * 64
+            p.write_text(json.dumps(manifest))
+            return subprocess.CompletedProcess(command, 0)
+        with patch.object(launch.subprocess, 'run', side_effect=wrong_export):
+            with self.assertRaisesRegex(ValueError, 'frozen run plan'):
+                self.launch()
+        self.assertTrue((self.work / cleanup.ACTIVE).exists())
+
+    def test_runtime_setup_failure_prevents_nextflow_submission(self):
+        self.prepare.side_effect = RuntimeError('Environment installation failed')
+        with patch.object(launch.subprocess, 'run') as run:
+            with self.assertRaisesRegex(RuntimeError, 'installation failed'):
+                self.launch(['--', '-profile', 'slurm,pixi'])
+        run.assert_not_called()
+
+    def test_multiple_runtime_profiles_fail_before_work_creation(self):
+        with patch.object(launch.subprocess, 'run') as run:
+            with self.assertRaisesRegex(ValueError, 'exactly one runtime'):
+                self.launch(['--', '-profile', 'pixi,docker'])
+        run.assert_not_called()
+        self.assertFalse(self.work.exists())
 
 
 if __name__ == '__main__':

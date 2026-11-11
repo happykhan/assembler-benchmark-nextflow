@@ -2,6 +2,6 @@
 set -euo pipefail
 case "${BENCH_RUNTIME:-native}" in
   native) exec "$@" ;;
-  pixi) exec pixi run --locked --manifest-path "$BENCH_PIXI_MANIFEST" "$@" ;;
+  pixi) exec pixi run --locked --no-install --manifest-path "$BENCH_PIXI_MANIFEST" --environment "${BENCH_PIXI_ENV:-default}" "$@" ;;
   *) echo "Unknown BENCH_RUNTIME" >&2; exit 2 ;;
 esac

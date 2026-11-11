@@ -3,7 +3,7 @@
     "id": "quick-baseline",
     "group": "read-quality",
     "reference_id": "bsub-168-quick",
-    "description": "Workflow fixture from first200kb of B.subtilis168; not a scientificpanel",
+    "description": "Workflow fixture from the chromosome's first 200,000 bases; excluded from scientific comparisons.",
     "preset": "quick",
     "purpose": "workflow_check",
     "headline_eligible": false,

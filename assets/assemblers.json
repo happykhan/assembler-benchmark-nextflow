@@ -1,10 +1,29 @@
 {
-  "flye": {
-    "version": "2.9.6",
-    "module": "flye"
+  "schema_version": 1,
+  "aliases": {
+    "flye": "flye-2.9.6",
+    "raven": "raven-1.8.3"
   },
-  "raven": {
-    "version": "1.8.3",
-    "module": "raven"
-  }
+  "assemblers": [
+    {
+      "id": "flye-2.9.6",
+      "tool": "flye",
+      "version": "2.9.6",
+      "adapter": "flye",
+      "environment": "flye-2-9-6",
+      "manifest": "environments/pixi.toml",
+      "container": null,
+      "status": "admitted"
+    },
+    {
+      "id": "raven-1.8.3",
+      "tool": "raven",
+      "version": "1.8.3",
+      "adapter": "raven",
+      "environment": "raven-1-8-3",
+      "manifest": "environments/pixi.toml",
+      "container": null,
+      "status": "admitted"
+    }
+  ]
 }
