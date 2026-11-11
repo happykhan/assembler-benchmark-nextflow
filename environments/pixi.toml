@@ -1,0 +1,14 @@
+[workspace]
+name = "assembler-benchmark-nextflow"
+version = "0.1.0"
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.11.*"
+psutil = "==7.0.0"
+badread = "==0.4.2"
+flye = "==2.9.6"
+raven-assembler = "==1.8.3"
+minimap2 = "==2.31"
+openjdk = "17.*"

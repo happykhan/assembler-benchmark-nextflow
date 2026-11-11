@@ -1,0 +1,11 @@
+.tools/
+.nextflow*
+work/
+results/
+references/*
+!references/README.md
+environments/.pixi/
+__pycache__/
+*.pyc
+.DS_Store
+evidence/quick-run/

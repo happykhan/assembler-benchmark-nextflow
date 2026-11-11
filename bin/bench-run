@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+case "${BENCH_RUNTIME:-native}" in
+  native) exec "$@" ;;
+  pixi) exec pixi run --locked --manifest-path "$BENCH_PIXI_MANIFEST" "$@" ;;
+  *) echo "Unknown BENCH_RUNTIME" >&2; exit 2 ;;
+esac

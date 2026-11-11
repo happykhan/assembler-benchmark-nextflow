@@ -1,0 +1,10 @@
+{
+  "flye": {
+    "version": "2.9.6",
+    "module": "flye"
+  },
+  "raven": {
+    "version": "1.8.3",
+    "module": "raven"
+  }
+}

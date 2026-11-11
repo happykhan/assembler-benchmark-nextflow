@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "id": "bsub-168-quick",
+      "accession": "GCF_000009045.1",
+      "molecule_accession": "NC_000964.3",
+      "organism": "Bacillus subtilis 168",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz",
+      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "compression": "gzip",
+      "quick_slice_bases": 200000,
+      "purpose": "workflow_check",
+      "source": "NCBI RefSeq; AL009126.3 / NC_000964.3"
+    }
+  ]
+}
