@@ -486,7 +486,9 @@
     "Uniform error-free reads do not model realistic sequencing biases",
     "Structural correctness remains unmeasured",
     "All four assemblies are incomplete under the fixed99%longest-alignment criterion",
-    "Container profiles not yet admitted",
-    "GitHub upload requires refreshed CLI authentication"
-  ]
+    "Container profiles not yet admitted"
+  ],
+  "code_commit": "136631f",
+  "repository": "https://github.com/happykhan/assembler-benchmark-nextflow",
+  "repository_visibility": "private"
 }

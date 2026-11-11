@@ -54,9 +54,11 @@ data are not implemented, and structural correctness remains unmeasured.
 Version-specific isolated environments are verified in the subsequent checkpoint
 below. Additional assembler adapters remain future work.
 
-The code and report are available locally. GitHub repository creation/upload was
-attempted, but the command-line credential returned HTTP401 and was confirmed
-invalid. Browser access was unavailable. No GitHub publication is claimed.
+The initial GitHub upload was blocked by an expired command-line credential.
+After sign-in was restored, the verified project was published to the private
+[GitHub repository](https://github.com/happykhan/assembler-benchmark-nextflow).
+The full report bundles remain local/on-cluster; compact verification evidence
+and reproducible source definitions are committed.
 
 The compact machine-readable verification record is
 [`evidence/quick-verification.json`](../evidence/quick-verification.json).
