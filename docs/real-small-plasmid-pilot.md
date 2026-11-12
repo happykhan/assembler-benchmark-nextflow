@@ -127,7 +127,7 @@ result. No causal parameter intervention or tuning was performed.
   outputs when the reporting/diagnostic stages were developed.
 - All nine stages cached on the final resume, with no new job submissions.
 - Eight final compute-job records terminal `COMPLETED`, exit `0:0`.
-- Two assembled/assessed slots, ten TSV molecule rows, 32 retained bundle files;
+- Two assembled/assessed slots, ten TSV molecule rows, 32 checksummed content files plus the manifest;
   every declared checksum and the complete bundle file inventory verified.
 - Independent arithmetic rechecks of longest alignments, identity/indels, strict
   thresholds, paper-rule sums/flags and read-support breadth/depth.

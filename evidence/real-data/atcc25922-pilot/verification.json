@@ -1,0 +1,88 @@
+{
+  "assembler_jobs": {
+    "flye-2.9.6": "35443833",
+    "raven-1.8.3": "35443834"
+  },
+  "automatic_assembler_retries": 0,
+  "case_id": "johnson-atcc25922-full",
+  "checked_date": "2026-11-12",
+  "checksum_verified_content_files": 32,
+  "cold_download": {
+    "compressed_and_decompressed_hashes_match_admission": true,
+    "method": "curl-verified-stream-v1",
+    "note": "A separate input-module transport check, not a new assembly run. Initial truncated transport was rejected; partial attempts remain retained.",
+    "verified": true
+  },
+  "full_bundle_local": "evidence/real-runs/atcc25922-full-v1/bundle",
+  "full_bundle_remote": "/well/aanensen/users/rva470/assembler-benchmark-real-pilot-v1/results/full-pilot-v1/bundle",
+  "headline_eligible": false,
+  "historical_reproduction": false,
+  "independent_arithmetic_verified": true,
+  "input_cleanup_performed": false,
+  "input_policy": "full_archive_reads_no_filtering_no_subsampling",
+  "local_report_links_verified": 9,
+  "native_molecules_per_assembly": 5,
+  "ont_run_accession": "SRR23290062",
+  "original_execution_and_assembly_hashes_unchanged": true,
+  "plasmids_per_assembly": 4,
+  "proof_file_sha256": {
+    "bundle-manifest.json": "83e1066f482db96bada99bfd6083a257ecae38ca849c2fb0776bc4e0db1bb860",
+    "download-transport-receipt.json": "043551dec2121a74e236fc9a6c24602f927027c070b89cc8013ec9c5eb5f013e",
+    "environment-preparation.json": "e557590cfa965dba45465284c3b0bc13675d6cf9cf5760ed839962cad117e9e1",
+    "fresh-download-verification.json": "0e8100f61c60a2deff33cf4496e7638c9d8765db91351e2d5f76c87f172a869c",
+    "independent-sequence-audit.json": "19b52eb2edd49501d354f170a1f9936564479f9de6c21fa70e4988223f41a03a",
+    "initial-trace.tsv": "f075f62f61e869dea7fa853f69b751b32a3e5c4aa3d8708435c39988a12f53c3",
+    "md5checksums.txt": "f4b6073baf933b4f91d92c639ead2501645ef4b51f45f5271002c08dc93d6c1c",
+    "nextflow-trace-resume.tsv": "6499724d12c3ba44d08e0b01bbcbd01c6625f583198e9998e2454479a4b018e9",
+    "original-execution-bindings.json": "7a3d4d4ff6870765d1e0e905be08ec1b73bee615aaa01d0fe965f13eec0d1423",
+    "read-admission-measurements.json": "c6593ce8430f1a1b6ec643348db00b5b5c6c560945666084ae324241c1a3c1e3",
+    "read-diagnostics.json": "d9ca655d4cb87ac8128e6954254ab7f296a8c2974de659763a13a2c59713af64",
+    "reference-admission-measurements.json": "45411e3976ece6cc34392c24ca3b4033466c7000eae58e619c4f98bdc2c6534d",
+    "slot-plan.json": "97cee9eb03a35ee8565274b5aa9c1996378e982c028f510f6f1749424e373035",
+    "terminal-accounting.tsv": "0816f6601a0b59f6a307731ed9278b562fab7353f1702740c271654c00ced8a4",
+    "tested-source-sha256.json": "87546d875bc7b3e9e5aa5d4d7e9b5b8c854a885670eeacd01a7ea186d4a21d4c",
+    "verification-arithmetic.json": "60a76d7343c276a352a081f2267aad22dd0905c75c2630f9ff83fe1b42677722",
+    "verify-bundle.py": "3411672372255140d021faf9c76b776b039da31135c405d763e66dc56f94ae81"
+  },
+  "reference_assembly": "GCA_028596225.1",
+  "result_slots": 2,
+  "results": [
+    {
+      "assembler": "flye-2.9.6",
+      "assembly_sha256": "741bbd43f7c0556c96acd7486292a20e69ae0263a2364848d08b0a51d6064c49",
+      "contigs": 8,
+      "paper_recovered_plasmids": 4,
+      "sequence_outcome": "chromosome_complete",
+      "strict_complete_plasmids": 3
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "assembly_sha256": "1ddab67acac79d5de0c97eb9b35c2ee5299e5dfbd6be5131d27fd9502afc50f7",
+      "contigs": 3,
+      "paper_recovered_plasmids": 2,
+      "sequence_outcome": "chromosome_complete",
+      "strict_complete_plasmids": 2
+    }
+  ],
+  "resume": {
+    "cached_stages": 9,
+    "new_submissions": 0,
+    "terminal_compute_jobs_verified": 8
+  },
+  "run_id": "johnson-atcc25922-full-v1",
+  "sample_accession": "SAMN32977649",
+  "scoped_tests_passed": 120,
+  "simulated_quick_regression": {
+    "assembler": "raven-1.8.3",
+    "case": "quick-baseline",
+    "complete_slots": 1,
+    "resume_cached_stages": 6,
+    "runtime": "bmrc,singularity"
+  },
+  "simulation_tasks": 0,
+  "status": "verified_end_to_end",
+  "tested_source_commit": "d4380bf486e1e7ffa83802faad35efe2f961508b",
+  "track": "real_single_isolate_long_reads",
+  "tsv_molecule_rows": 10,
+  "website_publication_performed": false
+}
