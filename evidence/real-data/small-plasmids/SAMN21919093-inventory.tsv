@@ -1,0 +1,4 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117215	1	Klebsiella pneumoniae strain 2021QW-00056 plasmid p2021QW-00056_1, complete sequence.	SAMN21919093	GCA_021904655	12268	circular	2023-06-14	2023-06-15
+CP117213	1	Klebsiella pneumoniae strain 2021QW-00056 chromosome, complete genome.	SAMN21919093	GCA_021904655	5177501	circular	2023-06-14	2023-06-15
+CP117214	1	Klebsiella pneumoniae strain 2021QW-00056 plasmid p2021QW-00056_2, complete sequence.	SAMN21919093	GCA_021904655	95985	circular	2023-06-14	2023-06-15

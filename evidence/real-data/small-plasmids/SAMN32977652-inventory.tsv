@@ -1,0 +1,6 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117226	1	Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_2, complete sequence.	SAMN32977652	GCA_028596205	85160	circular	2023-06-14	2023-06-15
+CP117223	1	Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_4, complete sequence.	SAMN32977652	GCA_028596205	140825	circular	2023-06-14	2023-06-15
+CP117225	1	Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_3, complete sequence.	SAMN32977652	GCA_028596205	117755	circular	2023-06-14	2023-06-15
+CP117224	1	Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_1, complete sequence.	SAMN32977652	GCA_028596205	2014	circular	2023-06-14	2023-06-15
+CP117227	1	Klebsiella pneumoniae strain ATCC BAA2146 chromosome, complete genome.	SAMN32977652	GCA_028596205	5435745	circular	2023-06-14	2023-06-15

@@ -1,0 +1,4 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117203	1	Staphylococcus aureus strain 2022QW-00133 chromosome, complete genome.	SAMN32885235	GCA_028596045	2780286	circular	2023-06-14	2023-06-15
+CP117204	1	Staphylococcus aureus strain 2022QW-00133 plasmid p2022QW-00133_2, complete sequence.	SAMN32885235	GCA_028596045	43879	circular	2023-06-14	2023-06-15
+CP117205	1	Staphylococcus aureus strain 2022QW-00133 plasmid p2022QW-00133_1, complete sequence.	SAMN32885235	GCA_028596045	27080	circular	2023-06-14	2023-06-15

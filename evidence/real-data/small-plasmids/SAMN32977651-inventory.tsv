@@ -1,0 +1,3 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117229	1	Listeria innocua strain ATCC 33090 chromosome, complete genome.	SAMN32977651	GCA_028596125	2782573	circular	2023-06-14	2023-06-15
+CP117228	1	Listeria innocua strain ATCC 33090 plasmid pATCC33090_1, complete sequence.	SAMN32977651	GCA_028596125	104612	circular	2023-06-14	2023-06-15

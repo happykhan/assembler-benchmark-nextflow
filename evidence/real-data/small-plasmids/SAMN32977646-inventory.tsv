@@ -1,0 +1,3 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117245	1	Salmonella enterica subsp. enterica serovar Typhimurium strain ATCC 14028 plasmid pATCC14028_1, complete sequence.	SAMN32977646	GCA_028596185	93832	circular	2023-06-14	2023-06-15
+CP117244	1	Salmonella enterica subsp. enterica serovar Typhimurium strain ATCC 14028 chromosome, complete genome.	SAMN32977646	GCA_028596185	4870254	circular	2023-06-14	2023-06-15

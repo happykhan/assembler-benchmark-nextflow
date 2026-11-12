@@ -1,0 +1,3 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117237	1	Staphylococcus aureus strain ATCC 23235 plasmid pATCC23235_1, complete sequence.	SAMN32977648	GCA_028596145	27269	circular	2023-06-14	2023-06-15
+CP117238	1	Staphylococcus aureus strain ATCC 23235 chromosome, complete genome.	SAMN32977648	GCA_028596145	2720522	circular	2023-06-14	2023-06-15

@@ -1,0 +1,1866 @@
+{
+  "schema_version": 1,
+  "dataset_id": "johnson-2023-small-plasmids",
+  "status": "proposed_not_admitted",
+  "executable": false,
+  "observed_date": "2026-11-12",
+  "group": "plasmids",
+  "track": "real_single_isolate_long_reads",
+  "study": {
+    "title": "Long read genome assemblers struggle with small plasmids",
+    "authors": [
+      "Jared Johnson",
+      "Marty Soehnlen",
+      "Heather M. Blankenship"
+    ],
+    "doi": "10.1099/mgen.0.001024",
+    "pmcid": "PMC10272865",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10272865/",
+    "supporting_repository_commit": "107c3dd3865cff8ab5bd86ef70249a65b465aa9c",
+    "bioprojects": [
+      "PRJNA929966",
+      "PRJNA288601",
+      "PRJNA812922"
+    ]
+  },
+  "scope": {
+    "hybrid_benchmark_arms": false,
+    "metagenomic_samples": false,
+    "short_reads": "reference-construction provenance only; never assembly inputs in this track",
+    "pilot_candidate": "ATCC25922",
+    "pilot_reason": "same-isolate deposited reference with two small native plasmids and two larger controls; selection is proposed, not executable"
+  },
+  "sequencing_reported_by_paper": {
+    "platform": "Oxford Nanopore",
+    "flowcell": "R9.4.1",
+    "library": "SQK-RBKP004 Rapid Barcoding",
+    "device": "Mk1C",
+    "basecaller": "Guppy 6.4.2+97a7f06",
+    "model": "dna_r9.4.1_450bps_hac",
+    "minimum_qscore": 8,
+    "archive_processing_equivalence_verified": false
+  },
+  "historical_reproduction": {
+    "status": "not_yet_reproducible",
+    "subset_method": "Trycycler 0.5.3 subsample --count 3",
+    "original_subsets_available": false,
+    "original_subset_ids_hashes": null,
+    "versions": {
+      "flye": "2.9-b1768",
+      "raven": "1.5.1",
+      "miniasm": "0.3-r179",
+      "minipolish": "0.1.3",
+      "minimap2": "2.23-r1117-dirty",
+      "canu": "2.2"
+    },
+    "note": "Do not claim exact historical reproduction with regenerated subsets or modern versions. Paper Flye-meta setting is historical context only; it does not admit a metagenomic dataset/benchmark arm."
+  },
+  "metrics": {
+    "paper_recovery": {
+      "threshold": "strictly greater than 0.90",
+      "quantity": "sum of PAF alignment-block lengths, with per-draft-contig filtering/fallback in the pinned R code; no union/deduplication",
+      "chromosome_incorporation": "historical code classifies draft contigs longer than 1,000,000 bp as chromosome",
+      "duplication": "paper records multiple draft contigs recovering the same reference plasmid",
+      "implementation_status": "not_implemented",
+      "caveat": "Published Miniasm/Minipolish snippet and mapping command orientation require audit before literal replay."
+    },
+    "benchmark_contiguity": {
+      "threshold": "greater than or equal to 0.99",
+      "quantity": "longest single alignment against tripled reference / native reference length; uncapped",
+      "implementation_status": "existing_core",
+      "separate_from_paper_recovery": true
+    }
+  },
+  "reference_provenance": {
+    "construction": "Paper reports Trycycler consensus from replicate drafts followed by long-read and short-read polishing; short-read/hybrid methods are provenance, not test arms",
+    "independence": "References partly derive from tested assembler families; circularity/CheckM and unused-read checks do not establish fully independent truth",
+    "table_discrepancies": "Pinned supplementary-data-2 has all33 plasmids and matches deposited lengths; article Table1 differs for ATCC25922, ATCC25923 and2022QW-00133. Never silently use Table1 as inventory.",
+    "ng_annotation_conflict": "CP119139.1/CP119141.1 are4,207/4,153bp records labelled chromosome; CP119140.1/CP119142.1 are~2.17Mb records labelled plasmid in ENA and NCBI. Proposed biological roles inferred from paper sizes require explicit resolution before admission."
+  },
+  "data_usage": {
+    "article": "Creative Commons Attribution, per PMC copyright statement",
+    "author_repository_dataset_specific_licence": null,
+    "archive_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+    "note": "No dataset-specific CC or public-domain licence is asserted for deposited reads/reference or supporting repository code."
+  },
+  "expected_inventory": {
+    "isolates": 14,
+    "plasmids": 33,
+    "small_plasmids_lt_10000bp": 11,
+    "native_molecules": 47
+  },
+  "source_receipts": [
+    {
+      "role": "archive_metadata_header_excerpt",
+      "file": "evidence/real-data/small-plasmids/CP117235.1.header.txt",
+      "sha256": "0003b5429c6e30876679ea8eca03e359554e279fa04ad6efb377b867e00202e5",
+      "bytes": 7000,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/text/CP117235.1",
+      "excerpt_bytes": 7000
+    },
+    {
+      "role": "archive_metadata_header_excerpt",
+      "file": "evidence/real-data/small-plasmids/CP119139.1.header.txt",
+      "sha256": "d67db6c99bc09f5c2e2f3aeb4a0f38d64759479ca61ae2ec4559fe955b71a640",
+      "bytes": 7000,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/text/CP119139.1",
+      "excerpt_bytes": 7000
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_020362645.xml",
+      "sha256": "2164b42c9b0511dd909d68d59b481caecdff9364b5002d05fb41114f9fda198a",
+      "bytes": 4466,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_020362645"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_021904535.3.ncbi.json",
+      "sha256": "c7d6dc18c78d6e4e519461e39f850c1d6c78bf8b0ac4b1ba7892614cf923d8fc",
+      "bytes": 3786,
+      "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_021904535.3/dataset_report"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_021904655.xml",
+      "sha256": "73689884c990cc2c0b20d2af1d8b9dcb780e5368dfdc8540ff0006fa54637b42",
+      "bytes": 3996,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_021904655"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_022024795.xml",
+      "sha256": "29d55c472199892f9216e01c758eec8a0fe672d6db802de0cec92a88df8865c5",
+      "bytes": 4116,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_022024795"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596045.xml",
+      "sha256": "37e69d7c6f8f864ba89a0ab599df304709769e3e792603cbee4bfe1be5f2d046",
+      "bytes": 3997,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596045"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596125.xml",
+      "sha256": "7b17db816ecb4f0b376fcf61029be5a32f737729c737a178aeb80528842597f6",
+      "bytes": 3774,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596125"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596145.xml",
+      "sha256": "8be39fc6c0721ad5a4f03182b3da1e567dd2b1331b854879419c449430cf67e2",
+      "bytes": 3784,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596145"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596165.xml",
+      "sha256": "54b2d6ef9d61b81ba3ad6b34d5c948b3c0afa7dd7b6d60453c31f18b6e45dd8d",
+      "bytes": 4135,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596165"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596185.xml",
+      "sha256": "b2031c53b496ee78807700c33fc83180c2fa838742630e4abc9795dec0036c2a",
+      "bytes": 3853,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596185"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596205.xml",
+      "sha256": "20dc8a7ddb2b80518170279e6a62940adef5dd94182506bbfa1e1feca3504a61",
+      "bytes": 4144,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596205"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596225.xml",
+      "sha256": "61c8a157bb1b77db37f35bf4f54d100cdfc92604205c1f2a7d84c73905944f68",
+      "bytes": 4124,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596225"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_028596245.xml",
+      "sha256": "2c824f8f783dc15238fcd6c2084578323181a2cbd9b8d2f792f275be30c0e1b2",
+      "bytes": 3784,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596245"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_029378435.xml",
+      "sha256": "467c76d213b7200a5dae642049959b23cce4ee25abda76a9ce8d9446d5a961bd",
+      "bytes": 3728,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_029378435"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/GCA_029378455.1.ncbi.json",
+      "sha256": "84a440c4db83e54dfacc95f54a520aa0be5ad4a1d5198246fb0f41e64351238b",
+      "bytes": 3835,
+      "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_029378455.1/dataset_report"
+    },
+    {
+      "role": "author_supporting_code",
+      "url": "https://raw.githubusercontent.com/johnsonj161/for_publications/107c3dd3865cff8ab5bd86ef70249a65b465aa9c/Long%20read%20genome%20assemblers%20struggle%20with%20small%20plasmids/Johnson%20et%20al.%202023%20-%20supplementary%20code",
+      "sha256": "635fe854720039899291b72e707834e7bed7e6565bcfd27180269c69faa7d247",
+      "bytes": 9061,
+      "local_cache": "references/study-evidence/small-plasmids/Johnson et al. 2023 - supplementary code"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN17608176-inventory.tsv",
+      "sha256": "dbbb28945305662dce0e0a1f6c451c0e702f61e59877e45e9c9e976a79a13c79",
+      "bytes": 753,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN17608176%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN21919088-inventory.tsv",
+      "sha256": "821a88d41ea0d59c80c16fff5decc68113507cd019609ace0b923f2e10b286e9",
+      "bytes": 592,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN21919088%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN21919093-inventory.tsv",
+      "sha256": "16df779ce8f5753679788b5947598b57c5ca0dba9fc51881a2f5cb05fb7851a9",
+      "bytes": 591,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN21919093%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN22066472-inventory.tsv",
+      "sha256": "2a605c103fb505483d3a8402e5ab07026e395a757dc5f1553639015dc275f29c",
+      "bytes": 1197,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN22066472%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32885235-inventory.tsv",
+      "sha256": "d9beb1ba5bdf490f26104225bdeb02a66e5b914f8983213b1d8e716d6fdd35a3",
+      "bytes": 591,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32885235%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977646-inventory.tsv",
+      "sha256": "121a8ad3cf721b89576cac0ef076a4a12b96dc8a955c77d7425f66ffcfdcdb7c",
+      "bytes": 491,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977646%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977647-inventory.tsv",
+      "sha256": "a5c40cd59c126c78c00f02c3d00f83c2b903f7e123d968a3a84723a8d1397441",
+      "bytes": 889,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977647%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977648-inventory.tsv",
+      "sha256": "c94005b153f22b5094ad6be2e8e386e351ff82094d012a772e562df258c109d3",
+      "bytes": 423,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977648%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977649-inventory.tsv",
+      "sha256": "2c21f09ca93ae2db9d50a0acc0b955e02993e960e0f4f4e4852c44143ac8e69c",
+      "bytes": 864,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977649%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977650-inventory.tsv",
+      "sha256": "91a182ca90c3fb5ba0b8b2426e36287eab61588dbba44259694152e467e827cd",
+      "bytes": 423,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977650%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977651-inventory.tsv",
+      "sha256": "2b4a0733008d9870d4db59e54cc0ef8c49280c42fd9bd382ba866ed8363c2dcb",
+      "bytes": 414,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977651%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN32977652-inventory.tsv",
+      "sha256": "984a1fa1e84ac6a02c13a9b0cac6be683cb8d8c6c35ca47fff153b7edfdf3b08",
+      "bytes": 910,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN32977652%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN33482239-inventory.tsv",
+      "sha256": "c528b3498d50c02a9ad567d964b911a07943fa866aa941d155de26c6c9274680",
+      "bytes": 426,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN33482239%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SAMN33482240-inventory.tsv",
+      "sha256": "043ac503397288d406cb7c69345684202d084675902909629bbc99cd3323759f",
+      "bytes": 426,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMN33482240%22&fields=accession%2Csequence_version%2Cdescription%2Csample_accession%2Cassembly_accession%2Cbase_count%2Ctopology%2Cfirst_public%2Clast_updated&format=tsv&limit=100"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19233348.xml",
+      "sha256": "6f76526f1c1ad97bc2fd1fd3bc0f0978f249fd3741dbd126ea55300505ae3e12",
+      "bytes": 2531,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19233348"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19233349.xml",
+      "sha256": "9863246a4a28c970282d8ed0ec45aac4b25ff1e66520dcdd5136554ea7b05d55",
+      "bytes": 2531,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19233349"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19233350.xml",
+      "sha256": "418398a2e9d60e5a59c60f5428291adc6890c9dee6fc6eb065c3ecc3060252b8",
+      "bytes": 2531,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19233350"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19233353.xml",
+      "sha256": "374b9228c85f47e7efbbab5cfc84b5b3d614767ca88139b971995385a07093a4",
+      "bytes": 2539,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19233353"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19234667.xml",
+      "sha256": "b9ac1e458f9be3ada157d7df563647bca577f3851f792ce4ed39e37b14949faa",
+      "bytes": 2540,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19234667"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19234668.xml",
+      "sha256": "ce2d49926b672d2e78f6a0941884f0151a6383da471fd7cccf02d25f2d319826",
+      "bytes": 2543,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19234668"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19522848.xml",
+      "sha256": "eb4cdec862684f3c189dbd18a7bfaee36a126a16a7d669d7076324e893367d9f",
+      "bytes": 2431,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19522848"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/SRX19522849.xml",
+      "sha256": "0dbd3f3c6febd8613f04b143dbd993277ef52b29db8955762d9a20c75151e28c",
+      "bytes": 2431,
+      "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX19522849"
+    },
+    {
+      "role": "author_supplementary_data",
+      "url": "https://raw.githubusercontent.com/johnsonj161/for_publications/107c3dd3865cff8ab5bd86ef70249a65b465aa9c/Long%20read%20genome%20assemblers%20struggle%20with%20small%20plasmids/johnson-et-al-2023_supplementary-data-1.csv",
+      "sha256": "d74033123e94aad825a6a694851e66c3579f5394577c0ff574476cff13481878",
+      "bytes": 8252,
+      "local_cache": "references/study-evidence/small-plasmids/johnson-et-al-2023_supplementary-data-1.csv"
+    },
+    {
+      "role": "author_supplementary_data",
+      "url": "https://raw.githubusercontent.com/johnsonj161/for_publications/107c3dd3865cff8ab5bd86ef70249a65b465aa9c/Long%20read%20genome%20assemblers%20struggle%20with%20small%20plasmids/johnson-et-al-2023_supplementary-data-2.csv",
+      "sha256": "a596ffbf9d11111810b9c26816a2ac6e9065b86502556f3a921914166f7f9c5d",
+      "bytes": 102561,
+      "local_cache": "references/study-evidence/small-plasmids/johnson-et-al-2023_supplementary-data-2.csv"
+    },
+    {
+      "role": "archive_metadata",
+      "file": "evidence/real-data/small-plasmids/ng-ncbi-summary.json",
+      "sha256": "6a3c0767a3e39540922aa3d8a9f8eddcfdf44903c089ecc178157427c2c9600a",
+      "bytes": 3375,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=nuccore&id=CP119139.1,CP119140.1,CP119141.1,CP119142.1&retmode=json"
+    },
+    {
+      "role": "selected_archive_run_metadata",
+      "file": "evidence/real-data/small-plasmids/selected-runs.tsv",
+      "sha256": "706d32b72005d1121a716669f77ff850fc95d35f7c630b3c5240181fb0da2bd7",
+      "bytes": 9619,
+      "query_note": "ENA filereport read_run for the three stated BioProjects, filtered by the fourteen exact paper isolate aliases. Shared surveillance projects contain many unrelated records and are not panels.",
+      "source_bioproject_query_urls": [
+        "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA929966&result=read_run&format=tsv&fields=study_accession,sample_accession,secondary_sample_accession,experiment_accession,run_accession,scientific_name,sample_alias,experiment_alias,instrument_platform,instrument_model,library_strategy,library_source,library_selection,read_count,base_count,fastq_ftp,fastq_md5,fastq_bytes,submitted_ftp,submitted_md5,submitted_bytes",
+        "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA288601&result=read_run&format=tsv&fields=study_accession,sample_accession,secondary_sample_accession,experiment_accession,run_accession,scientific_name,sample_alias,experiment_alias,instrument_platform,instrument_model,library_strategy,library_source,library_selection,read_count,base_count,fastq_ftp,fastq_md5,fastq_bytes,submitted_ftp,submitted_md5,submitted_bytes",
+        "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA812922&result=read_run&format=tsv&fields=study_accession,sample_accession,secondary_sample_accession,experiment_accession,run_accession,scientific_name,sample_alias,experiment_alias,instrument_platform,instrument_model,library_strategy,library_source,library_selection,read_count,base_count,fastq_ftp,fastq_md5,fastq_bytes,submitted_ftp,submitted_md5,submitted_bytes"
+      ]
+    }
+  ],
+  "isolates": [
+    {
+      "isolate_id": "2020QW-00078",
+      "scientific_name": "Klebsiella pneumoniae",
+      "sample_accession": "SAMN17608176",
+      "bioproject": "PRJNA288601",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23291426",
+        "experiment_accession": "SRX19234667",
+        "sample_accession": "SAMN17608176",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 56168,
+        "base_count": 607464679,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/026/SRR23291426/SRR23291426_1.fastq.gz",
+            "publisher_md5": "f72b49c39e484f912dcd2fae063012d4",
+            "compressed_bytes": 570416412,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23291426&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_022024795.3",
+        "assembly_candidate": "GCA_022024795",
+        "sample_accession": "SAMN17608176",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_022024795.3",
+        "molecules": [
+          {
+            "accession": "CP117219.1",
+            "sample_accession": "SAMN17608176",
+            "length_bp": 34331,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2020QW-00078 plasmid p2020QW-00078_3, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2020QW-00078_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117219.1"
+          },
+          {
+            "accession": "CP117220.1",
+            "sample_accession": "SAMN17608176",
+            "length_bp": 194062,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2020QW-00078 plasmid p2020QW-00078_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2020QW-00078_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117220.1"
+          },
+          {
+            "accession": "CP117221.1",
+            "sample_accession": "SAMN17608176",
+            "length_bp": 5238482,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2020QW-00078 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117221.1"
+          },
+          {
+            "accession": "CP117222.1",
+            "sample_accession": "SAMN17608176",
+            "length_bp": 97090,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2020QW-00078 plasmid p2020QW-00078_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2020QW-00078_4",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117222.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN17608176-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_022024795.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR13563379"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2020QW-00078_1",
+          "length_bp": 34331
+        },
+        {
+          "author_contig_id": "2020QW-00078_2",
+          "length_bp": 194062
+        },
+        {
+          "author_contig_id": "2020QW-00078_4",
+          "length_bp": 97090
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "2021QW-00045",
+      "scientific_name": "Klebsiella pneumoniae",
+      "sample_accession": "SAMN21919088",
+      "bioproject": "PRJNA288601",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23291425",
+        "experiment_accession": "SRX19234668",
+        "sample_accession": "SAMN21919088",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 125148,
+        "base_count": 1255038726,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/025/SRR23291425/SRR23291425_1.fastq.gz",
+            "publisher_md5": "13475a424c16bd9a6c48d52cd77c1c9a",
+            "compressed_bytes": 1173560071,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23291425&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_021904535.3",
+        "assembly_candidate": "GCA_021904535",
+        "sample_accession": "SAMN21919088",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_021904535.3",
+        "molecules": [
+          {
+            "accession": "CP117216.1",
+            "sample_accession": "SAMN21919088",
+            "length_bp": 5179337,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00045 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117216.1"
+          },
+          {
+            "accession": "CP117217.1",
+            "sample_accession": "SAMN21919088",
+            "length_bp": 97090,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00045 plasmid p2021QW-00045_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00045_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117217.1"
+          },
+          {
+            "accession": "CP117218.1",
+            "sample_accession": "SAMN21919088",
+            "length_bp": 190147,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00045 plasmid p2021QW-00045_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00045_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117218.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN21919088-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_021904535.3.ncbi.json"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR16133933"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2021QW-00045_2",
+          "length_bp": 97090
+        },
+        {
+          "author_contig_id": "2021QW-00045_3",
+          "length_bp": 190147
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "2021QW-00056",
+      "scientific_name": "Klebsiella pneumoniae",
+      "sample_accession": "SAMN21919093",
+      "bioproject": "PRJNA288601",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23291424",
+        "experiment_accession": "SRX19234669",
+        "sample_accession": "SAMN21919093",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 130579,
+        "base_count": 932928461,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/024/SRR23291424/SRR23291424_1.fastq.gz",
+            "publisher_md5": "51f40f740b0d2d4f95987b2680353c74",
+            "compressed_bytes": 880950610,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23291424&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_021904655.3",
+        "assembly_candidate": "GCA_021904655",
+        "sample_accession": "SAMN21919093",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_021904655.3",
+        "molecules": [
+          {
+            "accession": "CP117213.1",
+            "sample_accession": "SAMN21919093",
+            "length_bp": 5177501,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00056 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117213.1"
+          },
+          {
+            "accession": "CP117214.1",
+            "sample_accession": "SAMN21919093",
+            "length_bp": 95985,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00056 plasmid p2021QW-00056_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00056_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117214.1"
+          },
+          {
+            "accession": "CP117215.1",
+            "sample_accession": "SAMN21919093",
+            "length_bp": 12268,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain 2021QW-00056 plasmid p2021QW-00056_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00056_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117215.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN21919093-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_021904655.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR16133928"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2021QW-00056_2",
+          "length_bp": 95985
+        },
+        {
+          "author_contig_id": "2021QW-00056_3",
+          "length_bp": 12268
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "2021QW-00057",
+      "scientific_name": "Escherichia coli",
+      "sample_accession": "SAMN22066472",
+      "bioproject": "PRJNA288601",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23291423",
+        "experiment_accession": "SRX19234670",
+        "sample_accession": "SAMN22066472",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 149101,
+        "base_count": 1128597024,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/023/SRR23291423/SRR23291423_1.fastq.gz",
+            "publisher_md5": "c849db735c2d07c14425940af0264de1",
+            "compressed_bytes": 1062529887,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23291423&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_020362645.3",
+        "assembly_candidate": "GCA_020362645",
+        "sample_accession": "SAMN22066472",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_020362645.3",
+        "molecules": [
+          {
+            "accession": "CP117206.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 46161,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_6, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117206.1"
+          },
+          {
+            "accession": "CP117207.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 4084,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_3, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_7",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117207.1"
+          },
+          {
+            "accession": "CP117208.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 4063,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117208.1"
+          },
+          {
+            "accession": "CP117209.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 2101,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_4",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117209.1"
+          },
+          {
+            "accession": "CP117210.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 4715,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_4, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_6",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117210.1"
+          },
+          {
+            "accession": "CP117211.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 118339,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_5, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2021QW-00057_5",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117211.1"
+          },
+          {
+            "accession": "CP117212.1",
+            "sample_accession": "SAMN22066472",
+            "length_bp": 5036249,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain 2021QW-00057 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117212.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN22066472-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_020362645.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR16212265"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2021QW-00057_1",
+          "length_bp": 46161
+        },
+        {
+          "author_contig_id": "2021QW-00057_3",
+          "length_bp": 4063
+        },
+        {
+          "author_contig_id": "2021QW-00057_4",
+          "length_bp": 2101
+        },
+        {
+          "author_contig_id": "2021QW-00057_5",
+          "length_bp": 118339
+        },
+        {
+          "author_contig_id": "2021QW-00057_6",
+          "length_bp": 4715
+        },
+        {
+          "author_contig_id": "2021QW-00057_7",
+          "length_bp": 4084
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "2022NG-0032",
+      "scientific_name": "Neisseria gonorrhoeae",
+      "sample_accession": "SAMN33482239",
+      "bioproject": "PRJNA812922",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23640110",
+        "experiment_accession": "SRX19522848",
+        "sample_accession": "SAMN33482239",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 48702,
+        "base_count": 137466325,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR236/010/SRR23640110/SRR23640110_1.fastq.gz",
+            "publisher_md5": "dedbb9e7eead199345cccb0cff932328",
+            "compressed_bytes": 131311456,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23640110&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_029378455.1",
+        "assembly_candidate": "GCA_029378455",
+        "sample_accession": "SAMN33482239",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_029378455.1",
+        "molecules": [
+          {
+            "accession": "CP119141.1",
+            "sample_accession": "SAMN33482239",
+            "length_bp": 4153,
+            "topology": "circular",
+            "archive_description": "Neisseria gonorrhoeae strain 2022NG-0032 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "plasmid",
+            "role_status": "conflict_requires_resolution",
+            "paper_ref_contig": "2022NG-0032_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP119141.1"
+          },
+          {
+            "accession": "CP119142.1",
+            "sample_accession": "SAMN33482239",
+            "length_bp": 2167441,
+            "topology": "circular",
+            "archive_description": "Neisseria gonorrhoeae strain 2022NG-0032 plasmid p2022NG-0032_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "chromosome",
+            "role_status": "conflict_requires_resolution",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP119142.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN33482239-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_029378455.1.ncbi.json"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23640078"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2022NG-0032_1",
+          "length_bp": 4153
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable",
+        "archive_molecule_roles_conflict_with_paper_and_lengths"
+      ]
+    },
+    {
+      "isolate_id": "2022NG-0076",
+      "scientific_name": "Neisseria gonorrhoeae",
+      "sample_accession": "SAMN33482240",
+      "bioproject": "PRJNA812922",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23640109",
+        "experiment_accession": "SRX19522849",
+        "sample_accession": "SAMN33482240",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 336612,
+        "base_count": 863881830,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR236/009/SRR23640109/SRR23640109_1.fastq.gz",
+            "publisher_md5": "2af42bf594c0665185b40ffc0df5a29b",
+            "compressed_bytes": 832413434,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23640109&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_029378435.1",
+        "assembly_candidate": "GCA_029378435",
+        "sample_accession": "SAMN33482240",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_029378435.1",
+        "molecules": [
+          {
+            "accession": "CP119139.1",
+            "sample_accession": "SAMN33482240",
+            "length_bp": 4207,
+            "topology": "circular",
+            "archive_description": "Neisseria gonorrhoeae strain 2022NG-0076 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "plasmid",
+            "role_status": "conflict_requires_resolution",
+            "paper_ref_contig": "2022NG-0076_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP119139.1"
+          },
+          {
+            "accession": "CP119140.1",
+            "sample_accession": "SAMN33482240",
+            "length_bp": 2168363,
+            "topology": "circular",
+            "archive_description": "Neisseria gonorrhoeae strain 2022NG-0076 plasmid p2022NG-0076_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "chromosome",
+            "role_status": "conflict_requires_resolution",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP119140.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN33482240-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_029378435.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23640077"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2022NG-0076_1",
+          "length_bp": 4207
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable",
+        "archive_molecule_roles_conflict_with_paper_and_lengths"
+      ]
+    },
+    {
+      "isolate_id": "2022QW-00133",
+      "scientific_name": "Staphylococcus aureus",
+      "sample_accession": "SAMN32885235",
+      "bioproject": "PRJNA288601",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23291422",
+        "experiment_accession": "SRX19234671",
+        "sample_accession": "SAMN32885235",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 63402,
+        "base_count": 268932048,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/022/SRR23291422/SRR23291422_1.fastq.gz",
+            "publisher_md5": "9d497cd0cba970afea0937faae87cedd",
+            "compressed_bytes": 247109918,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23291422&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596045.1",
+        "assembly_candidate": "GCA_028596045",
+        "sample_accession": "SAMN32885235",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596045.1",
+        "molecules": [
+          {
+            "accession": "CP117203.1",
+            "sample_accession": "SAMN32885235",
+            "length_bp": 2780286,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain 2022QW-00133 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117203.1"
+          },
+          {
+            "accession": "CP117204.1",
+            "sample_accession": "SAMN32885235",
+            "length_bp": 43879,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain 2022QW-00133 plasmid p2022QW-00133_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2022QW-00133_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117204.1"
+          },
+          {
+            "accession": "CP117205.1",
+            "sample_accession": "SAMN32885235",
+            "length_bp": 27080,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain 2022QW-00133 plasmid p2022QW-00133_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "2022QW-00133_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117205.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32885235-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596045.xml"
+      },
+      "short_read_reference_provenance_only": [],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "2022QW-00133_2",
+          "length_bp": 43879
+        },
+        {
+          "author_contig_id": "2022QW-00133_3",
+          "length_bp": 27080
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC14028",
+      "scientific_name": "Salmonella enterica subsp. enterica serovar Typhimurium",
+      "sample_accession": "SAMN32977646",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290065",
+        "experiment_accession": "SRX19233347",
+        "sample_accession": "SAMN32977646",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 171682,
+        "base_count": 1041392825,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/065/SRR23290065/SRR23290065_1.fastq.gz",
+            "publisher_md5": "50a64712cf3c08aacac2c46a17f6320a",
+            "compressed_bytes": 993470638,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290065&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596185.1",
+        "assembly_candidate": "GCA_028596185",
+        "sample_accession": "SAMN32977646",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596185.1",
+        "molecules": [
+          {
+            "accession": "CP117244.1",
+            "sample_accession": "SAMN32977646",
+            "length_bp": 4870254,
+            "topology": "circular",
+            "archive_description": "Salmonella enterica subsp. enterica serovar Typhimurium strain ATCC 14028 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117244.1"
+          },
+          {
+            "accession": "CP117245.1",
+            "sample_accession": "SAMN32977646",
+            "length_bp": 93832,
+            "topology": "circular",
+            "archive_description": "Salmonella enterica subsp. enterica serovar Typhimurium strain ATCC 14028 plasmid pATCC14028_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC14028_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117245.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977646-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596185.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290092"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC14028_2",
+          "length_bp": 93832
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC14458",
+      "scientific_name": "Staphylococcus aureus",
+      "sample_accession": "SAMN32977647",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290064",
+        "experiment_accession": "SRX19233348",
+        "sample_accession": "SAMN32977647",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 230956,
+        "base_count": 813114174,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/064/SRR23290064/SRR23290064_1.fastq.gz",
+            "publisher_md5": "b15b7835ad45b4cb749123e64a6d9eb2",
+            "compressed_bytes": 764809033,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290064&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596165.1",
+        "assembly_candidate": "GCA_028596165",
+        "sample_accession": "SAMN32977647",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596165.1",
+        "molecules": [
+          {
+            "accession": "CP117239.1",
+            "sample_accession": "SAMN32977647",
+            "length_bp": 15773,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_4, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC14458_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117239.1"
+          },
+          {
+            "accession": "CP117240.1",
+            "sample_accession": "SAMN32977647",
+            "length_bp": 30891,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_3, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC14458_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117240.1"
+          },
+          {
+            "accession": "CP117241.1",
+            "sample_accession": "SAMN32977647",
+            "length_bp": 4326,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC14458_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117241.1"
+          },
+          {
+            "accession": "CP117242.1",
+            "sample_accession": "SAMN32977647",
+            "length_bp": 2866622,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 14458 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117242.1"
+          },
+          {
+            "accession": "CP117243.1",
+            "sample_accession": "SAMN32977647",
+            "length_bp": 4439,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC14458_5",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117243.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977647-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596165.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290091"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC14458_1",
+          "length_bp": 15773
+        },
+        {
+          "author_contig_id": "ATCC14458_2",
+          "length_bp": 30891
+        },
+        {
+          "author_contig_id": "ATCC14458_3",
+          "length_bp": 4326
+        },
+        {
+          "author_contig_id": "ATCC14458_5",
+          "length_bp": 4439
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC23235",
+      "scientific_name": "Staphylococcus aureus",
+      "sample_accession": "SAMN32977648",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290063",
+        "experiment_accession": "SRX19233349",
+        "sample_accession": "SAMN32977648",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 310140,
+        "base_count": 1049022339,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/063/SRR23290063/SRR23290063_1.fastq.gz",
+            "publisher_md5": "c275ca2f72d68fa35375a1b65e41aed8",
+            "compressed_bytes": 986685558,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290063&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596145.1",
+        "assembly_candidate": "GCA_028596145",
+        "sample_accession": "SAMN32977648",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596145.1",
+        "molecules": [
+          {
+            "accession": "CP117237.1",
+            "sample_accession": "SAMN32977648",
+            "length_bp": 27269,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 23235 plasmid pATCC23235_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC23235_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117237.1"
+          },
+          {
+            "accession": "CP117238.1",
+            "sample_accession": "SAMN32977648",
+            "length_bp": 2720522,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 23235 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117238.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977648-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596145.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290090"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC23235_1",
+          "length_bp": 27269
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC25922",
+      "scientific_name": "Escherichia coli",
+      "sample_accession": "SAMN32977649",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290062",
+        "experiment_accession": "SRX19233350",
+        "sample_accession": "SAMN32977649",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 165764,
+        "base_count": 867904341,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/062/SRR23290062/SRR23290062_1.fastq.gz",
+            "publisher_md5": "2934c206376021f54f34e97d033b5bd8",
+            "compressed_bytes": 821540769,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290062&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596225.1",
+        "assembly_candidate": "GCA_028596225",
+        "sample_accession": "SAMN32977649",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596225.1",
+        "molecules": [
+          {
+            "accession": "CP117232.1",
+            "sample_accession": "SAMN32977649",
+            "length_bp": 48488,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain ATCC 25922 plasmid pATCC25922_4, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC25922_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117232.1"
+          },
+          {
+            "accession": "CP117233.1",
+            "sample_accession": "SAMN32977649",
+            "length_bp": 3173,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain ATCC 25922 plasmid pATCC25922_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC25922_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117233.1"
+          },
+          {
+            "accession": "CP117234.1",
+            "sample_accession": "SAMN32977649",
+            "length_bp": 1919,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain ATCC 25922 plasmid pATCC25922_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC25922_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117234.1"
+          },
+          {
+            "accession": "CP117235.1",
+            "sample_accession": "SAMN32977649",
+            "length_bp": 5132219,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain ATCC 25922 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117235.1"
+          },
+          {
+            "accession": "CP117236.1",
+            "sample_accession": "SAMN32977649",
+            "length_bp": 24185,
+            "topology": "circular",
+            "archive_description": "Escherichia coli strain ATCC 25922 plasmid pATCC25922_3, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC25922_5",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117236.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977649-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596225.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290089"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC25922_1",
+          "length_bp": 48488
+        },
+        {
+          "author_contig_id": "ATCC25922_2",
+          "length_bp": 3173
+        },
+        {
+          "author_contig_id": "ATCC25922_3",
+          "length_bp": 1919
+        },
+        {
+          "author_contig_id": "ATCC25922_5",
+          "length_bp": 24185
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC25923",
+      "scientific_name": "Staphylococcus aureus",
+      "sample_accession": "SAMN32977650",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290061",
+        "experiment_accession": "SRX19233351",
+        "sample_accession": "SAMN32977650",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 45055,
+        "base_count": 187592055,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/061/SRR23290061/SRR23290061_1.fastq.gz",
+            "publisher_md5": "49002e33e33b8e426bcb84e6de0ad7f7",
+            "compressed_bytes": 176997584,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290061&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596245.1",
+        "assembly_candidate": "GCA_028596245",
+        "sample_accession": "SAMN32977650",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596245.1",
+        "molecules": [
+          {
+            "accession": "CP117230.1",
+            "sample_accession": "SAMN32977650",
+            "length_bp": 2773563,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 25923 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117230.1"
+          },
+          {
+            "accession": "CP117231.1",
+            "sample_accession": "SAMN32977650",
+            "length_bp": 27490,
+            "topology": "circular",
+            "archive_description": "Staphylococcus aureus strain ATCC 25923 plasmid pATCC25923_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC25923_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117231.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977650-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596245.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290088"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC25923_2",
+          "length_bp": 27490
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCC33090",
+      "scientific_name": "Listeria innocua",
+      "sample_accession": "SAMN32977651",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290060",
+        "experiment_accession": "SRX19233352",
+        "sample_accession": "SAMN32977651",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 102836,
+        "base_count": 572713810,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/060/SRR23290060/SRR23290060_1.fastq.gz",
+            "publisher_md5": "df30a066b6b685c1d040d1d5be0163ea",
+            "compressed_bytes": 544435869,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290060&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596125.1",
+        "assembly_candidate": "GCA_028596125",
+        "sample_accession": "SAMN32977651",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596125.1",
+        "molecules": [
+          {
+            "accession": "CP117228.1",
+            "sample_accession": "SAMN32977651",
+            "length_bp": 104612,
+            "topology": "circular",
+            "archive_description": "Listeria innocua strain ATCC 33090 plasmid pATCC33090_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCC33090_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117228.1"
+          },
+          {
+            "accession": "CP117229.1",
+            "sample_accession": "SAMN32977651",
+            "length_bp": 2782573,
+            "topology": "circular",
+            "archive_description": "Listeria innocua strain ATCC 33090 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117229.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977651-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596125.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290087"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCC33090_1",
+          "length_bp": 104612
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    },
+    {
+      "isolate_id": "ATCCBAA2146",
+      "scientific_name": "Klebsiella pneumoniae",
+      "sample_accession": "SAMN32977652",
+      "bioproject": "PRJNA929966",
+      "status": "proposed_not_admitted",
+      "ont": {
+        "run_accession": "SRR23290059",
+        "experiment_accession": "SRX19233353",
+        "sample_accession": "SAMN32977652",
+        "platform": "OXFORD_NANOPORE",
+        "instrument_model": "MinION",
+        "read_count": 530656,
+        "base_count": 1830851838,
+        "files": [
+          {
+            "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/059/SRR23290059/SRR23290059_1.fastq.gz",
+            "publisher_md5": "16186238b8955b5a89998bc947d72ada",
+            "compressed_bytes": 1747213243,
+            "download_sha256": null,
+            "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ"
+          }
+        ],
+        "metadata_url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR23290059&result=read_run&fields=run_accession,sample_accession,fastq_ftp,fastq_md5,fastq_bytes,read_count,base_count",
+        "metadata_file": "evidence/real-data/small-plasmids/selected-runs.tsv"
+      },
+      "reference": {
+        "assembly_accession": "GCA_028596205.1",
+        "assembly_candidate": "GCA_028596205",
+        "sample_accession": "SAMN32977652",
+        "assembly_metadata_url": "https://www.ebi.ac.uk/ena/browser/api/xml/GCA_028596205.1",
+        "molecules": [
+          {
+            "accession": "CP117223.1",
+            "sample_accession": "SAMN32977652",
+            "length_bp": 140825,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_4, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCCBAA2146_1",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117223.1"
+          },
+          {
+            "accession": "CP117224.1",
+            "sample_accession": "SAMN32977652",
+            "length_bp": 2014,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_1, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCCBAA2146_2",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117224.1"
+          },
+          {
+            "accession": "CP117225.1",
+            "sample_accession": "SAMN32977652",
+            "length_bp": 117755,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_3, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCCBAA2146_3",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117225.1"
+          },
+          {
+            "accession": "CP117226.1",
+            "sample_accession": "SAMN32977652",
+            "length_bp": 85160,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain ATCC BAA2146 plasmid pATCCBAA2146_2, complete sequence.",
+            "archive_role": "plasmid",
+            "proposed_biological_role": "plasmid",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": "ATCCBAA2146_4",
+            "paper_mapping_evidence": "same BioSample/isolate and unique exact supplementary length; original author FASTA sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117226.1"
+          },
+          {
+            "accession": "CP117227.1",
+            "sample_accession": "SAMN32977652",
+            "length_bp": 5435745,
+            "topology": "circular",
+            "archive_description": "Klebsiella pneumoniae strain ATCC BAA2146 chromosome, complete genome.",
+            "archive_role": "chromosome",
+            "proposed_biological_role": "chromosome",
+            "role_status": "archive_and_supplement_agree",
+            "paper_ref_contig": null,
+            "paper_mapping_evidence": "same BioSample chromosome record; author chromosome sequence equality not yet established",
+            "sequence_sha256": null,
+            "fasta_url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117227.1"
+          }
+        ],
+        "confidence": "same-isolate deposited Trycycler assembly; not independently established truth; supplementary plasmid identity matched by length only",
+        "inventory_metadata_file": "evidence/real-data/small-plasmids/SAMN32977652-inventory.tsv",
+        "assembly_metadata_file": "evidence/real-data/small-plasmids/GCA_028596205.xml"
+      },
+      "short_read_reference_provenance_only": [
+        "SRR23290086"
+      ],
+      "paper_plasmids": [
+        {
+          "author_contig_id": "ATCCBAA2146_1",
+          "length_bp": 140825
+        },
+        {
+          "author_contig_id": "ATCCBAA2146_2",
+          "length_bp": 2014
+        },
+        {
+          "author_contig_id": "ATCCBAA2146_3",
+          "length_bp": 117755
+        },
+        {
+          "author_contig_id": "ATCCBAA2146_4",
+          "length_bp": 85160
+        }
+      ],
+      "blockers": [
+        "read_bytes_not_downloaded_or_hashed",
+        "reference_sequences_not_downloaded_or_hashed",
+        "original_author_subset_read_ids_and_hashes_unavailable"
+      ]
+    }
+  ]
+}

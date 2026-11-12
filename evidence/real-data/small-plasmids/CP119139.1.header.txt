@@ -1,0 +1,153 @@
+ID   CP119139; SV 1; circular; genomic DNA; STD; PRO; 4207 BP.
+XX
+AC   CP119139;
+XX
+PR   Project:PRJNA812922;
+XX
+DT   14-JUN-2023 (Rel. 144, Created)
+DT   15-JUN-2023 (Rel. 144, Last updated, Version 1)
+XX
+DE   Neisseria gonorrhoeae strain 2022NG-0076 chromosome, complete genome.
+XX
+KW   .
+XX
+OS   Neisseria gonorrhoeae
+OC   Bacteria; Pseudomonadota; Betaproteobacteria; Neisseriales; Neisseriaceae;
+OC   Neisseria.
+XX
+RN   [1]
+RP   1-4207
+RA   Johnson J.D., Blankenship H., Soehnlen M.;
+RT   "Long read genome assemblers struggle with small plasmids";
+RL   Unpublished.
+XX
+RN   [2]
+RP   1-4207
+RA   Johnson J.D.;
+RT   ;
+RL   Submitted (28-FEB-2023) to the INSDC.
+RL   Bureau of Laboratories, Michigan Department of Health and Human Services,
+RL   3350 N Martin Luther King Blvd., Lansing, MI 48906, USA
+XX
+DR   MD5; 195712de3613b0bd88583fb63c360951.
+DR   BioSample; SAMN33482240.
+XX
+CC   The annotation was added by the NCBI Prokaryotic Genome Annotation
+CC   Pipeline (PGAP). Information about PGAP can be found here:
+CC   https://www.ncbi.nlm.nih.gov/genome/annotation_prok/
+CC   ##Genome-Assembly-Data-START##
+CC   Assembly Date          :: 2022
+CC   Assembly Method        :: Trycycler v. v0.5.3
+CC   Genome Representation  :: Full
+CC   Expected Final Version :: Yes
+CC   Genome Coverage        :: 188x
+CC   Sequencing Technology  :: Oxford Nanopore, Illumina MiSeq
+CC   ##Genome-Assembly-Data-END##
+CC   ##Genome-Annotation-Data-START##
+CC   Annotation Provider               :: NCBI
+CC   Annotation Date                   :: 03/03/2023 12:31:32
+CC   Annotation Pipeline               :: NCBI Prokaryotic Genome
+CC   Annotation Pipeline (PGAP)
+CC   Annotation Method                 :: Best-placed reference protein
+CC   set; GeneMarkS-2+
+CC   Annotation Software revision      :: 6.4
+CC   Features Annotated                :: Gene; CDS; rRNA; tRNA; ncRNA
+CC   Genes (total)                     :: 2,295
+CC   CDSs (total)                      :: 2,224
+CC   Genes (coding)                    :: 1,980
+CC   CDSs (with protein)               :: 1,980
+CC   Genes (RNA)                       :: 71
+CC   rRNAs                             :: 4, 4, 4 (5S, 16S, 23S)
+CC   complete rRNAs                    :: 4, 4, 4 (5S, 16S, 23S)
+CC   tRNAs                             :: 55
+CC   ncRNAs                            :: 4
+CC   Pseudo Genes (total)              :: 244
+CC   CDSs (without protein)            :: 244
+CC   Pseudo Genes (ambiguous residues) :: 0 of 244
+CC   Pseudo Genes (frameshifted)       :: 134 of 244
+CC   Pseudo Genes (incomplete)         :: 128 of 244
+CC   Pseudo Genes (internal stop)      :: 36 of 244
+CC   Pseudo Genes (multiple problems)  :: 53 of 244
+CC   ##Genome-Annotation-Data-END##
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..4207
+FT                   /organism="Neisseria gonorrhoeae"
+FT                   /host="Homo sapiens"
+FT                   /strain="2022NG-0076"
+FT                   /mol_type="genomic DNA"
+FT                   /country="USA"
+FT                   /isolation_source="blood"
+FT                   /collection_date="2022"
+FT                   /db_xref="taxon:485"
+FT   gene            complement(join(1..132,3470..4207))
+FT                   /locus_tag="P0D78_00005"
+FT   CDS             complement(join(1..132,3470..4207))
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="P0D78_00005"
+FT                   /product="replication initiation protein"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology."
+FT                   /inference="COORDINATES: similar to AA
+FT                   sequence:RefSeq:WP_003690219.1"
+FT                   /protein_id="WEU73004.1"
+FT                   /translation="MSQLYTQPDLFLQERIPHKPYCKDFKEAPMLVRSYAAAIKRRYIQ
+FT                   VNPPHLRVFMLFDLDYEGAGLAWEDNNLPMPAWAAINRENGGAHLAYALSAPVLTAEYG
+FT                   GRQKALRYLAALEAAYKAKLRGDVGFVSLITKNPEHPHWLTLRGVPDAIRGYDLEYLAD
+FT                   FVDLDKFKPYIGRSNVEAVGLSRNCTVFNLVSRWAHKNVLAFKQQGYTVQGWLKEVHYQ
+FT                   CMRVNGDFPVPMWEKEVKCISKSIANWVWYKFDIAASNRRFSELQAHRNSLRKTTINAG
+FT                   RTKIITEL"
+FT   gene            518..898
+FT                   /locus_tag="P0D78_00010"
+FT   CDS             518..898
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="P0D78_00010"
+FT                   /product="MobC family plasmid mobilization relaxosome
+FT                   protein"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology."
+FT                   /inference="COORDINATES: protein motif:HMM:NF017524.2"
+FT                   /protein_id="WEU73005.1"
+FT                   /translation="MTGSSAAEKRTKQLIIRVSPTEFETLTRQKTHPNLARYIRERVLE
+FT                   DGKASDKKTVKFQFPPEVVRVLAGMGNNLNQIAKALNTAAKVGTLGNVEALKATTELAA
+FT                   LERSLNSLRDFLAKEKNGWQSQ"
+FT   gene            883..1512
+FT                   /locus_tag="P0D78_00015"
+FT   CDS             883..1512
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="P0D78_00015"
+FT                   /product="relaxase/mobilization nuclease domain-containing
+FT                   protein"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology."
+FT                   /inference="COORDINATES: protein motif:HMM:NF015397.2"
+FT                   /protein_id="WEU73006.1"
+FT                   /translation="MAVPMIVQFFNRGKGGGSGPIDYLLGKDRDREEARLLRGDPEETA
+FT                   ALINSSDYAKKYTAGCLSFEESNIPAEQKHALMDSFEECIFAGLDKDQYNCLWVEHRDK
+FT                   GRLELNFVIPNIELLSGKRLQPYYYAADRGRVDAWRTMQNLTHGYSDPDDPAKRQSMTQ
+FT                   AKDLPRNTQEAAQSITEHHRRLRSPSPIRQAKKPRRRAGNAGKGRF"
+FT   gene            1596..2237
+FT                   /locus_tag="P0D78_00020"
+FT   CDS             1596..2237
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="P0D78_00020"
+FT                   /product="MbeB family mobilization protein"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology."
+FT                   /inference="COORDINATES: similar to AA
+FT                   sequence:RefSeq:WP_003690229.1"
+FT                   /protein_id="WEU73007.1"
+FT                   /translation="MSKISDLAKTFEQTSRTEAASIEQQTKADLETLRKNINEALKQSE
+FT                   QKITADINARQLRMSKAVFKPYLWSLLGISAAGLIVIAGLFIAIWSVKNELDDLKQQRA
+FT                   EAERTLDLLETKTKGLTLENCPVENSKATRVCVATEKRMLDALAELESNHAAIEQRMMK
+FT                   ALTHLGERLAELEQENTSLAQQLASLAAELERQSEIQQRQSEILNQLAKR"
+FT   gene            2284..2538
+FT                   /locus_tag="P0D78_00025"
+FT   CDS             2284..2538
+FT                   /codon_start=1
+FT     

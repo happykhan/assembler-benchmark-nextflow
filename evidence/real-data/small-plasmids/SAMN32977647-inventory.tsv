@@ -1,0 +1,6 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117240	1	Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_3, complete sequence.	SAMN32977647	GCA_028596165	30891	circular	2023-06-14	2023-06-15
+CP117241	1	Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_1, complete sequence.	SAMN32977647	GCA_028596165	4326	circular	2023-06-14	2023-06-15
+CP117239	1	Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_4, complete sequence.	SAMN32977647	GCA_028596165	15773	circular	2023-06-14	2023-06-15
+CP117242	1	Staphylococcus aureus strain ATCC 14458 chromosome, complete genome.	SAMN32977647	GCA_028596165	2866622	circular	2023-06-14	2023-06-15
+CP117243	1	Staphylococcus aureus strain ATCC 14458 plasmid pATCC14458_2, complete sequence.	SAMN32977647	GCA_028596165	4439	circular	2023-06-14	2023-06-15

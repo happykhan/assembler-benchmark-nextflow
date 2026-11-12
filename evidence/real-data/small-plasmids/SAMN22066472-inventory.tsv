@@ -1,0 +1,8 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117209	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_1, complete sequence.	SAMN22066472	GCA_020362645	2101	circular	2023-06-14	2023-06-15
+CP117208	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_2, complete sequence.	SAMN22066472	GCA_020362645	4063	circular	2023-06-14	2023-06-15
+CP117211	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_5, complete sequence.	SAMN22066472	GCA_020362645	118339	circular	2023-06-14	2023-06-15
+CP117207	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_3, complete sequence.	SAMN22066472	GCA_020362645	4084	circular	2023-06-14	2023-06-15
+CP117210	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_4, complete sequence.	SAMN22066472	GCA_020362645	4715	circular	2023-06-14	2023-06-15
+CP117206	1	Escherichia coli strain 2021QW-00057 plasmid p2021QW-00057_6, complete sequence.	SAMN22066472	GCA_020362645	46161	circular	2023-06-14	2023-06-15
+CP117212	1	Escherichia coli strain 2021QW-00057 chromosome, complete genome.	SAMN22066472	GCA_020362645	5036249	circular	2023-06-14	2023-06-15

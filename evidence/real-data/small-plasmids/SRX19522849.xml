@@ -1,0 +1,70 @@
+<EXPERIMENT_SET>
+<EXPERIMENT accession="SRX19522849" alias="2022NG-0076" center_name="SUB12922181" broker_name="NCBI">
+  <IDENTIFIERS>
+    <PRIMARY_ID>SRX19522849</PRIMARY_ID>
+    <SUBMITTER_ID namespace="SUB12922181">2022NG-0076</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <TITLE>Neisseria gonorrhoeae Raw Sequencing Reads</TITLE>
+  <STUDY_REF accession="SRP424919">
+    <IDENTIFIERS>
+      <PRIMARY_ID>SRP424919</PRIMARY_ID>
+      <EXTERNAL_ID namespace="BioProject">PRJNA812922</EXTERNAL_ID>
+    </IDENTIFIERS>
+  </STUDY_REF>
+  <DESIGN>
+    <DESIGN_DESCRIPTION>ONT whole genome sequence data for Neisseria gonorrhoeae isolates</DESIGN_DESCRIPTION>
+    <SAMPLE_DESCRIPTOR accession="SRS16909559">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS16909559</PRIMARY_ID>
+        <EXTERNAL_ID namespace="BioSample">SAMN33482240</EXTERNAL_ID>
+      </IDENTIFIERS>
+    </SAMPLE_DESCRIPTOR>
+    <LIBRARY_DESCRIPTOR>
+      <LIBRARY_NAME>2022NG-0076</LIBRARY_NAME>
+      <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+      <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+      <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+      <LIBRARY_LAYOUT>
+        <SINGLE/>
+      </LIBRARY_LAYOUT>
+    </LIBRARY_DESCRIPTOR>
+  </DESIGN>
+  <PLATFORM>
+    <OXFORD_NANOPORE>
+      <INSTRUMENT_MODEL>MinION</INSTRUMENT_MODEL>
+    </OXFORD_NANOPORE>
+  </PLATFORM>
+  <EXPERIMENT_LINKS>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SAMPLE</DB>
+        <ID>SRS16909559</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>SRA1597015</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRX19522849&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRX19522849&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+  </EXPERIMENT_LINKS>
+  <EXPERIMENT_ATTRIBUTES>
+    <EXPERIMENT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </EXPERIMENT_ATTRIBUTE>
+  </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+</EXPERIMENT_SET>

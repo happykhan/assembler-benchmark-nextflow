@@ -1,0 +1,3 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP119141	1	Neisseria gonorrhoeae strain 2022NG-0032 chromosome, complete genome.	SAMN33482239	GCA_029378455	4153	circular	2023-06-14	2023-06-15
+CP119142	1	Neisseria gonorrhoeae strain 2022NG-0032 plasmid p2022NG-0032_1, complete sequence.	SAMN33482239	GCA_029378455	2167441	circular	2023-06-14	2023-06-15

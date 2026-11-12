@@ -1,0 +1,6 @@
+accession	sequence_version	description	sample_accession	assembly_accession	base_count	topology	first_public	last_updated
+CP117235	1	Escherichia coli strain ATCC 25922 chromosome, complete genome.	SAMN32977649	GCA_028596225	5132219	circular	2023-06-14	2023-06-15
+CP117233	1	Escherichia coli strain ATCC 25922 plasmid pATCC25922_2, complete sequence.	SAMN32977649	GCA_028596225	3173	circular	2023-06-14	2023-06-15
+CP117232	1	Escherichia coli strain ATCC 25922 plasmid pATCC25922_4, complete sequence.	SAMN32977649	GCA_028596225	48488	circular	2023-06-14	2023-06-15
+CP117234	1	Escherichia coli strain ATCC 25922 plasmid pATCC25922_1, complete sequence.	SAMN32977649	GCA_028596225	1919	circular	2023-06-14	2023-06-15
+CP117236	1	Escherichia coli strain ATCC 25922 plasmid pATCC25922_3, complete sequence.	SAMN32977649	GCA_028596225	24185	circular	2023-06-14	2023-06-15

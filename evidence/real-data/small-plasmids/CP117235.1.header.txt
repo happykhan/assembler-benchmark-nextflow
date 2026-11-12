@@ -1,0 +1,149 @@
+ID   CP117235; SV 1; circular; genomic DNA; STD; PRO; 5132219 BP.
+XX
+AC   CP117235;
+XX
+PR   Project:PRJNA929966;
+XX
+DT   14-JUN-2023 (Rel. 144, Created)
+DT   15-JUN-2023 (Rel. 144, Last updated, Version 1)
+XX
+DE   Escherichia coli strain ATCC 25922 chromosome, complete genome.
+XX
+KW   .
+XX
+OS   Escherichia coli
+OC   Bacteria; Pseudomonadota; Gammaproteobacteria; Enterobacterales;
+OC   Enterobacteriaceae; Escherichia.
+XX
+RN   [1]
+RP   1-5132219
+RA   Johnson J.D., Blankenship H., Soehnlen M.;
+RT   "Long read genome assemblers struggle with small plasmids";
+RL   Unpublished.
+XX
+RN   [2]
+RP   1-5132219
+RA   Johnson J.D.;
+RT   ;
+RL   Submitted (31-JAN-2023) to the INSDC.
+RL   Bureau of Laboratories, Michigan Department of Health and Human Services,
+RL   3350 N Martin Luther King Blvd., Lansing, MI 48906, USA
+XX
+DR   MD5; 1127584804b6f737dcb63dba1a770f68.
+DR   BioSample; SAMN32977649.
+XX
+CC   The annotation was added by the NCBI Prokaryotic Genome Annotation
+CC   Pipeline (PGAP). Information about PGAP can be found here:
+CC   https://www.ncbi.nlm.nih.gov/genome/annotation_prok/
+CC   ##Genome-Assembly-Data-START##
+CC   Assembly Date          :: 2022
+CC   Assembly Method        :: Trycycler v. v0.5.3
+CC   Genome Representation  :: Full
+CC   Expected Final Version :: Yes
+CC   Genome Coverage        :: 140x
+CC   Sequencing Technology  :: Oxford Nanopore, Illumina MiSeq
+CC   ##Genome-Assembly-Data-END##
+CC   ##Genome-Annotation-Data-START##
+CC   Annotation Provider               :: NCBI
+CC   Annotation Date                   :: 02/02/2023 10:54:56
+CC   Annotation Pipeline               :: NCBI Prokaryotic Genome
+CC   Annotation Pipeline (PGAP)
+CC   Annotation Method                 :: Best-placed reference protein
+CC   set; GeneMarkS-2+
+CC   Annotation Software revision      :: 6.4
+CC   Features Annotated                :: Gene; CDS; rRNA; tRNA; ncRNA
+CC   Genes (total)                     :: 5,056
+CC   CDSs (total)                      :: 4,940
+CC   Genes (coding)                    :: 4,723
+CC   CDSs (with protein)               :: 4,723
+CC   Genes (RNA)                       :: 116
+CC   rRNAs                             :: 8, 7, 7 (5S, 16S, 23S)
+CC   complete rRNAs                    :: 8, 7, 7 (5S, 16S, 23S)
+CC   tRNAs                             :: 88
+CC   ncRNAs                            :: 6
+CC   Pseudo Genes (total)              :: 217
+CC   CDSs (without protein)            :: 217
+CC   Pseudo Genes (ambiguous residues) :: 0 of 217
+CC   Pseudo Genes (frameshifted)       :: 94 of 217
+CC   Pseudo Genes (incomplete)         :: 131 of 217
+CC   Pseudo Genes (internal stop)      :: 51 of 217
+CC   Pseudo Genes (multiple problems)  :: 52 of 217
+CC   Pseudo Genes (short protein)      :: 4 of 217
+CC   ##Genome-Annotation-Data-END##
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..5132219
+FT                   /organism="Escherichia coli"
+FT                   /strain="ATCC 25922"
+FT                   /mol_type="genomic DNA"
+FT                   /country="USA"
+FT                   /collection_date="2022"
+FT                   /db_xref="taxon:562"
+FT   gene            1..1404
+FT                   /gene="dnaA"
+FT                   /locus_tag="PQQ28_00385"
+FT   CDS             1..1404
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="dnaA"
+FT                   /locus_tag="PQQ28_00385"
+FT                   /product="chromosomal replication initiator protein DnaA"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology. GO_function:
+FT                   GO:0003677 - DNA binding [Evidence IEA]; GO_function:
+FT                   GO:0003688 - DNA replication origin binding [Evidence IEA];
+FT                   GO_function: GO:0005524 - ATP binding [Evidence IEA];
+FT                   GO_process: GO:0006270 - DNA replication initiation
+FT                   [Evidence IEA]; GO_process: GO:0006275 - regulation of DNA
+FT                   replication [Evidence IEA]"
+FT                   /inference="COORDINATES: similar to AA
+FT                   sequence:RefSeq:NP_418157.1"
+FT                   /protein_id="WCT47413.1"
+FT                   /translation="MSLSLWQQCLARLQDELPATEFSMWIRPLQAELSDNTLALYAPNR
+FT                   FVLDWVRDKYLNNINGLLTSFCGADAPQLRFEVGTKPVTQTPQAAVTSNVAAPAQVAQT
+FT                   QPQRAAPSTRSGWDNVPAPAEPTYRSNVNVKHTFDNFVEGKSNQLARAAARQVADNPGG
+FT                   AYNPLFLYGGTGLGKTHLLHAVGNGIMARKPNAKVVYMHSERFVQDMVKALQNNAIEEF
+FT                   KRYYRSVDALLIDDIQFFANKERSQEEFFHTFNALLEGNQQIILTSDRYPKEINGVEDR
+FT                   LKSRFGWGLTVAIEPPELETRVAILMKKADENDIRLPGEVAFFIAKRLRSNVRELEGAL
+FT                   NRVIANANFTGRAITIDFVREALRDLLALQEKLVTIDNIQKTVAEYYKIKVADLLSKRR
+FT                   SRSVARPRQMALALAKELTNHSLPEIGDAFGGRDHTTVLHACRKIEQLREESHDIKEDF
+FT                   SNLIRTLSS"
+FT   gene            1409..2509
+FT                   /gene="dnaN"
+FT                   /locus_tag="PQQ28_00390"
+FT   CDS             1409..2509
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="dnaN"
+FT                   /locus_tag="PQQ28_00390"
+FT                   /product="DNA polymerase III subunit beta"
+FT                   /EC_number="2.7.7.7"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology. GO_component:
+FT                   GO:0009360 - DNA polymerase III complex [Evidence IEA];
+FT                   GO_function: GO:0003887 - DNA-directed DNA polymerase
+FT                   activity [Evidence IEA]; GO_process: GO:0006260 - DNA
+FT                   replication [Evidence IEA]"
+FT                   /inference="COORDINATES: similar to AA
+FT                   sequence:RefSeq:WP_006177590.1"
+FT                   /protein_id="WCT47414.1"
+FT                   /translation="MKFTVEREHLLKPLQQVSGPLGGRPTLPILGNLLLQVADGTLSLT
+FT                   GTDLEMEMVARVALVQPHEPGATTVPARKFFDICRGLPEGAEIAVQLEGERMLVRSGRS
+FT                   RFSLSTLPAADFPNLDDWQSEVEFTLPQATMKRLIEATQFSMAHQDVRYYLNGMLFETE
+FT                   GEELRTVATDGHRLAVCSMPIGQSLPSHSVIVPRKGVIELMRMLDGGDNPLRVQIGSNN
+FT                   IRAHVGDFIFTSKLVDGRFPDYRRVLPKNPDKHLEAGCDLLKQAFARAAILSNEKFRGV
+FT                   RLYVSENQLKITANNPEQEEAEEILDVTYSGAEMEIGFNVSYVLDVLNALKCENVRMML
+FT                   TDSVSSVQIEDAASQSAAYVVMPMRL"
+FT   gene            2509..3582
+FT                   /gene="recF"
+FT                   /locus_tag="PQQ28_00395"
+FT   CDS             2509..3582
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="recF"
+FT                   /locus_tag="PQQ28_00395"
+FT                   /product="DNA replication/repair protein RecF"
+FT                   /note="Derived by automated computational analysis using
+FT                   gene prediction method: Protein Homology. GO_function:
+FT                   GO:0003697 - single-stranded
