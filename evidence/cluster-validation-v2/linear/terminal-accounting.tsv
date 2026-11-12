@@ -1,0 +1,11 @@
+35454211|nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3)|COMPLETED|0:0|1|4G|02:00:00|188
+35454212|nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0)|COMPLETED|0:0|1|4G|02:00:00|205
+35454213|nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1)|COMPLETED|0:0|1|4G|02:00:00|205
+35454246|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3_raven-1.8.3)|COMPLETED|0:0|4|16G|04:00:00|163
+35454249|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0_plassembler-1.9.0)|COMPLETED|0:0|4|16G|02:00:00|2429
+35454250|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1_miniasm-plus-0.2.1)|COMPLETED|0:0|4|16G|04:00:00|341
+35455473|nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3_raven-1.8.3)|COMPLETED|0:0|1|4G|00:30:00|8
+35455475|nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0_plassembler-1.9.0)|COMPLETED|0:0|1|4G|00:30:00|9
+35455476|nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1_miniasm-plus-0.2.1)|COMPLETED|0:0|1|4G|00:30:00|9
+35455501|nf-EXPORT_RESULTS|COMPLETED|0:0|1|4G|00:30:00|3
+35455506|nf-RENDER_WEBSITE|COMPLETED|0:0|1|4G|02:00:00|1

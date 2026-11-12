@@ -15,6 +15,14 @@ def retain_workflow_evidence(execution, directory, evidence):
             # their checksum in workflow.json; raw assemblies and logs are portable.
             if Path(name).suffix in ('.fasta', '.gfa', '.json', '.log'):
                 sources['tool-output/' + name] = checksum
+    final_plasmid_graph = 'tool-output/benchmark_plasmids.gfa'
+    if execution.get('tool') == 'plassembler' and execution.get('status') == 'completed':
+        graph = directory / final_plasmid_graph
+        if graph.is_file():
+            # Plassembler moves Flye graphs and writes its final graph under the
+            # configured prefix. Its scope is final plasmids, not the retained
+            # chromosome or the combined normalised FASTA.
+            sources[final_plasmid_graph] = digest(graph)
     for source in execution.get('assembly_sources', []):
         sources[source['file']] = source['sha256']
     retained, graphs = [], []
@@ -29,5 +37,7 @@ def retain_workflow_evidence(execution, directory, evidence):
         shutil.copyfile(source, evidence / target)
         retained.append({'source_file': name, 'file': target, 'sha256': expected})
         if source.suffix == '.gfa':
-            graphs.append({'file': target, 'sha256': expected, 'role': 'raw_phase_or_workflow_graph'})
+            graphs.append({'file': target, 'sha256': expected,
+                'role': 'final_plasmid_graph' if name == final_plasmid_graph and execution.get('tool') == 'plassembler' else 'raw_phase_or_workflow_graph',
+                'collection_scope': 'Retained task artifact, hashed during assessment; no reference-origin or physical-topology inference.'})
     return retained, graphs

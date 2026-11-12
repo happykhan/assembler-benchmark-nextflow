@@ -1,0 +1,334 @@
+[
+  {
+    "cohort": "quick",
+    "viewport": "desktop",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "quick",
+    "viewport": "desktop",
+    "route": "/simulated.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "quick",
+    "viewport": "desktop",
+    "overflow": false,
+    "route": "/results/06b6fa0efe76df403d25dc6c.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "quick",
+    "viewport": "mobile",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "quick",
+    "viewport": "mobile",
+    "route": "/simulated.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "quick",
+    "viewport": "mobile",
+    "overflow": false,
+    "route": "/results/06b6fa0efe76df403d25dc6c.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "general",
+    "viewport": "desktop",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "general",
+    "viewport": "desktop",
+    "route": "/performance.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "general",
+    "viewport": "desktop",
+    "route": "/aggregate.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 3
+  },
+  {
+    "cohort": "general",
+    "viewport": "desktop",
+    "overflow": false,
+    "route": "/results/ad0ef1ef407c9da63b673eab.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "general",
+    "viewport": "mobile",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "general",
+    "viewport": "mobile",
+    "route": "/performance.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "general",
+    "viewport": "mobile",
+    "route": "/aggregate.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 3
+  },
+  {
+    "cohort": "general",
+    "viewport": "mobile",
+    "overflow": false,
+    "route": "/results/ad0ef1ef407c9da63b673eab.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "route": "/scenarios/s5.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "overflow": false,
+    "route": "/results/688dab1fb0e878e3117c13a9.html",
+    "status": 200,
+    "graphs": 6,
+    "renderedGraphs": 4,
+    "errors": []
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "route": "/scenarios/s5.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "overflow": false,
+    "route": "/results/688dab1fb0e878e3117c13a9.html",
+    "status": 200,
+    "graphs": 6,
+    "renderedGraphs": 4,
+    "errors": []
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "desktop",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "desktop",
+    "route": "/scenarios/s7.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "desktop",
+    "overflow": false,
+    "route": "/results/32ade3f3ccd8cffbaac103f5.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "mobile",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "mobile",
+    "route": "/scenarios/s7.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "read-order",
+    "viewport": "mobile",
+    "overflow": false,
+    "route": "/results/32ade3f3ccd8cffbaac103f5.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  }
+]

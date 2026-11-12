@@ -1,0 +1,137 @@
+{
+  "jobs": 13,
+  "rows": [
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35454929",
+      "job_name": "nf-PREPARE_REFERENCE_(bsub-168-quick)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "58",
+      "exit_code": "0:0",
+      "job_id": "35454930",
+      "job_name": "nf-SIMULATE_READS_(quick-bimodal)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "43",
+      "exit_code": "0:0",
+      "job_id": "35454931",
+      "job_name": "nf-SIMULATE_READS_(quick-baseline)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "2",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35454940",
+      "job_name": "nf-ASSEMBLE_(quick-baseline_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "2",
+      "elapsed_seconds": "200",
+      "exit_code": "0:0",
+      "job_id": "35454941",
+      "job_name": "nf-ASSEMBLE_(quick-baseline_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35454948",
+      "job_name": "nf-ASSESS_(quick-baseline_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "2",
+      "elapsed_seconds": "119",
+      "exit_code": "0:0",
+      "job_id": "35454949",
+      "job_name": "nf-ASSEMBLE_(quick-bimodal_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "2",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35454950",
+      "job_name": "nf-ASSEMBLE_(quick-bimodal_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "5",
+      "exit_code": "0:0",
+      "job_id": "35454952",
+      "job_name": "nf-ASSESS_(quick-bimodal_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35454996",
+      "job_name": "nf-ASSESS_(quick-bimodal_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "0",
+      "exit_code": "0:0",
+      "job_id": "35455034",
+      "job_name": "nf-ASSESS_(quick-baseline_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35455035",
+      "job_name": "nf-EXPORT_RESULTS",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35455050",
+      "job_name": "nf-RENDER_WEBSITE",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    }
+  ],
+  "schema_version": 1,
+  "status": "verified"
+}

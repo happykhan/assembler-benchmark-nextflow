@@ -1,0 +1,49 @@
+{
+  "assessment_statuses": {
+    "completed": 4
+  },
+  "bundle_manifest_sha256": "120d9b5769f00b9f65b83439f64268ddbd1ee94250c8561672b953cee0ad0abd",
+  "execution_sha256": {
+    "quick-baseline__flye-2.9.6": "f12ffa3b2d11bb865a69d2bb58649d440286fa02b8c81cfe81607cc93418be16",
+    "quick-baseline__raven-1.8.3": "0cb7cc53ebaa6e1cc0dde9a7e98aef3a858d8f91135ea629c6d9adf896e77d39",
+    "quick-bimodal__flye-2.9.6": "4c0b79e76a60bab6ba104b3e920f517dc2e8b3f005cd4564081c6ea5114ef71a",
+    "quick-bimodal__raven-1.8.3": "c24e1748a560659794d541baa409c3fc5f5ab127317dedd2aa7c2e036a9db2a8"
+  },
+  "execution_statuses": {
+    "completed": 4
+  },
+  "expected_slots": 4,
+  "read_sha256": {
+    "quick-baseline": "db3661cda773f9ad71c074dc35a2da13375cf9e5ade2fd80495989ea6ca2e235",
+    "quick-bimodal": "1a20e42a6bc6b4cffdad0c908c90a21bbbe2bbb716be0072739cc82fc4f7a453"
+  },
+  "reported_outcomes": 4,
+  "run_id": "validation-quick-fixed-v2",
+  "scheduler_accounting": "Must be checked separately against the Slurm task IDs.",
+  "schema_version": 1,
+  "sequence_outcomes": {
+    "fully_complete": 1,
+    "incomplete": 3
+  },
+  "site": {
+    "errors": [],
+    "html_pages": 17,
+    "local_links_checked": 181,
+    "policy": {
+      "max_file_bytes": 5242880,
+      "max_files": 1500,
+      "max_total_bytes": 67108864
+    },
+    "public_files": 53,
+    "schema_version": 1,
+    "status": "pass",
+    "total_files": 55,
+    "website_bytes": 491216
+  },
+  "status": "verified",
+  "trace_statuses": {
+    "CACHED": 14
+  },
+  "trace_tasks": 14,
+  "verified_bundle_files": 58
+}

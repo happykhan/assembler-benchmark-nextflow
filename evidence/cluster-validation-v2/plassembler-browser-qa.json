@@ -1,0 +1,78 @@
+[
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "route": "/scenarios/s5.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "desktop",
+    "overflow": false,
+    "route": "/results/f6d9f95b13fb4f8656c2ac18.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "route": "/index.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 0,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "route": "/scenarios/s5.html",
+    "status": 200,
+    "overflow": false,
+    "dimensions": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "errors": [],
+    "tsvDownloads": 1,
+    "figures": 0
+  },
+  {
+    "cohort": "linear",
+    "viewport": "mobile",
+    "overflow": false,
+    "route": "/results/f6d9f95b13fb4f8656c2ac18.html",
+    "status": 200,
+    "graphs": 1,
+    "renderedGraphs": 1,
+    "errors": []
+  }
+]

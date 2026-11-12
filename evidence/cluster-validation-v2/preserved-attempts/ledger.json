@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "cohort": "general-r1",
+      "failure": "Cross-node shared reference transfer collision before assembly",
+      "repair": "Atomic directory locking, unique candidates, verified immutable publication",
+      "originals": "input-attempts/general-r1/ and run-attempts/general-r1/"
+    },
+    {
+      "cohort": "linear-r1",
+      "failure": "Minipolish version preflight received a tput warning without TERM; peer jobs interrupted by terminate policy",
+      "repair": "TERM default; finish healthy tasks; preserve interrupted executions",
+      "originals": "run-attempts/linear-r1/"
+    },
+    {
+      "cohort": "read-order-r1",
+      "failure": "Lazy JSON initialisation lost three planned slots; export gate correctly refused incomplete inventory",
+      "repair": "Eager initialisation; nine completed assembly/assessment pairs reused, only three missing slots executed",
+      "originals": "run-attempts/read-order-r1/"
+    },
+    {
+      "cohort": "general-and-linear-graph-retention",
+      "failure": "Prefixed Plassembler final graphs omitted from retained artifacts",
+      "repair": "Assessment/export/render only; all assemblies cached; exact outcome comparison retained",
+      "originals": "run-attempts/general-before-graph-retention/ and run-attempts/linear-before-graph-retention/"
+    }
+  ],
+  "genuine_software_failures_retried": false,
+  "source_archive_sha256": "401d49d55f2f13d2ca82dc3496a597fe7afb659ae836d1a1d996e9bc3e56173f"
+}

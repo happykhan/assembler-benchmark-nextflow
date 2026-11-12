@@ -1,0 +1,67 @@
+{
+  "assessment_statuses": {
+    "completed": 12
+  },
+  "bundle_manifest_sha256": "3e4ad537501a8813e25fb232d6f43c718212c413337e31537a82fe41b19e94c7",
+  "execution_sha256": {
+    "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3__raven-1.8.3": "41d763a310c96fde6b0cf46346f37aeea8aa1b51a112084416368bc043352727",
+    "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3__raven-1.8.3": "7fb37e2dd74d84eac106887c9da4dbed848a74817cac9101c89c9258fb9c9a6e",
+    "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3__raven-1.8.3": "65a66f28b2bf6503ac92706d59a4b574aa6ea98974e12f086162080871f83153",
+    "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3__raven-1.8.3": "1432b3ba9cdb2579d62349c3c48753ccbe74f946f04d23125c1c82a06a2d48be",
+    "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3__raven-1.8.3": "150b4ae21a2dce40b4d2265ba8d18c2a831a6130d122b52ee9f8b99c0b9a14fd",
+    "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3__raven-1.8.3": "ecb772d38439462c3156bca7f40e23c829e1926ea11a1b877904642257d7efad",
+    "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3__raven-1.8.3": "7ba52285270b4566837c4e3f4835d45bfd729a1d86ba37b97efe513c2670399a",
+    "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3__raven-1.8.3": "b5e5b5b9e94f8bd8247fb01ba2cf8f44bbdc780285e4b480cd2a7d9b75f6d37b",
+    "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3__raven-1.8.3": "50b42bef99680e155783115a66d50c2c91b435ed95dd4f3adb858336c1dfaf54",
+    "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3__raven-1.8.3": "3e80220b952329c959fa733f9976d13b1efc5b38f0599260813f34ecdb376c74",
+    "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3__raven-1.8.3": "e7e7b8dab2ef4bc47bcda6ce5ff3e2d97042e76f19f58480de275fbec09429c7",
+    "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3__raven-1.8.3": "6f824ccefa75938ca0fe43b37d0d254c8ae3633608d51f5c50cd203f24feb4fb"
+  },
+  "execution_statuses": {
+    "completed": 12
+  },
+  "expected_slots": 12,
+  "read_sha256": {
+    "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+    "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+    "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+    "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+    "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+    "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+    "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+    "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+    "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+    "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be",
+    "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be",
+    "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be"
+  },
+  "reported_outcomes": 12,
+  "run_id": "validation-read-order-v2",
+  "scheduler_accounting": "Must be checked separately against the Slurm task IDs.",
+  "schema_version": 1,
+  "sequence_outcomes": {
+    "fail": 12
+  },
+  "site": {
+    "errors": [],
+    "html_pages": 25,
+    "local_links_checked": 285,
+    "policy": {
+      "max_file_bytes": 5242880,
+      "max_files": 1500,
+      "max_total_bytes": 67108864
+    },
+    "public_files": 85,
+    "schema_version": 1,
+    "status": "pass",
+    "total_files": 87,
+    "website_bytes": 686222
+  },
+  "status": "verified",
+  "trace_statuses": {
+    "CACHED": 28,
+    "COMPLETED": 11
+  },
+  "trace_tasks": 39,
+  "verified_bundle_files": 163
+}

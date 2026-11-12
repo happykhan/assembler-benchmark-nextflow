@@ -1,0 +1,9 @@
+35453938|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0_plassembler-1.9.0)|CANCELLED by 35098|0:0
+35453938.batch|batch|FAILED|15:0
+35453938.extern|extern|COMPLETED|0:0
+35453940|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3_raven-1.8.3)|CANCELLED by 35098|0:0
+35453940.batch|batch|FAILED|15:0
+35453940.extern|extern|COMPLETED|0:0
+35453941|nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1_miniasm-plus-0.2.1)|FAILED|1:0
+35453941.batch|batch|FAILED|1:0
+35453941.extern|extern|COMPLETED|0:0

@@ -1,0 +1,207 @@
+{
+  "jobs": 20,
+  "rows": [
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "558",
+      "exit_code": "0:0",
+      "job_id": "35454209",
+      "job_name": "nf-PREPARE_COLLECTION_INPUT_(197_GCF_900070325.1)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "580",
+      "exit_code": "0:0",
+      "job_id": "35454210",
+      "job_name": "nf-PREPARE_COLLECTION_INPUT_(349_GCF_000146025.2)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "34",
+      "exit_code": "0:0",
+      "job_id": "35454357",
+      "job_name": "nf-ASSEMBLE_(197_GCF_900070325.1_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "355",
+      "exit_code": "0:0",
+      "job_id": "35454358",
+      "job_name": "nf-ASSEMBLE_(197_GCF_900070325.1_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "425",
+      "exit_code": "0:0",
+      "job_id": "35454359",
+      "job_name": "nf-ASSEMBLE_(197_GCF_900070325.1_plassembler-1.9.0)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "46",
+      "exit_code": "0:0",
+      "job_id": "35454360",
+      "job_name": "nf-ASSEMBLE_(197_GCF_900070325.1_miniasm-plus-0.2.1)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "29",
+      "exit_code": "0:0",
+      "job_id": "35454375",
+      "job_name": "nf-ASSEMBLE_(349_GCF_000146025.2_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "186",
+      "exit_code": "0:0",
+      "job_id": "35454376",
+      "job_name": "nf-ASSEMBLE_(349_GCF_000146025.2_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "251",
+      "exit_code": "0:0",
+      "job_id": "35454377",
+      "job_name": "nf-ASSEMBLE_(349_GCF_000146025.2_plassembler-1.9.0)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "34",
+      "exit_code": "0:0",
+      "job_id": "35454378",
+      "job_name": "nf-ASSEMBLE_(349_GCF_000146025.2_miniasm-plus-0.2.1)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "9",
+      "exit_code": "0:0",
+      "job_id": "35455466",
+      "job_name": "nf-ASSESS_(197_GCF_900070325.1_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35455467",
+      "job_name": "nf-ASSESS_(197_GCF_900070325.1_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "10",
+      "exit_code": "0:0",
+      "job_id": "35455468",
+      "job_name": "nf-ASSESS_(197_GCF_900070325.1_miniasm-plus-0.2.1)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "9",
+      "exit_code": "0:0",
+      "job_id": "35455469",
+      "job_name": "nf-ASSESS_(197_GCF_900070325.1_plassembler-1.9.0)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "4",
+      "exit_code": "0:0",
+      "job_id": "35455470",
+      "job_name": "nf-ASSESS_(349_GCF_000146025.2_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "4",
+      "exit_code": "0:0",
+      "job_id": "35455471",
+      "job_name": "nf-ASSESS_(349_GCF_000146025.2_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35455472",
+      "job_name": "nf-ASSESS_(349_GCF_000146025.2_plassembler-1.9.0)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "4",
+      "exit_code": "0:0",
+      "job_id": "35455474",
+      "job_name": "nf-ASSESS_(349_GCF_000146025.2_miniasm-plus-0.2.1)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35455500",
+      "job_name": "nf-EXPORT_RESULTS",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35455505",
+      "job_name": "nf-RENDER_WEBSITE",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    }
+  ],
+  "schema_version": 1,
+  "status": "verified"
+}

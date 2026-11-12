@@ -1,0 +1,30 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	dc/fdf923	3006042	PREPARE_RUN	COMPLETED	0	2026-11-12 15:22:06.816	48.4s	47.9s	1.2%	41.7 MB	193.6 MB	13.2 MB	1.6 MB
+4	88/58afbc	35453856	PREPARE_COLLECTION_INPUT (s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.034	13.5s	10.7s	80.9%	366.4 MB	471.3 MB	598.3 MB	404.2 MB
+2	c7/b0d7fd	35453855	PREPARE_COLLECTION_INPUT (s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.002	13.5s	10.8s	79.0%	366.5 MB	471.3 MB	598.3 MB	404.2 MB
+3	e4/286778	35453854	PREPARE_COLLECTION_INPUT (s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:55.922	13.6s	10.3s	80.9%	366.1 MB	470.9 MB	598.3 MB	404.2 MB
+5	50/1f7aea	35453857	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.058	53.5s	46.5s	93.4%	360.8 MB	465 MB	556.9 MB	360.6 MB
+7	18/c82b5e	35453859	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.161	53.4s	48.3s	93.5%	360.9 MB	465.1 MB	556.9 MB	360.6 MB
+6	0d/d3e59d	35453858	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.140	53.4s	48.5s	93.3%	360.8 MB	465 MB	556.9 MB	360.6 MB
+8	b2/5e55ba	35453860	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.220	53.3s	48.3s	93.5%	361 MB	465.1 MB	556.9 MB	360.6 MB
+9	c4/669fff	35453861	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.241	53.3s	48.8s	93.6%	360.6 MB	465.1 MB	556.9 MB	360.6 MB
+10	76/7623f5	35453862	PREPARE_COLLECTION_INPUT (s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:56.262	53.3s	48.8s	93.6%	360.6 MB	465.1 MB	556.9 MB	360.6 MB
+11	e6/107219	35453864	ASSEMBLE (s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:10.384	1m 59s	1m 56s	362.3%	1.4 GB	1.9 GB	1 GB	162.1 MB
+12	6d/d2e480	35453865	ASSEMBLE (s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:10.420	1m 59s	1m 57s	359.1%	1.4 GB	1.9 GB	1 GB	161.5 MB
+13	56/9d3e74	35453866	ASSEMBLE (s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:10.725	2m 4s	1m 59s	368.7%	1.4 GB	1.9 GB	1014.4 MB	161.5 MB
+21	d9/220017	35453896	ASSESS (s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:09.626	9.9s	5.3s	70.5%	162.6 MB	332.3 MB	143.5 MB	30 MB
+20	48/f29ed7	35453895	ASSESS (s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:09.594	9.9s	6.7s	50.6%	166.1 MB	332.3 MB	142.3 MB	29.7 MB
+22	25/544125	35453898	ASSESS (s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:14.630	9.9s	5.7s	61.4%	163.9 MB	332.3 MB	142.1 MB	29.7 MB
+18	4c/ae3394	35453882	ASSEMBLE (s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.841	1m 49s	1m 42s	368.8%	1.4 GB	1.8 GB	910 MB	160.6 MB
+19	09/151bb0	35453883	ASSEMBLE (s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.862	1m 49s	1m 45s	361.4%	1.4 GB	1.8 GB	892.9 MB	160.6 MB
+16	d0/43a43c	35453880	ASSEMBLE (s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.418	1m 54s	1m 49s	370.6%	1.4 GB	1.9 GB	1018.1 MB	160.6 MB
+23	e9/172a8e	35453909	ASSESS (s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:39.662	9.9s	5.3s	69.0%	182.6 MB	357.8 MB	142.7 MB	29.6 MB
+24	dc/8f8192	35453908	ASSESS (s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:39.605	9.9s	4s	86.3%	179.5 MB	357.8 MB	142.3 MB	29.6 MB
+15	c9/eba9f5	35453879	ASSEMBLE (s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.311	2m 4s	2m 1s	361.5%	1.4 GB	1.9 GB	1 GB	160.7 MB
+17	e0/182e18	35453881	ASSEMBLE (s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.456	2m 4s	2m	358.7%	1.4 GB	1.9 GB	1 GB	160.7 MB
+25	07/ecbd9d	35453918	ASSESS (s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:44.640	9.9s	7.8s	52.7%	179.7 MB	353.1 MB	147.9 MB	29.6 MB
+14	38/3c964d	35453878	ASSEMBLE (s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:23:50.279	2m 9s	2m 2s	361.4%	1.4 GB	1.9 GB	1 GB	160.6 MB
+27	8b/c36034	35453928	ASSESS (s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:54.679	9.8s	5.7s	73.4%	168.6 MB	332.3 MB	147.6 MB	29.7 MB
+26	02/a2f8ba	35453927	ASSESS (s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:54.657	9.9s	4.5s	90.4%	173 MB	359.8 MB	147.8 MB	29.7 MB
+28	b9/566e03	35453930	ASSESS (s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 15:25:59.688	9.8s	4.6s	88.4%	187.3 MB	385.1 MB	147.7 MB	29.6 MB
+29	38/1fd79a	35453932	EXPORT_RESULTS	FAILED	1	2026-11-12 15:26:09.680	4.8s	3ms	-	-	-	-	-

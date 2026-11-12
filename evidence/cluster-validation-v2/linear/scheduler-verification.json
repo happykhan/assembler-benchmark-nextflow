@@ -1,0 +1,117 @@
+{
+  "jobs": 11,
+  "rows": [
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "188",
+      "exit_code": "0:0",
+      "job_id": "35454211",
+      "job_name": "nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "205",
+      "exit_code": "0:0",
+      "job_id": "35454212",
+      "job_name": "nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "205",
+      "exit_code": "0:0",
+      "job_id": "35454213",
+      "job_name": "nf-PREPARE_COLLECTION_INPUT_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "163",
+      "exit_code": "0:0",
+      "job_id": "35454246",
+      "job_name": "nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "2429",
+      "exit_code": "0:0",
+      "job_id": "35454249",
+      "job_name": "nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0_plassembler-1.9.0)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "341",
+      "exit_code": "0:0",
+      "job_id": "35454250",
+      "job_name": "nf-ASSEMBLE_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1_miniasm-plus-0.2.1)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "8",
+      "exit_code": "0:0",
+      "job_id": "35455473",
+      "job_name": "nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "9",
+      "exit_code": "0:0",
+      "job_id": "35455475",
+      "job_name": "nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0_plassembler-1.9.0)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "9",
+      "exit_code": "0:0",
+      "job_id": "35455476",
+      "job_name": "nf-ASSESS_(s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1_miniasm-plus-0.2.1)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35455501",
+      "job_name": "nf-EXPORT_RESULTS",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35455506",
+      "job_name": "nf-RENDER_WEBSITE",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    }
+  ],
+  "schema_version": 1,
+  "status": "verified"
+}

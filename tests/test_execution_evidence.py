@@ -76,3 +76,18 @@ class ExecutionEvidenceTests(unittest.TestCase):
             self.assertEqual(outcome_label({'execution':{'status':status},'sequence_outcome':None}),label)
         self.assertEqual(outcome_label({'assessment':{'status':'error'},'sequence_outcome':None}),'Assessment error')
         self.assertEqual(outcome_label({'sequence_outcome':'incomplete'}),'incomplete')
+
+    def test_plassembler_prefixed_empty_final_graph_is_retained_as_plasmid_only(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root/'tool-output').mkdir()
+            graph=root/'tool-output/benchmark_plasmids.gfa'
+            graph.write_text('')
+            out=root/'evidence';out.mkdir()
+            files,graphs=retain_workflow_evidence({'tool':'plassembler','status':'completed'},root,out)
+            self.assertEqual(len(files),1)
+            self.assertEqual(graphs[0]['role'],'final_plasmid_graph')
+            self.assertEqual(graphs[0]['sha256'],digest(graph))
+            self.assertEqual((out/graphs[0]['file']).read_bytes(),b'')
+            failed=root/'failed-evidence';failed.mkdir()
+            self.assertEqual(retain_workflow_evidence({'tool':'plassembler','status':'software_error'},root,failed),([],[]))

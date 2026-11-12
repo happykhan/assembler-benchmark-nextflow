@@ -1,0 +1,117 @@
+{
+  "complete": true,
+  "expected_slot_plan": [
+    {
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1"
+    },
+    {
+      "assembler": "plassembler-1.9.0",
+      "case_id": "s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3"
+    }
+  ],
+  "expected_slots": 3,
+  "files": {
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/assembly.fasta": "dfb0ff8575723569ca6a421910dceb8d3ef325d9cc13a180e0c11a5441862ea4",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/assembly.gfa": "9e96931872532883b6fa5048244bc66969dc7162e8e1e7e1c880993b7ca4c9d4",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly.polished.gfa": "9e96931872532883b6fa5048244bc66969dc7162e8e1e7e1c880993b7ca4c9d4",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly.raw.gfa": "6408b30ec25b75f01836ae4b16a1b5a28eab2778c3ec94f9699e9a91beeeb234",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly_graph.gfa": "9e96931872532883b6fa5048244bc66969dc7162e8e1e7e1c880993b7ca4c9d4",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__assembly.raw.gfa": "6408b30ec25b75f01836ae4b16a1b5a28eab2778c3ec94f9699e9a91beeeb234",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__assembly_graph.gfa": "cc207e839671fa99a609962461ec5c10a0bf14a6a8a10c9cbe6cdc47160d6f90",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/assembly.fasta": "71b1c9ba2050c6db2b2547d96a5f2e0a08e3e1b7155669dd2141fd50db3fc2f6",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.gfa": "fd7fe58c8bf9388a30e31f8810bcf13694e3b3f1fde7d937cf376638f5d84a09",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/assembly.fasta": "ce2b1efda632e8b01282414ffe2df5fafc563d2dd92e895c9ac4b6242c87d129",
+    "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/assembly.gfa": "9fc8623023027ed5e384c34679289752add6ce237fec966822f7a9b6060ac92c",
+    "diagnostic-comparisons.json": "52f4de09cea76c627cbd88a2928103f6fae7a0b9d9f93d0b78ea7c2c52e953b2",
+    "environment-preparation.json": "46446675e9841f1fcdb772cf0b202935051a3993860ef228be633747467ed4e9",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/alignment.paf": "d84148eade897b38a9274ccc99cc842b054804cf5d69e78b93d9802f6c23459e",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/execution.json": "6e09e347f0c75d1a484ba05eb5ba0b9177e2ec1e5b51b54687bce7609aa4576b",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/input-provenance.json": "892bf96a3d8362160e9be60e88ef9862aaa7ecbad07d0998a91835f1a7b1393b",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/minimap2.stderr.log": "b858c9dc9d6036e1a2912af34710e4464556d56ffdd9e5bc62bf05d6273c8bd3",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/reference-provenance.json": "6f2cb9e75a02b85732287eb8957108f918db6849a47e5fbaf82cb5d8051688b6",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/result.json": "47c47f0f51c4dca75bbeda7089de40ac863e7a6668cf9b4c39868f6534e73f15",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly.fasta": "dfb0ff8575723569ca6a421910dceb8d3ef325d9cc13a180e0c11a5441862ea4",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__minipolish.stderr.log": "db15dde56392c71cd5c94550c3afcceeaf54510dd570cf87de2a1c563c7bd9b5",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__assembly.fasta": "dfb0ff8575723569ca6a421910dceb8d3ef325d9cc13a180e0c11a5441862ea4",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__execution.json": "eebbc59e5019f8ffaa4d203fed78806d004dc0357d5227bedfeb2d99b35ecb79",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__step-1.stderr.log": "b06d6d85e9c75d0f4254dc04bcbe3f386c6779e7efb6586c9a71d85bb5b60745",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__step-2.stderr.log": "e54b965b935e90bfe1a0667eca08bb93477c46b1e192a9e5411ad420a3e1b10d",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__workflow.json": "3fbed352fb6bbbb588737a4476a2507b880e599066e59f64115f84a6b679ea7c",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/alignment.paf": "30a02ab7d2019ee9b21ba7fce5be4440cbd656083ba245d096806d2c5812e581",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/execution.json": "7066d915ee9290d95df2b38e942442fa4d02c1247c15dcee705c2ba89b308f20",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/final-benchmark_summary.tsv": "f7bbf36f731de23a28f48ad5a986ae7dee0aa6f5cd5de71a242f95b271f59a68",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/final-plasmids.fasta": "73aa4ddaf21b5bfe4e7e946982ae99e22ebba0c4d1f74d5f2a366b703e76d354",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/initial-flye-assembly_info.txt": "ee5937b44dfa16608d8b0712508aa32090f971fd1a675233b9a6e70915069e4c",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/input-provenance.json": "70ff4d7762c8827f55b9f294b5b20547ecdae5f34795f97bf47d79a68df418e0",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/minimap2.stderr.log": "b24bd77aca8d950cc8127a8c3c18f3215ee05b404c4c35667bb3abc92652ad07",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/reference-provenance.json": "6f2cb9e75a02b85732287eb8957108f918db6849a47e5fbaf82cb5d8051688b6",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/result.json": "636faa02c253a57c8594b2c9fbadb97fed9f93938b0ca5f1d31e7fdeb7b45695",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/retained-chromosome.fasta": "6381fb3b598d6250fd4f6cf6f3987e11eb7c20a31281ee8e684bde1242f4ec0e",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/stderr.log": "3034a70ab006ddcc9d938b0e090147410920a744c4d01c0e0787a7bc0950b02c",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.fasta": "73aa4ddaf21b5bfe4e7e946982ae99e22ebba0c4d1f74d5f2a366b703e76d354",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/workflow__tool-output__chromosome.fasta": "6381fb3b598d6250fd4f6cf6f3987e11eb7c20a31281ee8e684bde1242f4ec0e",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/alignment.paf": "a9583dd6c7ff0cebd583e1970d816f17e6cc797bf15e6a68227d5074232567b2",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/execution.json": "4df9186ee82e2999481a20086b1e039830b917fd8cd20620f35001a1b19e137f",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/input-provenance.json": "caa71fa2ccac0d6dc06e354f5753b24c9e023d5374768d3203e6c91f7b4afcfb",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/minimap2.stderr.log": "4fb8d907d121dbda550e2e8722df512c001fe89b260f2c48bcea5a96613f50ae",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/reference-provenance.json": "6f2cb9e75a02b85732287eb8957108f918db6849a47e5fbaf82cb5d8051688b6",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/result.json": "297487e41cdd00100203a452a5226c667b6b9721eed965f988844cfe15cd982c",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/stderr.log": "b4d6b1b4937f5a13b45516d0972fc2be7b92513159120f0bc3795e2de488d8f6",
+    "evidence/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/stdout.log": "ce2b1efda632e8b01282414ffe2df5fafc563d2dd92e895c9ac4b6242c87d129",
+    "index.html": "28e7f8b39aa7d0e3edd575f730e19e7fc3d5988805e76fa13d158e90f2157947",
+    "presentation/alignments/0.svg": "b9006c2229972bb3cef56fa50eafa821fbfbb017378772ef9aab47812ab07025",
+    "presentation/alignments/0.tsv": "d820b850c111eabea3e3ded3e3e17f96a407d8624a77442f8fcec6d6510bcdd9",
+    "presentation/alignments/1.svg": "96ae4ae963fb02858f589a2cf85ebd7f2e6f000271135c96d71b2ec328481751",
+    "presentation/alignments/1.tsv": "bdb54e7c3026cfdeb74bf12da8d1554d4d02a6e241bb9b442a5cb1dd7fb13811",
+    "presentation/alignments/2.svg": "73f9717a0d64594c3e0d0e74d9e1936f9b532d423a35f9e9add256f198c7c797",
+    "presentation/alignments/2.tsv": "80c84b397825a409f988134209f3a995037590fbeabc467d52cdbef19424df4d",
+    "presentation/graphs/0-assembly.json": "802472361d9ebe63a402d3df3732df35918c28b12f95150e62c812537b1ebc2b",
+    "presentation/graphs/0-workflow__tool-output__assembly.polished.json": "9d24f4849fdc8ea132d205ada041175ab1e922bc16659dacb08670b9a0242485",
+    "presentation/graphs/0-workflow__tool-output__assembly.raw.json": "faf35fb494f21d5f810ecf34e12ea6967827ebda51c6e519654ac041000aa298",
+    "presentation/graphs/0-workflow__tool-output__assembly_graph.json": "bd4bda8aa32a5813fdf1a0f50627fc2c0a5ee331c83692c78dfaefa467cce33b",
+    "presentation/graphs/0-workflow__tool-output__raw-phase__assembly.raw.json": "eccd91d9ab83460f2b0cb561578001e40c372fa14de6cb66c4fdd54949527c45",
+    "presentation/graphs/0-workflow__tool-output__raw-phase__assembly_graph.json": "e1dc619cb67581871f5abb125527c83f77c8293c211146984f6fdbb8e9a08278",
+    "presentation/graphs/1-workflow__tool-output__benchmark_plasmids.json": "4762c38700215e5201d76f09cb5331e9f3aa28aaf3c34aa27bf1017dc521920a",
+    "presentation/graphs/2-assembly.json": "da39c955e8cf47252e1e815e3714e3610384a1b79559f7c1d769f1722614565a",
+    "presentation/index.json": "1d0f0c96e16fa8fa3dbc7371e1cb417419a10bc32a8da6409045a5059a21895b",
+    "results.json": "68eb150a3f48af97e587f4d79a1bd9c06c8d9367640ded48bc745b711bad1a30",
+    "results.tsv": "8d4360ff6cbc63ec44ea02ca322d1801d0bb19f2c7ee15d001d8f1a32c03498f",
+    "slot-plan.json": "e66a40f8a5c33f9bb03a8145c131b90ed6ae537b12ba9e17fb523e55fb854c1f"
+  },
+  "headline_eligible": false,
+  "plan_sha256": "e66a40f8a5c33f9bb03a8145c131b90ed6ae537b12ba9e17fb523e55fb854c1f",
+  "presets": [
+    "standard"
+  ],
+  "purposes": [
+    "diagnostic_benchmark"
+  ],
+  "result_count": 3,
+  "retention": {
+    "assemblies": [
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/assembly.fasta",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/assembly.fasta",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/assembly.fasta"
+    ],
+    "graphs": [
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/assembly.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly.polished.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly.raw.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__assembly_graph.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__assembly.raw.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1/workflow__tool-output__raw-phase__assembly_graph.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.gfa",
+      "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3/assembly.gfa"
+    ]
+  },
+  "run_id": "validation-linear-v2",
+  "schema_version": 1
+}

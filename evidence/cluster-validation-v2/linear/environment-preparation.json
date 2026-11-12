@@ -1,0 +1,92 @@
+{
+  "automatic_retries": 0,
+  "environments": [
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-validation-20261112/pipeline-pilot-r2/environments/pixi.toml",
+        "--environment",
+        "default"
+      ],
+      "elapsed_seconds": 0.11568457819521427,
+      "environment": "default",
+      "exit_code": 0,
+      "lock_sha256": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9",
+      "status": "prepared",
+      "stderr_sha256": "b6d2bef0ecf08e5c4a8674e38b0f8d8cd4e167c2c7e6c493a09e9f8e6a142fc8",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-validation-20261112/pipeline-pilot-r2/environments/pixi.toml",
+        "--environment",
+        "miniasm-plus-0-2-1"
+      ],
+      "elapsed_seconds": 0.07495525665581226,
+      "environment": "miniasm-plus-0-2-1",
+      "exit_code": 0,
+      "lock_sha256": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9",
+      "status": "prepared",
+      "stderr_sha256": "d4dbf3901a1df88c8fc4e7aeaa071e3879b371acabe8cef4f62ba10c4d6f8484",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-validation-20261112/pipeline-pilot-r2/environments/pixi.toml",
+        "--environment",
+        "plassembler-1-9-0"
+      ],
+      "elapsed_seconds": 0.07899128552526236,
+      "environment": "plassembler-1-9-0",
+      "exit_code": 0,
+      "lock_sha256": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9",
+      "status": "prepared",
+      "stderr_sha256": "23c68372053cb136e6c7b9f6f0cefa7dd40434fb22763a8019268e1a45a1718c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-validation-20261112/pipeline-pilot-r2/environments/pixi.toml",
+        "--environment",
+        "raven-1-8-3"
+      ],
+      "elapsed_seconds": 0.06268390081822872,
+      "environment": "raven-1-8-3",
+      "exit_code": 0,
+      "lock_sha256": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9",
+      "status": "prepared",
+      "stderr_sha256": "994983ae1aa18c5ab2b9a7091916b92e35bf9e75072d133bc4e3923fcaeabc83",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished_at": "2026-11-12T15:39:45.261734+00:00",
+  "plan_sha256": "697520fafa157cf2cad6e93b53645c4a7f2d833e265b4b9274c7c600a35f7629",
+  "policy": "Locked environment preparation is serial before scheduling; assembler concurrency is unchanged.",
+  "runtime_image": null,
+  "schema_version": 1,
+  "started_at": "2026-11-12T15:39:09.641765+00:00",
+  "status": "prepared"
+}

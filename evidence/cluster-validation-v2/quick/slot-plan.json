@@ -1,0 +1,128 @@
+{
+  "assembler_definitions": {
+    "flye-2.9.6": {
+      "adapter": "flye",
+      "container": null,
+      "environment": "flye-2-9-6",
+      "id": "flye-2.9.6",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "flye",
+      "version": "2.9.6"
+    },
+    "raven-1.8.3": {
+      "adapter": "raven",
+      "container": null,
+      "environment": "raven-1-8-3",
+      "id": "raven-1.8.3",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "raven",
+      "version": "1.8.3"
+    }
+  },
+  "assemblers": [
+    "flye-2.9.6",
+    "raven-1.8.3"
+  ],
+  "cases": [
+    {
+      "coverage": 30,
+      "description": "Workflow fixture from the chromosome's first 200,000 bases; excluded from scientific comparisons.",
+      "group": "read-quality",
+      "headline_eligible": false,
+      "id": "quick-baseline",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "quick",
+      "purpose": "workflow_check",
+      "reference_id": "bsub-168-quick",
+      "seed": 42
+    },
+    {
+      "coverage": 30,
+      "description": "Same targetbases; halfbases fromshort mode",
+      "group": "read-quality",
+      "headline_eligible": false,
+      "id": "quick-bimodal",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "quick",
+      "purpose": "workflow_check",
+      "reference_id": "bsub-168-quick",
+      "seed": 42,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250
+    }
+  ],
+  "expected_slots": 4,
+  "headline_eligible": false,
+  "plan_sha256": "ed38bbdff757f986cc54790a66a1b2350d1f22101af86ee81a4b15c4bc7306a9",
+  "preset": "quick",
+  "purpose": "workflow_check",
+  "reference_ids": [
+    "bsub-168-quick"
+  ],
+  "references": {
+    "bsub-168-quick": {
+      "accession": "GCF_000009045.1",
+      "compression": "gzip",
+      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "id": "bsub-168-quick",
+      "molecule_accession": "NC_000964.3",
+      "organism": "Bacillus subtilis 168",
+      "purpose": "workflow_check",
+      "quick_slice_bases": 200000,
+      "source": "NCBI RefSeq; AL009126.3 / NC_000964.3",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz"
+    }
+  },
+  "resource_policy": {
+    "assembly": {
+      "cpus": 2,
+      "default_memory_gb": 4,
+      "memory_gb_by_tool": {
+        "flye": 16,
+        "raven": 4
+      },
+      "time_minutes": 30
+    },
+    "queue_capacity": 1000
+  },
+  "schema_version": 1,
+  "selection": {
+    "assemblers": [
+      "flye-2.9.6",
+      "raven-1.8.3"
+    ],
+    "cases": [],
+    "groups": []
+  },
+  "slots": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "quick-baseline"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "quick-baseline"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "quick-bimodal"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "quick-bimodal"
+    }
+  ],
+  "source_file_sha256": {
+    "assets/assemblers.json": "520d4027232f504f1781b7e96381477c4399819a9b4e44d7fb4184baa449980c",
+    "assets/groups.json": "4a238f13cd4b73bae98cda54adf34ff8824831ddb23a6def0dd69658324753b4",
+    "assets/quick.json": "d80ecb5d6f2e8df26ca8141302c1a6b2337324feee422c1e0b14305ef63dc9e7",
+    "assets/references.json": "23dbd87badd36242d7bb714faed0e54c0eae33634e9df053e28ce072b20e754a",
+    "environments/pixi.lock": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+    "environments/pixi.toml": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9"
+  }
+}

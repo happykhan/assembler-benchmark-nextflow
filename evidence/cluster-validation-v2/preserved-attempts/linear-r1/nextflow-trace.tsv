@@ -1,0 +1,8 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	7d/de266a	3006093	PREPARE_RUN	COMPLETED	0	2026-11-12 15:22:06.908	47.9s	47.6s	8.0%	188 MB	857 MB	27.9 MB	202.8 MB
+3	86/20b312	35453851	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0)	COMPLETED	0	2026-11-12 15:22:55.403	3m 25s	3m 20s	91.5%	91.2 MB	195.8 MB	599.8 MB	506.6 MB
+4	62/ed2140	35453853	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1)	COMPLETED	0	2026-11-12 15:22:55.602	3m 29s	3m 23s	91.5%	92.2 MB	195.8 MB	599.7 MB	506.6 MB
+2	49/1a8143	35453852	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3)	COMPLETED	0	2026-11-12 15:22:55.505	3m 30s	3m 25s	91.6%	91.1 MB	195.8 MB	599.2 MB	506.4 MB
+6	bb/d5d7d6	35453941	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1)	FAILED	1	2026-11-12 15:26:25.664	9.4s	5s	-	-	-	-	-
+5	b7/227f26	35453938	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0)	ABORTED	-	2026-11-12 15:26:20.696	-	-	-	-	-	-	-
+7	7d/b8b791	35453940	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3)	ABORTED	-	2026-11-12 15:26:25.615	-	-	-	-	-	-	-

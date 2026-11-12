@@ -1,5 +1,9 @@
 # Nextflow replacement: scope and verification
 
+The subsequent [Cluster 3 validation](cluster-validation-v2.md) completed Quick
+and selected general/S5/S7 paths, including 31 verified outcomes and cache-resume
+checks. The migration checks below remain the historical archive/parity evidence.
+
 Checked on 12 November 2026. This document separates implemented workflow paths,
 verified historical evidence and newly executed scientific benchmarks. The
 [protocol v1 draft](benchmark-protocol-v1.md) is still under review. New scientific

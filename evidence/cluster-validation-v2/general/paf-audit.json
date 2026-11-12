@@ -1,0 +1,188 @@
+{
+  "method": "Independent saved-PAF arithmetic; no pipeline scoring imports or new alignment.",
+  "molecule_checks": 20,
+  "rows": [
+    {
+      "accession": "NZ_LN879430.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "197_GCF_900070325.1",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2609352
+    },
+    {
+      "accession": "NZ_LN879430.1",
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "197_GCF_900070325.1",
+      "complete": false,
+      "contiguity": 0.3504950654415349,
+      "identity_measured": true,
+      "longest_span": 914565
+    },
+    {
+      "accession": "NZ_LN879430.1",
+      "assembler": "plassembler-1.9.0",
+      "case_id": "197_GCF_900070325.1",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2609352
+    },
+    {
+      "accession": "NZ_LN879430.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "197_GCF_900070325.1",
+      "complete": false,
+      "contiguity": 0.22227702510048472,
+      "identity_measured": true,
+      "longest_span": 579999
+    },
+    {
+      "accession": "NC_020419.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "349_GCF_000146025.2",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1125857
+    },
+    {
+      "accession": "NC_020420.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020421.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "349_GCF_000146025.2",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 5701
+    },
+    {
+      "accession": "NC_020422.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020419.1",
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.8220866415539452,
+      "identity_measured": true,
+      "longest_span": 925552
+    },
+    {
+      "accession": "NC_020420.1",
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "349_GCF_000146025.2",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 11650
+    },
+    {
+      "accession": "NC_020421.1",
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "349_GCF_000146025.2",
+      "complete": true,
+      "contiguity": 1.7044378179266795,
+      "identity_measured": true,
+      "longest_span": 9717
+    },
+    {
+      "accession": "NC_020422.1",
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020419.1",
+      "assembler": "plassembler-1.9.0",
+      "case_id": "349_GCF_000146025.2",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1125857
+    },
+    {
+      "accession": "NC_020420.1",
+      "assembler": "plassembler-1.9.0",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020421.1",
+      "assembler": "plassembler-1.9.0",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020422.1",
+      "assembler": "plassembler-1.9.0",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020419.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.5770182181218396,
+      "identity_measured": true,
+      "longest_span": 649640
+    },
+    {
+      "accession": "NC_020420.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020421.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "NC_020422.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "349_GCF_000146025.2",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass"
+}

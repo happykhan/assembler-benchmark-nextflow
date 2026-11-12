@@ -1,0 +1,12 @@
+{
+  "base_source_commit": "f6535ef2d993f6ee79972714bce9ebf81a516f0c",
+  "orchestration_fix_commit": "84eb5f7",
+  "final_reporting_patch": {
+    "file": "benchlib/evidence.py",
+    "sha256": "f431491456830f81f09dc17a384157b6dea7526045ae32062e6c4a5723f0ee60",
+    "remote_match_verified": true
+  },
+  "runtime": "Nextflow 25.10.2; Pixi; Slurm",
+  "frozen_runtime_receipts": "Per-cohort environment-preparation.json and slot-plan.json",
+  "final_scheduler_check": "No active jobs in this validation suite."
+}

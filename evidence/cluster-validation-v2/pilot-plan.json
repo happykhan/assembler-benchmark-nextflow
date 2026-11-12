@@ -1,0 +1,77 @@
+{
+  "additional_regressions": {
+    "quick-fixed": {
+      "expected_outcomes": 4,
+      "reason": "Repeat Quick after the evidenced orchestration/runtime fixes, in a separate run and output directory."
+    }
+  },
+  "base_source_commit": "f6535ef2d993f6ee79972714bce9ebf81a516f0c",
+  "policy": "Retain original inputs, results and failed attempts. Resume successful assemblies; do not retry genuine assembler failures to improve results.",
+  "remote_root": "/well/aanensen/users/rva470/assembler-benchmark-validation-20261112",
+  "schema_version": 1,
+  "scope": "Authorised small Cluster 3 end-to-end validation, Quick first; no full scientific panel run.",
+  "selections": {
+    "general": {
+      "case_ids": [
+        "349_GCF_000146025.2",
+        "197_GCF_900070325.1"
+      ],
+      "expected_outcomes": 8,
+      "selection": {
+        "cases": "349_GCF_000146025.2,197_GCF_900070325.1",
+        "preset": "standard",
+        "track": "general"
+      }
+    },
+    "linear": {
+      "case_ids": [
+        "s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3",
+        "s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0",
+        "s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1"
+      ],
+      "expected_outcomes": 3,
+      "selection": {
+        "assemblers": "raven,plassembler,miniasm-plus",
+        "cases": "s5-albidoflavus-nbc01661-native-length-standard",
+        "groups": "S5",
+        "preset": "standard",
+        "track": "diagnostic"
+      }
+    },
+    "quick": {
+      "case_ids": [
+        "quick-baseline",
+        "quick-bimodal"
+      ],
+      "expected_outcomes": 4,
+      "selection": {
+        "preset": "quick"
+      }
+    },
+    "read-order": {
+      "case_ids": [
+        "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3",
+        "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3",
+        "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3",
+        "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3"
+      ],
+      "expected_outcomes": 12,
+      "selection": {
+        "assemblers": "raven",
+        "groups": "S7",
+        "preset": "standard",
+        "track": "diagnostic"
+      }
+    }
+  },
+  "total_expected_outcomes": 27,
+  "total_expected_outcomes_including_regressions": 31
+}

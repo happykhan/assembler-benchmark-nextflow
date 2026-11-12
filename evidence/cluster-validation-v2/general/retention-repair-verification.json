@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "unchanged_outcomes": 8,
+  "all_assemblies_cached": true,
+  "unchanged_fields": [
+    "execution_sha256",
+    "sequence_outcome",
+    "replicons",
+    "evaluation"
+  ]
+}

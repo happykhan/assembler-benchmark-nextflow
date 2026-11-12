@@ -1,0 +1,841 @@
+{
+  "across_threads": [],
+  "complete": true,
+  "groups": [
+    {
+      "assembler": "raven-1.8.3",
+      "category": "S7",
+      "circular_representation": {
+        "complete": false,
+        "expected_runs": 12,
+        "observed_runs": 0,
+        "variants": 0,
+        "verdict": "Not assessed \u2014 incomplete executions or comparison evidence",
+        "within_order": {
+          "original": {
+            "complete": false,
+            "identical": null,
+            "variants": 0
+          },
+          "shuffle-1": {
+            "complete": false,
+            "identical": null,
+            "variants": 0
+          },
+          "shuffle-2": {
+            "complete": false,
+            "identical": null,
+            "variants": 0
+          },
+          "shuffle-3": {
+            "complete": false,
+            "identical": null,
+            "variants": 0
+          }
+        }
+      },
+      "complete": true,
+      "configuration_id": "raven--default",
+      "end_sensitive": {
+        "complete": true,
+        "expected_runs": 12,
+        "observed_runs": 12,
+        "variants": 4,
+        "verdict": "Order-associated output difference",
+        "within_order": {
+          "original": {
+            "complete": true,
+            "identical": true,
+            "variants": 1
+          },
+          "shuffle-1": {
+            "complete": true,
+            "identical": true,
+            "variants": 1
+          },
+          "shuffle-2": {
+            "complete": true,
+            "identical": true,
+            "variants": 1
+          },
+          "shuffle-3": {
+            "complete": true,
+            "identical": true,
+            "variants": 1
+          }
+        }
+      },
+      "endpoint": "Reference-independent output agreement; reference recovery is secondary only.",
+      "expected_runs": 12,
+      "input_equivalence_verified": true,
+      "mode": "default",
+      "runs": [
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "dfab6b540efbc3778cb0caa2ab54e387340419fd4e2f04782e0b39f98b3c3db2",
+          "case_id": "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "original",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "shuffle_seed": null,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8"
+          },
+          "normalised_sequence_sha256": "33f93899e9b8d9414898e2f60808821c4d3f81960566f50451f092980772903e",
+          "order_id": "original",
+          "reads_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+          "repeat": 1,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91155,
+                "sha256": "d97b0113368d1a1968b39f08d6cdb93590a8bbef9a44b33577a15f2fc8357596"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "fe17fd912efa6eb243949985133040c7be20f27ea984589afd4e704e760f8572"
+              },
+              {
+                "length_bp": 391091,
+                "sha256": "dc83725b3b43f47b087ba1e908d75870d359946dd9e6fffcbf914e138ca69fb4"
+              },
+              {
+                "length_bp": 1126791,
+                "sha256": "b2e02e992d3689a3ad30f60da1cd00aa6f2a1b22e92ce979a9d6724f12122a74"
+              },
+              {
+                "length_bp": 3401566,
+                "sha256": "7d8324807224808418bac4098f3790ea8a23065ea23724b46a113cbe6a93e34c"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "9274631acc6f9dba0354ec9c835793c29e91026de26a0fffc4a1331c48887ab2",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5171167
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "dfab6b540efbc3778cb0caa2ab54e387340419fd4e2f04782e0b39f98b3c3db2",
+          "case_id": "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "original",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "shuffle_seed": null,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8"
+          },
+          "normalised_sequence_sha256": "33f93899e9b8d9414898e2f60808821c4d3f81960566f50451f092980772903e",
+          "order_id": "original",
+          "reads_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+          "repeat": 2,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91155,
+                "sha256": "d97b0113368d1a1968b39f08d6cdb93590a8bbef9a44b33577a15f2fc8357596"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "fe17fd912efa6eb243949985133040c7be20f27ea984589afd4e704e760f8572"
+              },
+              {
+                "length_bp": 391091,
+                "sha256": "dc83725b3b43f47b087ba1e908d75870d359946dd9e6fffcbf914e138ca69fb4"
+              },
+              {
+                "length_bp": 1126791,
+                "sha256": "b2e02e992d3689a3ad30f60da1cd00aa6f2a1b22e92ce979a9d6724f12122a74"
+              },
+              {
+                "length_bp": 3401566,
+                "sha256": "7d8324807224808418bac4098f3790ea8a23065ea23724b46a113cbe6a93e34c"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "9274631acc6f9dba0354ec9c835793c29e91026de26a0fffc4a1331c48887ab2",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5171167
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "dfab6b540efbc3778cb0caa2ab54e387340419fd4e2f04782e0b39f98b3c3db2",
+          "case_id": "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "original",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "shuffle_seed": null,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8"
+          },
+          "normalised_sequence_sha256": "33f93899e9b8d9414898e2f60808821c4d3f81960566f50451f092980772903e",
+          "order_id": "original",
+          "reads_sha256": "66f144b4656890e0b16c4854cadf26405a60f9f901fd4859cbf9567e561d38e8",
+          "repeat": 3,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91155,
+                "sha256": "d97b0113368d1a1968b39f08d6cdb93590a8bbef9a44b33577a15f2fc8357596"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "fe17fd912efa6eb243949985133040c7be20f27ea984589afd4e704e760f8572"
+              },
+              {
+                "length_bp": 391091,
+                "sha256": "dc83725b3b43f47b087ba1e908d75870d359946dd9e6fffcbf914e138ca69fb4"
+              },
+              {
+                "length_bp": 1126791,
+                "sha256": "b2e02e992d3689a3ad30f60da1cd00aa6f2a1b22e92ce979a9d6724f12122a74"
+              },
+              {
+                "length_bp": 3401566,
+                "sha256": "7d8324807224808418bac4098f3790ea8a23065ea23724b46a113cbe6a93e34c"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "9274631acc6f9dba0354ec9c835793c29e91026de26a0fffc4a1331c48887ab2",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5171167
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "b045e9397ef88d4ea0eece7746a5aca0d2550cf094241f24eb6f7c9a84e3c8fc",
+          "case_id": "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-1",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "780bb628a5460daf2b7b50a2ecc13503ef37e88cdad30fe5d3c537a261612ad7",
+            "shuffle_seed": 1,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780"
+          },
+          "normalised_sequence_sha256": "c9b448f069155dcb0a041684bc3b82f81015badd76b0d16b6f554bbb876223b2",
+          "order_id": "shuffle-1",
+          "reads_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+          "repeat": 1,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60550,
+                "sha256": "88936849724b182ae4cbd15accdb29fb6b9c2f4d14acbc7fda94bcce35a61c8a"
+              },
+              {
+                "length_bp": 91152,
+                "sha256": "2aa2fe80ae26b0fb32f459b49cc8581e7e2958d18fd211b1fde8460ade2cc5d8"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "037795f095d610d9537d1f7b5d34e062034f88b7345fec3955b3f71dd8840b9c"
+              },
+              {
+                "length_bp": 4899484,
+                "sha256": "fe744256459a4484ca6f9340f10c726194eab68fb2f66d5584d03a81bf1ecf6b"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "8ab3cf1ae7c99a87543bec9f22bd85d35e230e0c47053172aee983bd301ffd23",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151202
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "b045e9397ef88d4ea0eece7746a5aca0d2550cf094241f24eb6f7c9a84e3c8fc",
+          "case_id": "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-1",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "780bb628a5460daf2b7b50a2ecc13503ef37e88cdad30fe5d3c537a261612ad7",
+            "shuffle_seed": 1,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780"
+          },
+          "normalised_sequence_sha256": "c9b448f069155dcb0a041684bc3b82f81015badd76b0d16b6f554bbb876223b2",
+          "order_id": "shuffle-1",
+          "reads_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+          "repeat": 2,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60550,
+                "sha256": "88936849724b182ae4cbd15accdb29fb6b9c2f4d14acbc7fda94bcce35a61c8a"
+              },
+              {
+                "length_bp": 91152,
+                "sha256": "2aa2fe80ae26b0fb32f459b49cc8581e7e2958d18fd211b1fde8460ade2cc5d8"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "037795f095d610d9537d1f7b5d34e062034f88b7345fec3955b3f71dd8840b9c"
+              },
+              {
+                "length_bp": 4899484,
+                "sha256": "fe744256459a4484ca6f9340f10c726194eab68fb2f66d5584d03a81bf1ecf6b"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "8ab3cf1ae7c99a87543bec9f22bd85d35e230e0c47053172aee983bd301ffd23",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151202
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "b045e9397ef88d4ea0eece7746a5aca0d2550cf094241f24eb6f7c9a84e3c8fc",
+          "case_id": "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-1",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "780bb628a5460daf2b7b50a2ecc13503ef37e88cdad30fe5d3c537a261612ad7",
+            "shuffle_seed": 1,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780"
+          },
+          "normalised_sequence_sha256": "c9b448f069155dcb0a041684bc3b82f81015badd76b0d16b6f554bbb876223b2",
+          "order_id": "shuffle-1",
+          "reads_sha256": "99a484f0091deaf0eab38ff48c8bbb868a6b70a28e080e4bfb936440b6896780",
+          "repeat": 3,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60550,
+                "sha256": "88936849724b182ae4cbd15accdb29fb6b9c2f4d14acbc7fda94bcce35a61c8a"
+              },
+              {
+                "length_bp": 91152,
+                "sha256": "2aa2fe80ae26b0fb32f459b49cc8581e7e2958d18fd211b1fde8460ade2cc5d8"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "037795f095d610d9537d1f7b5d34e062034f88b7345fec3955b3f71dd8840b9c"
+              },
+              {
+                "length_bp": 4899484,
+                "sha256": "fe744256459a4484ca6f9340f10c726194eab68fb2f66d5584d03a81bf1ecf6b"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "8ab3cf1ae7c99a87543bec9f22bd85d35e230e0c47053172aee983bd301ffd23",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151202
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "8f2cf11e9759f46f3d91230a8a816983f81f5d9e13c5d7541f76d9eceeb975f5",
+          "case_id": "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-2",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "773891e4701e001893e4027535684dad4d7032bf0105faf8610151386f8cc01c",
+            "shuffle_seed": 2,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c"
+          },
+          "normalised_sequence_sha256": "b3b16536f7ebfd5f9c70c54cc0c11175b06745e1dc88f1e3daaa9e0a258ce21d",
+          "order_id": "shuffle-2",
+          "reads_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+          "repeat": 1,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91150,
+                "sha256": "9ced8628fddea7c70c316985d0072b1b93c0d596724c2229ff527ea905ade9c3"
+              },
+              {
+                "length_bp": 100015,
+                "sha256": "a1e5fa0bff89e3a789481fe1d563f9faa59cce87097757ff5e85937a93eb1f00"
+              },
+              {
+                "length_bp": 381239,
+                "sha256": "f316bae3a4772a45fcafc236082cd2c530dd88bb2aa9176ef46b2aa9330fbdd9"
+              },
+              {
+                "length_bp": 1126522,
+                "sha256": "c2be479b83130aa21409de41e1968cdb5ffd3e28253571159b97eacf7ebcb6e8"
+              },
+              {
+                "length_bp": 3401549,
+                "sha256": "91a66db6be689c159f2e04b1ed56057b0d5136bcfa965f2a5f41a1692570b5bc"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "e70c4b3d04e06deb7cb917bf3b188ab42081fe15613a17b00a5eca5f0e022c5e",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5161023
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "8f2cf11e9759f46f3d91230a8a816983f81f5d9e13c5d7541f76d9eceeb975f5",
+          "case_id": "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-2",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "773891e4701e001893e4027535684dad4d7032bf0105faf8610151386f8cc01c",
+            "shuffle_seed": 2,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c"
+          },
+          "normalised_sequence_sha256": "b3b16536f7ebfd5f9c70c54cc0c11175b06745e1dc88f1e3daaa9e0a258ce21d",
+          "order_id": "shuffle-2",
+          "reads_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+          "repeat": 2,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91150,
+                "sha256": "9ced8628fddea7c70c316985d0072b1b93c0d596724c2229ff527ea905ade9c3"
+              },
+              {
+                "length_bp": 100015,
+                "sha256": "a1e5fa0bff89e3a789481fe1d563f9faa59cce87097757ff5e85937a93eb1f00"
+              },
+              {
+                "length_bp": 381239,
+                "sha256": "f316bae3a4772a45fcafc236082cd2c530dd88bb2aa9176ef46b2aa9330fbdd9"
+              },
+              {
+                "length_bp": 1126522,
+                "sha256": "c2be479b83130aa21409de41e1968cdb5ffd3e28253571159b97eacf7ebcb6e8"
+              },
+              {
+                "length_bp": 3401549,
+                "sha256": "91a66db6be689c159f2e04b1ed56057b0d5136bcfa965f2a5f41a1692570b5bc"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "e70c4b3d04e06deb7cb917bf3b188ab42081fe15613a17b00a5eca5f0e022c5e",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5161023
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "355e78131dbe59af3c857674890d99704193161633e23b2dc5e5fa2beb4b845b",
+          "byte_sha256": "8f2cf11e9759f46f3d91230a8a816983f81f5d9e13c5d7541f76d9eceeb975f5",
+          "case_id": "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-2",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "773891e4701e001893e4027535684dad4d7032bf0105faf8610151386f8cc01c",
+            "shuffle_seed": 2,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c"
+          },
+          "normalised_sequence_sha256": "b3b16536f7ebfd5f9c70c54cc0c11175b06745e1dc88f1e3daaa9e0a258ce21d",
+          "order_id": "shuffle-2",
+          "reads_sha256": "b51a786164ac549d206c6a40f683e49d55e277af8b9e8eac7af49b0e73488b9c",
+          "repeat": 3,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2294",
+              "Utg2296",
+              "Utg2298",
+              "Utg2300",
+              "Utg2302",
+              "Utg2304"
+            ],
+            "contig_count": 6,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91150,
+                "sha256": "9ced8628fddea7c70c316985d0072b1b93c0d596724c2229ff527ea905ade9c3"
+              },
+              {
+                "length_bp": 100015,
+                "sha256": "a1e5fa0bff89e3a789481fe1d563f9faa59cce87097757ff5e85937a93eb1f00"
+              },
+              {
+                "length_bp": 381239,
+                "sha256": "f316bae3a4772a45fcafc236082cd2c530dd88bb2aa9176ef46b2aa9330fbdd9"
+              },
+              {
+                "length_bp": 1126522,
+                "sha256": "c2be479b83130aa21409de41e1968cdb5ffd3e28253571159b97eacf7ebcb6e8"
+              },
+              {
+                "length_bp": 3401549,
+                "sha256": "91a66db6be689c159f2e04b1ed56057b0d5136bcfa965f2a5f41a1692570b5bc"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "e70c4b3d04e06deb7cb917bf3b188ab42081fe15613a17b00a5eca5f0e022c5e",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5161023
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "dc58397723e68bbae04585f082793c2debab1488b8da21a0ebbe49b3cb927115",
+          "case_id": "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-3",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "0edce02ed0f2ea2168ab681e4434efaa70394d8afd0d7309a12bf719933c789a",
+            "shuffle_seed": 3,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be"
+          },
+          "normalised_sequence_sha256": "9fc07b7790a0dd7e6603015cca8be0c1ff412296c9578456d9b178bfcda80cf6",
+          "order_id": "shuffle-3",
+          "reads_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be",
+          "repeat": 1,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2286",
+              "Utg2294",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91153,
+                "sha256": "bb63552d6e718cc45033a269a6a5ba50dcc127b9b006352a69ec1c5c1702ecd4"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "4627dcccbbaa00b9ea4ae537151fc23ea2331be5a5b3b055c2704c3415b6532f"
+              },
+              {
+                "length_bp": 4900185,
+                "sha256": "934919f2f8f0aec7a905f69a7a9d6fa5fd45cf2b974fb76c410afa27287bc014"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "60be2ac94be64610baa2f614966cf0ce15d0ae1861e3d9dc5e829c3b78a7c5c9",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151902
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "dc58397723e68bbae04585f082793c2debab1488b8da21a0ebbe49b3cb927115",
+          "case_id": "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-3",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "0edce02ed0f2ea2168ab681e4434efaa70394d8afd0d7309a12bf719933c789a",
+            "shuffle_seed": 3,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be"
+          },
+          "normalised_sequence_sha256": "9fc07b7790a0dd7e6603015cca8be0c1ff412296c9578456d9b178bfcda80cf6",
+          "order_id": "shuffle-3",
+          "reads_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be",
+          "repeat": 2,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2286",
+              "Utg2294",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91153,
+                "sha256": "bb63552d6e718cc45033a269a6a5ba50dcc127b9b006352a69ec1c5c1702ecd4"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "4627dcccbbaa00b9ea4ae537151fc23ea2331be5a5b3b055c2704c3415b6532f"
+              },
+              {
+                "length_bp": 4900185,
+                "sha256": "934919f2f8f0aec7a905f69a7a9d6fa5fd45cf2b974fb76c410afa27287bc014"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "60be2ac94be64610baa2f614966cf0ce15d0ae1861e3d9dc5e829c3b78a7c5c9",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151902
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        },
+        {
+          "biological_sha256": "85f265113c53cfbc9abf2eccab2da53917951876b8a44c001741c1ec612c0a94",
+          "byte_sha256": "dc58397723e68bbae04585f082793c2debab1488b8da21a0ebbe49b3cb927115",
+          "case_id": "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3",
+          "input_admission": {
+            "algorithm": "read-order-sha256-sort-v1",
+            "id": "shuffle-3",
+            "record_count": 15397,
+            "record_multiset_sha256": "a102246fcd9cf430a23fc3694afca2075c76fdf5a50612d49a6c94af043e187b",
+            "record_order_sha256": "0edce02ed0f2ea2168ab681e4434efaa70394d8afd0d7309a12bf719933c789a",
+            "shuffle_seed": 3,
+            "source_record_order_sha256": "8dd01e6035fb8908cb5e160292025fa73bd26becb8908200454d95a65a5e2b01",
+            "uncompressed_bytes": 308816722,
+            "uncompressed_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be"
+          },
+          "normalised_sequence_sha256": "9fc07b7790a0dd7e6603015cca8be0c1ff412296c9578456d9b178bfcda80cf6",
+          "order_id": "shuffle-3",
+          "reads_sha256": "7ffa89aae19cb39caf31bbf9aa5eb3bbe4a346e805710c1928a5b79282f357be",
+          "repeat": 3,
+          "secondary_reference_status": "fail",
+          "signature": {
+            "circular_policy": "Rotations ignored only for tool-reported circular contigs; unavailable when any contig topology is unknown.",
+            "circular_representation_sha256": null,
+            "circularity_unknown_contigs": [
+              "Utg2286",
+              "Utg2294",
+              "Utg2298",
+              "Utg2300"
+            ],
+            "contig_count": 4,
+            "contigs": [
+              {
+                "length_bp": 60548,
+                "sha256": "66b79a31333756134f11918bbd47e61e48b15b2d98c8177a45abe8dced12d565"
+              },
+              {
+                "length_bp": 91153,
+                "sha256": "bb63552d6e718cc45033a269a6a5ba50dcc127b9b006352a69ec1c5c1702ecd4"
+              },
+              {
+                "length_bp": 100016,
+                "sha256": "4627dcccbbaa00b9ea4ae537151fc23ea2331be5a5b3b055c2704c3415b6532f"
+              },
+              {
+                "length_bp": 4900185,
+                "sha256": "934919f2f8f0aec7a905f69a7a9d6fa5fd45cf2b974fb76c410afa27287bc014"
+              }
+            ],
+            "end_sensitive_policy": "Names/order/strand ignored; ends, sequence and duplicate copies retained.",
+            "end_sensitive_sha256": "60be2ac94be64610baa2f614966cf0ce15d0ae1861e3d9dc5e829c3b78a7c5c9",
+            "method": "reference-independent-contig-multiset-v1",
+            "schema_version": 1,
+            "total_length_bp": 5151902
+          },
+          "status": "pass",
+          "truth_sha256": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+          "version": "1.8.3"
+        }
+      ],
+      "source_case_id": "s1-se11-large",
+      "status_counts": {
+        "pass": 12
+      },
+      "threads": 4
+    }
+  ],
+  "method": "diagnostic-comparison-v1",
+  "plan_sha256": "d7eb09c1b947daabe0d2ffbac2fbdd05164cd6afbb768435a7d6ebc92c53414b",
+  "reference_recovery": "Secondary only for S7; never used to decide output agreement.",
+  "schema_version": 1
+}

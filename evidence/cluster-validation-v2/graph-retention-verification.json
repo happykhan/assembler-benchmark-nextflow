@@ -1,0 +1,29 @@
+{
+  "status": "verified",
+  "graphs": [
+    {
+      "cohort": "general",
+      "case": "197_GCF_900070325.1",
+      "graph_file": "assemblies/197_GCF_900070325.1/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.gfa",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "final plasmids only"
+    },
+    {
+      "cohort": "general",
+      "case": "349_GCF_000146025.2",
+      "graph_file": "assemblies/349_GCF_000146025.2/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.gfa",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "final plasmids only"
+    },
+    {
+      "cohort": "linear",
+      "case": "s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0",
+      "graph_file": "assemblies/s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0/workflow__tool-output__benchmark_plasmids.gfa",
+      "bytes": 123953,
+      "sha256": "fd7fe58c8bf9388a30e31f8810bcf13694e3b3f1fde7d937cf376638f5d84a09",
+      "scope": "final plasmids only"
+    }
+  ]
+}

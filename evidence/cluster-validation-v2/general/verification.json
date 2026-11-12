@@ -1,0 +1,55 @@
+{
+  "assessment_statuses": {
+    "completed": 8
+  },
+  "bundle_manifest_sha256": "ae831dcff7f806e4655d3be0d38960beeebacb62fd59d5cabcebab6c3311a97f",
+  "execution_sha256": {
+    "197_GCF_900070325.1__flye-2.9.6": "32e04392e57003cab7353a72088e645d04ef09c3620d35e17a207f1e100763e2",
+    "197_GCF_900070325.1__miniasm-plus-0.2.1": "0df6756b12036a3ce830813106ba1df80827ee3351473082fa6eaddf3eaf02c6",
+    "197_GCF_900070325.1__plassembler-1.9.0": "d17adfbdc6281be375273de6b210eab2550eb3f4fc0ea2291080220f49300830",
+    "197_GCF_900070325.1__raven-1.8.3": "c70f8bb67ca2295211350a1a58a072de02221fc1312b7bbf616fa6b0a16e54e7",
+    "349_GCF_000146025.2__flye-2.9.6": "76a83ef231652d43fa2b586e8472db381e36c039586484aedbc6aee5d87f15a4",
+    "349_GCF_000146025.2__miniasm-plus-0.2.1": "cecbba1ca92fc31bd0fbf5a68ab963676cc3df4cf6a964fbb6b951adc34d9fa3",
+    "349_GCF_000146025.2__plassembler-1.9.0": "ad560eee5440f78bd1dd6edfb6970c3e9937b158aab5bb5b9d5a5918dec4562d",
+    "349_GCF_000146025.2__raven-1.8.3": "1be69b0d84af5a0bed01121e2925bf8f2534d6cdf1da143b312a7293842cc872"
+  },
+  "execution_statuses": {
+    "completed": 8
+  },
+  "expected_slots": 8,
+  "read_sha256": {
+    "197_GCF_900070325.1": "1dce4ec921dbdb403e23468894ebbfc40f5915c2dbe31f615135f43dd24ceeed",
+    "349_GCF_000146025.2": "16d7ffebbd06a31b5f33d7e5cfe77ea70a7f1fbe19eac0adc9f42656f11fe5b5"
+  },
+  "reported_outcomes": 8,
+  "run_id": "validation-general-v2",
+  "scheduler_accounting": "Must be checked separately against the Slurm task IDs.",
+  "schema_version": 1,
+  "sequence_outcomes": {
+    "chromosome_complete": 2,
+    "fully_complete": 2,
+    "incomplete": 4
+  },
+  "site": {
+    "errors": [],
+    "html_pages": 21,
+    "local_links_checked": 246,
+    "policy": {
+      "max_file_bytes": 5242880,
+      "max_files": 1500,
+      "max_total_bytes": 67108864
+    },
+    "public_files": 79,
+    "schema_version": 1,
+    "status": "pass",
+    "total_files": 81,
+    "website_bytes": 610234
+  },
+  "status": "verified",
+  "trace_statuses": {
+    "CACHED": 11,
+    "COMPLETED": 10
+  },
+  "trace_tasks": 21,
+  "verified_bundle_files": 148
+}

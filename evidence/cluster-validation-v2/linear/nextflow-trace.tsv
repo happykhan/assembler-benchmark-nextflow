@@ -1,0 +1,13 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	8d/9489ae	3077206	PREPARE_RUN	CACHED	0	2026-11-12 15:38:58.500	46.8s	46.6s	1.6%	64.9 MB	193.6 MB	18.9 MB	1.6 MB
+3	a8/6308a2	35454212	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0)	CACHED	0	2026-11-12 15:39:45.746	3m 27s	3m 25s	95.6%	76.1 MB	184.4 MB	585.1 MB	499.6 MB
+2	58/390a3b	35454211	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3)	CACHED	0	2026-11-12 15:39:45.722	3m 12s	3m 8s	96.0%	70 MB	183.4 MB	585.2 MB	499.6 MB
+4	67/c2ca11	35454213	PREPARE_COLLECTION_INPUT (s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1)	CACHED	0	2026-11-12 15:39:45.820	3m 27s	3m 25s	95.6%	75.3 MB	184.4 MB	585.1 MB	499.6 MB
+6	af/4b19a5	35454246	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3)	CACHED	0	2026-11-12 15:42:58.276	2m 44s	2m 43s	370.3%	1.8 GB	2.3 GB	1.4 GB	231.6 MB
+5	a4/cf5816	35454249	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0)	CACHED	0	2026-11-12 15:43:13.461	40m 34s	40m 30s	364.3%	2.9 GB	4.4 GB	15.2 GB	4.7 GB
+7	20/d2a9e0	35454250	ASSEMBLE (s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1)	CACHED	0	2026-11-12 15:43:13.513	5m 44s	5m 41s	372.8%	2.7 GB	3.4 GB	8.2 GB	394.8 MB
+9	bc/1dd6b0	35455475	ASSESS (s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0/plassembler-1.9.0)	COMPLETED	0	2026-11-12 16:26:03.336	16s	9.1s	59.1%	245.7 MB	503.4 MB	236 MB	42.3 MB
+8	ea/6454f0	35455473	ASSESS (s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3/raven-1.8.3)	COMPLETED	0	2026-11-12 16:26:03.303	16s	8.6s	59.8%	250.5 MB	485.6 MB	198.9 MB	41.4 MB
+10	c7/f34495	35455476	ASSESS (s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1/miniasm-plus-0.2.1)	COMPLETED	0	2026-11-12 16:26:03.843	15.5s	9.6s	56.8%	231.9 MB	387.3 MB	285.2 MB	126.7 MB
+11	41/daea1b	35455501	EXPORT_RESULTS	COMPLETED	0	2026-11-12 16:26:19.437	4.9s	2.8s	66.6%	70.4 MB	174.6 MB	539.2 MB	210.7 MB
+12	07/ac10ee	35455506	RENDER_WEBSITE	COMPLETED	0	2026-11-12 16:26:24.354	5s	1.3s	43.6%	49.5 MB	163.3 MB	111.6 MB	950.5 KB

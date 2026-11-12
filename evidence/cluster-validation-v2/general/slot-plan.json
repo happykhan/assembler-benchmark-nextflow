@@ -1,0 +1,552 @@
+{
+  "assembler_definitions": {
+    "flye-2.9.6": {
+      "adapter": "flye",
+      "container": null,
+      "environment": "flye-2-9-6",
+      "id": "flye-2.9.6",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "flye",
+      "version": "2.9.6"
+    },
+    "miniasm-plus-0.2.1": {
+      "adapter": "miniasm-plus",
+      "container": null,
+      "environment": "miniasm-plus-0-2-1",
+      "id": "miniasm-plus-0.2.1",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "miniasm-plus",
+      "version": "0.2.1"
+    },
+    "plassembler-1.9.0": {
+      "adapter": "plassembler",
+      "container": null,
+      "environment": "plassembler-1-9-0",
+      "id": "plassembler-1.9.0",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "plassembler",
+      "version": "1.9.0"
+    },
+    "raven-1.8.3": {
+      "adapter": "raven",
+      "container": null,
+      "environment": "raven-1-8-3",
+      "id": "raven-1.8.3",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "raven",
+      "version": "1.8.3"
+    }
+  },
+  "assemblers": [
+    "flye-2.9.6",
+    "raven-1.8.3",
+    "plassembler-1.9.0",
+    "miniasm-plus-0.2.1"
+  ],
+  "assessment": "wick-longest-alignment-v1",
+  "cases": [
+    {
+      "assembly_accession": "GCF_000146025.2",
+      "assembly_options": {
+        "flye_input_mode": "nano-raw",
+        "plassembler_chromosome_threshold": 400000,
+        "plassembler_raw_flag": true
+      },
+      "badread_command_as_published": "badread simulate --reference reference_genomes/349_GCF_000146025.2.fasta --quantity 21.066x --length 7733,14779 --identity 81.180,96.681,12.004 --junk_reads 1.060 --random_reads 1.280 --chimeras 0.124 --glitches 030225,22.584,22.584 --start_adapter_seq 57 --end_adapter_seq 57 | gzip > read_sets/349_GCF_000146025.2.fastq.gz",
+      "badread_parameters": {
+        "adapter_length": 57.0,
+        "chimera_percent": 0.124,
+        "depth": 21.066,
+        "glitch_rate": 30225.0,
+        "glitch_size_skip": 22.584,
+        "identity_max": 96.681,
+        "identity_mean": 81.18,
+        "identity_sd": 12.004,
+        "junk_percent": 1.06,
+        "length_mean": 7733.0,
+        "length_sd": 14779.0,
+        "random_percent": 1.28
+      },
+      "group": "general",
+      "gtdb_taxonomy_as_published": "Endomicrobium_A trichonymphae",
+      "headline_eligible": true,
+      "id": "349_GCF_000146025.2",
+      "input_policy": "published_frozen_bytes_no_resimulation",
+      "ncbi_taxonomy_as_published": "none",
+      "organism": "Endomicrobium_A trichonymphae",
+      "plasmid_count": 3,
+      "preset": "standard",
+      "published_read_statistics": {
+        "mean_depth": 21.077389275359796,
+        "read_count": 3443,
+        "read_n50_bp": 24028,
+        "total_read_bases": 24208857
+      },
+      "purpose": "published_general_benchmark",
+      "reference_id": "349_GCF_000146025.2",
+      "replicons": [
+        {
+          "length_bp": 1125857,
+          "molecule_type": "chromosome",
+          "published_achieved_depth": 16.123,
+          "refseq_accession": "NC_020419.1",
+          "replicon_name": "NC_020419.1",
+          "source_relative_depth": 1.0,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim."
+        },
+        {
+          "length_bp": 11650,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 16.305,
+          "refseq_accession": "NC_020420.1",
+          "replicon_name": "NC_020420.1",
+          "source_relative_depth": 1.29,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim."
+        },
+        {
+          "length_bp": 5701,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 159.377,
+          "refseq_accession": "NC_020421.1",
+          "replicon_name": "NC_020421.1",
+          "source_relative_depth": 25.62,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim."
+        },
+        {
+          "length_bp": 5362,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 1.385,
+          "refseq_accession": "NC_020422.1",
+          "replicon_name": "NC_020422.1",
+          "source_relative_depth": 0.26,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim."
+        }
+      ],
+      "total_size_bp": 1148570,
+      "track": "general"
+    },
+    {
+      "assembly_accession": "GCF_900070325.1",
+      "assembly_options": {
+        "flye_input_mode": "nano-raw",
+        "plassembler_chromosome_threshold": 400000,
+        "plassembler_raw_flag": true
+      },
+      "badread_command_as_published": "badread simulate --reference reference_genomes/197_GCF_900070325.1.fasta --quantity 12.536x --length 19940,13139 --identity 93.914,97.960,3.194 --junk_reads 8.836 --random_reads 3.095 --chimeras 1.292 --glitches 002858,67.103,67.103 --start_adapter_seq 136 --end_adapter_seq 136 | gzip > read_sets/197_GCF_900070325.1.fastq.gz",
+      "badread_parameters": {
+        "adapter_length": 136.0,
+        "chimera_percent": 1.292,
+        "depth": 12.536,
+        "glitch_rate": 2858.0,
+        "glitch_size_skip": 67.103,
+        "identity_max": 97.96,
+        "identity_mean": 93.914,
+        "identity_sd": 3.194,
+        "junk_percent": 8.836,
+        "length_mean": 19940.0,
+        "length_sd": 13139.0,
+        "random_percent": 3.095
+      },
+      "group": "general",
+      "gtdb_taxonomy_as_published": "Herbinix luporum",
+      "headline_eligible": true,
+      "id": "197_GCF_900070325.1",
+      "input_policy": "published_frozen_bytes_no_resimulation",
+      "ncbi_taxonomy_as_published": "Herbinix luporum",
+      "organism": "Herbinix luporum",
+      "plasmid_count": 0,
+      "preset": "standard",
+      "published_read_statistics": {
+        "mean_depth": 12.539730170555755,
+        "read_count": 1600,
+        "read_n50_bp": 25714,
+        "total_read_bases": 32720570
+      },
+      "purpose": "published_general_benchmark",
+      "reference_id": "197_GCF_900070325.1",
+      "replicons": [
+        {
+          "length_bp": 2609352,
+          "molecule_type": "chromosome",
+          "published_achieved_depth": 11.113,
+          "refseq_accession": "NZ_LN879430.1",
+          "replicon_name": "NZ_LN879430.1",
+          "source_relative_depth": 1.0,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim."
+        }
+      ],
+      "total_size_bp": 2609352,
+      "track": "general"
+    }
+  ],
+  "collection_id": "wick-subset-50-v1",
+  "completion_threshold": 0.99,
+  "expected_slots": 8,
+  "headline_eligible": true,
+  "intermediate_policy": "Raw miniasm belongs to miniasm-plus; never a fifth reported outcome.",
+  "plan_sha256": "dab6abcd9aa806f45ae083264c2b7a71279e11c4e500ca37178f514cd70e4e54",
+  "preset": "standard",
+  "purpose": "published_general_benchmark",
+  "read_inputs": {
+    "197_GCF_900070325.1": {
+      "manifest": {
+        "case": {
+          "assembly_accession": "GCF_900070325.1",
+          "badread_command_as_published": "badread simulate --reference reference_genomes/197_GCF_900070325.1.fasta --quantity 12.536x --length 19940,13139 --identity 93.914,97.960,3.194 --junk_reads 8.836 --random_reads 3.095 --chimeras 1.292 --glitches 002858,67.103,67.103 --start_adapter_seq 136 --end_adapter_seq 136 | gzip > read_sets/197_GCF_900070325.1.fastq.gz",
+          "badread_parameters": {
+            "adapter_length": 136.0,
+            "chimera_percent": 1.292,
+            "depth": 12.536,
+            "glitch_rate": 2858.0,
+            "glitch_size_skip": 67.103,
+            "identity_max": 97.96,
+            "identity_mean": 93.914,
+            "identity_sd": 3.194,
+            "junk_percent": 8.836,
+            "length_mean": 19940.0,
+            "length_sd": 13139.0,
+            "random_percent": 3.095
+          },
+          "category": "P1",
+          "fingerprint": "7032a68fe01c2d600cad45342c6fe8a82b24dfa7e5f8703a64da5e2029d4f530",
+          "gtdb_taxonomy_as_published": "Herbinix luporum",
+          "id": "197_GCF_900070325.1",
+          "ncbi_taxonomy_as_published": "Herbinix luporum",
+          "organism": "Herbinix luporum",
+          "plasmid_count": 0,
+          "published_read_statistics": {
+            "mean_depth": 12.539730170555755,
+            "read_count": 1600,
+            "read_n50_bp": 25714,
+            "total_read_bases": 32720570
+          },
+          "replicons": [
+            {
+              "length_bp": 2609352,
+              "molecule_type": "chromosome",
+              "published_achieved_depth": 11.113,
+              "refseq_accession": "NZ_LN879430.1",
+              "replicon_name": "NZ_LN879430.1",
+              "source_relative_depth": 1.0,
+              "topology": "circular",
+              "topology_scope": "Original study simulation assumption; not a native-topology claim."
+            }
+          ],
+          "title": "197_GCF_900070325.1",
+          "total_size_bp": 2609352,
+          "track": "broad-performance"
+        },
+        "model": "published-Badread-v0.1.5-frozen-bytes",
+        "read_archive_member": {
+          "header_sha256": "990850f9bf9b68ae6f20ba451c2cb5774b7403553c4112684bc3055732d3a88a",
+          "name": "197_GCF_900070325.1.fastq.gz",
+          "offset": 74532219904,
+          "size": 32015830
+        },
+        "reads_sha256": "991efdebb6d3d3182d404b4a288c66f24f6e4f1dfea6af0aa2d3c6448a597ac9",
+        "schema_version": 1,
+        "source_read_archive": {
+          "computed_md5": "e34a360b75e3543bed0879bff07f4f5e",
+          "download_url": "https://ndownloader.figshare.com/files/20188401",
+          "id": 20188401,
+          "name": "simulated_read_sets.tar",
+          "size": 207989719040
+        },
+        "source_reference_archive": {
+          "computed_md5": "b78080dbe56aece943fd5b218f06cdb0",
+          "download_url": "https://ndownloader.figshare.com/files/20188407",
+          "id": 20188407,
+          "name": "reference_genomes.tar.gz",
+          "size": 725085295
+        },
+        "statistics": {
+          "read_count": 1600,
+          "read_n50_bp": 25714,
+          "total_read_bases": 32720570,
+          "uncompressed_fastq_sha256": "1dce4ec921dbdb403e23468894ebbfc40f5915c2dbe31f615135f43dd24ceeed"
+        },
+        "status": "valid",
+        "truth_sha256": "9c72798d7c32250691aba0332ce5f4052493b5d06122f27f8e2b32633f272812",
+        "validation_summary": "Published bytes downloaded without simulation or reordering; gzip CRC, FASTQ structure and published count/bases/N50 verified."
+      },
+      "source_file": "runs/20261106T134511/cases/197_GCF_900070325.1/input.json",
+      "source_sha256": "d0caf4e487c2965f9bf373423ee82ec8af848b3c6e8b1a199f475a727fdaf275"
+    },
+    "349_GCF_000146025.2": {
+      "manifest": {
+        "case": {
+          "assembly_accession": "GCF_000146025.2",
+          "badread_command_as_published": "badread simulate --reference reference_genomes/349_GCF_000146025.2.fasta --quantity 21.066x --length 7733,14779 --identity 81.180,96.681,12.004 --junk_reads 1.060 --random_reads 1.280 --chimeras 0.124 --glitches 030225,22.584,22.584 --start_adapter_seq 57 --end_adapter_seq 57 | gzip > read_sets/349_GCF_000146025.2.fastq.gz",
+          "badread_parameters": {
+            "adapter_length": 57.0,
+            "chimera_percent": 0.124,
+            "depth": 21.066,
+            "glitch_rate": 30225.0,
+            "glitch_size_skip": 22.584,
+            "identity_max": 96.681,
+            "identity_mean": 81.18,
+            "identity_sd": 12.004,
+            "junk_percent": 1.06,
+            "length_mean": 7733.0,
+            "length_sd": 14779.0,
+            "random_percent": 1.28
+          },
+          "category": "P1",
+          "fingerprint": "0f8657ef80ed7a5140273881b679bb76f28f15af4edb73f58026a19d30d852aa",
+          "gtdb_taxonomy_as_published": "Endomicrobium_A trichonymphae",
+          "id": "349_GCF_000146025.2",
+          "ncbi_taxonomy_as_published": "none",
+          "organism": "Endomicrobium_A trichonymphae",
+          "plasmid_count": 3,
+          "published_read_statistics": {
+            "mean_depth": 21.077389275359796,
+            "read_count": 3443,
+            "read_n50_bp": 24028,
+            "total_read_bases": 24208857
+          },
+          "replicons": [
+            {
+              "length_bp": 1125857,
+              "molecule_type": "chromosome",
+              "published_achieved_depth": 16.123,
+              "refseq_accession": "NC_020419.1",
+              "replicon_name": "NC_020419.1",
+              "source_relative_depth": 1.0,
+              "topology": "circular",
+              "topology_scope": "Original study simulation assumption; not a native-topology claim."
+            },
+            {
+              "length_bp": 11650,
+              "molecule_type": "plasmid",
+              "published_achieved_depth": 16.305,
+              "refseq_accession": "NC_020420.1",
+              "replicon_name": "NC_020420.1",
+              "source_relative_depth": 1.29,
+              "topology": "circular",
+              "topology_scope": "Original study simulation assumption; not a native-topology claim."
+            },
+            {
+              "length_bp": 5701,
+              "molecule_type": "plasmid",
+              "published_achieved_depth": 159.377,
+              "refseq_accession": "NC_020421.1",
+              "replicon_name": "NC_020421.1",
+              "source_relative_depth": 25.62,
+              "topology": "circular",
+              "topology_scope": "Original study simulation assumption; not a native-topology claim."
+            },
+            {
+              "length_bp": 5362,
+              "molecule_type": "plasmid",
+              "published_achieved_depth": 1.385,
+              "refseq_accession": "NC_020422.1",
+              "replicon_name": "NC_020422.1",
+              "source_relative_depth": 0.26,
+              "topology": "circular",
+              "topology_scope": "Original study simulation assumption; not a native-topology claim."
+            }
+          ],
+          "title": "349_GCF_000146025.2",
+          "total_size_bp": 1148570,
+          "track": "broad-performance"
+        },
+        "model": "published-Badread-v0.1.5-frozen-bytes",
+        "read_archive_member": {
+          "header_sha256": "18dbd530e2da6b69c57be7b636ed6ee3bfd9d124ff0b60f0d7a1fae8043b647e",
+          "name": "349_GCF_000146025.2.fastq.gz",
+          "offset": 135559655424,
+          "size": 24276428
+        },
+        "reads_sha256": "88c34c504270055ce95c5e2f86135096c38f63ef54f2dc585a6def59bd3ca0c9",
+        "schema_version": 1,
+        "source_read_archive": {
+          "computed_md5": "e34a360b75e3543bed0879bff07f4f5e",
+          "download_url": "https://ndownloader.figshare.com/files/20188401",
+          "id": 20188401,
+          "name": "simulated_read_sets.tar",
+          "size": 207989719040
+        },
+        "source_reference_archive": {
+          "computed_md5": "b78080dbe56aece943fd5b218f06cdb0",
+          "download_url": "https://ndownloader.figshare.com/files/20188407",
+          "id": 20188407,
+          "name": "reference_genomes.tar.gz",
+          "size": 725085295
+        },
+        "statistics": {
+          "read_count": 3443,
+          "read_n50_bp": 24028,
+          "total_read_bases": 24208857,
+          "uncompressed_fastq_sha256": "16d7ffebbd06a31b5f33d7e5cfe77ea70a7f1fbe19eac0adc9f42656f11fe5b5"
+        },
+        "status": "valid",
+        "truth_sha256": "ada26d5cbfc2bdc83aadc96b3f5b9b559d73155285ac161955ec2986342de4f4",
+        "validation_summary": "Published bytes downloaded without simulation or reordering; gzip CRC, FASTQ structure and published count/bases/N50 verified."
+      },
+      "source_file": "runs/20261106T134511/cases/349_GCF_000146025.2/input.json",
+      "source_sha256": "b8708cad5c71e569bfae0869c43233503c67e7a7a8cf5557b987f5278e201a55"
+    }
+  },
+  "reference_ids": [
+    "349_GCF_000146025.2",
+    "197_GCF_900070325.1"
+  ],
+  "references": {
+    "197_GCF_900070325.1": {
+      "id": "197_GCF_900070325.1",
+      "mode": "whole_genome",
+      "molecules": [
+        {
+          "accession": "NZ_LN879430.1",
+          "length_bp": 2609352,
+          "molecule_type": "chromosome",
+          "published_achieved_depth": 11.113,
+          "refseq_accession": "NZ_LN879430.1",
+          "replicon_name": "NZ_LN879430.1",
+          "source_relative_depth": 1.0,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "type": "chromosome"
+        }
+      ],
+      "reference_sha256": "9c72798d7c32250691aba0332ce5f4052493b5d06122f27f8e2b32633f272812",
+      "status": "admitted"
+    },
+    "349_GCF_000146025.2": {
+      "id": "349_GCF_000146025.2",
+      "mode": "whole_genome",
+      "molecules": [
+        {
+          "accession": "NC_020419.1",
+          "length_bp": 1125857,
+          "molecule_type": "chromosome",
+          "published_achieved_depth": 16.123,
+          "refseq_accession": "NC_020419.1",
+          "replicon_name": "NC_020419.1",
+          "source_relative_depth": 1.0,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "type": "chromosome"
+        },
+        {
+          "accession": "NC_020420.1",
+          "length_bp": 11650,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 16.305,
+          "refseq_accession": "NC_020420.1",
+          "replicon_name": "NC_020420.1",
+          "source_relative_depth": 1.29,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "type": "plasmid"
+        },
+        {
+          "accession": "NC_020421.1",
+          "length_bp": 5701,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 159.377,
+          "refseq_accession": "NC_020421.1",
+          "replicon_name": "NC_020421.1",
+          "source_relative_depth": 25.62,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "type": "plasmid"
+        },
+        {
+          "accession": "NC_020422.1",
+          "length_bp": 5362,
+          "molecule_type": "plasmid",
+          "published_achieved_depth": 1.385,
+          "refseq_accession": "NC_020422.1",
+          "replicon_name": "NC_020422.1",
+          "source_relative_depth": 0.26,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "type": "plasmid"
+        }
+      ],
+      "reference_sha256": "ada26d5cbfc2bdc83aadc96b3f5b9b559d73155285ac161955ec2986342de4f4",
+      "status": "admitted"
+    }
+  },
+  "resource_policy": {
+    "assembly": {
+      "cpus": 4,
+      "default_memory_gb": 16,
+      "time_minutes": 240,
+      "time_minutes_by_tool": {
+        "plassembler": 120
+      }
+    },
+    "queue_capacity": 1000
+  },
+  "schema_version": 1,
+  "selection": {
+    "assemblers": [
+      "flye-2.9.6",
+      "raven-1.8.3",
+      "plassembler-1.9.0",
+      "miniasm-plus-0.2.1"
+    ],
+    "cases": [
+      "349_GCF_000146025.2",
+      "197_GCF_900070325.1"
+    ],
+    "groups": [],
+    "track": "general"
+  },
+  "slots": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "349_GCF_000146025.2"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "349_GCF_000146025.2"
+    },
+    {
+      "assembler": "plassembler-1.9.0",
+      "case_id": "349_GCF_000146025.2"
+    },
+    {
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "349_GCF_000146025.2"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "197_GCF_900070325.1"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "197_GCF_900070325.1"
+    },
+    {
+      "assembler": "plassembler-1.9.0",
+      "case_id": "197_GCF_900070325.1"
+    },
+    {
+      "assembler": "miniasm-plus-0.2.1",
+      "case_id": "197_GCF_900070325.1"
+    }
+  ],
+  "source_file_sha256": {
+    "assets/assemblers.json": "520d4027232f504f1781b7e96381477c4399819a9b4e44d7fb4184baa449980c",
+    "assets/general/checksums.json": "5de482baf0c2d70b3b9ebab65b01d8305e4f9c81c4fd6299005672a54d0f024d",
+    "assets/general/inputs.json": "b5e7a9ebed7a03b10d7812fdbd6aff162ac7d7f823524f32105087310d8ea3c8",
+    "assets/general/profile.json": "7af50783fb8434215d6892ba93b4e951e7d0de64773f895e2f813e8c1fff7889",
+    "assets/general/reference-archive.json": "e9f393fd2c3dbdcb950bdcf7a4baf4f33ecda8805e1933ce05a052f3d7753f3f",
+    "assets/general/selection-50.json": "b054d6c69502216b300f0d6677bf5f562202873d51c0d6b962effc0882522186",
+    "environments/pixi.lock": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+    "environments/pixi.toml": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9"
+  },
+  "track": "general"
+}

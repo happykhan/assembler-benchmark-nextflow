@@ -1,0 +1,49 @@
+{
+  "assessment_statuses": {
+    "completed": 3
+  },
+  "bundle_manifest_sha256": "da8ce01120a0a1a1e440fd7d04fac9d1176d84277007404a05ec52e2e0563cd7",
+  "execution_sha256": {
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1__miniasm-plus-0.2.1": "6e09e347f0c75d1a484ba05eb5ba0b9177e2ec1e5b51b54687bce7609aa4576b",
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0__plassembler-1.9.0": "7066d915ee9290d95df2b38e942442fa4d02c1247c15dcee705c2ba89b308f20",
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3__raven-1.8.3": "4df9186ee82e2999481a20086b1e039830b917fd8cd20620f35001a1b19e137f"
+  },
+  "execution_statuses": {
+    "completed": 3
+  },
+  "expected_slots": 3,
+  "read_sha256": {
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--miniasm-plus--default--miniasm-plus-0.2.1": "bbe7ad8577c6013509e70cd8022268be2f2ae6c5c51fe164fb177f76f3c26492",
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--plassembler--default--plassembler-1.9.0": "bbe7ad8577c6013509e70cd8022268be2f2ae6c5c51fe164fb177f76f3c26492",
+    "s5--s5-albidoflavus-nbc01661-native-length-standard--raven--default--raven-1.8.3": "bbe7ad8577c6013509e70cd8022268be2f2ae6c5c51fe164fb177f76f3c26492"
+  },
+  "reported_outcomes": 3,
+  "run_id": "validation-linear-v2",
+  "scheduler_accounting": "Must be checked separately against the Slurm task IDs.",
+  "schema_version": 1,
+  "sequence_outcomes": {
+    "fail": 3
+  },
+  "site": {
+    "errors": [],
+    "html_pages": 16,
+    "local_links_checked": 173,
+    "policy": {
+      "max_file_bytes": 5242880,
+      "max_files": 1500,
+      "max_total_bytes": 67108864
+    },
+    "public_files": 54,
+    "schema_version": 1,
+    "status": "pass",
+    "total_files": 56,
+    "website_bytes": 516167
+  },
+  "status": "verified",
+  "trace_statuses": {
+    "CACHED": 7,
+    "COMPLETED": 5
+  },
+  "trace_tasks": 12,
+  "verified_bundle_files": 69
+}

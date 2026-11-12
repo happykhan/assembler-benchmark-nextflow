@@ -1,0 +1,1626 @@
+{
+  "assembler_definitions": {
+    "raven-1.8.3": {
+      "adapter": "raven",
+      "container": null,
+      "environment": "raven-1-8-3",
+      "id": "raven-1.8.3",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "raven",
+      "version": "1.8.3"
+    }
+  },
+  "assemblers": [
+    "raven-1.8.3"
+  ],
+  "cases": [
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "118bf4799a98978b0e916c3bda6d6deabecb54d0e1851742fa6783a12e537026",
+        "id": "s7-se11-original-repeat-1",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "original",
+          "repeat": 1
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 original \u00b7 repeat 1",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-original-repeat-1",
+      "input_recipe": {
+        "case_fingerprint": "118bf4799a98978b0e916c3bda6d6deabecb54d0e1851742fa6783a12e537026",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "original",
+          "shuffle_seed": null
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-original-repeat-1",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 1,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "8431b293842eafba9bad30a52393f72614780c107cbeb4f7bc36dcb52bdc275c",
+        "id": "s7-se11-original-repeat-2",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "original",
+          "repeat": 2
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 original \u00b7 repeat 2",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-original-repeat-2",
+      "input_recipe": {
+        "case_fingerprint": "8431b293842eafba9bad30a52393f72614780c107cbeb4f7bc36dcb52bdc275c",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "original",
+          "shuffle_seed": null
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-original-repeat-2",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 2,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "9aaa645c87e7ea8a2559b867b3c82b07e7c4abdc11b693b9720e2971d2d3316f",
+        "id": "s7-se11-original-repeat-3",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "original",
+          "repeat": 3
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 original \u00b7 repeat 3",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-original-repeat-3",
+      "input_recipe": {
+        "case_fingerprint": "9aaa645c87e7ea8a2559b867b3c82b07e7c4abdc11b693b9720e2971d2d3316f",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "original",
+          "shuffle_seed": null
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-original-repeat-3",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 3,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "ec9a03af8e3e4e1095b2caa4e96a4661bf2b18f763f5093d1f61a1578ea5cfa7",
+        "id": "s7-se11-shuffle-1-repeat-1",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-1",
+          "repeat": 1
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 1",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-1-repeat-1",
+      "input_recipe": {
+        "case_fingerprint": "ec9a03af8e3e4e1095b2caa4e96a4661bf2b18f763f5093d1f61a1578ea5cfa7",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-1",
+          "shuffle_seed": 1
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-1-repeat-1",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 1,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "534cce56e0ae2e8a1f7348ef0cd0043f7ab267143d1475639563868ed94af8a7",
+        "id": "s7-se11-shuffle-1-repeat-2",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-1",
+          "repeat": 2
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 2",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-1-repeat-2",
+      "input_recipe": {
+        "case_fingerprint": "534cce56e0ae2e8a1f7348ef0cd0043f7ab267143d1475639563868ed94af8a7",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-1",
+          "shuffle_seed": 1
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-1-repeat-2",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 2,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "fe80c7d45bdbcef38b518c9c81e7a54763e3e12339b76bc435b16773d9de0666",
+        "id": "s7-se11-shuffle-1-repeat-3",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-1",
+          "repeat": 3
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 3",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-1-repeat-3",
+      "input_recipe": {
+        "case_fingerprint": "fe80c7d45bdbcef38b518c9c81e7a54763e3e12339b76bc435b16773d9de0666",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-1",
+          "shuffle_seed": 1
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-1-repeat-3",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 3,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "f5c88e276bbb461a579d35e86d02af0f1d28db49a6e838dd8399a78594969067",
+        "id": "s7-se11-shuffle-2-repeat-1",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-2",
+          "repeat": 1
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 1",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-2-repeat-1",
+      "input_recipe": {
+        "case_fingerprint": "f5c88e276bbb461a579d35e86d02af0f1d28db49a6e838dd8399a78594969067",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-2",
+          "shuffle_seed": 2
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-2-repeat-1",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 1,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "a87048a6acf468a9fc81bfc6aa27cbfef1948e95c071f1ab973489b91df29ef5",
+        "id": "s7-se11-shuffle-2-repeat-2",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-2",
+          "repeat": 2
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 2",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-2-repeat-2",
+      "input_recipe": {
+        "case_fingerprint": "a87048a6acf468a9fc81bfc6aa27cbfef1948e95c071f1ab973489b91df29ef5",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-2",
+          "shuffle_seed": 2
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-2-repeat-2",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 2,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "026f49f514b6c962319e1c161b114085b4961c03dc7063002de25e989788882c",
+        "id": "s7-se11-shuffle-2-repeat-3",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-2",
+          "repeat": 3
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 3",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-2-repeat-3",
+      "input_recipe": {
+        "case_fingerprint": "026f49f514b6c962319e1c161b114085b4961c03dc7063002de25e989788882c",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-2",
+          "shuffle_seed": 2
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-2-repeat-3",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 3,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "839e6653b003fb324dbbb3a21b3bd03dbcfcef894389fd0207b1c2707a2990b0",
+        "id": "s7-se11-shuffle-3-repeat-1",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-3",
+          "repeat": 1
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 1",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-3-repeat-1",
+      "input_recipe": {
+        "case_fingerprint": "839e6653b003fb324dbbb3a21b3bd03dbcfcef894389fd0207b1c2707a2990b0",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-3",
+          "shuffle_seed": 3
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-3-repeat-1",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 1,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "add55203b205c56edb63510fa4cbe0b0c4e162e482405e3e020268f1e4a0c184",
+        "id": "s7-se11-shuffle-3-repeat-2",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-3",
+          "repeat": 2
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 2",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-3-repeat-2",
+      "input_recipe": {
+        "case_fingerprint": "add55203b205c56edb63510fa4cbe0b0c4e162e482405e3e020268f1e4a0c184",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-3",
+          "shuffle_seed": 3
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-3-repeat-2",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 2,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    },
+    {
+      "assembler_options": {
+        "deterministic": false,
+        "flye_input_mode": "nano-hq",
+        "flye_meta": false,
+        "plassembler_chromosome_threshold": 1000000,
+        "plassembler_no_chromosome": false,
+        "plassembler_raw_flag": false
+      },
+      "assessor_id": "exact-dedicated-molecule-v1",
+      "category": "S7",
+      "comparison_id": "reference-independent-contig-multiset-v1",
+      "configuration_id": "raven--default",
+      "diagnostic_case": {
+        "assembly_accession": "GCF_000010385.1",
+        "category": "S7",
+        "fingerprint": "bdaaca88915f335b5aecfdb0878b6ec80197964aabb84d153a9b47cd3ed3518d",
+        "id": "s7-se11-shuffle-3-repeat-3",
+        "organism": "Escherichia coli SE11",
+        "profile_id": "s1-multiple-large-v3",
+        "read_order": {
+          "order_id": "shuffle-3",
+          "repeat": 3
+        },
+        "replicons": [
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009240.1",
+            "length_bp": 4887515,
+            "molecule_type": "chromosome",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+            "refseq_accession": "NC_011415.1",
+            "replicon_name": "chromosome",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009241.1",
+            "length_bp": 100021,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+            "refseq_accession": "NC_011419.1",
+            "replicon_name": "pSE11-1",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009242.1",
+            "length_bp": 91158,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+            "refseq_accession": "NC_011413.1",
+            "replicon_name": "pSE11-2",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          },
+          {
+            "assembly_accession": "GCF_000010385.1",
+            "genbank_accession": "AP009243.1",
+            "length_bp": 60555,
+            "molecule_type": "plasmid",
+            "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+            "refseq_accession": "NC_011416.1",
+            "replicon_name": "pSE11-3",
+            "selection_status": "preferred_candidate",
+            "topology": "circular"
+          }
+        ],
+        "simulation": {
+          "chromosome_depth": 30,
+          "circular_read_limit": "one_circumference",
+          "fastq_phred": 40,
+          "length_max": 50000,
+          "length_mean": 10000,
+          "length_min": 500,
+          "length_sd": 5000,
+          "minimum_breadth": 0.99,
+          "model": "exact-lognormal-v1",
+          "plasmid_relative_depth": 1,
+          "seed": 20261106
+        },
+        "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 3",
+        "truth_type": "derived_subset"
+      },
+      "group": "S7",
+      "headline_eligible": false,
+      "id": "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3",
+      "input_id": "s7-se11-shuffle-3-repeat-3",
+      "input_recipe": {
+        "case_fingerprint": "bdaaca88915f335b5aecfdb0878b6ec80197964aabb84d153a9b47cd3ed3518d",
+        "model": "exact-lognormal-v1",
+        "order": {
+          "id": "shuffle-3",
+          "shuffle_seed": 3
+        },
+        "source": {
+          "batch": "20261106T042113",
+          "case_id": "s1-se11-large",
+          "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+          "minimum_plasmid_bp": 20000,
+          "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+          "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb"
+        }
+      },
+      "legacy_case_id": "s7-se11-shuffle-3-repeat-3",
+      "mode": "default",
+      "preset": "standard",
+      "profile_id": "s1-multiple-large-v3",
+      "purpose": "diagnostic_benchmark",
+      "reference_id": "diagnostic-8e232388ae54f9c56982",
+      "repeat": 3,
+      "source_config_fingerprint": "7a7b1b9170b922a60b89d10718577b6cd26a454a1f1981c73c22fda15b664cc1",
+      "supplementary_assessor_id": null,
+      "threads": 4,
+      "track": "diagnostic"
+    }
+  ],
+  "expected_slots": 12,
+  "headline_eligible": false,
+  "plan_sha256": "d7eb09c1b947daabe0d2ffbac2fbdd05164cd6afbb768435a7d6ebc92c53414b",
+  "preset": "standard",
+  "purpose": "diagnostic_benchmark",
+  "reference_ids": [
+    "diagnostic-8e232388ae54f9c56982"
+  ],
+  "references": {
+    "diagnostic-8e232388ae54f9c56982": {
+      "id": "diagnostic-8e232388ae54f9c56982",
+      "mode": "diagnostic_replicons",
+      "molecule_types": {
+        "NC_011413.1": "plasmid",
+        "NC_011415.1": "chromosome",
+        "NC_011416.1": "plasmid",
+        "NC_011419.1": "plasmid"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "genbank_accession": "AP009240.1",
+          "length_bp": 4887515,
+          "molecule_type": "chromosome",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1",
+          "refseq_accession": "NC_011415.1",
+          "replicon_name": "chromosome",
+          "selection_status": "preferred_candidate",
+          "topology": "circular"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "genbank_accession": "AP009241.1",
+          "length_bp": 100021,
+          "molecule_type": "plasmid",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1",
+          "refseq_accession": "NC_011419.1",
+          "replicon_name": "pSE11-1",
+          "selection_status": "preferred_candidate",
+          "topology": "circular"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "genbank_accession": "AP009242.1",
+          "length_bp": 91158,
+          "molecule_type": "plasmid",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1",
+          "refseq_accession": "NC_011413.1",
+          "replicon_name": "pSE11-2",
+          "selection_status": "preferred_candidate",
+          "topology": "circular"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "genbank_accession": "AP009243.1",
+          "length_bp": 60555,
+          "molecule_type": "plasmid",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1",
+          "refseq_accession": "NC_011416.1",
+          "replicon_name": "pSE11-3",
+          "selection_status": "preferred_candidate",
+          "topology": "circular"
+        }
+      ],
+      "status": "admitted"
+    }
+  },
+  "resource_policy": {
+    "assembly": {
+      "cpus": 4,
+      "default_memory_gb": 16,
+      "memory_gb_by_tool": {
+        "flye": 16,
+        "raven": 16
+      },
+      "time_minutes": 240
+    },
+    "queue_capacity": 1000,
+    "simulation": {
+      "cpus": 1,
+      "time_minutes": 120
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "assemblers": [
+      "raven-1.8.3"
+    ],
+    "cases": [],
+    "groups": [
+      "S7"
+    ]
+  },
+  "slots": [
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-original-repeat-1--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-original-repeat-2--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-original-repeat-3--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-1-repeat-1--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-1-repeat-2--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-1-repeat-3--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-2-repeat-1--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-2-repeat-2--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-2-repeat-3--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-3-repeat-1--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-3-repeat-2--raven--default--raven-1.8.3"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "s7--s7-se11-shuffle-3-repeat-3--raven--default--raven-1.8.3"
+    }
+  ],
+  "source_file_sha256": {
+    "assets/assemblers.json": "520d4027232f504f1781b7e96381477c4399819a9b4e44d7fb4184baa449980c",
+    "assets/diagnostics/README.md": "d98112615c04a9720f7587ec2ff358ecb32a10914d28e400ebe328c5dc0fc590",
+    "assets/diagnostics/catalogue.json": "b3c3580799c90098df574592618c39b35e29fd4f2b277cb624ebb5afd53c07af",
+    "assets/diagnostics/profiles/baseline-large.json": "cfe57da741698883726ba453017a4e99e996b104ad693df9aedf5aa607b7e2b9",
+    "assets/diagnostics/profiles/coverage-large.json": "91e2db72abe9b47ed6338baa227b5b5171dd05a02e31546cf70ac5a44a67c71f",
+    "assets/diagnostics/profiles/determinism-modes.json": "61e6bd3f6a41eecc7377b7a127696f649060cec9a327fbe6e4909ff803772324",
+    "assets/diagnostics/profiles/determinism.json": "4552b0b5ca5a69e572a9bb2d6b5aaddcb1858917d2d4a27a7dbb930090a74ce2",
+    "assets/diagnostics/profiles/linear-isolated-legacy.json": "0cc0b2b2d233603f4c935ccd0f0d2fad7f9514e6ce9e03c7d43da441ce9c40c2",
+    "assets/diagnostics/profiles/linear-plasmids.json": "0305ff971f2e8643b127f6dc3455189032450993835fd58cb6d0fca72ad5536f",
+    "assets/diagnostics/profiles/miniasm-linear.json": "71f596fa8a2c56bd68e190dcfbe95a3147184a320047bd78229d3736848acf31",
+    "assets/diagnostics/profiles/miniasm-plus-linear.json": "b9bf960b00e9e6c748708443a6cf7e11526a88f913f92083b4b4cb9ee180ba4f",
+    "assets/diagnostics/profiles/noisy-large.json": "816e3b3fee9f220420273a4f3f0cf23b66092132ad98d54d81b9d7524da94c50",
+    "assets/diagnostics/profiles/noisy-smoke.json": "bc6ac65cb4b6447c3f8ca6be4563d25b5f17a6075b857b113bbd968ca0b15031",
+    "assets/diagnostics/profiles/pilot.json": "e13fe45d06278c560709ba46f39856c4d83bfa6cf5a8b076bd52ebe0a0d85b57",
+    "assets/diagnostics/profiles/read-order.json": "46e320de5ec5b298b48121b4a04763a672563314406cf05c24b56f098d806175",
+    "assets/diagnostics/profiles/repeatability-large.json": "17c62af0784f206a94ff36b40bd1ed729fcf753b013e3f6741e29b4920bab3df",
+    "assets/diagnostics/profiles/small-plasmids.json": "1452da98a7de63269c716c22f1af5138084c2d655d2a41db3fd1d35141dac62e",
+    "assets/diagnostics/reference-admissions.json": "73059f096707f10ec4d8a9d82d546965ed6d83c121386b447de8dd1f249ecb1d",
+    "assets/diagnostics/references/linear-panel.json": "c933a74fe62ee631ad489db409704d4c201aae293d89779b6ee6fee9b1388718",
+    "assets/diagnostics/references/panel.json": "6d18f92947750d703aee8b834f6ea4eb44a9238460a766850326161cfc0c9ce8",
+    "assets/diagnostics/references/streptomyces-linear-panel.json": "11ea51f62ed1d962dd4ed83ad323e898aee0d88949e56deac62e2d0c6d57834d",
+    "assets/diagnostics/source-provenance.json": "7690841980d1b45228ede9f38c659b4a1e218b97db4d3ec4841d21c3f11a2be9",
+    "diagnostic_core/__init__.py": "f1cf1a4a264fb52813132ea56150245d22a71ea2bf9182bbad59a62e00e00a72",
+    "diagnostic_core/assessment.py": "69985fe89f81ebc0c4dbbf4e42aee45c57a74468552f107064d82cf356b4beb0",
+    "diagnostic_core/assessments.py": "d431e053a93450398c84a8b8e1b0ff0b36aa318159d671930f44bf639a093bd0",
+    "diagnostic_core/cases.py": "d3ec146ebc8410ec479ba8e343075d1c5e197cfe8f709509168a9a0c338f4657",
+    "diagnostic_core/common.py": "a959a4ee93fc5f028b98ca0dbe07079d97a240e3e78e4891c44b5970fd6fca70",
+    "diagnostic_core/comparison.py": "4784cbf09d0f0f27c8992c073b67b0635ffd884326f2f730648999e1b0893521",
+    "diagnostic_core/determinism.py": "9492200e50f24b63c48ccc4e53345ec112f8b3c6a7075095e92c1b5e72df9584",
+    "diagnostic_core/diagnostics.py": "cfc987c103061a567a1ffea2db0e51110e1de80637125a746ed1b5f9d4b9e76f",
+    "diagnostic_core/linear_cases.py": "8aff025a38b6c5782849c1bfbc21e50865bca13da0fbc0f0dc68ea378944f84c",
+    "diagnostic_core/mapping.py": "5a0ed3b4c59625714be70d8f0d560ef33791c74c75113fae83ddda81abdf1585",
+    "diagnostic_core/noisy_reads.py": "8ab14c0e18a65eb73fc8da6ec2f00248088b8bfd7c7d7b27cd4a2f64da79a68d",
+    "diagnostic_core/noisy_workflow.py": "b0cdf1621be945ed33e629d2c524e244119719c1afbd0807c049f3d0d5376b10",
+    "diagnostic_core/planning.py": "d819d6468648a16a480922383d440b3e1f70fefd459ec5f35ffa3298c8e2bde5",
+    "diagnostic_core/plassembler_outputs.py": "0e0f726a963ff8f0ea40d04e75ff60e009ff5de9916b445d3d280cda770c4abf",
+    "diagnostic_core/preparation.py": "6ffbccce5e076f0ed52ccb10a7da3938fb99ae8e03222ee8e069291ef69c8d87",
+    "diagnostic_core/read_order.py": "479ad483cf4d9260f0eb615c86aa6e4a5e92a51921684a71ca9f2250d4148e56",
+    "diagnostic_core/reads.py": "a8ac70febe1dc54306121095db2afdacb9631a9f9f0e7c326f707aa7f9c27164",
+    "diagnostic_core/scoring.py": "73795a6bc484411ff9d2b28670543bb2bb1f148258b83dce573a7a66f80e96a0",
+    "diagnostic_core/tolerant.py": "d0c62ac359f7104ba586a0e1d4383b723c4389ba6e199f41824c2e800ca9dd58",
+    "diagnostic_core/topology.py": "0423c92a18fc0768b8d11e3fe8ff475bf5b53baf31e336a5aae6dffdd26b8988",
+    "diagnostic_core/topology_metadata.py": "dcf0e594df7c0ecba36369392b53428be314b3d68aff5d836e2f4fd1a3118f25",
+    "environments/pixi.lock": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+    "environments/pixi.toml": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9"
+  },
+  "track": "diagnostic"
+}
