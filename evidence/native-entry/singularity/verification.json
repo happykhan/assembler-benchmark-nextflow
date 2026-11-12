@@ -1,0 +1,50 @@
+{
+  "bundle_complete": true,
+  "result_count": 4,
+  "verified_files": 45,
+  "trace_tasks": 13,
+  "trace_statuses": {
+    "CACHED": 13
+  },
+  "runtime_image": "docker://ghcr.io/prefix-dev/pixi@sha256:702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8",
+  "prepared_environments": [
+    "default",
+    "flye-2-9-6",
+    "raven-1-8-3"
+  ],
+  "slots": [
+    {
+      "case": "quick-baseline",
+      "assembler": "flye-2.9.6",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-baseline",
+      "assembler": "raven-1.8.3",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-bimodal",
+      "assembler": "flye-2.9.6",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-bimodal",
+      "assembler": "raven-1.8.3",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "fully_complete"
+    }
+  ],
+  "manifest_sha256": "d5df6ae0f5e265313e97cbd02cb7f33cf379e8b0062685f127f02c7779afa285",
+  "read_sha256": {
+    "quick-baseline": "db3661cda773f9ad71c074dc35a2da13375cf9e5ade2fd80495989ea6ca2e235",
+    "quick-bimodal": "1a20e42a6bc6b4cffdad0c908c90a21bbbe2bbb716be0072739cc82fc4f7a453"
+  }
+}

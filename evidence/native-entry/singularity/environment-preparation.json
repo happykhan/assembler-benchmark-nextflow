@@ -1,0 +1,72 @@
+{
+  "automatic_retries": 0,
+  "environments": [
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-singularity-entry-v1/environments/pixi.toml",
+        "--environment",
+        "default"
+      ],
+      "elapsed_seconds": 0.13680378813296556,
+      "environment": "default",
+      "exit_code": 0,
+      "lock_sha256": "5a8107c0477f53e71ef898ada6a32f26047309af5bd8ad7f94554b1d11d530fa",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "732ac6adb2e36b7fa47553f9c5bca32dacf2d166502215790a873ad280fb0abd",
+      "status": "prepared",
+      "stderr_sha256": "02b2f089d469b80b2713e85800e80f71a3954e7c75bf33c609359a8d297f9bd9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-singularity-entry-v1/environments/pixi.toml",
+        "--environment",
+        "flye-2-9-6"
+      ],
+      "elapsed_seconds": 3.931799811311066,
+      "environment": "flye-2-9-6",
+      "exit_code": 0,
+      "lock_sha256": "5a8107c0477f53e71ef898ada6a32f26047309af5bd8ad7f94554b1d11d530fa",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "732ac6adb2e36b7fa47553f9c5bca32dacf2d166502215790a873ad280fb0abd",
+      "status": "prepared",
+      "stderr_sha256": "9250e1375c443cb3b5785b420d63997cb54d1fd21c7dda45cee1bfdf0ab984aa",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "pixi",
+        "install",
+        "--locked",
+        "--manifest-path",
+        "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-singularity-entry-v1/environments/pixi.toml",
+        "--environment",
+        "raven-1-8-3"
+      ],
+      "elapsed_seconds": 3.3864874076098204,
+      "environment": "raven-1-8-3",
+      "exit_code": 0,
+      "lock_sha256": "5a8107c0477f53e71ef898ada6a32f26047309af5bd8ad7f94554b1d11d530fa",
+      "manifest": "environments/pixi.toml",
+      "manifest_sha256": "732ac6adb2e36b7fa47553f9c5bca32dacf2d166502215790a873ad280fb0abd",
+      "status": "prepared",
+      "stderr_sha256": "8be84ddd9ad3f97b613865e58ddb6cf4f8d461594d894e08deee0419c56cd09c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "finished_at": "2026-11-12T10:34:57.754091+00:00",
+  "plan_sha256": "66d741c04f2f91a7201180b08cedc93c0a24f40d08d41275b0703a59f8060746",
+  "policy": "Locked environment preparation is serial before scheduling; assembler concurrency is unchanged.",
+  "runtime_image": "docker://ghcr.io/prefix-dev/pixi@sha256:702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8",
+  "schema_version": 1,
+  "started_at": "2026-11-12T10:34:50.278223+00:00",
+  "status": "prepared"
+}

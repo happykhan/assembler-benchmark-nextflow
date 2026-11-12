@@ -1,0 +1,50 @@
+{
+  "bundle_complete": true,
+  "result_count": 4,
+  "verified_files": 45,
+  "trace_tasks": 13,
+  "trace_statuses": {
+    "COMPLETED": 13
+  },
+  "runtime_image": null,
+  "prepared_environments": [
+    "default",
+    "flye-2-9-6",
+    "raven-1-8-3"
+  ],
+  "slots": [
+    {
+      "case": "quick-baseline",
+      "assembler": "flye-2.9.6",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-baseline",
+      "assembler": "raven-1.8.3",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-bimodal",
+      "assembler": "flye-2.9.6",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "incomplete"
+    },
+    {
+      "case": "quick-bimodal",
+      "assembler": "raven-1.8.3",
+      "execution": "completed",
+      "assessment": "completed",
+      "sequence_outcome": "fully_complete"
+    }
+  ],
+  "manifest_sha256": "8b78054bdd2618f764ae560af53a8c333a7d65d6318410f766e0a1737e2ea09a",
+  "read_sha256": {
+    "quick-baseline": "db3661cda773f9ad71c074dc35a2da13375cf9e5ade2fd80495989ea6ca2e235",
+    "quick-bimodal": "1a20e42a6bc6b4cffdad0c908c90a21bbbe2bbb716be0072739cc82fc4f7a453"
+  }
+}

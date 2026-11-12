@@ -27,7 +27,7 @@ Real-data admission follows the simulated end-to-end implementation.
 ## Run with Nextflow
 
 On Linux x86-64, install Nextflow 25.10.2 or later, a compatible Java runtime,
-and [Pixi](https://pixi.sh). Then run:
+and [Pixi](https://pixi.sh) 0.73.0 or later. Then run:
 
 ```bash
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick

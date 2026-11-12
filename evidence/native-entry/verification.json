@@ -1,0 +1,57 @@
+{
+  "both_runtime_input_read_hashes_equal": true,
+  "both_runtime_sequence_outcomes_equal": true,
+  "checked_date": "2026-11-12",
+  "docker": {
+    "execution_tested": false,
+    "profile_configuration_parsed": true,
+    "reason": "Docker unavailable on Cluster 3"
+  },
+  "full_bundles": {
+    "pixi": "/well/aanensen/users/rva470/assembler-benchmark-remote-quick-v1/results/quick/bundle",
+    "singularity": "/well/aanensen/users/rva470/assembler-benchmark-singularity-entry-v1/results/fresh-singularity/bundle"
+  },
+  "host_pixi_version": "0.73.0",
+  "linux_architecture": "x86_64",
+  "nextflow_version": "25.10.2",
+  "pixi": {
+    "fresh_asset_cache": true,
+    "initial_completed_tasks": 13,
+    "remote_github_launch": true,
+    "result_slots": 4,
+    "resume_cached_tasks": 13,
+    "verified_bundle_files": 45
+  },
+  "repaired_preassembly_infrastructure": [
+    "Pixi 0.63.2 image could not read lock format 7; pinned Pixi 0.73.0 instead.",
+    "Placed package cache on writable mounted pipeline filesystem.",
+    "Forwarded cluster proxy variables into isolated container tasks; failed reference download 35436157 remains recorded."
+  ],
+  "retained_evidence_sha256": {
+    "pixi/environment-preparation.json": "0ca117a2a3bb5c03229d703c2a52e9a248afb892c1c505cc410de0b551758158",
+    "pixi/manifest.json": "8b78054bdd2618f764ae560af53a8c333a7d65d6318410f766e0a1737e2ea09a",
+    "pixi/nextflow-trace.tsv": "c8805c0a6a4fd7760eeeefebb98b2598805558e303e1221e95e532c785005613",
+    "pixi/slot-plan.json": "d814e04a5200f46df9e8826649f8083289897b7aab852b54138d8afd71abb6e5",
+    "pixi/verification-initial.json": "920cadc77a3d76e2586da3203511492f0b7b0a2b6dc4223b9e0ab5fc7582f393",
+    "pixi/verification-resume.json": "bce399b160c198c810a78568fe4b97f5e0a6a4776c736ba631d1b36bba0bfb32",
+    "singularity/environment-preparation.json": "47e0c6d3c3ef83d4f654d201766e7610bedbfd8dc86db4e81fdd5d0c2c4d9fcc",
+    "singularity/manifest.json": "d5df6ae0f5e265313e97cbd02cb7f33cf379e8b0062685f127f02c7779afa285",
+    "singularity/nextflow-trace.tsv": "fc5e9189b3da2e2de79ca6ee47f654a53a3d00cb12c99fcc03a8c996aebc4388",
+    "singularity/slot-plan.json": "d814e04a5200f46df9e8826649f8083289897b7aab852b54138d8afd71abb6e5",
+    "singularity/verification.json": "1892c443faf535a6bcc0f7ebfa0d67e8916c3220482905879d6ff40d1a3c5fb1",
+    "terminal-accounting.tsv": "5ef6180b004ac25aeef2b8340bbd5cbdb0de182cc42633f3429abbc10313f92a",
+    "verify-bundle.py": "66733bbee2ec81b42db1948163a55a5863f17f710335d355c9f78e5f0e7b16d8"
+  },
+  "scoped_tests_passed": 104,
+  "singularity": {
+    "automatic_image_pull": true,
+    "host_pixi_required": false,
+    "initial_prepared_environment_cached_after_proxy_repair": true,
+    "result_slots": 4,
+    "resume_cached_tasks": 13,
+    "verified_bundle_files": 45
+  },
+  "singularity_command_implementation": "Apptainer 1.5.3-3.el8",
+  "terminal_compute_jobs_verified": 24,
+  "tested_source_commit": "40935752ca3444716e66f33dce060f25f94715f2"
+}

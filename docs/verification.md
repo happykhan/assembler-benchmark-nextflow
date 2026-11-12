@@ -46,7 +46,7 @@ completed all assemblies but exposed a mapper working-directory bug. The export
 completion gate blocked that release. The fix uses an absolute final-assembly
 path; `quick-v3` verifies the corrected integration.
 
-## Boundaries
+## Initial checkpoint boundaries
 
 Only Linux Pixi/Slurm was integration-tested. Docker and Apptainer profile
 definitions are present but have not been run. Standard is not admitted, real
@@ -143,3 +143,9 @@ compute tasks and submitted only the export.
 Evidence and interpretation are in [assessment diagnosis](assessment-diagnosis.md),
 [fragmentation review](fragmentation-review.md) and
 [`report-clarity-check.json`](../evidence/assessment-diagnosis/report-clarity-check.json).
+
+## Native entry point and container verification
+
+The later [native-entry checkpoint](native-entry-verification.md) replaces the
+manual preparation requirement and records Pixi/Singularity integration checks.
+The initial runtime limitations above describe the earlier Quick checkpoint.

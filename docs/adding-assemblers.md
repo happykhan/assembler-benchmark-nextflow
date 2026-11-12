@@ -35,9 +35,10 @@ its definition, environment, actual version, commands and source/lock hashes.
 
 The verified initial runtime is Linux Pixi. Each assembler stage selects its
 own named environment; simulation, assessment and export use the tooling
-environment. Containers require a digest-pinned image in every selected
-definition. `container: null` means that version is not admitted for container
-profiles; the workflow stops before scheduling it.
+environment. The current container profiles use a shared digest-pinned Pixi
+runtime and the same locked named environments. The per-definition `container`
+field is reserved for future self-contained tool images; `null` does not prevent
+using the shared runtime. See [runtime verification](native-entry-verification.md).
 
 Changes to registry/reference/case metadata or environment locks require a new
 frozen plan. Use a new run ID and output/work directories for changed selections.

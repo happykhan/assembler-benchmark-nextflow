@@ -47,3 +47,32 @@ Use `-resume` for the same selection, or a new output directory for a changed
 selection. Direct Nextflow runs do not create the optional launcher's custom
 cleanup ownership markers; custom cleanup therefore refuses them. Retain work
 for resume and review Nextflow's own cleanup command when removing it.
+
+## Verified Quick runs — 12 November 2026
+
+| Runtime | Entry point | Results | Bundle checksums | Resume |
+| --- | --- | --- | --- | --- |
+| Pixi | GitHub repository, fresh Nextflow asset cache | 4/4 assembled and assessed | 45/45 files verified | All 13 tasks cached; no new jobs |
+| Singularity | Fresh development checkout, automatic image/environment preparation | 4/4 assembled and assessed | 45/45 files verified | All 13 tasks cached; no new jobs |
+| Docker | Profile configuration parsed | Not executed: Docker unavailable on Cluster 3 | — | — |
+
+All 24 final compute-job records are terminal `COMPLETED` with exit `0:0`.
+Input read SHA256s and the four sequence outcomes agree between runtimes.
+Quick remains a workflow check: three outputs fall below the fixed single-alignment
+completion criterion, and one meets it. Successful execution does not turn the
+linear Quick fixture into a whole-genome scientific benchmark.
+
+The fresh GitHub run tested source commit `40935752ca` with no prior plan,
+reference cache or installed environments in that asset checkout. Preparation,
+reference download, simulation, assembly, assessment and export all completed.
+The full test suite passed **104 tests**.
+
+Compact [verification records](../evidence/native-entry/verification.json), plans,
+runtime receipts, manifests, cached traces, the verification script and terminal
+scheduler accounting are committed under `evidence/native-entry`. Full bundles
+remain on the cluster at the paths in the record.
+
+The Singularity development test exposed and repaired an incompatible older Pixi
+image, an unmounted home-cache location and missing cluster proxy forwarding.
+The failed reference-download job remains recorded separately; it was not an
+assembler failure. No assembler retry was used to obtain these Quick results.

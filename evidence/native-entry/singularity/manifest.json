@@ -1,0 +1,94 @@
+{
+  "complete": true,
+  "expected_slot_plan": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "quick-baseline"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "quick-baseline"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "quick-bimodal"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "quick-bimodal"
+    }
+  ],
+  "expected_slots": 4,
+  "files": {
+    "assemblies/quick-baseline/flye-2.9.6/assembly.fasta": "b5ec92611bc782ee091a730572995d48116a82774a7ca6fcb3e77474e98e6737",
+    "assemblies/quick-baseline/flye-2.9.6/assembly.gfa": "14612d065ceff9513d6857b2d9116d4b73634b74d59bbf609de7d7489c43d4c6",
+    "assemblies/quick-baseline/raven-1.8.3/assembly.fasta": "12f63ab3c0eb6743236276fa329c23a333c132bef0058513f97f5fed4d16a232",
+    "assemblies/quick-baseline/raven-1.8.3/assembly.gfa": "85322af7780e69153768a0aabf3e12b9b6afe86da6a9aa76016fe7d30fbabb0b",
+    "assemblies/quick-bimodal/flye-2.9.6/assembly.fasta": "4f73a473f65c8f57d56c0d36a92dc5b83447cd5a17917aab727a992c77cec6c8",
+    "assemblies/quick-bimodal/flye-2.9.6/assembly.gfa": "47a6e03ce23d9c57a4e0b2cdd93e765292227ed9fc1c866ec4befcc7f3031e4d",
+    "assemblies/quick-bimodal/raven-1.8.3/assembly.fasta": "d9a50659b8f421ec0d1567184e11c04c02373bb7e7202f4fb731373f50ce5281",
+    "assemblies/quick-bimodal/raven-1.8.3/assembly.gfa": "aede86bbd9a24b3a9005dc039723d2bafdeca15d848c06f5c499d67171f44856",
+    "environment-preparation.json": "47e0c6d3c3ef83d4f654d201766e7610bedbfd8dc86db4e81fdd5d0c2c4d9fcc",
+    "evidence/quick-baseline/flye-2.9.6/alignment.paf": "a6577720dadb596c11dc472e8ac6af349b97257551300a5aedec35aac95a9299",
+    "evidence/quick-baseline/flye-2.9.6/execution.json": "2bf8f0ab6bf5e5729f289ec257c5d565ca1e222cc5539e1c1a63d401398adb5c",
+    "evidence/quick-baseline/flye-2.9.6/minimap2.stderr.log": "9c779e2aee978b924aaa68d99ef47204bc68594021d40430a58e6e9abd49183e",
+    "evidence/quick-baseline/flye-2.9.6/reference-provenance.json": "6378bd61276985196955d024a9cfd49fb557615d789be0c88a32b290bb7cffaa",
+    "evidence/quick-baseline/flye-2.9.6/result.json": "54f3e192bd7c8a0aad09d2cd2f078ec366dea24c22f1d1fd8aca159d4803bcde",
+    "evidence/quick-baseline/flye-2.9.6/simulation.json": "d921e9182f7c3b5d8d2836c254a64bff37d13a6ad2fb7cdfc450f489343dfb4a",
+    "evidence/quick-baseline/flye-2.9.6/stderr.log": "5498a07a4085ad07880ad6367c294db69f74f48edf79c2c688f18859a9b70b27",
+    "evidence/quick-baseline/flye-2.9.6/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/quick-baseline/raven-1.8.3/alignment.paf": "bb45bb41b8b60de5d2186f672e76cf28fa5dff7019f8bbe553579a2e15316640",
+    "evidence/quick-baseline/raven-1.8.3/execution.json": "131ffe12c319d560edd8348d89050e3b0a3de2f4bc6838e85af6621c25a1c339",
+    "evidence/quick-baseline/raven-1.8.3/minimap2.stderr.log": "83b3b552038d60392d800f275aaa7440ca55167f80e7d06e1e7c2217096923b9",
+    "evidence/quick-baseline/raven-1.8.3/reference-provenance.json": "6378bd61276985196955d024a9cfd49fb557615d789be0c88a32b290bb7cffaa",
+    "evidence/quick-baseline/raven-1.8.3/result.json": "570dea590189537788dd25bfed9d568f49b4585a666f2c4932161fac1d7f02d8",
+    "evidence/quick-baseline/raven-1.8.3/simulation.json": "d921e9182f7c3b5d8d2836c254a64bff37d13a6ad2fb7cdfc450f489343dfb4a",
+    "evidence/quick-baseline/raven-1.8.3/stderr.log": "2e056a1e07fc15225c16b10351e9b12c57fb25c55221e161226685ac3a8d581e",
+    "evidence/quick-baseline/raven-1.8.3/stdout.log": "12f63ab3c0eb6743236276fa329c23a333c132bef0058513f97f5fed4d16a232",
+    "evidence/quick-bimodal/flye-2.9.6/alignment.paf": "f47939056a4acc3e5873bd9350d6042712543409a812463d0ec2e9161b4fb3a7",
+    "evidence/quick-bimodal/flye-2.9.6/execution.json": "405e6b7a9debb86b8621996f0b9c09b595b1ae33d6a37811a61d9e23e06f3289",
+    "evidence/quick-bimodal/flye-2.9.6/minimap2.stderr.log": "75b6dfe816d08e35ea939f2f6701cf8735a7b83487d341e1692d2f45965a60eb",
+    "evidence/quick-bimodal/flye-2.9.6/reference-provenance.json": "6378bd61276985196955d024a9cfd49fb557615d789be0c88a32b290bb7cffaa",
+    "evidence/quick-bimodal/flye-2.9.6/result.json": "65d9ad212f575974c5a5b3da14338b854698c7d6207d6f8f349900e4f68c8eaa",
+    "evidence/quick-bimodal/flye-2.9.6/simulation.json": "68b4d060ba3dcec1540b113dbbcb4531987bae54a74f6a702f69dc9a63986253",
+    "evidence/quick-bimodal/flye-2.9.6/stderr.log": "6075505df139e1139c71ff748e05f1d64dda0cab0994d435f32c344a867d290b",
+    "evidence/quick-bimodal/flye-2.9.6/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/quick-bimodal/raven-1.8.3/alignment.paf": "f4857e73e44b0a92342d51895daedc0e6cd04060cb90ed85781cfb8bf9c969c7",
+    "evidence/quick-bimodal/raven-1.8.3/execution.json": "19f4fee8af0f246dde1bedada0075dc9e0120d4bbd6caf6484512391304b8e8e",
+    "evidence/quick-bimodal/raven-1.8.3/minimap2.stderr.log": "17691e9fd0e7df33aa351c7b4e6ffa6eff772cf60239b2cc6ef5968c2bbd3dcf",
+    "evidence/quick-bimodal/raven-1.8.3/reference-provenance.json": "6378bd61276985196955d024a9cfd49fb557615d789be0c88a32b290bb7cffaa",
+    "evidence/quick-bimodal/raven-1.8.3/result.json": "a4dc18136480a8870b26b330536d014fd1a3e33d1c12333f0b4188c9fe12e81e",
+    "evidence/quick-bimodal/raven-1.8.3/simulation.json": "68b4d060ba3dcec1540b113dbbcb4531987bae54a74f6a702f69dc9a63986253",
+    "evidence/quick-bimodal/raven-1.8.3/stderr.log": "b0f3c97a2a1dec741f0caf3ed6435e0b5bcf2313f28565af317ddb6bcf37cdb5",
+    "evidence/quick-bimodal/raven-1.8.3/stdout.log": "d9a50659b8f421ec0d1567184e11c04c02373bb7e7202f4fb731373f50ce5281",
+    "index.html": "bb9b45f160dc7cf5eaa6a31564d3b0cc88551c75c86e0caf9453275ba9718753",
+    "results.json": "ffe71ec1a5438349638ed46a3e1f825c68e3f3ee6b5a281d300c27486cb9c69a",
+    "results.tsv": "6ba0bf153401e1fbcdb143c9e12b6d1560039a8aeb91f7bd2ceab7c43a8ee3ea",
+    "slot-plan.json": "d814e04a5200f46df9e8826649f8083289897b7aab852b54138d8afd71abb6e5"
+  },
+  "headline_eligible": false,
+  "plan_sha256": "d814e04a5200f46df9e8826649f8083289897b7aab852b54138d8afd71abb6e5",
+  "presets": [
+    "quick"
+  ],
+  "purposes": [
+    "workflow_check"
+  ],
+  "result_count": 4,
+  "retention": {
+    "assemblies": [
+      "assemblies/quick-baseline/flye-2.9.6/assembly.fasta",
+      "assemblies/quick-baseline/raven-1.8.3/assembly.fasta",
+      "assemblies/quick-bimodal/flye-2.9.6/assembly.fasta",
+      "assemblies/quick-bimodal/raven-1.8.3/assembly.fasta"
+    ],
+    "graphs": [
+      "assemblies/quick-baseline/flye-2.9.6/assembly.gfa",
+      "assemblies/quick-baseline/raven-1.8.3/assembly.gfa",
+      "assemblies/quick-bimodal/flye-2.9.6/assembly.gfa",
+      "assemblies/quick-bimodal/raven-1.8.3/assembly.gfa"
+    ]
+  },
+  "run_id": "fresh-singularity",
+  "schema_version": 1
+}
