@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T18:12:14.992057+00:00",
-  "state": "ready_awaiting_cluster_authentication",
+  "updated_at": "2026-11-12T19:48:28.662887+00:00",
+  "state": "live_verified",
   "expected_input_sets": 55,
   "expected_assembly_outcomes": 110,
   "assemblers": [
@@ -16,15 +16,29 @@
     505
   ],
   "reference_count": 5,
-  "completed_beta_assembly_outcomes": 0,
-  "website_live": false,
-  "blocker": "Cluster 3 is reachable but SSH authentication is rejected. Existing master connection has expired. No beta assemblies submitted.",
+  "completed_beta_assembly_outcomes": 110,
+  "website_live": true,
+  "blocker": null,
   "input_verification": "Five seed-101 full-depth native genome inputs: 39,714 reads independently reconstructed; zero sequence/quality mismatches. Unit checks cover exact budgets, native caps, lower-depth prefixes and deterministic output.",
-  "nextflow_verification": "Native plan-only process completed; frozen 110-slot plan validates. This is not a scientific execution.",
-  "website_verification": "Test-fixture publication only; desktop/mobile filters, downloads, figure and homepage link checked. Current historical site preserved within existing size/file limits. No fixture deployed.",
+  "nextflow_verification": "Complete end-to-end run verified. All 110 assemblies and 55 simulations reused on assessment-only recovery; execution hashes unchanged. 282 terminal Slurm jobs checked.",
+  "website_verification": "Live desktop/mobile checks pass. All 13 selected live pages, downloads and figures match the reviewed build. Historical general report and S5/S7 pages preserved.",
   "tests": {
-    "total": 191,
-    "passed": 189,
+    "total": 192,
+    "passed": 190,
     "skipped": 2
-  }
+  },
+  "source_commit": "1ccb96e",
+  "remote_root": "/well/aanensen/users/rva470/assembler-benchmark-beta-standard-v1",
+  "controller_pid": 3883461,
+  "progress_note": "Complete and published; no pending slots.",
+  "completed_assessments": 110,
+  "url": "https://ploptimizer-assembly-benchmark.vercel.app/beta/",
+  "deployment_id": "dpl_9yg7qWm43YrJWjXCL38YbPcaivTR",
+  "deployment_url": "https://ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app",
+  "sequence_outcomes": {
+    "fully_complete": 35,
+    "chromosome_complete": 2,
+    "incomplete": 73
+  },
+  "molecule_measurements": 200
 }

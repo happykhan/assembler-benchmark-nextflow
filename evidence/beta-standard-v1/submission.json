@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_commit": "1467d867f2308f420fd3587ae030289377dcddb5",
+  "remote_root": "/well/aanensen/users/rva470/assembler-benchmark-beta-standard-v1",
+  "session_id": "28b81024-3480-43a5-8416-9a9034e2fd1c",
+  "controller_pid": 3883461,
+  "source_archive_sha256": "48db4e8d606a97786bbd5c3131f003ce1a978f2b76de5edfc3c44cbb06bd81d9",
+  "expected_outcomes": 110,
+  "automatic_retries": 0,
+  "resume_policy": "Reuse this Nextflow session; do not start another run for the same slots.",
+  "assessment_fix_commit": "1ccb96e",
+  "assessment_recovery": {
+    "preserved_attempt_dir": "recovery/assessment-interface-v1",
+    "issue": "Native sampler binds canonical reference FASTA, but the assessor required a legacy JSON receipt hash.",
+    "repair": "Explicit native-version canonical FASTA/inventory binding; legacy JSON receipt validation unchanged.",
+    "assembly_tasks_reused": 110,
+    "simulation_tasks_reused": 55,
+    "initial_assessment_errors": 110,
+    "final_assessment_errors": 0
+  }
+}

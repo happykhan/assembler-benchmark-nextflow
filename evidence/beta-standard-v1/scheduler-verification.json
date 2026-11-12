@@ -1,0 +1,2827 @@
+{
+  "jobs": 282,
+  "rows": [
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35469625",
+      "job_name": "nf-PREPARE_REFERENCE_(bsub-168-whole)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35469626",
+      "job_name": "nf-PREPARE_REFERENCE_(llactis-il1403-whole)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "53",
+      "exit_code": "0:0",
+      "job_id": "35469627",
+      "job_name": "nf-PREPARE_REFERENCE_(lplantarum-wcfs1-whole)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "5",
+      "exit_code": "0:0",
+      "job_id": "35469628",
+      "job_name": "nf-PREPARE_REFERENCE_(mflorum-l1-whole)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35469629",
+      "job_name": "nf-PREPARE_REFERENCE_(mluteus-nctc2665-whole)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469634",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-baseline-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469635",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-baseline-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469636",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-baseline-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469637",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-baseline-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35469638",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-baseline-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469639",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-low-coverage-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469640",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-low-coverage-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469641",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-low-coverage-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469642",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-low-coverage-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "4",
+      "exit_code": "0:0",
+      "job_id": "35469643",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-short-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469645",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-low-coverage-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469646",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-short-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469647",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-short-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469648",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-short-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469649",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-short-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469650",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-bimodal-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469651",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-bimodal-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469652",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-bimodal-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469653",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-bimodal-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469654",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-bimodal-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469655",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-long-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469656",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-long-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469657",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-long-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469658",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-long-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469659",
+      "job_name": "nf-SIMULATE_READS_(beta-bsub-168-whole-long-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "0",
+      "exit_code": "0:0",
+      "job_id": "35469660",
+      "job_name": "nf-SIMULATE_READS_(beta-mflorum-l1-whole-baseline-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "0",
+      "exit_code": "0:0",
+      "job_id": "35469661",
+      "job_name": "nf-SIMULATE_READS_(beta-mflorum-l1-whole-baseline-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "0",
+      "exit_code": "0:0",
+      "job_id": "35469662",
+      "job_name": "nf-SIMULATE_READS_(beta-mflorum-l1-whole-baseline-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469663",
+      "job_name": "nf-SIMULATE_READS_(beta-mflorum-l1-whole-baseline-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469664",
+      "job_name": "nf-SIMULATE_READS_(beta-mflorum-l1-whole-baseline-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469665",
+      "job_name": "nf-SIMULATE_READS_(beta-llactis-il1403-whole-baseline-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469666",
+      "job_name": "nf-SIMULATE_READS_(beta-llactis-il1403-whole-baseline-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469667",
+      "job_name": "nf-SIMULATE_READS_(beta-llactis-il1403-whole-baseline-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469668",
+      "job_name": "nf-SIMULATE_READS_(beta-llactis-il1403-whole-baseline-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469669",
+      "job_name": "nf-SIMULATE_READS_(beta-llactis-il1403-whole-baseline-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "94",
+      "exit_code": "0:0",
+      "job_id": "35469674",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "379",
+      "exit_code": "0:0",
+      "job_id": "35469675",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "349",
+      "exit_code": "0:0",
+      "job_id": "35469676",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "95",
+      "exit_code": "0:0",
+      "job_id": "35469677",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "114",
+      "exit_code": "0:0",
+      "job_id": "35469678",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "373",
+      "exit_code": "0:0",
+      "job_id": "35469679",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "361",
+      "exit_code": "0:0",
+      "job_id": "35469680",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "93",
+      "exit_code": "0:0",
+      "job_id": "35469681",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "351",
+      "exit_code": "0:0",
+      "job_id": "35469682",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "84",
+      "exit_code": "0:0",
+      "job_id": "35469683",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "174",
+      "exit_code": "0:0",
+      "job_id": "35469684",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "31",
+      "exit_code": "0:0",
+      "job_id": "35469685",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "162",
+      "exit_code": "0:0",
+      "job_id": "35469687",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "32",
+      "exit_code": "0:0",
+      "job_id": "35469688",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "162",
+      "exit_code": "0:0",
+      "job_id": "35469689",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "29",
+      "exit_code": "0:0",
+      "job_id": "35469690",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "159",
+      "exit_code": "0:0",
+      "job_id": "35469691",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "31",
+      "exit_code": "0:0",
+      "job_id": "35469692",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "219",
+      "exit_code": "0:0",
+      "job_id": "35469693",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "88",
+      "exit_code": "0:0",
+      "job_id": "35469694",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "242",
+      "exit_code": "0:0",
+      "job_id": "35469695",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "17",
+      "exit_code": "0:0",
+      "job_id": "35469696",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "186",
+      "exit_code": "0:0",
+      "job_id": "35469697",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35469698",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "17",
+      "exit_code": "0:0",
+      "job_id": "35469699",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "189",
+      "exit_code": "0:0",
+      "job_id": "35469700",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35469701",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "172",
+      "exit_code": "0:0",
+      "job_id": "35469702",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35469703",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "204",
+      "exit_code": "0:0",
+      "job_id": "35469704",
+      "job_name": "nf-ASSEMBLE_(beta-mflorum-l1-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "153",
+      "exit_code": "0:0",
+      "job_id": "35469706",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "34",
+      "exit_code": "0:0",
+      "job_id": "35469707",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-low-coverage-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "94",
+      "exit_code": "0:0",
+      "job_id": "35469708",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "213",
+      "exit_code": "0:0",
+      "job_id": "35469709",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "101",
+      "exit_code": "0:0",
+      "job_id": "35469710",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "219",
+      "exit_code": "0:0",
+      "job_id": "35469711",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "242",
+      "exit_code": "0:0",
+      "job_id": "35469712",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "94",
+      "exit_code": "0:0",
+      "job_id": "35469713",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "91",
+      "exit_code": "0:0",
+      "job_id": "35469714",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "261",
+      "exit_code": "0:0",
+      "job_id": "35469715",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-short-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "87",
+      "exit_code": "0:0",
+      "job_id": "35469716",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "274",
+      "exit_code": "0:0",
+      "job_id": "35469717",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "295",
+      "exit_code": "0:0",
+      "job_id": "35469718",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "90",
+      "exit_code": "0:0",
+      "job_id": "35469719",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "301",
+      "exit_code": "0:0",
+      "job_id": "35469720",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "93",
+      "exit_code": "0:0",
+      "job_id": "35469721",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "92",
+      "exit_code": "0:0",
+      "job_id": "35469722",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "328",
+      "exit_code": "0:0",
+      "job_id": "35469723",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "87",
+      "exit_code": "0:0",
+      "job_id": "35469724",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "314",
+      "exit_code": "0:0",
+      "job_id": "35469725",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-bimodal-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "95",
+      "exit_code": "0:0",
+      "job_id": "35469726",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "525",
+      "exit_code": "0:0",
+      "job_id": "35469727",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "486",
+      "exit_code": "0:0",
+      "job_id": "35469728",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "97",
+      "exit_code": "0:0",
+      "job_id": "35469729",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "561",
+      "exit_code": "0:0",
+      "job_id": "35469730",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "94",
+      "exit_code": "0:0",
+      "job_id": "35469731",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469732",
+      "job_name": "nf-SIMULATE_READS_(beta-mluteus-nctc2665-whole-baseline-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469733",
+      "job_name": "nf-SIMULATE_READS_(beta-mluteus-nctc2665-whole-baseline-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469734",
+      "job_name": "nf-SIMULATE_READS_(beta-mluteus-nctc2665-whole-baseline-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469735",
+      "job_name": "nf-SIMULATE_READS_(beta-mluteus-nctc2665-whole-baseline-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469736",
+      "job_name": "nf-SIMULATE_READS_(beta-mluteus-nctc2665-whole-baseline-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "533",
+      "exit_code": "0:0",
+      "job_id": "35469737",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "97",
+      "exit_code": "0:0",
+      "job_id": "35469738",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "523",
+      "exit_code": "0:0",
+      "job_id": "35469739",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "92",
+      "exit_code": "0:0",
+      "job_id": "35469740",
+      "job_name": "nf-ASSEMBLE_(beta-bsub-168-whole-long-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "320",
+      "exit_code": "0:0",
+      "job_id": "35469741",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "55",
+      "exit_code": "0:0",
+      "job_id": "35469742",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "292",
+      "exit_code": "0:0",
+      "job_id": "35469743",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "68",
+      "exit_code": "0:0",
+      "job_id": "35469744",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "257",
+      "exit_code": "0:0",
+      "job_id": "35469745",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "67",
+      "exit_code": "0:0",
+      "job_id": "35469746",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "268",
+      "exit_code": "0:0",
+      "job_id": "35469747",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "53",
+      "exit_code": "0:0",
+      "job_id": "35469748",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "278",
+      "exit_code": "0:0",
+      "job_id": "35469749",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "68",
+      "exit_code": "0:0",
+      "job_id": "35469750",
+      "job_name": "nf-ASSEMBLE_(beta-llactis-il1403-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "297",
+      "exit_code": "0:0",
+      "job_id": "35469751",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "57",
+      "exit_code": "0:0",
+      "job_id": "35469752",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "263",
+      "exit_code": "0:0",
+      "job_id": "35469753",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "57",
+      "exit_code": "0:0",
+      "job_id": "35469754",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "57",
+      "exit_code": "0:0",
+      "job_id": "35469755",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "270",
+      "exit_code": "0:0",
+      "job_id": "35469756",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "252",
+      "exit_code": "0:0",
+      "job_id": "35469757",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "62",
+      "exit_code": "0:0",
+      "job_id": "35469758",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "271",
+      "exit_code": "0:0",
+      "job_id": "35469759",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "55",
+      "exit_code": "0:0",
+      "job_id": "35469760",
+      "job_name": "nf-ASSEMBLE_(beta-mluteus-nctc2665-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469775",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-baseline-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469776",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-baseline-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469777",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-baseline-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469778",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-baseline-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469779",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-baseline-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469780",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469781",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469782",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469783",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469784",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469785",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "1",
+      "exit_code": "0:0",
+      "job_id": "35469786",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469787",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469788",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "2",
+      "exit_code": "0:0",
+      "job_id": "35469789",
+      "job_name": "nf-SIMULATE_READS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "410",
+      "exit_code": "0:0",
+      "job_id": "35469806",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "75",
+      "exit_code": "0:0",
+      "job_id": "35469807",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "389",
+      "exit_code": "0:0",
+      "job_id": "35469808",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "74",
+      "exit_code": "0:0",
+      "job_id": "35469809",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "78",
+      "exit_code": "0:0",
+      "job_id": "35469810",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "372",
+      "exit_code": "0:0",
+      "job_id": "35469811",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "69",
+      "exit_code": "0:0",
+      "job_id": "35469812",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "460",
+      "exit_code": "0:0",
+      "job_id": "35469813",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "74",
+      "exit_code": "0:0",
+      "job_id": "35469814",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "417",
+      "exit_code": "0:0",
+      "job_id": "35469815",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "403",
+      "exit_code": "0:0",
+      "job_id": "35469816",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "81",
+      "exit_code": "0:0",
+      "job_id": "35469817",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "380",
+      "exit_code": "0:0",
+      "job_id": "35469818",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "78",
+      "exit_code": "0:0",
+      "job_id": "35469819",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "73",
+      "exit_code": "0:0",
+      "job_id": "35469820",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "346",
+      "exit_code": "0:0",
+      "job_id": "35469821",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "454",
+      "exit_code": "0:0",
+      "job_id": "35469822",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "69",
+      "exit_code": "0:0",
+      "job_id": "35469823",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "379",
+      "exit_code": "0:0",
+      "job_id": "35469824",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "70",
+      "exit_code": "0:0",
+      "job_id": "35469825",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "461",
+      "exit_code": "0:0",
+      "job_id": "35469826",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "76",
+      "exit_code": "0:0",
+      "job_id": "35469827",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "412",
+      "exit_code": "0:0",
+      "job_id": "35469828",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "77",
+      "exit_code": "0:0",
+      "job_id": "35469829",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "409",
+      "exit_code": "0:0",
+      "job_id": "35469830",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "78",
+      "exit_code": "0:0",
+      "job_id": "35469831",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "467",
+      "exit_code": "0:0",
+      "job_id": "35469832",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "77",
+      "exit_code": "0:0",
+      "job_id": "35469833",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "415",
+      "exit_code": "0:0",
+      "job_id": "35469834",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505_flye-2.9.6)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "4",
+      "elapsed_seconds": "95",
+      "exit_code": "0:0",
+      "job_id": "35469835",
+      "job_name": "nf-ASSEMBLE_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505_raven-1.8.3)",
+      "requested_memory": "16G",
+      "state": "COMPLETED",
+      "time_limit": "04:00:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35470535",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470536",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35470537",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "13",
+      "exit_code": "0:0",
+      "job_id": "35470538",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "10",
+      "exit_code": "0:0",
+      "job_id": "35470539",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470540",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35470541",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35470542",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470543",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470544",
+      "job_name": "nf-ASSESS_(beta-llactis-il1403-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "20",
+      "exit_code": "0:0",
+      "job_id": "35470545",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "22",
+      "exit_code": "0:0",
+      "job_id": "35470546",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470551",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "22",
+      "exit_code": "0:0",
+      "job_id": "35470552",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "21",
+      "exit_code": "0:0",
+      "job_id": "35470553",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "20",
+      "exit_code": "0:0",
+      "job_id": "35470554",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "35",
+      "exit_code": "0:0",
+      "job_id": "35470555",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "32",
+      "exit_code": "0:0",
+      "job_id": "35470556",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "32",
+      "exit_code": "0:0",
+      "job_id": "35470557",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "33",
+      "exit_code": "0:0",
+      "job_id": "35470558",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "33",
+      "exit_code": "0:0",
+      "job_id": "35470559",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "30",
+      "exit_code": "0:0",
+      "job_id": "35470560",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "21",
+      "exit_code": "0:0",
+      "job_id": "35470561",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "23",
+      "exit_code": "0:0",
+      "job_id": "35470562",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "22",
+      "exit_code": "0:0",
+      "job_id": "35470563",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470564",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470565",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470566",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470567",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "21",
+      "exit_code": "0:0",
+      "job_id": "35470568",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-low-coverage-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "19",
+      "exit_code": "0:0",
+      "job_id": "35470572",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "21",
+      "exit_code": "0:0",
+      "job_id": "35470573",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470574",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "19",
+      "exit_code": "0:0",
+      "job_id": "35470575",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470576",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "22",
+      "exit_code": "0:0",
+      "job_id": "35470577",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "22",
+      "exit_code": "0:0",
+      "job_id": "35470578",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470579",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "23",
+      "exit_code": "0:0",
+      "job_id": "35470580",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "23",
+      "exit_code": "0:0",
+      "job_id": "35470581",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-short-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "26",
+      "exit_code": "0:0",
+      "job_id": "35470582",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470583",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470584",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "26",
+      "exit_code": "0:0",
+      "job_id": "35470588",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470589",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "17",
+      "exit_code": "0:0",
+      "job_id": "35470590",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "40",
+      "exit_code": "0:0",
+      "job_id": "35470591",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "26",
+      "exit_code": "0:0",
+      "job_id": "35470592",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "31",
+      "exit_code": "0:0",
+      "job_id": "35470593",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "26",
+      "exit_code": "0:0",
+      "job_id": "35470594",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-bimodal-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "35",
+      "exit_code": "0:0",
+      "job_id": "35470595",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "24",
+      "exit_code": "0:0",
+      "job_id": "35470596",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470597",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "36",
+      "exit_code": "0:0",
+      "job_id": "35470598",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "29",
+      "exit_code": "0:0",
+      "job_id": "35470599",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "23",
+      "exit_code": "0:0",
+      "job_id": "35470600",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "30",
+      "exit_code": "0:0",
+      "job_id": "35470601",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "23",
+      "exit_code": "0:0",
+      "job_id": "35470602",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "25",
+      "exit_code": "0:0",
+      "job_id": "35470606",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "32",
+      "exit_code": "0:0",
+      "job_id": "35470607",
+      "job_name": "nf-ASSESS_(beta-bsub-168-whole-long-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470608",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470609",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470610",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35470611",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470612",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "13",
+      "exit_code": "0:0",
+      "job_id": "35470613",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "19",
+      "exit_code": "0:0",
+      "job_id": "35470614",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470615",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "19",
+      "exit_code": "0:0",
+      "job_id": "35470616",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470617",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "19",
+      "exit_code": "0:0",
+      "job_id": "35470618",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470619",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470620",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470621",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "18",
+      "exit_code": "0:0",
+      "job_id": "35470623",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "17",
+      "exit_code": "0:0",
+      "job_id": "35470624",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35470625",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470626",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470627",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35470628",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470629",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35470630",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470631",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "16",
+      "exit_code": "0:0",
+      "job_id": "35470632",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470633",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470634",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470635",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470636",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470637",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470638",
+      "job_name": "nf-ASSESS_(beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470639",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470640",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470641",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470642",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470643",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470644",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470645",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470646",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470647",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "3",
+      "exit_code": "0:0",
+      "job_id": "35470648",
+      "job_name": "nf-ASSESS_(beta-mflorum-l1-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470649",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-101_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "10",
+      "exit_code": "0:0",
+      "job_id": "35470650",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-101_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "14",
+      "exit_code": "0:0",
+      "job_id": "35470651",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-202_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470652",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-202_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "11",
+      "exit_code": "0:0",
+      "job_id": "35470653",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-303_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "13",
+      "exit_code": "0:0",
+      "job_id": "35470654",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-303_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "12",
+      "exit_code": "0:0",
+      "job_id": "35470655",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-404_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "10",
+      "exit_code": "0:0",
+      "job_id": "35470656",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-404_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "15",
+      "exit_code": "0:0",
+      "job_id": "35470657",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-505_flye-2.9.6)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "10",
+      "exit_code": "0:0",
+      "job_id": "35470658",
+      "job_name": "nf-ASSESS_(beta-mluteus-nctc2665-whole-baseline-seed-505_raven-1.8.3)",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "48",
+      "exit_code": "0:0",
+      "job_id": "35470691",
+      "job_name": "nf-EXPORT_RESULTS",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "00:30:00"
+    },
+    {
+      "allocated_cpus": "1",
+      "elapsed_seconds": "17",
+      "exit_code": "0:0",
+      "job_id": "35470767",
+      "job_name": "nf-RENDER_WEBSITE",
+      "requested_memory": "4G",
+      "state": "COMPLETED",
+      "time_limit": "02:00:00"
+    }
+  ],
+  "schema_version": 1,
+  "status": "verified"
+}

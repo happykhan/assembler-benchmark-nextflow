@@ -1,0 +1,25 @@
+Vercel CLI 50.20.0
+Fetching deployment "ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app" in happykhans-projects
+> Fetched deployment "ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app" in happykhans-projects [406ms]
+
+  General
+
+    id		dpl_9yg7qWm43YrJWjXCL38YbPcaivTR
+    name	ploptimizer-assembly-benchmark
+    target	production
+    status	● Ready
+    url		https://ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app
+    created	Thu Nov 12 2026 19:46:17 GMT+0000 (Greenwich Mean Time) [46s ago]
+
+
+  Aliases
+
+    ╶ https://ploptimizer-assembly-benchmark.vercel.app
+    ╶ https://ploptimizer-assembly-benchmark-happykhans-projects.vercel.app
+    
+
+  Builds
+
+    ╶ .        [0ms]
+    
+

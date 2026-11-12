@@ -1,0 +1,1808 @@
+{
+  "method": "Independent saved-PAF arithmetic; no pipeline scoring imports or new alignment.",
+  "molecule_checks": 200,
+  "rows": [
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.28177182592490857,
+      "identity_measured": true,
+      "longest_span": 1187839
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0020927003140236,
+      "identity_measured": true,
+      "longest_span": 4224428
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.3975086855839943,
+      "identity_measured": true,
+      "longest_span": 1675740
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.7174093119708056,
+      "identity_measured": true,
+      "longest_span": 3024315
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.3130401655183146,
+      "identity_measured": true,
+      "longest_span": 1319654
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.36357667201346616,
+      "identity_measured": true,
+      "longest_span": 1532696
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.26420756588732436,
+      "identity_measured": true,
+      "longest_span": 1113795
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.9851539731179811,
+      "identity_measured": true,
+      "longest_span": 4153021
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-101",
+      "complete": false,
+      "contiguity": 0.6927241302911136,
+      "identity_measured": true,
+      "longest_span": 2920252
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-101",
+      "complete": false,
+      "contiguity": 0.46534187492853935,
+      "identity_measured": true,
+      "longest_span": 1961698
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-202",
+      "complete": false,
+      "contiguity": 0.4478895798136733,
+      "identity_measured": true,
+      "longest_span": 1888126
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-202",
+      "complete": false,
+      "contiguity": 0.40663833384808734,
+      "identity_measured": true,
+      "longest_span": 1714227
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-303",
+      "complete": false,
+      "contiguity": 0.2528293678299158,
+      "identity_measured": true,
+      "longest_span": 1065829
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-303",
+      "complete": true,
+      "contiguity": 0.999995492937433,
+      "identity_measured": true,
+      "longest_span": 4215587
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-404",
+      "complete": false,
+      "contiguity": 0.9826086688366987,
+      "identity_measured": true,
+      "longest_span": 4142291
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-404",
+      "complete": false,
+      "contiguity": 0.6220581335162726,
+      "identity_measured": true,
+      "longest_span": 2622352
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-505",
+      "complete": false,
+      "contiguity": 0.4987252129349849,
+      "identity_measured": true,
+      "longest_span": 2102429
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-505",
+      "complete": false,
+      "contiguity": 0.8543765712450357,
+      "identity_measured": true,
+      "longest_span": 3601715
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-101",
+      "complete": true,
+      "contiguity": 0.9999997627861806,
+      "identity_measured": true,
+      "longest_span": 4215605
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-202",
+      "complete": true,
+      "contiguity": 1.0002939079221351,
+      "identity_measured": true,
+      "longest_span": 4216845
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-303",
+      "complete": false,
+      "contiguity": 0.6446876202377547,
+      "identity_measured": true,
+      "longest_span": 2717749
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-404",
+      "complete": false,
+      "contiguity": 0.7066910427587398,
+      "identity_measured": true,
+      "longest_span": 2979131
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-505",
+      "complete": false,
+      "contiguity": 0.8729160172938363,
+      "identity_measured": true,
+      "longest_span": 3679870
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 4215606
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-101",
+      "complete": false,
+      "contiguity": 0.12123476434941975,
+      "identity_measured": true,
+      "longest_span": 511078
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-101",
+      "complete": false,
+      "contiguity": 0.06601233606745982,
+      "identity_measured": true,
+      "longest_span": 278282
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-202",
+      "complete": false,
+      "contiguity": 0.2046232498957445,
+      "identity_measured": true,
+      "longest_span": 862611
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-202",
+      "complete": false,
+      "contiguity": 0.09522687841321034,
+      "identity_measured": true,
+      "longest_span": 401439
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-303",
+      "complete": false,
+      "contiguity": 0.1512311634436425,
+      "identity_measured": true,
+      "longest_span": 637531
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-303",
+      "complete": false,
+      "contiguity": 0.07307466589619618,
+      "identity_measured": true,
+      "longest_span": 308054
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-404",
+      "complete": false,
+      "contiguity": 0.10891221807730608,
+      "identity_measured": true,
+      "longest_span": 459131
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-404",
+      "complete": false,
+      "contiguity": 0.05182149375439735,
+      "identity_measured": true,
+      "longest_span": 218459
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-505",
+      "complete": false,
+      "contiguity": 0.11585783870693799,
+      "identity_measured": true,
+      "longest_span": 488411
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-505",
+      "complete": false,
+      "contiguity": 0.05323528811753281,
+      "identity_measured": true,
+      "longest_span": 224419
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-101",
+      "complete": false,
+      "contiguity": 0.002351026163260988,
+      "identity_measured": false,
+      "longest_span": 9911
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-101",
+      "complete": false,
+      "contiguity": 0.24902161160222278,
+      "identity_measured": true,
+      "longest_span": 1049777
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-202",
+      "complete": false,
+      "contiguity": 0.0025052151458177067,
+      "identity_measured": false,
+      "longest_span": 10561
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-202",
+      "complete": false,
+      "contiguity": 0.24882211478017632,
+      "identity_measured": true,
+      "longest_span": 1048936
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-303",
+      "complete": false,
+      "contiguity": 0.0025588254689835814,
+      "identity_measured": false,
+      "longest_span": 10787
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-303",
+      "complete": false,
+      "contiguity": 0.2614316897736648,
+      "identity_measured": true,
+      "longest_span": 1102093
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-404",
+      "complete": false,
+      "contiguity": 0.003219228741964975,
+      "identity_measured": false,
+      "longest_span": 13571
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-404",
+      "complete": false,
+      "contiguity": 0.24902540702333187,
+      "identity_measured": true,
+      "longest_span": 1049793
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-505",
+      "complete": false,
+      "contiguity": 0.003218279886687703,
+      "identity_measured": false,
+      "longest_span": 13567
+    },
+    {
+      "accession": "NC_000964.3",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-505",
+      "complete": false,
+      "contiguity": 0.2612642168172263,
+      "identity_measured": true,
+      "longest_span": 1101387
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.7285221566383678,
+      "identity_measured": true,
+      "longest_span": 1723384
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.5817354578500322,
+      "identity_measured": true,
+      "longest_span": 1376147
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.4246295531472289,
+      "identity_measured": true,
+      "longest_span": 1004499
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.910685668558655,
+      "identity_measured": true,
+      "longest_span": 2154308
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.5993116302113343,
+      "identity_measured": true,
+      "longest_span": 1417725
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.7788914304217681,
+      "identity_measured": true,
+      "longest_span": 1842537
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.5615290737317429,
+      "identity_measured": true,
+      "longest_span": 1328347
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365589
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.5388776325896003,
+      "identity_measured": true,
+      "longest_span": 1274763
+    },
+    {
+      "accession": "AE005176.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.4950838881986685,
+      "identity_measured": true,
+      "longest_span": 1171165
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.2372452333891429,
+      "identity_measured": true,
+      "longest_span": 784872
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.006182594471707,
+      "identity_measured": true,
+      "longest_span": 36292
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 0.9974581904214072,
+      "identity_measured": true,
+      "longest_span": 3299864
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.1679178229849834,
+      "identity_measured": true,
+      "longest_span": 555518
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 0.9985856669023385,
+      "identity_measured": true,
+      "longest_span": 3303594
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.14395637844881604,
+      "identity_measured": true,
+      "longest_span": 476247
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": false,
+      "contiguity": 0.5199066098837671,
+      "identity_measured": true,
+      "longest_span": 1719993
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.3244405766996859,
+      "identity_measured": true,
+      "longest_span": 1073338
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.5210262272793086,
+      "identity_measured": true,
+      "longest_span": 1723697
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.3597526564464299,
+      "identity_measured": true,
+      "longest_span": 1190160
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 0.9993310709243161,
+      "identity_measured": true,
+      "longest_span": 3306060
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.14201004572476333,
+      "identity_measured": true,
+      "longest_span": 469808
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.5206870775174842,
+      "identity_measured": true,
+      "longest_span": 1722575
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.16570760635534007,
+      "identity_measured": true,
+      "longest_span": 548206
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.5256186535996273,
+      "identity_measured": true,
+      "longest_span": 1738890
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.14395637844881604,
+      "identity_measured": true,
+      "longest_span": 476247
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.4772184762261156,
+      "identity_measured": true,
+      "longest_span": 1578769
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.3247866787293552,
+      "identity_measured": true,
+      "longest_span": 1074483
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.5210262272793086,
+      "identity_measured": true,
+      "longest_span": 1723697
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.3597073155691807,
+      "identity_measured": true,
+      "longest_span": 1190010
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.5177302477758032,
+      "identity_measured": true,
+      "longest_span": 1712793
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.18773994770080946,
+      "identity_measured": true,
+      "longest_span": 621095
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.1734730655133216,
+      "identity_measured": true,
+      "longest_span": 42326
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 0.9974581904214072,
+      "identity_measured": true,
+      "longest_span": 3299864
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "complete": false,
+      "contiguity": 0.8695832986775347,
+      "identity_measured": true,
+      "longest_span": 31365
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.3045679724738557,
+      "identity_measured": true,
+      "longest_span": 1007594
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 0.9985856669023385,
+      "identity_measured": true,
+      "longest_span": 3303594
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.14395637844881604,
+      "identity_measured": true,
+      "longest_span": 476247
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 36069
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.5199066098837671,
+      "identity_measured": true,
+      "longest_span": 1719993
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "complete": false,
+      "contiguity": 0.9136377498683079,
+      "identity_measured": true,
+      "longest_span": 32954
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.32478637645684016,
+      "identity_measured": true,
+      "longest_span": 1074482
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.5210262272793086,
+      "identity_measured": true,
+      "longest_span": 1723697
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "complete": false,
+      "contiguity": 0.6732374060827858,
+      "identity_measured": true,
+      "longest_span": 24283
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.36009906074861414,
+      "identity_measured": true,
+      "longest_span": 1191306
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.0,
+      "identity_measured": false,
+      "longest_span": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.1252876431284482,
+      "identity_measured": true,
+      "longest_span": 40588
+    },
+    {
+      "accession": "AL935263.2",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 0.9993310709243161,
+      "identity_measured": true,
+      "longest_span": 3306060
+    },
+    {
+      "accession": "CR377164.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 1917
+    },
+    {
+      "accession": "CR377165.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2365
+    },
+    {
+      "accession": "CR377166.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "complete": false,
+      "contiguity": 0.9410296930882476,
+      "identity_measured": true,
+      "longest_span": 33942
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "AE017263.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 793224
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2501097
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-101",
+      "complete": true,
+      "contiguity": 1.0044480481964515,
+      "identity_measured": true,
+      "longest_span": 2512222
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2501097
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-202",
+      "complete": true,
+      "contiguity": 1.000001199473671,
+      "identity_measured": true,
+      "longest_span": 2501100
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2501097
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-303",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2501097
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-404",
+      "complete": false,
+      "contiguity": 0.5433267882053355,
+      "identity_measured": true,
+      "longest_span": 1358913
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-404",
+      "complete": true,
+      "contiguity": 1.0,
+      "identity_measured": true,
+      "longest_span": 2501097
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0004753913982545,
+      "identity_measured": true,
+      "longest_span": 2502286
+    },
+    {
+      "accession": "CP001628.1",
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-505",
+      "complete": true,
+      "contiguity": 1.0035144578558928,
+      "identity_measured": true,
+      "longest_span": 2509887
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass"
+}

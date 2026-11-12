@@ -1,0 +1,12 @@
+Vercel CLI 50.20.0
+Fetching deployments in happykhans-projects
+> Deployments for happykhans-projects/ploptimizer-assembly-benchmark [249ms]
+
+  Age     Deployment                                                                          Status      Environment     Duration     Username      
+  1m      https://ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app     ● Ready     Production      5s           happykhan     
+  1d      https://ploptimizer-assembly-benchmark-yo2wwo76e-happykhans-projects.vercel.app     ● Ready     Production      5s           happykhan     
+  6d      https://ploptimizer-assembly-benchmark-es8b9if95-happykhans-projects.vercel.app     ● Ready     Production      5s           happykhan     
+
+https://ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app
+https://ploptimizer-assembly-benchmark-yo2wwo76e-happykhans-projects.vercel.app
+https://ploptimizer-assembly-benchmark-es8b9if95-happykhans-projects.vercel.app

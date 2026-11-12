@@ -1,0 +1,86 @@
+{
+  "status": "verified",
+  "url": "https://ploptimizer-assembly-benchmark.vercel.app/beta/",
+  "outcomes": 110,
+  "molecule_measurements": 200,
+  "checked": [
+    {
+      "path": "/aggregate",
+      "status": 200,
+      "bytes": 5201,
+      "sha256": "48f12b2ce2befb7f5d74128d361386dea2a3acdf69aa4181b4aab331a218028b"
+    },
+    {
+      "path": "/beta/",
+      "status": 200,
+      "bytes": 24950,
+      "sha256": "27c3771db8aeec4ee40c59ef44b62898f0a10cd2fa2cc630190f9e5e0fcdb7ff"
+    },
+    {
+      "path": "/beta/contiguity.svg",
+      "status": 200,
+      "bytes": 22602,
+      "sha256": "18578d49fd391d61ffcd67bec35431af30fce501fd025b325c06ae9166cae809"
+    },
+    {
+      "path": "/beta/filters.js",
+      "status": 200,
+      "bytes": 545,
+      "sha256": "2e1ea90ee9e2bd3291534056ee99475966c4329dbc38141fb5c912f097af1b9d"
+    },
+    {
+      "path": "/beta/molecules.tsv",
+      "status": 200,
+      "bytes": 34975,
+      "sha256": "59cf1a900d312a5062a4d5d7c3674f0608ade019f2d338bb19f30f036864bd32"
+    },
+    {
+      "path": "/beta/results.tsv",
+      "status": 200,
+      "bytes": 24031,
+      "sha256": "fe3dff9c587f974d2a56f606e9db11738019fc7ca3952e1a8012b637dd20a765"
+    },
+    {
+      "path": "/beta/summary.json",
+      "status": 200,
+      "bytes": 219267,
+      "sha256": "84fa16f8a2d7255dabeedf19c5619448ab85a21112dea5db011beb262ca36206"
+    },
+    {
+      "path": "/data/read-order/orders.tsv",
+      "status": 200,
+      "bytes": 1219,
+      "sha256": "e0448fdf22be251fb47d1e7dfb7f0bd0790c46ce5a1bf1407cae4313d04d7f4d"
+    },
+    {
+      "path": "/data/read-order/runs.tsv",
+      "status": 200,
+      "bytes": 8518,
+      "sha256": "fdb39d7298e208250c5cddd6790ec52bec8a0a73970fd1433344d7a7f11a4b35"
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 12824,
+      "sha256": "da2929bb0b2808f97fc30700d2bad479cc7131f96c494ae67031d8a05fdc444f"
+    },
+    {
+      "path": "/performance",
+      "status": 200,
+      "bytes": 831287,
+      "sha256": "70e8ae0a00f1b5cda71dfa3a0d198cb5c84551e89b627313b53a4d7e039427a1"
+    },
+    {
+      "path": "/scenarios/s5",
+      "status": 200,
+      "bytes": 25909,
+      "sha256": "6a4cfb645ecea5963ea66fa5e854622f32e7a677de2eb7917dfda01bb223f88d"
+    },
+    {
+      "path": "/scenarios/s7",
+      "status": 200,
+      "bytes": 53936,
+      "sha256": "bfd62448a70db141ab3ef3c2d59ad3e5c12c8a895f7627bc17109f4f809a1068"
+    }
+  ]
+}

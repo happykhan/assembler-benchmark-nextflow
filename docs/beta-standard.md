@@ -1,5 +1,20 @@
 # Beta Standard
 
+**Live:** [Simulated Standard beta](https://ploptimizer-assembly-benchmark.vercel.app/beta/),
+12 November 2026. All 110 executions and assessments completed: 35 fully complete,
+two chromosome-complete and 73 incomplete outcomes under the 99% single-alignment
+criterion. All 200 molecule measurements passed the independent saved-PAF audit.
+The beta has its own downloads and denominator; the historical 200-outcome
+general report and S5/S6/48-run S7 remain unchanged.
+
+The initial assessment/export attempt caught a simulator/assessor interface
+mismatch: native inputs bind canonical reference FASTA rather than the older
+JSON receipt. The fix explicitly supports that contract while retaining legacy
+checks. Recovery reused all 110 assemblies and 55 simulated inputs; execution
+hashes are unchanged. No assemblies were rerun to improve their outcomes.
+The final workflow, terminal scheduler states, report and live desktop/mobile
+checks pass. Compact evidence is in `evidence/beta-standard-v1/`.
+
 The beta is an executable development panel, separate from the full protocol-v1
 scientific release. On 12 November the user authorised running this beta and
 publishing its results on the website, keeping provenance work lightweight.

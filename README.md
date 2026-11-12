@@ -25,6 +25,9 @@ read-length/coverage/plasmid-depth contrasts. The full scientific protocol remai
 under review. Implemented functionality and verified scientific runs are different;
 see [replacement verification](docs/nextflow-replacement-verification.md).
 
+The completed [Standard beta results are live](https://ploptimizer-assembly-benchmark.vercel.app/beta/):
+110 outcomes, five references and five seeds, with run/molecule TSV downloads.
+
 Inspect available choices with `--list` and command help with `--help`.
 `--plan_only` freezes a selection without preparing inputs; `--prepare_only`
 prepares the selected inputs without launching assemblies. S7 requires its
