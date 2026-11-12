@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "dataset_id": "johnson-2023-small-plasmids",
+      "description": "Full deposited ONT archive for ATCC25922; one native chromosome and four plasmids, including two <10kb. Modern versions, separate paper-rule and strict-contiguity endpoints.",
+      "group": "plasmids",
+      "headline_eligible": false,
+      "id": "johnson-atcc25922-full",
+      "input_policy": "full_archive_reads_no_filtering_no_subsampling",
+      "preset": "standard",
+      "purpose": "real_data_pilot",
+      "reference_id": "johnson-atcc25922-native",
+      "run_accession": "SRR23290062",
+      "track": "real"
+    }
+  ],
+  "read_inputs": {
+    "johnson-atcc25922-full": {
+      "admission_receipt": "assets/admissions/johnson-atcc25922-reads.json",
+      "admission_sha256": "2021497859e94cefc685445f83ad35f2c00877038746779c6d2c650c68bc3619",
+      "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ",
+      "compressed_bytes": 821540769,
+      "dataset_id": "johnson-2023-small-plasmids",
+      "decompressed_bytes": 1741056684,
+      "download_sha256": "2d954c5bb05b1d46400b3d1738466304f5bd91afe41a93ca71ba1c0dccde0422",
+      "isolate_id": "ATCC25922",
+      "publisher_md5": "2934c206376021f54f34e97d033b5bd8",
+      "read_count": 165764,
+      "reads_sha256": "be9fbc1d265d8a7b056e3d764188cf60c0fbf2da5a99f3379fc7d8b450905519",
+      "run_accession": "SRR23290062",
+      "sample_accession": "SAMN32977649",
+      "total_bases": 867904341,
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/062/SRR23290062/SRR23290062_1.fastq.gz"
+    }
+  },
+  "schema_version": 1,
+  "status": "pilot_admitted",
+  "study_manifest": "assets/real-data/small-plasmids-paper.json"
+}

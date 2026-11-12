@@ -169,7 +169,11 @@ def catalogue(project):
         standard_status = 'baseline_admitted'
     except (ValueError, OSError, KeyError) as error:
         admission_error = str(error)
-    return {'schema_version': 1, 'scope': 'single_isolate_bacterial_long_read',
+    real_cases = []
+    if (Path(project) / 'assets/real-pilot.json').is_file():
+        real_cases = build_plan(project, preset='standard', track='real')['cases']
+    return {'tracks': {'simulated': 'implemented', 'real': 'pilot_admitted' if real_cases else 'not_admitted'},
+            'real_cases': real_cases, 'schema_version': 1, 'scope': 'single_isolate_bacterial_long_read',
             'presets': {'quick': 'workflow_check', 'standard': standard_status},
             'standard_scope': 'Small simulated baseline validation; full scientific panel is not admitted',
             'standard_admission_error': admission_error,
@@ -183,7 +187,12 @@ def plan_digest(plan):
     return hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()
 
 
-def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None):
+def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None, track='simulated'):
+    if track == 'real':
+        from .real_planning import build_real_plan
+        return build_real_plan(project, preset, groups, cases, assemblers)
+    if track != 'simulated':
+        raise ValueError('Unknown input track')
     project = Path(project).resolve()
     if preset not in ('quick', 'standard'):
         raise ValueError('Unknown preset: ' + str(preset))
@@ -247,7 +256,7 @@ def validate_plan(project, plan):
     if not isinstance(plan, dict) or plan.get('plan_sha256') != plan_digest(plan):
         raise ValueError('Frozen plan checksum mismatch')
     selection = plan.get('selection', {})
-    rebuilt = build_plan(project, plan.get('preset'), selection.get('groups'), selection.get('cases'), selection.get('assemblers'))
+    rebuilt = build_plan(project, plan.get('preset'), selection.get('groups'), selection.get('cases'), selection.get('assemblers'), track=plan.get('track', 'simulated'))
     if rebuilt != plan:
         raise ValueError('Frozen plan differs from current admitted sources or selections')
     return plan

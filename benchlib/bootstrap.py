@@ -10,6 +10,8 @@ def prepare_run(project, selection, runtime, supplied_plan=None, existing_plan=N
     if runtime not in ('pixi', 'native'):
         raise ValueError('Use the admitted Pixi runtime or explicitly prepared native tools')
     if supplied_plan:
+        if selection.get('track', 'simulated') != 'simulated':
+            raise ValueError('An existing plan cannot be combined with track selection')
         if selection.get('preset', 'quick') != 'quick' or any(selection.get(k) for k in ('groups', 'cases', 'assemblers')):
             raise ValueError('An existing plan cannot be combined with new selections')
         plan = validate_plan(project, json.loads(Path(supplied_plan).read_text()))

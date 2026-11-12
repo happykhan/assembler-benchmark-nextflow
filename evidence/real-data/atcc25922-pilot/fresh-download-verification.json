@@ -1,0 +1,20 @@
+{
+  "status": "verified",
+  "reads_path": "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-real-pilot-v1/online-input-cache/SRR23290062.fastq",
+  "statistics": {
+    "compressed_bytes": 821540769,
+    "publisher_md5": "2934c206376021f54f34e97d033b5bd8",
+    "compressed_sha256": "2d954c5bb05b1d46400b3d1738466304f5bd91afe41a93ca71ba1c0dccde0422",
+    "reads_sha256": "be9fbc1d265d8a7b056e3d764188cf60c0fbf2da5a99f3379fc7d8b450905519",
+    "decompressed_bytes": 1741056684,
+    "header_lines_sha256": "17dd80268b0361d14474e637b636a24595c5ca7cce9658d63ab9bb7b845e6bc8",
+    "read_count": 165764,
+    "total_bases": 867904341,
+    "min_length": 103,
+    "max_length": 92708,
+    "n50": 10414,
+    "mean_length": 5235.783046982457
+  },
+  "policy": "Fresh automatic transport and byte validation only; no assembler execution or read changes",
+  "transport_method": "curl-verified-stream-v1"
+}

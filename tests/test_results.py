@@ -87,6 +87,49 @@ class FailureAndExportTests(unittest.TestCase):
                                     'reference_sha256': sha256(self.reference), 'reads_sha256': 'a' * 64,
                                     'reference_provenance_sha256': sha256(self.provenance)})
 
+    def real_fixture(self):
+        self.standard_baseline()
+        self.case.update(track='real', purpose='real_data_pilot', run_accession='SRR123', input_policy='full_archive_reads_no_filtering_no_subsampling')
+        self.args.case_json = json.dumps(self.case)
+        self.args.assembly.write_text('>draft\nACGT\n')
+        write_json(self.execution, {'status': 'completed', 'assembler': 'flye', 'reads_sha256': 'a' * 64,
+            'assembly_sha256': sha256(self.args.assembly), 'elapsed_seconds': 1, 'process_tree_peak_rss_bytes': 100})
+        write_json(self.provenance, {'mode': 'whole_genome', 'status': 'admitted', 'biosample': 'SAMN123',
+            'reference_sha256': sha256(self.reference), 'molecule_types': {'reference': 'plasmid'}})
+        write_json(self.simulation, {'status': 'completed', 'track': 'real', 'case': self.case,
+            'input_policy': self.case['input_policy'], 'run_accession': 'SRR123', 'sample_accession': 'SAMN123',
+            'reference_sha256': sha256(self.reference), 'reference_provenance_sha256': sha256(self.provenance), 'reads_sha256': 'a' * 64})
+
+    def test_secondary_paper_failure_retains_primary_measurement_and_blocks_completion(self):
+        self.real_fixture()
+        def mapper(command, paf, log, directory):
+            if '-c' not in command:
+                raise OSError('secondary mapper unavailable')
+            paf.write_text('draft\t4\t0\t4\t+\treference\t12\t0\t4\t4\t4\t60\tcg:Z:4M\n')
+            log.write_text('')
+            return {'exit_code': 0, 'elapsed_seconds': 1, 'process_tree_peak_rss_bytes': 100}
+        with patch.object(assess_cli, 'measured_run', side_effect=mapper), patch.object(assess_cli.subprocess, 'run') as version:
+            version.return_value.stdout = '2.31-r1279'
+            # assess_paper imports this at call time, so both measurements use the fixture.
+            with patch('benchlib.process.measured_run', side_effect=mapper):
+                result = assess_cli.assess(self.args)
+        self.assertEqual(result['assessment']['status'], 'completed')
+        self.assertEqual(result['paper_assessment']['status'], 'error')
+        self.assertEqual(result['sequence_outcome'], 'fully_complete')
+        manifest = export_results([self.args.out], self.directory / 'bundle', 1, 'test')
+        self.assertFalse(manifest['complete'])
+
+    def test_real_input_sample_mismatch_never_establishes_absence(self):
+        self.real_fixture()
+        metadata = json.loads(self.simulation.read_text())
+        metadata['sample_accession'] = 'SAMN999'
+        write_json(self.simulation, metadata)
+        with patch.object(assess_cli, 'measured_run') as mapper:
+            result = assess_cli.assess(self.args)
+        mapper.assert_not_called()
+        self.assertEqual(result['assessment']['status'], 'error')
+        self.assertIsNone(result['sequence_outcome'])
+
     def test_runtime_receipt_is_bound_and_retained_in_bundle(self):
         assess_cli.assess(self.args)
         plan = self.directory / 'plan.json'

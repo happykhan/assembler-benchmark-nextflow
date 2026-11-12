@@ -1,0 +1,18 @@
+{
+  "method": "curl-verified-stream-v1",
+  "command": [
+    "/usr/bin/curl",
+    "--fail",
+    "--location",
+    "--silent",
+    "--show-error",
+    "--connect-timeout",
+    "30",
+    "--max-time",
+    "1800",
+    "--output",
+    "/well/aanensen/users/rva470/assembler-benchmark-real-pilot-v1/online-input-cache/tmp13sj0yb8.download",
+    "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/062/SRR23290062/SRR23290062_1.fastq.gz"
+  ],
+  "verified_bytes": 821540769
+}

@@ -176,7 +176,7 @@ def prepare_reference(registry, reference_id, cache, offline=False):
                           mode='whole_genome', molecule_types={m['accession']: m['type'] for m in molecules},
                           molecules=molecules, total_length_bp=sum(m['length_bp'] for m in molecules),
                           headline_eligible=False,
-                          truth_scope='Frozen published sequence used as simulation truth; not validated truth for real-isolate reads')
+                          truth_scope=row.get('truth_scope', 'Frozen published sequence used as simulation truth; not validated truth for real-isolate reads'))
         return fasta, provenance
     # Preserve the original Quick fixture's exact header, sequence and wrapping.
     if len(records) != 1 or not set(next(iter(records.values()))) <= set('ACGT'):

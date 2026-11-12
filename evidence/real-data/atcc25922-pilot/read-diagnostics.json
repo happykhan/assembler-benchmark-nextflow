@@ -1,0 +1,74 @@
+{
+  "case_id": "johnson-atcc25922-full",
+  "command": [
+    "minimap2",
+    "-t",
+    "4",
+    "-x",
+    "map-ont",
+    "--secondary=no",
+    "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-real-pilot-v1/work/7a/3049efcd9bef8f2a320f50f5bb4f49/reference.fasta",
+    "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-real-pilot-v1/input-cache/SRR23290062.fastq"
+  ],
+  "measurement": {
+    "elapsed_seconds": 32.19226107397117,
+    "exit_code": 0,
+    "memory_method": "Peak sampled sum of process-tree RSS; shared pages may be counted more than once",
+    "memory_sampling_interval_seconds": 0.02,
+    "process_tree_peak_rss_bytes": 966787072
+  },
+  "molecules": [
+    {
+      "accession": "CP117235.1",
+      "aligned_target_bases": 626184127,
+      "covered_reference_bases": 5132218,
+      "distinct_mapped_read_ids": 89443,
+      "length_bp": 5132219,
+      "mean_aligned_target_depth": 122.01040660969456,
+      "reference_breadth": 0.9999998051525081
+    },
+    {
+      "accession": "CP117234.1",
+      "aligned_target_bases": 54742253,
+      "covered_reference_bases": 1913,
+      "distinct_mapped_read_ids": 31493,
+      "length_bp": 1919,
+      "mean_aligned_target_depth": 28526.447628973423,
+      "reference_breadth": 0.9968733715476811
+    },
+    {
+      "accession": "CP117233.1",
+      "aligned_target_bases": 102928519,
+      "covered_reference_bases": 3164,
+      "distinct_mapped_read_ids": 36976,
+      "length_bp": 3173,
+      "mean_aligned_target_depth": 32438.8651118815,
+      "reference_breadth": 0.9971635676016388
+    },
+    {
+      "accession": "CP117236.1",
+      "aligned_target_bases": 25209135,
+      "covered_reference_bases": 24176,
+      "distinct_mapped_read_ids": 3650,
+      "length_bp": 24185,
+      "mean_aligned_target_depth": 1042.3458755426918,
+      "reference_breadth": 0.9996278685135415
+    },
+    {
+      "accession": "CP117232.1",
+      "aligned_target_bases": 38725963,
+      "covered_reference_bases": 48478,
+      "distinct_mapped_read_ids": 3234,
+      "length_bp": 48488,
+      "mean_aligned_target_depth": 798.6710732552384,
+      "reference_breadth": 0.9997937634053786
+    }
+  ],
+  "paf_sha256": "56af21c9ca81dfb79611ff3c665d3a5a1e8e220888bcac2f8a80c40cb959087e",
+  "reads_sha256": "be9fbc1d265d8a7b056e3d764188cf60c0fbf2da5a99f3379fc7d8b450905519",
+  "reference_sha256": "94c005ecc2049e1ad83830c24bf6a87a448f4feeed7f7e984ce0ef3513495d93",
+  "run_accession": "SRR23290062",
+  "schema_version": 1,
+  "scope": "Native-reference mapping; secondary mappings suppressed, split mappings retained. Depth sums aligned target spans; breadth is interval union. Read support is not assembly recovery, independent truth, or structural correctness.",
+  "status": "completed"
+}

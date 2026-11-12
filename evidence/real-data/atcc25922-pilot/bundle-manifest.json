@@ -1,0 +1,69 @@
+{
+  "complete": true,
+  "expected_slot_plan": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "johnson-atcc25922-full"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "johnson-atcc25922-full"
+    }
+  ],
+  "expected_slots": 2,
+  "files": {
+    "assemblies/johnson-atcc25922-full/flye-2.9.6/assembly.fasta": "741bbd43f7c0556c96acd7486292a20e69ae0263a2364848d08b0a51d6064c49",
+    "assemblies/johnson-atcc25922-full/flye-2.9.6/assembly.gfa": "dc7a93e699ec0555cd7d7a9146b0d1963c38aa9c4949066ff89236a6f6462749",
+    "assemblies/johnson-atcc25922-full/raven-1.8.3/assembly.fasta": "1ddab67acac79d5de0c97eb9b35c2ee5299e5dfbd6be5131d27fd9502afc50f7",
+    "assemblies/johnson-atcc25922-full/raven-1.8.3/assembly.gfa": "4c61c7dc220f09e57b96b0b9b20ba8a51fc77f5baa46839aa2226a828b3cf2c8",
+    "environment-preparation.json": "e557590cfa965dba45465284c3b0bc13675d6cf9cf5760ed839962cad117e9e1",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/alignment.paf": "0fff24eada6d2e08f91e1a19e4e1b50afe09a843879f0c697b54f08be840f124",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/execution.json": "4efebcd8e062f240ad001ff726a5c0e75b0b13085772a7d68ff582c1cbb51956",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/input-provenance.json": "282f91abd618268b28c86d3102998dce95b27d3346f2f5b6d338d498fc9ec9a2",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/minimap2.stderr.log": "d51f61329776950ba5ba555d5cc94de37763a7a1f4fcf0ef7717380f2a180468",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/paper-alignment.paf": "53ba42da3f31b72c9de36d7f4ff97fc0875f1c88345d86ee6e9b9055e55da8f1",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/paper-minimap2.stderr.log": "5691b110178af689ae7a0b66a59cb89324783cbdd8da86f835e5c9dca8c42639",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/reference-provenance.json": "d47fd06ef134e1ce1f3537cb9fc0710b8644fd97ac5d21f1ce3c9731827a0fc1",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/result.json": "3bbb6020460ebdd0b7e1c34178226300f879b41b0b1bcbac0c2c79f0c64fe826",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/stderr.log": "88410cf42bb107a94550898785f2f4da5ff4b46230b5513553a0c26f52bd1a69",
+    "evidence/johnson-atcc25922-full/flye-2.9.6/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/alignment.paf": "34e2a70f5ed144cbbb356299ee5cce0f6bcd4c9613a350bd2a60e5ba9009fb65",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/execution.json": "b69a2854bbeecdb469d5124e9221b6d79cf1a7adc60f75c59bceae7fb14a03f4",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/input-provenance.json": "282f91abd618268b28c86d3102998dce95b27d3346f2f5b6d338d498fc9ec9a2",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/minimap2.stderr.log": "fa04055875cb2057eb5ade62c86d3ef78a58d734b65410475299368eff79c38b",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/paper-alignment.paf": "ef943d34bef80f8544fb66995b4dd1ea78212af1e18ccd76a574345e37b3cbb0",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/paper-minimap2.stderr.log": "3cabc9becf1061c3d3beff657ffc0aa8bdaf6b1450caad424945478c796463b9",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/reference-provenance.json": "d47fd06ef134e1ce1f3537cb9fc0710b8644fd97ac5d21f1ce3c9731827a0fc1",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/result.json": "7ee995db45170e81789b6e1251e1c1f5ab02d5880dd5958f478be40d1e627eaa",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/stderr.log": "07582608899257e99427c109386512bbb675f18a6d77595b2b3290327489545b",
+    "evidence/johnson-atcc25922-full/raven-1.8.3/stdout.log": "1ddab67acac79d5de0c97eb9b35c2ee5299e5dfbd6be5131d27fd9502afc50f7",
+    "index.html": "df8d9be1de2d7096342b85f94957b4e47231492794bd2cb84f7e07697c12d805",
+    "input-diagnostics/johnson-atcc25922-full/minimap2.stderr.log": "71efccad2e70ee40d622d7299132dec3b3b915aa56d382891a429ba37edf7583",
+    "input-diagnostics/johnson-atcc25922-full/read-alignment.paf": "56af21c9ca81dfb79611ff3c665d3a5a1e8e220888bcac2f8a80c40cb959087e",
+    "input-diagnostics/johnson-atcc25922-full/read-diagnostics.json": "d9ca655d4cb87ac8128e6954254ab7f296a8c2974de659763a13a2c59713af64",
+    "results.json": "314b00ffbdfeb2346ce78dd03353a00b1f3afb5ec618863a8766482d87296087",
+    "results.tsv": "a7978f5b50e1faf1ce0f2aca1ccd9eee378346afb63f8db35ce6b1fcc3f3efb1",
+    "slot-plan.json": "97cee9eb03a35ee8565274b5aa9c1996378e982c028f510f6f1749424e373035"
+  },
+  "headline_eligible": false,
+  "plan_sha256": "97cee9eb03a35ee8565274b5aa9c1996378e982c028f510f6f1749424e373035",
+  "presets": [
+    "standard"
+  ],
+  "purposes": [
+    "real_data_pilot"
+  ],
+  "result_count": 2,
+  "retention": {
+    "assemblies": [
+      "assemblies/johnson-atcc25922-full/flye-2.9.6/assembly.fasta",
+      "assemblies/johnson-atcc25922-full/raven-1.8.3/assembly.fasta"
+    ],
+    "graphs": [
+      "assemblies/johnson-atcc25922-full/flye-2.9.6/assembly.gfa",
+      "assemblies/johnson-atcc25922-full/raven-1.8.3/assembly.gfa"
+    ]
+  },
+  "run_id": "johnson-atcc25922-full-v1",
+  "schema_version": 1
+}

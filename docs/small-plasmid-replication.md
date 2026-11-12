@@ -1,6 +1,9 @@
 # Real-data small-plasmid study: admission proposal
 
-**Metadata mapped; inputs not admitted or executable.** This is a separate real-data
+**Cohort metadata mapped; one-isolate pilot admitted separately.** The full 14-isolate
+manifest remains a proposal. The [ATCC25922 pilot](real-small-plasmid-pilot.md) now
+has byte-verified reads and references and a native Nextflow real-input branch.
+This is a separate real-data
 case within the plasmids group, alongside the simulated cases. It does not change
 Quick, the simulated Standard baseline, or their results.
 
@@ -139,7 +142,8 @@ never a missing-plasmid verdict.
 The proposed first real-data pilot is **ATCC25922 / SRR23290062**: one same-sample
 chromosome and four native plasmids, including 1,919 and 3,173 bp plasmids plus
 24,185 and 48,488 bp controls. Its compressed ONT file is 821,540,769 bytes.
-This is a proposed development case, not an admitted Standard case.
+This is an admitted development pilot in the real-input track, excluded from
+headline comparisons and from the default simulated Standard selection.
 
 1. Prepare only the selected run and versioned reference set. Preserve source
    archives, publisher checksums, original headers and molecule order; calculate
@@ -169,9 +173,10 @@ python3 bin/inspect-real-data.py
 ```
 
 It checks exact BioSample joins, versioned accessions, inventory totals, source
-receipt hashes and explicit annotation conflicts. It reports `executable: false`
-and admission blockers. Passing this check does not download inputs, enable a
-Nextflow real-data preset, or claim biological/reference validation.
+receipt hashes and explicit annotation conflicts. It reports `executable: false` and admission blockers for the full cohort.
+Passing this metadata check does not admit that cohort. The separate
+`assets/real-pilot.json` and byte-verified admission receipts enable only the
+ATCC25922 case through `--track real --preset standard`.
 
 ## Provenance and reuse
 

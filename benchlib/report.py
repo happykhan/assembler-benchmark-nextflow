@@ -33,7 +33,18 @@ def expected_plan(path):
     return set(pairs)
 
 
-def export_results(paths, output, expected_slots, run_id, plan_path=None, runtime_receipt=None):
+def record_complete(record):
+    if record['assessment']['status'] == 'not_run':
+        return record['execution']['status'] == 'software_error'
+    if record['assessment']['status'] != 'completed':
+        return False
+    if record.get('track') != 'real':
+        return True
+    return (record.get('paper_assessment', {}).get('status') == 'completed'
+            and record.get('input_diagnostics', {}).get('status') == 'completed')
+
+
+def export_results(paths, output, expected_slots, run_id, plan_path=None, runtime_receipt=None, input_diagnostics=()):
     if expected_slots < 1:
         raise ValueError('Expected slot count must be positive')
     sources = sorted(map(Path, paths))
@@ -89,15 +100,24 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None, runtim
         record['source_result_sha256'] = sha256(source)
         record['evidence_directory'] = target.relative_to(output).as_posix()
         records.append(record)
+    for directory in input_diagnostics:
+        diagnostic = json.loads((Path(directory) / 'read-diagnostics.json').read_text())
+        case_id = identifier(diagnostic['case_id'])
+        matching = [r for r in records if r['case']['id'] == case_id and r.get('track') == 'real']
+        if (not matching or diagnostic['status'] != 'completed'
+                or any(diagnostic['reads_sha256'] != r['execution']['reads_sha256']
+                    or diagnostic['reference_sha256'] != r['provenance']['reference_sha256'] for r in matching)
+                or sha256(Path(directory) / 'read-alignment.paf') != diagnostic['paf_sha256']):
+            raise ValueError('Real-read diagnostic/result binding differs')
+        shutil.copytree(directory, output / 'input-diagnostics' / case_id)
+        for record in matching:
+            record['input_diagnostics'] = diagnostic
     write_json(output / 'results.json', {'schema_version': 1, 'run_id': run_id, 'results': records})
     write_table(output / 'results.tsv', records)
     (output / 'index.html').write_text(render_html(records, expected_slots, run_id))
     if runtime_receipt:
         shutil.copyfile(runtime_receipt, output / 'environment-preparation.json')
-    complete = len(records) == expected_slots and all(
-        r['assessment']['status'] == 'completed' or (
-            r['assessment']['status'] == 'not_run' and r['execution']['status'] == 'software_error')
-        for r in records)
+    complete = len(records) == expected_slots and all(record_complete(r) for r in records)
     manifest = {'schema_version': 1, 'run_id': run_id, 'complete': complete,
                 'expected_slots': expected_slots, 'result_count': len(records),
                 'presets': sorted({r['preset'] for r in records}),
@@ -118,12 +138,13 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None, runtim
 
 def verify_evidence(record, target, assembly_dir):
     provenance = record['provenance']
-    for name, key in (('execution.json', 'execution_sha256'), ('simulation.json', 'simulation_sha256'),
+    input_name, input_key = ('input-provenance.json', 'input_provenance_sha256') if record.get('track') == 'real' else ('simulation.json', 'simulation_sha256')
+    for name, key in (('execution.json', 'execution_sha256'), (input_name, input_key),
                       ('reference-provenance.json', 'reference_provenance_sha256')):
         if sha256(target / name) != provenance[key]:
             raise ValueError('Evidence hash mismatch: ' + name)
     execution = json.loads((target / 'execution.json').read_text())
-    simulation = json.loads((target / 'simulation.json').read_text())
+    simulation = json.loads((target / input_name).read_text())
     reference = json.loads((target / 'reference-provenance.json').read_text())
     if execution != record['execution']:
         raise ValueError('Embedded execution differs from retained execution')
@@ -141,6 +162,9 @@ def verify_evidence(record, target, assembly_dir):
     for graph in graphs:
         if identifier(graph['file']) != graph['file'] or sha256(assembly_dir / graph['file']) != graph['sha256']:
             raise ValueError('Graph hash mismatch')
+    if record.get('paper_assessment', {}).get('status') == 'completed':
+        if sha256(target / 'paper-alignment.paf') != record['paper_assessment']['paf_sha256']:
+            raise ValueError('Paper alignment hash mismatch')
     if record['assessment']['status'] == 'completed':
         if sha256(target / 'alignment.paf') != record['assessment']['paf_sha256']:
             raise ValueError('Alignment hash mismatch')
@@ -170,6 +194,15 @@ def rows(records):
                    'assembly_sha256': record['provenance'].get('assembly_sha256'),
                    'assembler_version': record['execution'].get('version'),
                    'structural_correctness': None}
+            paper = next((p for p in record.get('paper_assessment', {}).get('replicons', []) if molecule and p['accession'] == molecule['accession']), {})
+            row.update(track=record.get('track', 'simulated'), input_run_accession=record['case'].get('run_accession'),
+                paper_assessment_status=record.get('paper_assessment', {}).get('status'),
+                paper_recovered=paper.get('recovered'), paper_fragmented=paper.get('fragmented_recovery'),
+                paper_duplicate=paper.get('duplicate_recovering_contigs'),
+                paper_chromosome_incorporation_heuristic=paper.get('chromosome_incorporation_heuristic'),
+                paper_summed_block_fraction=paper.get('summed_block_fraction'),
+                paper_mapper_wall_seconds=record['resources'].get('paper_mapper_wall_seconds'),
+                paper_mapper_process_tree_peak_rss_bytes=record['resources'].get('paper_mapper_process_tree_peak_rss_bytes'))
             for key in ('accession', 'molecule_type', 'length_bp', 'contiguity', 'complete',
                         'identity', 'identity_measured', 'max_indel_bp'):
                 row[key] = molecule[key] if molecule else None
@@ -205,10 +238,16 @@ def render_html(records, expected_slots, run_id):
                             f"{display(m['identity'], 100, '%')} identity, "
                             f"{m['max_indel_bp'] if m['max_indel_bp'] is not None else 'not measured'} bp maximum indel"
                             for m in molecules) or record['assessment'].get('reason', record['assessment'].get('error', 'No sequence measurement'))
+        if record.get('input_diagnostics'):
+            details += '; Input support: ' + '; '.join(d['accession'] + ': ' + display(d['reference_breadth'],100,'%') + ' breadth, ' + display(d['mean_aligned_target_depth']) + '× aligned depth' for d in record['input_diagnostics']['molecules'])
+        if record.get('track') == 'real':
+            details += '; Paper >90% summed-block rule: ' + '; '.join(p['accession'] + (': recovered' if p['recovered'] else ': below threshold') + (' (fragmented)' if p['fragmented_recovery'] else '') for p in record.get('paper_assessment', {}).get('replicons', []))
         link = ''
         if record['assessment']['status'] == 'completed':
             path = f'assemblies/{case_id}/{assembler}/assembly.fasta'
             link = f'<a href="{escape(path, quote=True)}">Assembly FASTA</a> · '
+        if record.get('input_diagnostics'):
+            link += f'<a href="input-diagnostics/{escape(case_id, quote=True)}/read-diagnostics.json">Read support</a> · '
         evidence = record['evidence_directory'] + '/result.json'
         body.append('<tr>' + ''.join(f'<td>{escape(str(v))}</td>' for v in
                     (case_id, record['case']['group'], assembler,
@@ -221,7 +260,9 @@ def render_html(records, expected_slots, run_id):
                     + f'<td>{link}<a href="{escape(evidence, quote=True)}">Evidence</a></td></tr>')
     quick = any(r['preset'] == 'quick' for r in records)
     baseline = any(r['case'].get('purpose') == 'baseline_validation' for r in records)
-    label = ('Quick workflow check — excluded from headline comparisons' if quick else
+    real = any(r.get('track') == 'real' for r in records)
+    label = ('Real-data small-plasmid pilot — new comparison on deposited ONT data; not historical reproduction' if real else
+             'Quick workflow check — excluded from headline comparisons' if quick else
              'Standard whole-genome baseline validation — excluded from headline comparisons' if baseline else
              'Standard benchmark' if all(r.get('headline_eligible') for r in records) else
              'Standard validation — excluded from headline comparisons')
@@ -236,5 +277,6 @@ def render_html(records, expected_slots, run_id):
 <h2>Measurement scope</h2><p>Completeness is the longest single alignment span against a tripled reference divided by the original molecule length. Completion requires at least 99%; contiguity is uncapped. Identity and maximum indel are reported only when that alignment spans more than 100,000 bp or one quarter of the reference. Structural correctness is not measured by this assessment. An execution or assessment failure does not establish sequence absence.</p>
 <p>Falling below the contiguity threshold does not mean that most reference sequence is absent: it may be spread across multiple contigs. Total reference coverage is a separate measurement. Identity and maximum indel describe only the selected longest alignment; other contigs can contain additional errors.</p>
 <p>Workflow time includes assembler verification/execution and exact assessment; downloads, environment provisioning, simulation and scheduler waiting are excluded. Assembler and assessment mapper RAM are separate sampled process-tree sums; shared pages may be counted more than once. Separate molecule types are reported only where provided by reference provenance.</p>
-<p>Method attribution: <a href="https://github.com/rrwick/Long-read-assembler-comparison">Wick and Holt long-read assembler comparison</a>; alignment with <a href="https://github.com/lh3/minimap2">minimap2</a>. Reference accessions, input hashes, simulator settings and software versions are retained in the evidence files.</p>
+<p>Method attribution: <a href="https://github.com/rrwick/Long-read-assembler-comparison">Wick and Holt long-read assembler comparison</a>; alignment with <a href="https://github.com/lh3/minimap2">minimap2</a>. Reference accessions, input hashes, simulation or real-read preparation provenance and software versions are retained in the evidence files.</p>
+{'<p>For real-data pilots, the separate Johnson et al. 2023 rule uses strictly greater than 90% summed alignment blocks against the native reference. It retains the published fragmented fallback, duplicate-contig flag and length-based chromosome-incorporation heuristic. It can count overlapping alignments and is not sequence breadth. Current tools and full archive reads do not reproduce historical subset percentages. Paper-rule failure leaves that measurement unresolved; it never establishes absence.</p>' if real else ''}
 </main></body></html>'''

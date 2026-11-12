@@ -20,9 +20,9 @@ Nanopore sequencing bias. A small Standard whole-genome baseline is now admitted
 for two checked chromosomes; the full scientific panel remains unadmitted.
 
 The five agreed groups for Standard are plasmids, GC/composition, repeats/genome
-structure, read quality/sampling, and reproducibility. Currently only the Quick
-read-quality fixtures and the two-reference Standard baseline are implemented.
-Real-data admission follows the simulated end-to-end implementation.
+structure, read quality/sampling, and reproducibility. The Quick read-quality fixtures and two-reference simulated Standard baseline
+are implemented. A separate real-data small-plasmid pilot now admits one study
+isolate; it is selected explicitly and does not change the default simulated runs.
 
 ## Run with Nextflow
 
@@ -93,6 +93,34 @@ bundle. The bundle retains the plan and runtime receipt with checksums. Advanced
 users can pass an existing frozen selection with `--plan`; do not combine that
 with selection options. A local development checkout runs identically with
 `nextflow run . --preset quick`.
+
+## Real-data small-plasmid pilot
+
+One isolate from [Johnson et al. (2023)](https://doi.org/10.1099/mgen.0.001024)
+is admitted: ATCC25922, ONT run SRR23290062, one native chromosome and four
+plasmids. This uses all deposited ONT reads, with no filtering, subsampling or
+simulation. It is a modern comparison using the study's data; original historical
+subset IDs are unavailable. No Illumina reads are assembly inputs.
+
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow -latest \
+  --track real --preset standard --cases johnson-atcc25922-full \
+  -profile bmrc,pixi --outdir results/real-plasmid-pilot --run_id real-plasmid-pilot
+```
+
+Nextflow prepares the locked tools, downloads and verifies the frozen reference
+and 821.5 MB compressed read archive, then runs assembly, read-support diagnostics,
+two separate assessments and report export. Allow space for the 1.74 GB
+uncompressed input, work and retained outputs. Input archives and prepared reads
+are cached without automatic deletion. `--read_cache` and `--reference_dir` select
+shared caches; `--offline` requires the admitted bytes there already.
+
+The report separates the fixed 99% longest-alignment criterion from the paper's
+strict >90% summed-block rule, fragmented recovery, duplicate-contig flag and
+chromosome-incorporation heuristic. Read breadth/depth is a separate input-support
+check. See [pilot design and verification](docs/real-small-plasmid-pilot.md) and
+[study accession mapping](docs/small-plasmid-replication.md). The other study
+isolates remain unadmitted; two have unresolved archive role annotations.
 
 ## Prepare references before an offline run
 

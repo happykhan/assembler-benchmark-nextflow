@@ -10,3 +10,6 @@ __pycache__/
 .DS_Store
 evidence/quick-run/
 evidence/standard-runs/
+
+evidence/real-runs/
+reads-cache/

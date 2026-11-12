@@ -1,51 +1,21 @@
 {
-  "schema_version": 1,
   "references": [
     {
-      "id": "bsub-168-quick",
       "accession": "GCF_000009045.1",
+      "compression": "gzip",
+      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "id": "bsub-168-quick",
       "molecule_accession": "NC_000964.3",
       "organism": "Bacillus subtilis 168",
-      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz",
-      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
-      "compression": "gzip",
-      "quick_slice_bases": 200000,
       "purpose": "workflow_check",
-      "source": "NCBI RefSeq; AL009126.3 / NC_000964.3"
+      "quick_slice_bases": 200000,
+      "source": "NCBI RefSeq; AL009126.3 / NC_000964.3",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz"
     },
     {
-      "id": "bsub-168-whole",
       "accession": "GCF_000009045.1",
-      "organism": "Bacillus subtilis subsp. subtilis str. 168",
-      "strain": "168",
-      "bioproject": "PRJNA76",
-      "biosample": "SAMEA3138188",
-      "taxid": 224308,
-      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz",
-      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
-      "compression": "gzip",
-      "preparation": "whole_genome",
-      "status": "admitted",
-      "purpose": "simulation_truth",
-      "molecules": [
-        {
-          "accession": "NC_000964.3",
-          "type": "chromosome",
-          "topology": "circular",
-          "aliases": [
-            "AL009126.3"
-          ],
-          "length_bp": 4215606,
-          "sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
-          "gc_bases": 1834396,
-          "gc_fraction": 0.43514408130171556,
-          "ambiguous_bases": 0
-        }
-      ],
-      "canonical_fasta_sha256": "2680ee8c5663aa8de28159faa7b97b1adaa85e2547a45083ab9f6da40c45ee1d",
       "admission_receipt": "assets/admissions/bsub-168-whole.json",
       "admission_receipt_sha256": "25bc5381255d2ee168b4707138407b919407462ad1a8bbd77ef2c3d5e6624eaf",
-      "source": "NCBI RefSeq original assembly and sequence record.",
       "attribution": [
         {
           "citation": "Barbe et al. (2009), From a consortium sequence to a unified sequence: the Bacillus subtilis 168 reference genome a decade later.",
@@ -56,41 +26,41 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/23429746/"
         }
       ],
-      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular"
-    },
-    {
-      "id": "llactis-il1403-whole",
-      "accession": "GCA_000006865.1",
-      "organism": "Lactococcus lactis subsp. lactis Il1403",
-      "strain": "IL1403",
-      "bioproject": "PRJNA72",
-      "biosample": "SAMN02603339",
-      "taxid": 272623,
-      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_genomic.fna.gz",
-      "download_sha256": "e6e445dfc5b9171523b3e5c7afb521bf5adbac7d2f6e6ed27cc5a3eddd19c4c7",
+      "bioproject": "PRJNA76",
+      "biosample": "SAMEA3138188",
+      "canonical_fasta_sha256": "2680ee8c5663aa8de28159faa7b97b1adaa85e2547a45083ab9f6da40c45ee1d",
       "compression": "gzip",
-      "preparation": "whole_genome",
-      "status": "admitted",
-      "purpose": "simulation_truth",
+      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "id": "bsub-168-whole",
       "molecules": [
         {
-          "accession": "AE005176.1",
-          "type": "chromosome",
-          "topology": "circular",
+          "accession": "NC_000964.3",
           "aliases": [
-            "NC_002662.1"
+            "AL009126.3"
           ],
-          "length_bp": 2365589,
-          "sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
-          "gc_bases": 835748,
-          "gc_fraction": 0.3532938308387467,
-          "ambiguous_bases": 0
+          "ambiguous_bases": 0,
+          "gc_bases": 1834396,
+          "gc_fraction": 0.43514408130171556,
+          "length_bp": 4215606,
+          "sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
+          "topology": "circular",
+          "type": "chromosome"
         }
       ],
-      "canonical_fasta_sha256": "e79b9aa32f75879924d05b193e7ad3f5e52ed1fcdfbad039f3da162405990e74",
+      "organism": "Bacillus subtilis subsp. subtilis str. 168",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "NCBI RefSeq original assembly and sequence record.",
+      "status": "admitted",
+      "strain": "168",
+      "taxid": 224308,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz"
+    },
+    {
+      "accession": "GCA_000006865.1",
       "admission_receipt": "assets/admissions/llactis-il1403-whole.json",
       "admission_receipt_sha256": "38f94b78a38bae3330ffe06412e74d526495fde25bdf03af8d2c9df8f8bd2eb7",
-      "source": "NCBI GenBank original IL1403 assembly; later CP033607 resequencing excluded.",
       "attribution": [
         {
           "citation": "Bolotin et al. (2001), The complete genome sequence of the lactic acid bacterium Lactococcus lactis ssp. lactis IL1403.",
@@ -101,7 +71,118 @@
           "url": "https://www.ncbi.nlm.nih.gov/bioproject/72"
         }
       ],
-      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular"
+      "bioproject": "PRJNA72",
+      "biosample": "SAMN02603339",
+      "canonical_fasta_sha256": "e79b9aa32f75879924d05b193e7ad3f5e52ed1fcdfbad039f3da162405990e74",
+      "compression": "gzip",
+      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+      "download_sha256": "e6e445dfc5b9171523b3e5c7afb521bf5adbac7d2f6e6ed27cc5a3eddd19c4c7",
+      "id": "llactis-il1403-whole",
+      "molecules": [
+        {
+          "accession": "AE005176.1",
+          "aliases": [
+            "NC_002662.1"
+          ],
+          "ambiguous_bases": 0,
+          "gc_bases": 835748,
+          "gc_fraction": 0.3532938308387467,
+          "length_bp": 2365589,
+          "sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
+          "topology": "circular",
+          "type": "chromosome"
+        }
+      ],
+      "organism": "Lactococcus lactis subsp. lactis Il1403",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "NCBI GenBank original IL1403 assembly; later CP033607 resequencing excluded.",
+      "status": "admitted",
+      "strain": "IL1403",
+      "taxid": 272623,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_genomic.fna.gz"
+    },
+    {
+      "accession": "GCA_028596225.1",
+      "admission_receipt": "assets/admissions/johnson-atcc25922-native.json",
+      "admission_receipt_sha256": "4748a6758218f2d60e21d7235e2050859dc374c351078c01a0135fa774394f02",
+      "attribution": {
+        "authors": [
+          "Jared Johnson",
+          "Marty Soehnlen",
+          "Heather M. Blankenship"
+        ],
+        "bioprojects": [
+          "PRJNA929966",
+          "PRJNA288601",
+          "PRJNA812922"
+        ],
+        "doi": "10.1099/mgen.0.001024",
+        "pmcid": "PMC10272865",
+        "supporting_repository_commit": "107c3dd3865cff8ab5bd86ef70249a65b465aa9c",
+        "title": "Long read genome assemblers struggle with small plasmids",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10272865/"
+      },
+      "biosample": "SAMN32977649",
+      "canonical_fasta_sha256": "94c005ecc2049e1ad83830c24bf6a87a448f4feeed7f7e984ce0ef3513495d93",
+      "compression": "gzip",
+      "download_sha256": "79c505e307dc0cdecbce2068d6b5ac59ed3ee6d8b8a8cd660184330fe476d801",
+      "headline_eligible": false,
+      "id": "johnson-atcc25922-native",
+      "molecules": [
+        {
+          "accession": "CP117235.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 2593652,
+          "length_bp": 5132219,
+          "sequence_sha256": "6e3cc6ea6284d2af9c60486d56935c76223b7e5d14c71fe96d62ca0476699b29",
+          "topology": "circular",
+          "type": "chromosome"
+        },
+        {
+          "accession": "CP117234.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 985,
+          "length_bp": 1919,
+          "sequence_sha256": "237ef3866cc9b06682b3ef839b3bc38d3ffdbba5867036b93936056f4b4249db",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117233.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 1488,
+          "length_bp": 3173,
+          "sequence_sha256": "74288aa73d3effbd854e520d20a3ea9fe1567086b75f4517eb760bd01452abf1",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117236.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 9485,
+          "length_bp": 24185,
+          "sequence_sha256": "e7a25a76097b85423c4458dfb753ef564ce23d00c539d7ee602a22c411dcfc3b",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117232.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 21510,
+          "length_bp": 48488,
+          "sequence_sha256": "9f2c7452ddbfa876512b6a8cfd0d0639ee1676ad09c54f0611b623e13853ecc8",
+          "topology": "circular",
+          "type": "plasmid"
+        }
+      ],
+      "organism": "Escherichia coli ATCC 25922",
+      "preparation": "whole_genome",
+      "purpose": "real_data_pilot",
+      "status": "admitted",
+      "truth_scope": "Same-BioSample deposited Trycycler-derived reference; not independently established error-free truth. Full archive ONT modern comparison, not historical subset reproduction.",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/596/225/GCA_028596225.1_ASM2859622v1/GCA_028596225.1_ASM2859622v1_genomic.fna.gz"
     }
-  ]
+  ],
+  "schema_version": 1
 }

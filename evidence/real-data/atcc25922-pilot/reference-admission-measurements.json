@@ -1,0 +1,55 @@
+{
+  "download_sha256": "79c505e307dc0cdecbce2068d6b5ac59ed3ee6d8b8a8cd660184330fe476d801",
+  "publisher_md5": "dd7c5e9b2c727462fb8503ec45eccaa6",
+  "download_bytes": 1549238,
+  "canonical_fasta_sha256": "94c005ecc2049e1ad83830c24bf6a87a448f4feeed7f7e984ce0ef3513495d93",
+  "molecules": [
+    {
+      "accession": "CP117235.1",
+      "type": "chromosome",
+      "topology": "circular",
+      "length_bp": 5132219,
+      "sequence_sha256": "6e3cc6ea6284d2af9c60486d56935c76223b7e5d14c71fe96d62ca0476699b29",
+      "gc_bases": 2593652,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CP117234.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 1919,
+      "sequence_sha256": "237ef3866cc9b06682b3ef839b3bc38d3ffdbba5867036b93936056f4b4249db",
+      "gc_bases": 985,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CP117233.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 3173,
+      "sequence_sha256": "74288aa73d3effbd854e520d20a3ea9fe1567086b75f4517eb760bd01452abf1",
+      "gc_bases": 1488,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CP117236.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 24185,
+      "sequence_sha256": "e7a25a76097b85423c4458dfb753ef564ce23d00c539d7ee602a22c411dcfc3b",
+      "gc_bases": 9485,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CP117232.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 48488,
+      "sequence_sha256": "9f2c7452ddbfa876512b6a8cfd0d0639ee1676ad09c54f0611b623e13853ecc8",
+      "gc_bases": 21510,
+      "ambiguous_bases": 0
+    }
+  ],
+  "independent_ena_sequence_equality": false,
+  "verification_scope": "NCBI assembly FASTA publisher MD5 plus frozen same-BioSample ENA/NCBI molecule inventory; independent ENA sequence retrieval unavailable"
+}

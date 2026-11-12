@@ -11,6 +11,7 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from benchlib.assessment import METHOD, outcome, parse_paf, read_fasta, sha256, summarise, write_json
 from benchlib.process import measured_run
+from benchlib.paper_recovery import assess_paper
 
 
 def retain_tool_evidence(execution, directory, evidence):
@@ -41,16 +42,20 @@ def assess(args):
     started = time.monotonic()
     case = json.loads(args.case_json)
     execution = json.loads(args.execution.read_text())
-    simulation = json.loads(args.simulation.read_text())
+    input_path = getattr(args, 'input_provenance', None) or args.simulation
+    real = case.get('track') == 'real'
+    input_name = 'input-provenance.json' if real else 'simulation.json'
+    input_key = 'input_provenance_sha256' if real else 'simulation_sha256'
+    simulation = json.loads(input_path.read_text())
     provenance = json.loads(args.reference_provenance.read_text())
     output = args.out.resolve()
     evidence = output.with_name(output.stem + '.evidence')
     evidence.mkdir(parents=True, exist_ok=False)
-    for source, name in ((args.execution, 'execution.json'), (args.simulation, 'simulation.json'),
+    for source, name in ((args.execution, 'execution.json'), (input_path, input_name),
                          (args.reference_provenance, 'reference-provenance.json')):
         shutil.copyfile(source, evidence / name)
     result = {'schema_version': 1, 'case': case, 'assembler': args.assembler,
-              'track': 'simulated', 'preset': case.get('preset', 'quick'),
+              'track': 'real' if real else 'simulated', 'preset': case.get('preset', 'quick'),
               'headline_eligible': bool(case.get('preset') == 'standard' and case.get('headline_eligible')
                                         and provenance.get('headline_eligible')),
               'execution': execution, 'sequence_outcome': None, 'replicons': [],
@@ -60,7 +65,7 @@ def assess(args):
                              'structural_correctness_note': 'Not measured by longest-alignment assessment.'},
               'provenance': {'reference_sha256': sha256(args.reference),
                              'execution_sha256': sha256(args.execution),
-                             'simulation_sha256': sha256(args.simulation),
+                             input_key: sha256(input_path),
                              'reference_provenance_sha256': sha256(args.reference_provenance),
                              'reference': provenance},
               'evidence_directory': evidence.name,
@@ -78,16 +83,24 @@ def assess(args):
         if provenance.get('reference_sha256') != result['provenance']['reference_sha256']:
             raise ValueError('Reference-provenance/reference hash binding differs')
         if simulation.get('case') != case or simulation.get('status') != 'completed':
-            raise ValueError('Simulation/case binding differs or simulation is incomplete')
+            raise ValueError('Input provenance/case binding differs or input preparation is incomplete')
         if simulation.get('reference_sha256') != result['provenance']['reference_sha256']:
-            raise ValueError('Simulation/reference hash binding differs')
+            raise ValueError('Input/reference hash binding differs')
+        if real:
+            if (simulation.get('track') != 'real' or simulation.get('input_policy') != case.get('input_policy')
+                    or simulation.get('sample_accession') != provenance.get('biosample')
+                    or simulation.get('run_accession') != case.get('run_accession')
+                    or simulation.get('reference_provenance_sha256') != sha256(args.reference_provenance)):
+                raise ValueError('Real input/reference/run binding differs')
+            result['limitations'].extend(['Modern comparison on full deposited ONT reads; not reproduction of the original paper subsets.',
+                'Deposited references partly derive from tested assembler families; they are not independently established error-free truth.'])
         if case.get('preset') == 'standard':
             if provenance.get('mode') != 'whole_genome' or provenance.get('status') != 'admitted':
                 raise ValueError('Standard assessment requires an admitted whole-genome reference')
             if simulation.get('reference_provenance_sha256') != sha256(args.reference_provenance):
                 raise ValueError('Standard simulation/preparation provenance binding differs')
         if execution.get('reads_sha256') != simulation.get('reads_sha256') or not execution.get('reads_sha256'):
-            raise ValueError('Execution/simulation read hash binding differs')
+            raise ValueError('Execution/input read hash binding differs')
         if execution.get('status') == 'completed':
             if not args.assembly.is_file() or sha256(args.assembly) != execution.get('assembly_sha256'):
                 raise ValueError('Final assembly differs from execution hash')
@@ -115,6 +128,12 @@ def assess(args):
             result['sequence_outcome'] = outcome(result['replicons'], len(queries))
             result['assessment'].update(status='completed', paf_sha256=sha256(paf), query_count=len(queries))
             result['provenance']['assembly_sha256'] = execution['assembly_sha256']
+            if real:
+                result['paper_assessment'] = assess_paper(args.reference, args.assembly, evidence, references, queries, types, args.cpus, version)
+                paper_measurement = result['paper_assessment'].get('measurement', {})
+                result['resources'].update(paper_mapper_wall_seconds=paper_measurement.get('elapsed_seconds'),
+                    paper_mapper_process_tree_peak_rss_bytes=paper_measurement.get('process_tree_peak_rss_bytes'))
+
             # Reference is already identified by content hash; the transient tripled copy is unnecessary.
             tripled.unlink()
         elif execution.get('status') == 'software_error':
@@ -136,8 +155,11 @@ def assess(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ('reference', 'assembly', 'execution', 'simulation', 'reference-provenance', 'out'):
+    for name in ('reference', 'assembly', 'execution', 'reference-provenance', 'out'):
         parser.add_argument('--' + name, type=Path, required=True)
+    input_group = parser.add_mutually_exclusive_group(required=True)
+    input_group.add_argument('--simulation', type=Path)
+    input_group.add_argument('--input-provenance', type=Path)
     parser.add_argument('--case-json', required=True)
     parser.add_argument('--assembler', required=True)
     parser.add_argument('--cpus', type=int, default=1)

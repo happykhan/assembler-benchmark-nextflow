@@ -1,0 +1,242 @@
+{
+  "assembler_definitions": {
+    "flye-2.9.6": {
+      "adapter": "flye",
+      "container": null,
+      "environment": "flye-2-9-6",
+      "id": "flye-2.9.6",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "flye",
+      "version": "2.9.6"
+    },
+    "raven-1.8.3": {
+      "adapter": "raven",
+      "container": null,
+      "environment": "raven-1-8-3",
+      "id": "raven-1.8.3",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "raven",
+      "version": "1.8.3"
+    }
+  },
+  "assemblers": [
+    "flye-2.9.6",
+    "raven-1.8.3"
+  ],
+  "cases": [
+    {
+      "dataset_id": "johnson-2023-small-plasmids",
+      "description": "Full deposited ONT archive for ATCC25922; one native chromosome and four plasmids, including two <10kb. Modern versions, separate paper-rule and strict-contiguity endpoints.",
+      "group": "plasmids",
+      "headline_eligible": false,
+      "id": "johnson-atcc25922-full",
+      "input_policy": "full_archive_reads_no_filtering_no_subsampling",
+      "preset": "standard",
+      "purpose": "real_data_pilot",
+      "reference_id": "johnson-atcc25922-native",
+      "run_accession": "SRR23290062",
+      "track": "real"
+    }
+  ],
+  "expected_slots": 2,
+  "headline_eligible": false,
+  "plan_sha256": "185af56a356011d1b5195ebd61ab1b38e4d144afee84331d1a3d177eba1e95d0",
+  "preset": "standard",
+  "purpose": "real_data_pilot",
+  "read_inputs": {
+    "johnson-atcc25922-full": {
+      "admission_receipt": "assets/admissions/johnson-atcc25922-reads.json",
+      "admission_sha256": "2021497859e94cefc685445f83ad35f2c00877038746779c6d2c650c68bc3619",
+      "byte_provenance": "ENA archive-generated FASTQ; not asserted byte-identical to the submitted combined HAC FASTQ",
+      "compressed_bytes": 821540769,
+      "dataset_id": "johnson-2023-small-plasmids",
+      "decompressed_bytes": 1741056684,
+      "download_sha256": "2d954c5bb05b1d46400b3d1738466304f5bd91afe41a93ca71ba1c0dccde0422",
+      "isolate_id": "ATCC25922",
+      "publisher_md5": "2934c206376021f54f34e97d033b5bd8",
+      "read_count": 165764,
+      "reads_sha256": "be9fbc1d265d8a7b056e3d764188cf60c0fbf2da5a99f3379fc7d8b450905519",
+      "run_accession": "SRR23290062",
+      "sample_accession": "SAMN32977649",
+      "total_bases": 867904341,
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR232/062/SRR23290062/SRR23290062_1.fastq.gz"
+    }
+  },
+  "reference_ids": [
+    "johnson-atcc25922-native"
+  ],
+  "references": {
+    "johnson-atcc25922-native": {
+      "accession": "GCA_028596225.1",
+      "admission_receipt": "assets/admissions/johnson-atcc25922-native.json",
+      "admission_receipt_sha256": "4748a6758218f2d60e21d7235e2050859dc374c351078c01a0135fa774394f02",
+      "attribution": {
+        "authors": [
+          "Jared Johnson",
+          "Marty Soehnlen",
+          "Heather M. Blankenship"
+        ],
+        "bioprojects": [
+          "PRJNA929966",
+          "PRJNA288601",
+          "PRJNA812922"
+        ],
+        "doi": "10.1099/mgen.0.001024",
+        "pmcid": "PMC10272865",
+        "supporting_repository_commit": "107c3dd3865cff8ab5bd86ef70249a65b465aa9c",
+        "title": "Long read genome assemblers struggle with small plasmids",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10272865/"
+      },
+      "biosample": "SAMN32977649",
+      "canonical_fasta_sha256": "94c005ecc2049e1ad83830c24bf6a87a448f4feeed7f7e984ce0ef3513495d93",
+      "compression": "gzip",
+      "download_sha256": "79c505e307dc0cdecbce2068d6b5ac59ed3ee6d8b8a8cd660184330fe476d801",
+      "headline_eligible": false,
+      "id": "johnson-atcc25922-native",
+      "molecules": [
+        {
+          "accession": "CP117235.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 2593652,
+          "length_bp": 5132219,
+          "sequence_sha256": "6e3cc6ea6284d2af9c60486d56935c76223b7e5d14c71fe96d62ca0476699b29",
+          "topology": "circular",
+          "type": "chromosome"
+        },
+        {
+          "accession": "CP117234.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 985,
+          "length_bp": 1919,
+          "sequence_sha256": "237ef3866cc9b06682b3ef839b3bc38d3ffdbba5867036b93936056f4b4249db",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117233.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 1488,
+          "length_bp": 3173,
+          "sequence_sha256": "74288aa73d3effbd854e520d20a3ea9fe1567086b75f4517eb760bd01452abf1",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117236.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 9485,
+          "length_bp": 24185,
+          "sequence_sha256": "e7a25a76097b85423c4458dfb753ef564ce23d00c539d7ee602a22c411dcfc3b",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CP117232.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 21510,
+          "length_bp": 48488,
+          "sequence_sha256": "9f2c7452ddbfa876512b6a8cfd0d0639ee1676ad09c54f0611b623e13853ecc8",
+          "topology": "circular",
+          "type": "plasmid"
+        }
+      ],
+      "organism": "Escherichia coli ATCC 25922",
+      "preparation": "whole_genome",
+      "purpose": "real_data_pilot",
+      "status": "admitted",
+      "truth_scope": "Same-BioSample deposited Trycycler-derived reference; not independently established error-free truth. Full archive ONT modern comparison, not historical subset reproduction.",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/596/225/GCA_028596225.1_ASM2859622v1/GCA_028596225.1_ASM2859622v1_genomic.fna.gz"
+    }
+  },
+  "resource_policy": {
+    "assembly": {
+      "cpus": 4,
+      "default_memory_gb": 16,
+      "memory_gb_by_tool": {
+        "flye": 16,
+        "raven": 16
+      },
+      "time_minutes": 240
+    },
+    "queue_capacity": 1000,
+    "simulation": {
+      "cpus": 1,
+      "time_minutes": 120
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "assemblers": [
+      "flye-2.9.6",
+      "raven-1.8.3"
+    ],
+    "cases": [
+      "johnson-atcc25922-full"
+    ],
+    "groups": [],
+    "track": "real"
+  },
+  "slots": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "johnson-atcc25922-full"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "johnson-atcc25922-full"
+    }
+  ],
+  "source_file_sha256": {
+    "assets/admissions/johnson-atcc25922-native.json": "4748a6758218f2d60e21d7235e2050859dc374c351078c01a0135fa774394f02",
+    "assets/admissions/johnson-atcc25922-reads.json": "2021497859e94cefc685445f83ad35f2c00877038746779c6d2c650c68bc3619",
+    "assets/assemblers.json": "02e18bb09b4d59854b7b95a7cabefb78bfb07e423365504b6292d6b3ded2641b",
+    "assets/real-data/small-plasmids-paper.json": "cd63280186ba81779660c60e0cd263a1add89011419bb5064556f02695078c55",
+    "assets/real-pilot.json": "d179530d8f6b833fc7bf4177dbb911d824ab1415bd802dc3dba3fc401846d369",
+    "assets/references.json": "23dbd87badd36242d7bb714faed0e54c0eae33634e9df053e28ce072b20e754a",
+    "environments/pixi.lock": "5a8107c0477f53e71ef898ada6a32f26047309af5bd8ad7f94554b1d11d530fa",
+    "environments/pixi.toml": "732ac6adb2e36b7fa47553f9c5bca32dacf2d166502215790a873ad280fb0abd",
+    "evidence/real-data/small-plasmids/CP117235.1.header.txt": "0003b5429c6e30876679ea8eca03e359554e279fa04ad6efb377b867e00202e5",
+    "evidence/real-data/small-plasmids/CP119139.1.header.txt": "d67db6c99bc09f5c2e2f3aeb4a0f38d64759479ca61ae2ec4559fe955b71a640",
+    "evidence/real-data/small-plasmids/GCA_020362645.xml": "2164b42c9b0511dd909d68d59b481caecdff9364b5002d05fb41114f9fda198a",
+    "evidence/real-data/small-plasmids/GCA_021904535.3.ncbi.json": "c7d6dc18c78d6e4e519461e39f850c1d6c78bf8b0ac4b1ba7892614cf923d8fc",
+    "evidence/real-data/small-plasmids/GCA_021904655.xml": "73689884c990cc2c0b20d2af1d8b9dcb780e5368dfdc8540ff0006fa54637b42",
+    "evidence/real-data/small-plasmids/GCA_022024795.xml": "29d55c472199892f9216e01c758eec8a0fe672d6db802de0cec92a88df8865c5",
+    "evidence/real-data/small-plasmids/GCA_028596045.xml": "37e69d7c6f8f864ba89a0ab599df304709769e3e792603cbee4bfe1be5f2d046",
+    "evidence/real-data/small-plasmids/GCA_028596125.xml": "7b17db816ecb4f0b376fcf61029be5a32f737729c737a178aeb80528842597f6",
+    "evidence/real-data/small-plasmids/GCA_028596145.xml": "8be39fc6c0721ad5a4f03182b3da1e567dd2b1331b854879419c449430cf67e2",
+    "evidence/real-data/small-plasmids/GCA_028596165.xml": "54b2d6ef9d61b81ba3ad6b34d5c948b3c0afa7dd7b6d60453c31f18b6e45dd8d",
+    "evidence/real-data/small-plasmids/GCA_028596185.xml": "b2031c53b496ee78807700c33fc83180c2fa838742630e4abc9795dec0036c2a",
+    "evidence/real-data/small-plasmids/GCA_028596205.xml": "20dc8a7ddb2b80518170279e6a62940adef5dd94182506bbfa1e1feca3504a61",
+    "evidence/real-data/small-plasmids/GCA_028596225.xml": "61c8a157bb1b77db37f35bf4f54d100cdfc92604205c1f2a7d84c73905944f68",
+    "evidence/real-data/small-plasmids/GCA_028596245.xml": "2c824f8f783dc15238fcd6c2084578323181a2cbd9b8d2f792f275be30c0e1b2",
+    "evidence/real-data/small-plasmids/GCA_029378435.xml": "467c76d213b7200a5dae642049959b23cce4ee25abda76a9ce8d9446d5a961bd",
+    "evidence/real-data/small-plasmids/GCA_029378455.1.ncbi.json": "84a440c4db83e54dfacc95f54a520aa0be5ad4a1d5198246fb0f41e64351238b",
+    "evidence/real-data/small-plasmids/SAMN17608176-inventory.tsv": "dbbb28945305662dce0e0a1f6c451c0e702f61e59877e45e9c9e976a79a13c79",
+    "evidence/real-data/small-plasmids/SAMN21919088-inventory.tsv": "821a88d41ea0d59c80c16fff5decc68113507cd019609ace0b923f2e10b286e9",
+    "evidence/real-data/small-plasmids/SAMN21919093-inventory.tsv": "16df779ce8f5753679788b5947598b57c5ca0dba9fc51881a2f5cb05fb7851a9",
+    "evidence/real-data/small-plasmids/SAMN22066472-inventory.tsv": "2a605c103fb505483d3a8402e5ab07026e395a757dc5f1553639015dc275f29c",
+    "evidence/real-data/small-plasmids/SAMN32885235-inventory.tsv": "d9beb1ba5bdf490f26104225bdeb02a66e5b914f8983213b1d8e716d6fdd35a3",
+    "evidence/real-data/small-plasmids/SAMN32977646-inventory.tsv": "121a8ad3cf721b89576cac0ef076a4a12b96dc8a955c77d7425f66ffcfdcdb7c",
+    "evidence/real-data/small-plasmids/SAMN32977647-inventory.tsv": "a5c40cd59c126c78c00f02c3d00f83c2b903f7e123d968a3a84723a8d1397441",
+    "evidence/real-data/small-plasmids/SAMN32977648-inventory.tsv": "c94005b153f22b5094ad6be2e8e386e351ff82094d012a772e562df258c109d3",
+    "evidence/real-data/small-plasmids/SAMN32977649-inventory.tsv": "2c21f09ca93ae2db9d50a0acc0b955e02993e960e0f4f4e4852c44143ac8e69c",
+    "evidence/real-data/small-plasmids/SAMN32977650-inventory.tsv": "91a182ca90c3fb5ba0b8b2426e36287eab61588dbba44259694152e467e827cd",
+    "evidence/real-data/small-plasmids/SAMN32977651-inventory.tsv": "2b4a0733008d9870d4db59e54cc0ef8c49280c42fd9bd382ba866ed8363c2dcb",
+    "evidence/real-data/small-plasmids/SAMN32977652-inventory.tsv": "984a1fa1e84ac6a02c13a9b0cac6be683cb8d8c6c35ca47fff153b7edfdf3b08",
+    "evidence/real-data/small-plasmids/SAMN33482239-inventory.tsv": "c528b3498d50c02a9ad567d964b911a07943fa866aa941d155de26c6c9274680",
+    "evidence/real-data/small-plasmids/SAMN33482240-inventory.tsv": "043ac503397288d406cb7c69345684202d084675902909629bbc99cd3323759f",
+    "evidence/real-data/small-plasmids/SRX19233348.xml": "6f76526f1c1ad97bc2fd1fd3bc0f0978f249fd3741dbd126ea55300505ae3e12",
+    "evidence/real-data/small-plasmids/SRX19233349.xml": "9863246a4a28c970282d8ed0ec45aac4b25ff1e66520dcdd5136554ea7b05d55",
+    "evidence/real-data/small-plasmids/SRX19233350.xml": "418398a2e9d60e5a59c60f5428291adc6890c9dee6fc6eb065c3ecc3060252b8",
+    "evidence/real-data/small-plasmids/SRX19233353.xml": "374b9228c85f47e7efbbab5cfc84b5b3d614767ca88139b971995385a07093a4",
+    "evidence/real-data/small-plasmids/SRX19234667.xml": "b9ac1e458f9be3ada157d7df563647bca577f3851f792ce4ed39e37b14949faa",
+    "evidence/real-data/small-plasmids/SRX19234668.xml": "ce2d49926b672d2e78f6a0941884f0151a6383da471fd7cccf02d25f2d319826",
+    "evidence/real-data/small-plasmids/SRX19522848.xml": "eb4cdec862684f3c189dbd18a7bfaee36a126a16a7d669d7076324e893367d9f",
+    "evidence/real-data/small-plasmids/SRX19522849.xml": "0dbd3f3c6febd8613f04b143dbd993277ef52b29db8955762d9a20c75151e28c",
+    "evidence/real-data/small-plasmids/ng-ncbi-summary.json": "6a3c0767a3e39540922aa3d8a9f8eddcfdf44903c089ecc178157427c2c9600a",
+    "evidence/real-data/small-plasmids/selected-runs.tsv": "706d32b72005d1121a716669f77ff850fc95d35f7c630b3c5240181fb0da2bd7"
+  },
+  "track": "real"
+}

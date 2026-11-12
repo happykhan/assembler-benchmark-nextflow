@@ -1,0 +1,45 @@
+{
+  "molecules": [
+    {
+      "accession": "CP117235.1",
+      "status": "independent_download_incomplete",
+      "native_length_bp": 5132219,
+      "independent_received_bases": 695411,
+      "independent_fasta_sha256": "415beb7d3d55a9b0955c4c1a4c377173b1ca24a65cec04f0e58184df81caa784",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117235.1"
+    },
+    {
+      "accession": "CP117234.1",
+      "status": "sequence_equal",
+      "native_length_bp": 1919,
+      "independent_received_bases": 1919,
+      "independent_fasta_sha256": "2009e87a1ec0748ea767f586195cc614f9ac3b6c7fe8f18fe846fb1d07666c03",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117234.1"
+    },
+    {
+      "accession": "CP117233.1",
+      "status": "sequence_equal",
+      "native_length_bp": 3173,
+      "independent_received_bases": 3173,
+      "independent_fasta_sha256": "fb0d6d40785e36a0ea4f1f1a4aaae313d7759cd7c45fe13b22537ea9a98a4fe8",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117233.1"
+    },
+    {
+      "accession": "CP117236.1",
+      "status": "sequence_equal",
+      "native_length_bp": 24185,
+      "independent_received_bases": 24185,
+      "independent_fasta_sha256": "61b534d51d543c2584e4c6d4843f0717e667b17d5e6a98b62d6dabc86ac57265",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117236.1"
+    },
+    {
+      "accession": "CP117232.1",
+      "status": "sequence_equal",
+      "native_length_bp": 48488,
+      "independent_received_bases": 48488,
+      "independent_fasta_sha256": "2d7244ffacc388de804caf15ee095d7c0007303b3b17168aa40080301a0d0245",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP117232.1"
+    }
+  ],
+  "scope": "Additional audit after input admission; original immutable admission receipts remain unchanged."
+}
