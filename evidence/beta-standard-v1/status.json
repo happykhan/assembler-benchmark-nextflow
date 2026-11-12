@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-12T18:12:14.992057+00:00",
+  "state": "ready_awaiting_cluster_authentication",
+  "expected_input_sets": 55,
+  "expected_assembly_outcomes": 110,
+  "assemblers": [
+    "flye-2.9.6",
+    "raven-1.8.3"
+  ],
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "reference_count": 5,
+  "completed_beta_assembly_outcomes": 0,
+  "website_live": false,
+  "blocker": "Cluster 3 is reachable but SSH authentication is rejected. Existing master connection has expired. No beta assemblies submitted.",
+  "input_verification": "Five seed-101 full-depth native genome inputs: 39,714 reads independently reconstructed; zero sequence/quality mismatches. Unit checks cover exact budgets, native caps, lower-depth prefixes and deterministic output.",
+  "nextflow_verification": "Native plan-only process completed; frozen 110-slot plan validates. This is not a scientific execution.",
+  "website_verification": "Test-fixture publication only; desktop/mobile filters, downloads, figure and homepage link checked. Current historical site preserved within existing size/file limits. No fixture deployed.",
+  "tests": {
+    "total": 191,
+    "passed": 189,
+    "skipped": 2
+  }
+}

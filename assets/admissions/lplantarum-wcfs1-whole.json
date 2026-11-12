@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "reference_id": "lplantarum-wcfs1-whole",
+  "download_sha256": "44e02ddd8b79f4171b64526bbe84fcc436422d357899557d3baa2cb7099faaed",
+  "canonical_fasta_sha256": "a97eec80225128fce2366a625e0b5cf9aadb0d8cbf3f6919ca3b4bff941321fb",
+  "molecules": [
+    {
+      "accession": "AL935263.2",
+      "type": "chromosome",
+      "topology": "circular",
+      "length_bp": 3308273,
+      "sequence_sha256": "c6d163d1bf47b23075f01cd1e457213db6649ca7b80d071eb08eaaf34cf55b02",
+      "gc_bases": 1471086,
+      "gc_fraction": 0.44466886499391073,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CR377164.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 1917,
+      "sequence_sha256": "1f7873b7c07c363ff93f9d1cd58660bfd4f9619b8039a1362dbbcd7d76b935d9",
+      "gc_bases": 757,
+      "gc_fraction": 0.39488784559207096,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CR377165.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 2365,
+      "sequence_sha256": "5c9db0e8c712a36343b7012866d7bafa45e0ba8889c6a30f3145c70075c39cd6",
+      "gc_bases": 812,
+      "gc_fraction": 0.34334038054968286,
+      "ambiguous_bases": 0
+    },
+    {
+      "accession": "CR377166.1",
+      "type": "plasmid",
+      "topology": "circular",
+      "length_bp": 36069,
+      "sequence_sha256": "5df46440b1aac7063f2005dd3dcffeb75e1a9b6addb19503400b1032b890c96c",
+      "gc_bases": 14727,
+      "gc_fraction": 0.4083007568826416,
+      "ambiguous_bases": 0
+    }
+  ],
+  "source_urls": [
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/AL935263.2",
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377164.1",
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377165.1",
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377166.1"
+  ]
+}

@@ -19,8 +19,10 @@ The replacement implementation now covers selectable general and diagnostic
 tracks, plus import and rendering of frozen results. Small end-to-end validation
 runs on Cluster 3 are complete: Quick, two general datasets, native-linear S5
 and Raven read-order S7. See the [validation evidence](docs/cluster-validation-v2.md).
-The broader five-seed scientific panel in [benchmark protocol v1](docs/benchmark-protocol-v1.md)
-remains under review. Implemented functionality and verified scientific runs are different;
+The [beta Standard preset](docs/beta-standard.md) now declares 55 inputs and 110
+Flye/Raven outcomes across five seeds, whole-genome GC strata and error-free
+read-length/coverage/plasmid-depth contrasts. The full scientific protocol remains
+under review. Implemented functionality and verified scientific runs are different;
 see [replacement verification](docs/nextflow-replacement-verification.md).
 
 Inspect available choices with `--list` and command help with `--help`.
@@ -33,7 +35,7 @@ verified original source directories under `--diagnostic_source_dir`.
 | Selection | Purpose |
 | --- | --- |
 | `--preset quick` | Small simulated workflow check; the default |
-| `--preset standard` | Admitted simulated whole-genome baseline |
+| `--preset standard` | Beta simulated whole-genome panel; 55 inputs, 110 default outcomes |
 | `--track general --preset standard` | Frozen Wick/Holt 50-dataset general comparison |
 | `--track diagnostic --preset standard --groups S5` | Selected controlled diagnostic family |
 | `--track real --preset standard --cases johnson-atcc25922-full` | Admitted real-data small-plasmid pilot |

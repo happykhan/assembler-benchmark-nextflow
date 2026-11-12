@@ -1,0 +1,122 @@
+{
+  "status": "verified",
+  "checks": [
+    {
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "read_count": 12656,
+      "zero_sequence_mismatches": true,
+      "total_bases": 126468180,
+      "replicons": [
+        {
+          "accession": "NC_000964.3",
+          "type": "chromosome",
+          "target_bases": 126468180,
+          "observed_bases": 126468180,
+          "coverage": 30.0,
+          "read_count": 12656,
+          "native_length_or_terminal_budget_trim_count": 1
+        }
+      ]
+    },
+    {
+      "reference_id": "llactis-il1403-whole",
+      "seed": 101,
+      "read_count": 7094,
+      "zero_sequence_mismatches": true,
+      "total_bases": 70967670,
+      "replicons": [
+        {
+          "accession": "AE005176.1",
+          "type": "chromosome",
+          "target_bases": 70967670,
+          "observed_bases": 70967670,
+          "coverage": 30.0,
+          "read_count": 7094,
+          "native_length_or_terminal_budget_trim_count": 1
+        }
+      ]
+    },
+    {
+      "reference_id": "mflorum-l1-whole",
+      "seed": 101,
+      "read_count": 2365,
+      "zero_sequence_mismatches": true,
+      "total_bases": 23796720,
+      "replicons": [
+        {
+          "accession": "AE017263.1",
+          "type": "chromosome",
+          "target_bases": 23796720,
+          "observed_bases": 23796720,
+          "coverage": 30.0,
+          "read_count": 2365,
+          "native_length_or_terminal_budget_trim_count": 1
+        }
+      ]
+    },
+    {
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 101,
+      "read_count": 7513,
+      "zero_sequence_mismatches": true,
+      "total_bases": 75032910,
+      "replicons": [
+        {
+          "accession": "CP001628.1",
+          "type": "chromosome",
+          "target_bases": 75032910,
+          "observed_bases": 75032910,
+          "coverage": 30.0,
+          "read_count": 7513,
+          "native_length_or_terminal_budget_trim_count": 1
+        }
+      ]
+    },
+    {
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 101,
+      "read_count": 10086,
+      "zero_sequence_mismatches": true,
+      "total_bases": 100458720,
+      "replicons": [
+        {
+          "accession": "AL935263.2",
+          "type": "chromosome",
+          "target_bases": 99248190,
+          "observed_bases": 99248190,
+          "coverage": 30.0,
+          "read_count": 9923,
+          "native_length_or_terminal_budget_trim_count": 1
+        },
+        {
+          "accession": "CR377164.1",
+          "type": "plasmid",
+          "target_bases": 57510,
+          "observed_bases": 57510,
+          "coverage": 30.0,
+          "read_count": 30,
+          "native_length_or_terminal_budget_trim_count": 30
+        },
+        {
+          "accession": "CR377165.1",
+          "type": "plasmid",
+          "target_bases": 70950,
+          "observed_bases": 70950,
+          "coverage": 30.0,
+          "read_count": 30,
+          "native_length_or_terminal_budget_trim_count": 30
+        },
+        {
+          "accession": "CR377166.1",
+          "type": "plasmid",
+          "target_bases": 1082070,
+          "observed_bases": 1082070,
+          "coverage": 30.0,
+          "read_count": 103,
+          "native_length_or_terminal_budget_trim_count": 1
+        }
+      ]
+    }
+  ]
+}

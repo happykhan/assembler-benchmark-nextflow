@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "reference_id": "mflorum-l1-whole",
+  "download_sha256": "6e3d58c78169d12fb4110a9bb36de162d9d7bf6c85faaf9db7e535abb2383de7",
+  "canonical_fasta_sha256": "80c57d8093763408fde076cc138062418676aea296cf8d5f045de9bae7a1f24a",
+  "molecules": [
+    {
+      "accession": "AE017263.1",
+      "type": "chromosome",
+      "topology": "circular",
+      "length_bp": 793224,
+      "sequence_sha256": "482e1913019c60eefa4904e329c467304db8c751b8065a42975fafc85e45993a",
+      "gc_bases": 214333,
+      "gc_fraction": 0.2702048853791615,
+      "ambiguous_bases": 0
+    }
+  ],
+  "source_urls": [
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/AE017263.1"
+  ]
+}

@@ -123,7 +123,7 @@ class PlanningTests(unittest.TestCase):
 
     def admit_standard_fixtures(self):
         """Metadata-only fixtures; no reference download or sequence claim."""
-        (self.project / 'assets/standard.json').write_bytes((ROOT / 'assets/standard.json').read_bytes())
+        (self.project / 'assets/standard.json').write_bytes((ROOT / 'assets/standard-baseline.json').read_bytes())
         registry_path = self.project / 'assets/references.json'
         registry = json.loads(registry_path.read_text())
         identifiers = ('bsub-168-whole', 'llactis-il1403-whole')
@@ -169,7 +169,7 @@ class PlanningTests(unittest.TestCase):
                 build_plan(self.project, preset='standard')
         registry_path.write_text(original)
         with self.assertRaisesRegex(ValueError, 'not admitted'):
-            build_plan(self.project, preset='standard', groups='plasmids')
+            build_plan(self.project, preset='standard', groups='reproducibility')
         cases = self.project / 'assets/standard.json'
         data = json.loads(cases.read_text())
         data[0]['reference_id'] = 'bsub-168-quick'

@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": "desktop",
+    "status": 200,
+    "outcomes": 1,
+    "downloads": 3,
+    "search": true,
+    "group_filter": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "status": 200,
+    "outcomes": 1,
+    "downloads": 3,
+    "search": true,
+    "group_filter": true,
+    "overflow": false,
+    "errors": []
+  }
+]

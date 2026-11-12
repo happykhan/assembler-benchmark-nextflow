@@ -314,9 +314,11 @@ def render_html(records, expected_slots, run_id):
                     + f'<td>{link}<a href="{escape(evidence, quote=True)}">Evidence</a></td></tr>')
     quick = any(r['preset'] == 'quick' for r in records)
     baseline = any(r['case'].get('purpose') == 'baseline_validation' for r in records)
+    beta = any(r['case'].get('simulation_method') == 'native-error-free-v1' for r in records)
     real = any(r.get('track') == 'real' for r in records)
     label = ('Real-data small-plasmid pilot — new comparison on deposited ONT data; not historical reproduction' if real else
              'Quick workflow check — excluded from headline comparisons' if quick else
+             'Beta Standard — excluded from headline comparisons' if beta else
              'Standard whole-genome baseline validation — excluded from headline comparisons' if baseline else
              'Standard benchmark' if all(r.get('headline_eligible') for r in records) else
              'Standard validation — excluded from headline comparisons')

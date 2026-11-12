@@ -1,0 +1,1748 @@
+{
+  "assembler_definitions": {
+    "flye-2.9.6": {
+      "adapter": "flye",
+      "container": null,
+      "environment": "flye-2-9-6",
+      "id": "flye-2.9.6",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "flye",
+      "version": "2.9.6"
+    },
+    "raven-1.8.3": {
+      "adapter": "raven",
+      "container": null,
+      "environment": "raven-1-8-3",
+      "id": "raven-1.8.3",
+      "manifest": "environments/pixi.toml",
+      "status": "admitted",
+      "tool": "raven",
+      "version": "1.8.3"
+    }
+  },
+  "assemblers": [
+    "flye-2.9.6",
+    "raven-1.8.3"
+  ],
+  "cases": [
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 101",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "read-quality",
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-baseline-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 202",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "read-quality",
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-baseline-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 303",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "read-quality",
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-baseline-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 404",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "read-quality",
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-baseline-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 505",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "read-quality",
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-baseline-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 101",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-llactis-il1403-whole-baseline-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "llactis-il1403-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 202",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-llactis-il1403-whole-baseline-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "llactis-il1403-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 303",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-llactis-il1403-whole-baseline-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "llactis-il1403-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 404",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-llactis-il1403-whole-baseline-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "llactis-il1403-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 505",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-llactis-il1403-whole-baseline-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "llactis-il1403-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 101",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mflorum-l1-whole-baseline-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mflorum-l1-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 202",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mflorum-l1-whole-baseline-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mflorum-l1-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 303",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mflorum-l1-whole-baseline-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mflorum-l1-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 404",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mflorum-l1-whole-baseline-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mflorum-l1-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 505",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mflorum-l1-whole-baseline-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mflorum-l1-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 101",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mluteus-nctc2665-whole-baseline-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 202",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mluteus-nctc2665-whole-baseline-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 303",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mluteus-nctc2665-whole-baseline-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 404",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mluteus-nctc2665-whole-baseline-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 505",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition"
+      ],
+      "headline_eligible": false,
+      "id": "beta-mluteus-nctc2665-whole-baseline-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "mluteus-nctc2665-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 101",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-baseline-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 202",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-baseline-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 303",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-baseline-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 404",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-baseline-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: baseline; error-free whole native genome; seed 505",
+      "group": "gc-composition",
+      "groups": [
+        "gc-composition",
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-baseline-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 10,
+      "description": "Beta Standard: low-coverage, seed 101",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-low-coverage-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 10,
+      "description": "Beta Standard: low-coverage, seed 202",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-low-coverage-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 10,
+      "description": "Beta Standard: low-coverage, seed 303",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-low-coverage-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 10,
+      "description": "Beta Standard: low-coverage, seed 404",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-low-coverage-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 10,
+      "description": "Beta Standard: low-coverage, seed 505",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-low-coverage-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: short, seed 101",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-short-seed-101",
+      "length_mean": 2000,
+      "length_sd": 400,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: short, seed 202",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-short-seed-202",
+      "length_mean": 2000,
+      "length_sd": 400,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: short, seed 303",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-short-seed-303",
+      "length_mean": 2000,
+      "length_sd": 400,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: short, seed 404",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-short-seed-404",
+      "length_mean": 2000,
+      "length_sd": 400,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: short, seed 505",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-short-seed-505",
+      "length_mean": 2000,
+      "length_sd": 400,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: bimodal, seed 101",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-bimodal-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: bimodal, seed 202",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-bimodal-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 202,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: bimodal, seed 303",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-bimodal-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 303,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: bimodal, seed 404",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-bimodal-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 404,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: bimodal, seed 505",
+      "group": "read-quality",
+      "groups": [
+        "read-quality"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-bimodal-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 505,
+      "short_fraction": 0.5,
+      "short_length_mean": 1000,
+      "short_length_sd": 250,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: long, seed 101",
+      "group": "repeats-structure",
+      "groups": [
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-long-seed-101",
+      "length_mean": 20000,
+      "length_sd": 4000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: long, seed 202",
+      "group": "repeats-structure",
+      "groups": [
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-long-seed-202",
+      "length_mean": 20000,
+      "length_sd": 4000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: long, seed 303",
+      "group": "repeats-structure",
+      "groups": [
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-long-seed-303",
+      "length_mean": 20000,
+      "length_sd": 4000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: long, seed 404",
+      "group": "repeats-structure",
+      "groups": [
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-long-seed-404",
+      "length_mean": 20000,
+      "length_sd": 4000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: long, seed 505",
+      "group": "repeats-structure",
+      "groups": [
+        "repeats-structure"
+      ],
+      "headline_eligible": false,
+      "id": "beta-bsub-168-whole-long-seed-505",
+      "length_mean": 20000,
+      "length_sd": 4000,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "bsub-168-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: low-plasmid-depth; error-free whole native genome; seed 101",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 0.25,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: low-plasmid-depth; error-free whole native genome; seed 202",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 0.25,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: low-plasmid-depth; error-free whole native genome; seed 303",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 0.25,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: low-plasmid-depth; error-free whole native genome; seed 404",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 0.25,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: low-plasmid-depth; error-free whole native genome; seed 505",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 0.25,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: high-plasmid-depth; error-free whole native genome; seed 101",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 4,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 101,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: high-plasmid-depth; error-free whole native genome; seed 202",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 4,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 202,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: high-plasmid-depth; error-free whole native genome; seed 303",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 4,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 303,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: high-plasmid-depth; error-free whole native genome; seed 404",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 4,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 404,
+      "simulation_method": "native-error-free-v1"
+    },
+    {
+      "coverage": 30,
+      "description": "Beta Standard: high-plasmid-depth; error-free whole native genome; seed 505",
+      "group": "plasmids",
+      "groups": [
+        "plasmids"
+      ],
+      "headline_eligible": false,
+      "id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505",
+      "length_mean": 10000,
+      "length_sd": 2000,
+      "plasmid_relative_depth": 4,
+      "preset": "standard",
+      "purpose": "baseline_validation",
+      "reference_id": "lplantarum-wcfs1-whole",
+      "seed": 505,
+      "simulation_method": "native-error-free-v1"
+    }
+  ],
+  "expected_slots": 110,
+  "headline_eligible": false,
+  "plan_sha256": "0eb3bc5b969adf473de2922eecdcd57aa04911b8d35718f5a3a804e830752db4",
+  "preset": "standard",
+  "purpose": "baseline_validation",
+  "reference_ids": [
+    "bsub-168-whole",
+    "llactis-il1403-whole",
+    "lplantarum-wcfs1-whole",
+    "mflorum-l1-whole",
+    "mluteus-nctc2665-whole"
+  ],
+  "references": {
+    "bsub-168-whole": {
+      "accession": "GCF_000009045.1",
+      "admission_receipt": "assets/admissions/bsub-168-whole.json",
+      "admission_receipt_sha256": "25bc5381255d2ee168b4707138407b919407462ad1a8bbd77ef2c3d5e6624eaf",
+      "attribution": [
+        {
+          "citation": "Barbe et al. (2009), From a consortium sequence to a unified sequence: the Bacillus subtilis 168 reference genome a decade later.",
+          "url": "https://doi.org/10.1099/mic.0.027839-0"
+        },
+        {
+          "citation": "Belda et al. (2013), An updated metabolic view of the Bacillus subtilis 168 genome.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23429746/"
+        }
+      ],
+      "bioproject": "PRJNA76",
+      "biosample": "SAMEA3138188",
+      "canonical_fasta_sha256": "2680ee8c5663aa8de28159faa7b97b1adaa85e2547a45083ab9f6da40c45ee1d",
+      "compression": "gzip",
+      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+      "download_sha256": "1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5",
+      "id": "bsub-168-whole",
+      "molecules": [
+        {
+          "accession": "NC_000964.3",
+          "aliases": [
+            "AL009126.3"
+          ],
+          "ambiguous_bases": 0,
+          "gc_bases": 1834396,
+          "gc_fraction": 0.43514408130171556,
+          "length_bp": 4215606,
+          "sequence_sha256": "71572ae0b98f44a6382b29e194e56c1f7d87477be8f53915fb06816f886b17b7",
+          "topology": "circular",
+          "type": "chromosome"
+        }
+      ],
+      "organism": "Bacillus subtilis subsp. subtilis str. 168",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "NCBI RefSeq original assembly and sequence record.",
+      "status": "admitted",
+      "strain": "168",
+      "taxid": 224308,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz"
+    },
+    "llactis-il1403-whole": {
+      "accession": "GCA_000006865.1",
+      "admission_receipt": "assets/admissions/llactis-il1403-whole.json",
+      "admission_receipt_sha256": "38f94b78a38bae3330ffe06412e74d526495fde25bdf03af8d2c9df8f8bd2eb7",
+      "attribution": [
+        {
+          "citation": "Bolotin et al. (2001), The complete genome sequence of the lactic acid bacterium Lactococcus lactis ssp. lactis IL1403.",
+          "url": "https://doi.org/10.1101/gr.169701"
+        },
+        {
+          "citation": "NCBI BioProject PRJNA72, original plasmid-free laboratory derivative and assembly GCA_000006865.1.",
+          "url": "https://www.ncbi.nlm.nih.gov/bioproject/72"
+        }
+      ],
+      "bioproject": "PRJNA72",
+      "biosample": "SAMN02603339",
+      "canonical_fasta_sha256": "e79b9aa32f75879924d05b193e7ad3f5e52ed1fcdfbad039f3da162405990e74",
+      "compression": "gzip",
+      "data_usage_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#molecular",
+      "download_sha256": "e6e445dfc5b9171523b3e5c7afb521bf5adbac7d2f6e6ed27cc5a3eddd19c4c7",
+      "id": "llactis-il1403-whole",
+      "molecules": [
+        {
+          "accession": "AE005176.1",
+          "aliases": [
+            "NC_002662.1"
+          ],
+          "ambiguous_bases": 0,
+          "gc_bases": 835748,
+          "gc_fraction": 0.3532938308387467,
+          "length_bp": 2365589,
+          "sequence_sha256": "7f45c2746a9ee6a8b2303150dc8450a5ffd42570a4f6aa43adaca116a0c76371",
+          "topology": "circular",
+          "type": "chromosome"
+        }
+      ],
+      "organism": "Lactococcus lactis subsp. lactis Il1403",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "NCBI GenBank original IL1403 assembly; later CP033607 resequencing excluded.",
+      "status": "admitted",
+      "strain": "IL1403",
+      "taxid": 272623,
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/006/865/GCA_000006865.1_ASM686v1/GCA_000006865.1_ASM686v1_genomic.fna.gz"
+    },
+    "lplantarum-wcfs1-whole": {
+      "accession": "AL935263.2,CR377164.1,CR377165.1,CR377166.1",
+      "admission_receipt": "assets/admissions/lplantarum-wcfs1-whole.json",
+      "admission_receipt_sha256": "b0d8ab31506f718fa96b93d7c06d40c8c95d83f204d95eed5e50b9d28f23a1a2",
+      "attribution": [
+        {
+          "citation": "Lactiplantibacillus plantarum WCFS1 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/AL935263.2"
+        }
+      ],
+      "canonical_fasta_sha256": "a97eec80225128fce2366a625e0b5cf9aadb0d8cbf3f6919ca3b4bff941321fb",
+      "compression": "none",
+      "download_sha256": "44e02ddd8b79f4171b64526bbe84fcc436422d357899557d3baa2cb7099faaed",
+      "id": "lplantarum-wcfs1-whole",
+      "molecules": [
+        {
+          "accession": "AL935263.2",
+          "ambiguous_bases": 0,
+          "gc_bases": 1471086,
+          "gc_fraction": 0.44466886499391073,
+          "length_bp": 3308273,
+          "sequence_sha256": "c6d163d1bf47b23075f01cd1e457213db6649ca7b80d071eb08eaaf34cf55b02",
+          "topology": "circular",
+          "type": "chromosome"
+        },
+        {
+          "accession": "CR377164.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 757,
+          "gc_fraction": 0.39488784559207096,
+          "length_bp": 1917,
+          "sequence_sha256": "1f7873b7c07c363ff93f9d1cd58660bfd4f9619b8039a1362dbbcd7d76b935d9",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CR377165.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 812,
+          "gc_fraction": 0.34334038054968286,
+          "length_bp": 2365,
+          "sequence_sha256": "5c9db0e8c712a36343b7012866d7bafa45e0ba8889c6a30f3145c70075c39cd6",
+          "topology": "circular",
+          "type": "plasmid"
+        },
+        {
+          "accession": "CR377166.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 14727,
+          "gc_fraction": 0.4083007568826416,
+          "length_bp": 36069,
+          "sequence_sha256": "5df46440b1aac7063f2005dd3dcffeb75e1a9b6addb19503400b1032b890c96c",
+          "topology": "circular",
+          "type": "plasmid"
+        }
+      ],
+      "organism": "Lactiplantibacillus plantarum WCFS1",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "sources": [
+        {
+          "sha256": "eb754b19e6091e0bd30121ccf9ab48386726f4a648260b87eb2c44522e4880ec",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AL935263.2"
+        },
+        {
+          "sha256": "1944a04b2c54f3344eb5dcb775f5e79a8d8a53c7887ba1bf678bafd8b3ce023b",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377164.1"
+        },
+        {
+          "sha256": "b5324a1379101b6d6f9009571f0ff616fb0f305f8ce3c069a68294c047f1c6fb",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377165.1"
+        },
+        {
+          "sha256": "5f1dbe455a9037bae413925c8986466991627a6655604dcd721b8b2a4a1c8286",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377166.1"
+        }
+      ],
+      "status": "admitted",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AL935263.2"
+    },
+    "mflorum-l1-whole": {
+      "accession": "AE017263.1",
+      "admission_receipt": "assets/admissions/mflorum-l1-whole.json",
+      "admission_receipt_sha256": "28d6e28aac75afbef68d0ee39bbe82669c04af0f8162fbfcec78d3ed329cc8e1",
+      "attribution": [
+        {
+          "citation": "Mesoplasma florum L1 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/AE017263.1"
+        }
+      ],
+      "canonical_fasta_sha256": "80c57d8093763408fde076cc138062418676aea296cf8d5f045de9bae7a1f24a",
+      "compression": "none",
+      "download_sha256": "6e3d58c78169d12fb4110a9bb36de162d9d7bf6c85faaf9db7e535abb2383de7",
+      "id": "mflorum-l1-whole",
+      "molecules": [
+        {
+          "accession": "AE017263.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 214333,
+          "gc_fraction": 0.2702048853791615,
+          "length_bp": 793224,
+          "sequence_sha256": "482e1913019c60eefa4904e329c467304db8c751b8065a42975fafc85e45993a",
+          "topology": "circular",
+          "type": "chromosome"
+        }
+      ],
+      "organism": "Mesoplasma florum L1",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "sources": [
+        {
+          "sha256": "6e3d58c78169d12fb4110a9bb36de162d9d7bf6c85faaf9db7e535abb2383de7",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AE017263.1"
+        }
+      ],
+      "status": "admitted",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AE017263.1"
+    },
+    "mluteus-nctc2665-whole": {
+      "accession": "CP001628.1",
+      "admission_receipt": "assets/admissions/mluteus-nctc2665-whole.json",
+      "admission_receipt_sha256": "e07aeb7c5e6b47e29d437afff0064442f530e2fa8758ac365739ed73c084658f",
+      "attribution": [
+        {
+          "citation": "Micrococcus luteus NCTC 2665 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/CP001628.1"
+        }
+      ],
+      "canonical_fasta_sha256": "05f4814824e2777e8505e26dd87467d2f2469122a1f724db0aa0f942836e23ad",
+      "compression": "none",
+      "download_sha256": "4ef1d6bfdce225dbd19c31c045d886f178a1a41fc857e056c0f61fb5c5fd338c",
+      "id": "mluteus-nctc2665-whole",
+      "molecules": [
+        {
+          "accession": "CP001628.1",
+          "ambiguous_bases": 0,
+          "gc_bases": 1825682,
+          "gc_fraction": 0.7299524968443847,
+          "length_bp": 2501097,
+          "sequence_sha256": "1e7e1e15e7a529e3e8d2f7a7b854e97c142152c8947dceaf0994bb514d02af5c",
+          "topology": "circular",
+          "type": "chromosome"
+        }
+      ],
+      "organism": "Micrococcus luteus NCTC 2665",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "sources": [
+        {
+          "sha256": "4ef1d6bfdce225dbd19c31c045d886f178a1a41fc857e056c0f61fb5c5fd338c",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP001628.1"
+        }
+      ],
+      "status": "admitted",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP001628.1"
+    }
+  },
+  "resource_policy": {
+    "assembly": {
+      "cpus": 4,
+      "default_memory_gb": 16,
+      "memory_gb_by_tool": {
+        "flye": 16,
+        "raven": 16
+      },
+      "time_minutes": 240
+    },
+    "queue_capacity": 1000,
+    "simulation": {
+      "cpus": 1,
+      "time_minutes": 120
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "assemblers": [
+      "flye-2.9.6",
+      "raven-1.8.3"
+    ],
+    "cases": [],
+    "groups": []
+  },
+  "slots": [
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-llactis-il1403-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mflorum-l1-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-mluteus-nctc2665-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-baseline-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-low-coverage-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-short-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-short-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-bimodal-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-bsub-168-whole-long-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-bsub-168-whole-long-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-low-plasmid-depth-seed-505"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-101"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-202"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-303"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-404"
+    },
+    {
+      "assembler": "flye-2.9.6",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505"
+    },
+    {
+      "assembler": "raven-1.8.3",
+      "case_id": "beta-lplantarum-wcfs1-whole-high-plasmid-depth-seed-505"
+    }
+  ],
+  "source_file_sha256": {
+    "assets/admissions/bsub-168-whole.json": "25bc5381255d2ee168b4707138407b919407462ad1a8bbd77ef2c3d5e6624eaf",
+    "assets/admissions/llactis-il1403-whole.json": "38f94b78a38bae3330ffe06412e74d526495fde25bdf03af8d2c9df8f8bd2eb7",
+    "assets/admissions/lplantarum-wcfs1-whole.json": "b0d8ab31506f718fa96b93d7c06d40c8c95d83f204d95eed5e50b9d28f23a1a2",
+    "assets/admissions/mflorum-l1-whole.json": "28d6e28aac75afbef68d0ee39bbe82669c04af0f8162fbfcec78d3ed329cc8e1",
+    "assets/admissions/mluteus-nctc2665-whole.json": "e07aeb7c5e6b47e29d437afff0064442f530e2fa8758ac365739ed73c084658f",
+    "assets/assemblers.json": "520d4027232f504f1781b7e96381477c4399819a9b4e44d7fb4184baa449980c",
+    "assets/groups.json": "1b8a30e0bcc1f341d38be60f480bc04de3fd049d01b5542e8bb86400bd860930",
+    "assets/references.json": "899d8b0464aacf5741da5dfd380704e9a381158000e042b822030b6cc0418fed",
+    "assets/standard.json": "f87265527b26f17362b61835eef60f450a32d165c24d83b84a7746933eae828e",
+    "environments/pixi.lock": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+    "environments/pixi.toml": "298ac6b7ab613a9c499adbc9e76cf0a7e1b98aac77abf7a575e618df9fd1a6a9"
+  }
+}

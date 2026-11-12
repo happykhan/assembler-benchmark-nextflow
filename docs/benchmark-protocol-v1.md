@@ -1,5 +1,10 @@
 # Benchmark protocol v1
 
+**Beta implementation update — 12 November:** the user subsequently authorised
+a practical beta Standard run and website publication. Its scope and executable
+budget are in [Beta Standard](beta-standard.md). That beta is not the full
+scientific release proposed below; error scenarios remain deferred.
+
 **Review draft, revised 12 November 2026. Full protocol not yet approved, frozen or executable.**
 
 Review decisions recorded: include a fifth, below-30% GC reference; use five

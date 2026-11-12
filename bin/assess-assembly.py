@@ -76,6 +76,8 @@ def assess(args):
                             'memory_scope': 'Sampled sum of resident memory across the assembler process tree; shared pages may be counted more than once.'},
               'limitations': (['Quick is a workflow check, excluded from headline comparisons.']
                              if case.get('preset', 'quick') == 'quick' else
+                             ['Beta Standard development panel, excluded from headline comparisons.']
+                             if case.get('simulation_method') == 'native-error-free-v1' else
                              ['Initial whole-genome baseline validation, excluded from headline comparisons.']
                              if case.get('purpose') == 'baseline_validation' else [])}
     try:

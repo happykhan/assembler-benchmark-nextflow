@@ -16,7 +16,8 @@ from benchlib.io import digest, fasta_lengths, fastq_records, length_statistics,
 
 CASE_FIELDS = {'id', 'group', 'reference_id', 'description', 'coverage', 'seed',
                'length_mean', 'length_sd', 'short_fraction', 'short_length_mean',
-               'short_length_sd', 'preset', 'purpose', 'headline_eligible'}
+               'short_length_sd', 'preset', 'purpose', 'headline_eligible',
+               'simulation_method', 'plasmid_relative_depth', 'groups'}
 
 
 def validate_case(case):
@@ -94,12 +95,13 @@ def verify_reference(reference, case, provenance_path=None):
         if provenance.get('mode') != 'whole_genome' or provenance.get('status') != 'admitted':
             raise ValueError('Standard simulation requires an admitted whole-genome reference')
         molecules = provenance.get('molecules', [])
-        if len(molecules) != 1 or molecules[0].get('type') != 'chromosome':
+        native = case.get('simulation_method') == 'native-error-free-v1'
+        if not native and (len(molecules) != 1 or molecules[0].get('type') != 'chromosome'):
             raise ValueError('Initial Standard baseline supports one verified chromosome only')
-        if molecules[0].get('topology') != 'circular':
+        if any(m.get('topology') != 'circular' for m in molecules):
             raise ValueError('Initial Standard baseline requires verified native circular topology')
         records = [line.strip() for line in Path(reference).read_text().splitlines() if line.startswith('>')]
-        if len(records) != 1 or 'circular=true' not in records[0].split():
+        if len(records) != len(molecules) or any('circular=true' not in r.split() for r in records):
             raise ValueError('Whole-genome FASTA does not declare native circular topology')
     return provenance
 
@@ -108,6 +110,11 @@ def simulate(reference, case, destination, metadata, reference_provenance=None):
     validate_case(case)
     reference = Path(reference).resolve()
     provenance = verify_reference(reference, case, reference_provenance)
+    if case.get('simulation_method') == 'native-error-free-v1':
+        if not provenance or case.get('preset') != 'standard':
+            raise ValueError('Native Standard sampler requires a whole-reference case')
+        from benchlib.standard_reads import simulate_standard
+        return simulate_standard(reference, case, destination, metadata, provenance)
     destination = Path(destination).resolve()
     metadata = Path(metadata).resolve()
     if destination.exists() or metadata.exists():

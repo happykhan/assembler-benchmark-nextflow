@@ -58,7 +58,7 @@ def unique_rows(rows, label):
 
 
 def validate_standard_reference(reference):
-    """The first Standard slice only admits checked whole chromosomes."""
+    """Standard uses whole native circular chromosome/plasmid inventories."""
     from .references import validate_reference_definition
 
     validate_reference_definition(reference)
@@ -67,12 +67,10 @@ def validate_standard_reference(reference):
     if 'quick_slice_bases' in reference or reference.get('purpose') == 'workflow_check':
         raise ValueError('Quick fragments cannot be Standard references')
     molecules = reference.get('molecules', [])
-    if len(molecules) != 1 or molecules[0].get('type') != 'chromosome':
-        raise ValueError('Initial Standard baseline admits one chromosome per isolate')
-    if molecules[0].get('topology') != 'circular':
-        raise ValueError('Initial Standard baseline requires admitted native circular topology')
-    if molecules[0].get('ambiguous_bases') != 0:
-        raise ValueError('Initial Standard baseline requires an unambiguous reference chromosome')
+    if sum(m.get('type') == 'chromosome' for m in molecules) != 1:
+        raise ValueError('Standard requires exactly one chromosome plus native plasmids')
+    if any(m.get('topology') != 'circular' or m.get('ambiguous_bases') != 0 for m in molecules):
+        raise ValueError('Standard requires unambiguous native circular molecules; use diagnostics for linear cases')
     return reference
 
 
@@ -103,6 +101,9 @@ def validate_case(case, groups, references, preset='quick'):
     identifier(case.get('id'), 'case ID')
     if case.get('group') not in groups:
         raise ValueError('Case uses an unknown group: ' + case['id'])
+    memberships = case.get('groups', [case['group']])
+    if not isinstance(memberships, list) or not memberships or set(memberships)-set(groups) or case['group'] not in memberships:
+        raise ValueError('Invalid scenario memberships: ' + case['id'])
     if case.get('reference_id') not in references:
         raise ValueError('Case uses an unknown reference: ' + case['id'])
     purpose = 'workflow_check' if preset == 'quick' else 'baseline_validation'
@@ -135,7 +136,13 @@ def validate_case(case, groups, references, preset='quick'):
                 raise ValueError('Invalid case ' + field)
     supported = {'id', 'group', 'reference_id', 'description', 'preset', 'purpose', 'headline_eligible',
                  'coverage', 'seed', 'length_mean', 'length_sd', 'short_fraction',
-                 'short_length_mean', 'short_length_sd'}
+                 'short_length_mean', 'short_length_sd', 'plasmid_relative_depth', 'simulation_method', 'groups'}
+    if 'simulation_method' in case and case['simulation_method'] != 'native-error-free-v1':
+        raise ValueError('Unsupported Standard simulation method')
+    if 'plasmid_relative_depth' in case:
+        depth = case['plasmid_relative_depth']
+        if preset != 'standard' or type(depth) not in (int, float) or not math.isfinite(depth) or depth <= 0:
+            raise ValueError('Invalid plasmid relative depth')
     if set(case) - supported:
         raise ValueError('Unsupported ' + preset + ' simulation fields: ' + ', '.join(sorted(set(case) - supported)))
 
@@ -177,7 +184,7 @@ def catalogue(project):
             'diagnostic_groups': {key: {'new_execution': 'deferred' if key == 'S6' else 'implemented', 'original_source_required': key == 'S7'} for key in ('S1','S2','S3','S4','S5','S6','S7')},
             'real_cases': real_cases, 'schema_version': 1, 'scope': 'single_isolate_bacterial_long_read',
             'presets': {'quick': 'workflow_check', 'standard': standard_status},
-            'standard_scope': 'Small simulated baseline validation; full scientific panel is not admitted',
+            'standard_scope': 'Beta simulated panel; five seeds, native genomes, error-free contrasts; no headline rankings',
             'standard_admission_error': admission_error,
             'groups': list(groups.values()), 'cases': list(cases.values()) + standard_cases,
             'references': list(references.values()), 'aliases': registry['aliases'],
@@ -215,7 +222,7 @@ def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None
     if unavailable:
         raise ValueError('Groups are not admitted in ' + preset.title() + ': ' + ', '.join(unavailable))
     selected = [row for row in case_rows.values()
-                if (not selected_groups or row['group'] in selected_groups)
+                if (not selected_groups or set(row.get('groups', [row['group']])) & set(selected_groups))
                 and (not selected_cases or row['id'] in selected_cases)]
     if selected_cases and set(selected_cases) != {row['id'] for row in selected}:
         raise ValueError('Selected cases are excluded by the selected groups')

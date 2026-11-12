@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "reference_id": "mluteus-nctc2665-whole",
+  "download_sha256": "4ef1d6bfdce225dbd19c31c045d886f178a1a41fc857e056c0f61fb5c5fd338c",
+  "canonical_fasta_sha256": "05f4814824e2777e8505e26dd87467d2f2469122a1f724db0aa0f942836e23ad",
+  "molecules": [
+    {
+      "accession": "CP001628.1",
+      "type": "chromosome",
+      "topology": "circular",
+      "length_bp": 2501097,
+      "sequence_sha256": "1e7e1e15e7a529e3e8d2f7a7b854e97c142152c8947dceaf0994bb514d02af5c",
+      "gc_bases": 1825682,
+      "gc_fraction": 0.7299524968443847,
+      "ambiguous_bases": 0
+    }
+  ],
+  "source_urls": [
+    "https://www.ebi.ac.uk/ena/browser/api/fasta/CP001628.1"
+  ]
+}

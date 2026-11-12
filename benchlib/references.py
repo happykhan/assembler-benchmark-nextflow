@@ -47,7 +47,15 @@ def source_records(data, compression='gzip'):
         data = gzip.decompress(data)
     elif compression != 'none':
         raise ValueError('Unsupported reference source compression')
-    return read_fasta(data.decode('ascii'))
+    records = read_fasta(data.decode('ascii'))
+    # ENA FASTA uses ENA|accession|accession.version as its first field.
+    normalised = {}
+    for name, sequence in records.items():
+        accession = name.split('|')[-1] if name.startswith('ENA|') else name
+        if accession in normalised:
+            raise ValueError('Duplicate source accession after FASTA header normalisation')
+        normalised[accession] = sequence
+    return normalised
 
 
 def sequence_statistics(sequence):
@@ -142,9 +150,13 @@ def cached_source(row, cache, offline):
             with tempfile.NamedTemporaryFile(dir=cache, delete=False) as handle:
                 temporary = Path(handle.name)
                 try:
-                    with urllib.request.urlopen(row['url'], timeout=60) as response:
-                        while chunk := response.read(1024 * 1024):
-                            handle.write(chunk)
+                    sources = row.get('sources') or [{'url': row['url']}]
+                    for component in sources:
+                        with urllib.request.urlopen(component['url'], timeout=90) as response:
+                            payload = response.read()
+                        if component.get('sha256') and sha256_bytes(payload) != component['sha256']:
+                            raise ValueError('Reference component checksum mismatch')
+                        handle.write(payload)
                     handle.flush()
                     if sha256_bytes(temporary.read_bytes()) != checksum:
                         raise ValueError('Downloaded reference checksum mismatch')

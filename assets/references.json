@@ -182,6 +182,165 @@
       "status": "admitted",
       "truth_scope": "Same-BioSample deposited Trycycler-derived reference; not independently established error-free truth. Full archive ONT modern comparison, not historical subset reproduction.",
       "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/028/596/225/GCA_028596225.1_ASM2859622v1/GCA_028596225.1_ASM2859622v1_genomic.fna.gz"
+    },
+    {
+      "id": "mflorum-l1-whole",
+      "organism": "Mesoplasma florum L1",
+      "accession": "AE017263.1",
+      "status": "admitted",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "compression": "none",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AE017263.1",
+      "sources": [
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AE017263.1",
+          "sha256": "6e3d58c78169d12fb4110a9bb36de162d9d7bf6c85faaf9db7e535abb2383de7"
+        }
+      ],
+      "download_sha256": "6e3d58c78169d12fb4110a9bb36de162d9d7bf6c85faaf9db7e535abb2383de7",
+      "canonical_fasta_sha256": "80c57d8093763408fde076cc138062418676aea296cf8d5f045de9bae7a1f24a",
+      "molecules": [
+        {
+          "accession": "AE017263.1",
+          "type": "chromosome",
+          "topology": "circular",
+          "length_bp": 793224,
+          "sequence_sha256": "482e1913019c60eefa4904e329c467304db8c751b8065a42975fafc85e45993a",
+          "gc_bases": 214333,
+          "gc_fraction": 0.2702048853791615,
+          "ambiguous_bases": 0
+        }
+      ],
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "attribution": [
+        {
+          "citation": "Mesoplasma florum L1 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/AE017263.1"
+        }
+      ],
+      "admission_receipt": "assets/admissions/mflorum-l1-whole.json",
+      "admission_receipt_sha256": "28d6e28aac75afbef68d0ee39bbe82669c04af0f8162fbfcec78d3ed329cc8e1"
+    },
+    {
+      "id": "mluteus-nctc2665-whole",
+      "organism": "Micrococcus luteus NCTC 2665",
+      "accession": "CP001628.1",
+      "status": "admitted",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "compression": "none",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP001628.1",
+      "sources": [
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CP001628.1",
+          "sha256": "4ef1d6bfdce225dbd19c31c045d886f178a1a41fc857e056c0f61fb5c5fd338c"
+        }
+      ],
+      "download_sha256": "4ef1d6bfdce225dbd19c31c045d886f178a1a41fc857e056c0f61fb5c5fd338c",
+      "canonical_fasta_sha256": "05f4814824e2777e8505e26dd87467d2f2469122a1f724db0aa0f942836e23ad",
+      "molecules": [
+        {
+          "accession": "CP001628.1",
+          "type": "chromosome",
+          "topology": "circular",
+          "length_bp": 2501097,
+          "sequence_sha256": "1e7e1e15e7a529e3e8d2f7a7b854e97c142152c8947dceaf0994bb514d02af5c",
+          "gc_bases": 1825682,
+          "gc_fraction": 0.7299524968443847,
+          "ambiguous_bases": 0
+        }
+      ],
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "attribution": [
+        {
+          "citation": "Micrococcus luteus NCTC 2665 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/CP001628.1"
+        }
+      ],
+      "admission_receipt": "assets/admissions/mluteus-nctc2665-whole.json",
+      "admission_receipt_sha256": "e07aeb7c5e6b47e29d437afff0064442f530e2fa8758ac365739ed73c084658f"
+    },
+    {
+      "id": "lplantarum-wcfs1-whole",
+      "organism": "Lactiplantibacillus plantarum WCFS1",
+      "accession": "AL935263.2,CR377164.1,CR377165.1,CR377166.1",
+      "status": "admitted",
+      "preparation": "whole_genome",
+      "purpose": "simulation_truth",
+      "compression": "none",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AL935263.2",
+      "sources": [
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/AL935263.2",
+          "sha256": "eb754b19e6091e0bd30121ccf9ab48386726f4a648260b87eb2c44522e4880ec"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377164.1",
+          "sha256": "1944a04b2c54f3344eb5dcb775f5e79a8d8a53c7887ba1bf678bafd8b3ce023b"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377165.1",
+          "sha256": "b5324a1379101b6d6f9009571f0ff616fb0f305f8ce3c069a68294c047f1c6fb"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/CR377166.1",
+          "sha256": "5f1dbe455a9037bae413925c8986466991627a6655604dcd721b8b2a4a1c8286"
+        }
+      ],
+      "download_sha256": "44e02ddd8b79f4171b64526bbe84fcc436422d357899557d3baa2cb7099faaed",
+      "canonical_fasta_sha256": "a97eec80225128fce2366a625e0b5cf9aadb0d8cbf3f6919ca3b4bff941321fb",
+      "molecules": [
+        {
+          "accession": "AL935263.2",
+          "type": "chromosome",
+          "topology": "circular",
+          "length_bp": 3308273,
+          "sequence_sha256": "c6d163d1bf47b23075f01cd1e457213db6649ca7b80d071eb08eaaf34cf55b02",
+          "gc_bases": 1471086,
+          "gc_fraction": 0.44466886499391073,
+          "ambiguous_bases": 0
+        },
+        {
+          "accession": "CR377164.1",
+          "type": "plasmid",
+          "topology": "circular",
+          "length_bp": 1917,
+          "sequence_sha256": "1f7873b7c07c363ff93f9d1cd58660bfd4f9619b8039a1362dbbcd7d76b935d9",
+          "gc_bases": 757,
+          "gc_fraction": 0.39488784559207096,
+          "ambiguous_bases": 0
+        },
+        {
+          "accession": "CR377165.1",
+          "type": "plasmid",
+          "topology": "circular",
+          "length_bp": 2365,
+          "sequence_sha256": "5c9db0e8c712a36343b7012866d7bafa45e0ba8889c6a30f3145c70075c39cd6",
+          "gc_bases": 812,
+          "gc_fraction": 0.34334038054968286,
+          "ambiguous_bases": 0
+        },
+        {
+          "accession": "CR377166.1",
+          "type": "plasmid",
+          "topology": "circular",
+          "length_bp": 36069,
+          "sequence_sha256": "5df46440b1aac7063f2005dd3dcffeb75e1a9b6addb19503400b1032b890c96c",
+          "gc_bases": 14727,
+          "gc_fraction": 0.4083007568826416,
+          "ambiguous_bases": 0
+        }
+      ],
+      "source": "ENA versioned sequence records; beta simulation reference",
+      "attribution": [
+        {
+          "citation": "Lactiplantibacillus plantarum WCFS1 deposited sequence records",
+          "url": "https://www.ebi.ac.uk/ena/browser/view/AL935263.2"
+        }
+      ],
+      "admission_receipt": "assets/admissions/lplantarum-wcfs1-whole.json",
+      "admission_receipt_sha256": "b0d8ab31506f718fa96b93d7c06d40c8c95d83f204d95eed5e50b9d28f23a1a2"
     }
   ],
   "schema_version": 1

@@ -34,7 +34,7 @@ Profiles: pixi (default), singularity, apptainer, docker; local, slurm, bmrc
         file(params.read_cache).mkdirs()
         // A reporting repair must not rerun a cached assembler on unchanged inputs.
         def referenceSource = sourceHash(projectDir, ['bin/prepare-reference.py', 'benchlib/references.py', 'assets/references.json'])
-        def simulationSource = sourceHash(projectDir, ['bin/simulate-reads.py', 'benchlib/io.py'])
+        def simulationSource = sourceHash(projectDir, ['bin/simulate-reads.py', 'benchlib/io.py', 'benchlib/standard_reads.py'])
         def assemblySource = sourceHash(projectDir, ['bin/run-assembler.py', 'benchlib/io.py', 'benchlib/process.py', 'benchlib/adapters.py', 'benchlib/miniasm.py', 'bin/run-miniasm.py', 'assets/assemblers.json'])
         def assessmentSource = sourceHash(projectDir, ['bin/assess-assembly.py', 'benchlib/assessment.py', 'benchlib/paper_recovery.py', 'benchlib/process.py', 'bin/assess-diagnostic.py', 'benchlib/evidence.py'] + sourcesUnder(projectDir, ['diagnostic_core']))
         def exportSource = sourceHash(projectDir, ['bin/export-results.py', 'benchlib/assessment.py', 'benchlib/report.py'] + sourcesUnder(projectDir, ['reporting']))
