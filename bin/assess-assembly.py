@@ -9,7 +9,7 @@ import sys
 import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from benchlib.assessment import METHOD, outcome, parse_paf, read_fasta, sha256, summarise, write_json
+from benchlib.assessment import METHOD, outcome, parse_paf, read_fasta, sha256, summarise, write_json, standard_reference_binding
 from benchlib.process import measured_run
 from benchlib.evidence import retain_workflow_evidence
 from benchlib.paper_recovery import assess_paper
@@ -103,8 +103,8 @@ def assess(args):
         if case.get('preset') == 'standard':
             if provenance.get('mode') != 'whole_genome' or provenance.get('status') != 'admitted':
                 raise ValueError('Standard assessment requires an admitted whole-genome reference')
-            if simulation.get('reference_provenance_sha256') != sha256(args.reference_provenance):
-                raise ValueError('Standard simulation/preparation provenance binding differs')
+            result['provenance']['simulation_reference_binding'] = standard_reference_binding(
+                case, simulation, provenance, sha256(args.reference_provenance))
         if execution.get('reads_sha256') != simulation.get('reads_sha256') or not execution.get('reads_sha256'):
             raise ValueError('Execution/input read hash binding differs')
         if execution.get('status') == 'completed':

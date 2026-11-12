@@ -89,6 +89,22 @@ def summarise(references, alignments, molecule_types=None):
     return results
 
 
+def standard_reference_binding(case, simulation, provenance, provenance_sha256):
+    """Native beta inputs bind canonical FASTA; legacy inputs also bind JSON."""
+    receipt = simulation.get('reference_provenance_sha256')
+    if receipt == provenance_sha256:
+        return 'reference_metadata_sha256'
+    if (receipt is None and case.get('simulation_method') == 'native-error-free-v1'
+            and simulation.get('version') == 'native-error-free-v1'
+            and simulation.get('reference_mode') == 'whole_genome'
+            and simulation.get('reference_sha256') == provenance.get('reference_sha256')
+            and provenance.get('reference_sha256')
+            and {r['accession'] for r in simulation.get('replicons', [])}
+                == {r['accession'] for r in provenance.get('molecules', [])}):
+        return 'canonical_reference_fasta_sha256'
+    raise ValueError('Standard simulation/preparation provenance binding differs')
+
+
 def outcome(replicons, query_count):
     if not query_count:
         return 'empty'

@@ -5,6 +5,7 @@ import tempfile
 import unittest
 
 from benchlib.io import fastq_records
+from benchlib.assessment import standard_reference_binding
 from benchlib.planning import build_plan
 from benchlib.standard_reads import budget, sample_records, simulate_standard
 
@@ -12,6 +13,22 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class BetaStandardTests(unittest.TestCase):
+    def test_native_reference_binding_matches_sampler_contract_without_weakening_legacy(self):
+        case={'simulation_method':'native-error-free-v1'}
+        provenance={'reference_sha256':'fasta-hash','molecules':[{'accession':'CHR.1'}]}
+        simulation={'version':'native-error-free-v1','reference_mode':'whole_genome',
+                    'reference_sha256':'fasta-hash','replicons':[{'accession':'CHR.1'}]}
+        self.assertEqual(standard_reference_binding(case,simulation,provenance,'json-hash'),
+                         'canonical_reference_fasta_sha256')
+        for changed in ({'reference_sha256':'changed'}, {'reference_provenance_sha256':'wrong'},
+                        {'replicons':[]}, {'version':'unknown'}):
+            with self.subTest(changed=changed),self.assertRaises(ValueError):
+                standard_reference_binding(case,dict(simulation,**changed),provenance,'json-hash')
+        with self.assertRaises(ValueError):
+            standard_reference_binding({},simulation,provenance,'json-hash')
+        self.assertEqual(standard_reference_binding({},dict(simulation,reference_provenance_sha256='json-hash'),provenance,'json-hash'),
+                         'reference_metadata_sha256')
+
     def test_plan_budget_and_shared_comparators(self):
         plan = build_plan(ROOT, preset='standard')
         self.assertEqual(plan['expected_slots'],110)
