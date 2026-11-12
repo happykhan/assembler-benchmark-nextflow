@@ -504,3 +504,11 @@ checks. The protocol does not authorise input deletion.
 
 Agreement on the design should be followed by a checked, non-executable protocol
 manifest and implementation plan. It is not itself permission to submit the suite.
+
+## Implementation validation authorisation — 12 November 2026
+
+The user separately authorised end-to-end software validation: Quick first, then
+a small selection of the new general and diagnostic paths on Cluster 3, with
+repairs for evidenced failures. This authorisation does not approve or activate
+the broader five-seed scientific panel above. Its references, scientific scenario
+matrix and deferred error scenarios remain under protocol review.

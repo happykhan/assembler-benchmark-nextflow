@@ -4,6 +4,10 @@ import gzip
 import hashlib
 import io
 import json
+import multiprocessing
+import threading
+import time
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import shutil
 import tarfile
@@ -11,11 +15,28 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from benchlib.general_inputs import _range, obtain_reads, prepare_general_input
+from benchlib.general_inputs import _range, _publish, locked, obtain_reads, obtain_reference, prepare_general_input
 from benchlib.general_planning import build_general_plan, load_collection, validate_general_plan
 from benchlib.io import digest
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _reference_worker(manifest, directory, cache, start, results):
+    start.wait(10)
+    try:
+        reference = obtain_reference(manifest, Path(directory), Path(cache), False)
+        results.put(('ok', reference.read_bytes()))
+    except Exception as error:
+        results.put(('error', repr(error)))
+
+
+def _killed_owner(path, ready):
+    with locked(Path(path)):
+        Path(path).parent.joinpath('interrupted.partial').write_bytes(b'original interrupted transfer')
+        ready.set()
+        # Parent terminates this process; the lock must remain fail-closed.
+        time.sleep(30)
 
 
 class GeneralCollectionTests(unittest.TestCase):
@@ -171,6 +192,128 @@ class GeneralInputTests(unittest.TestCase):
         with patch('urllib.request.urlopen',return_value=response):
             with self.assertRaisesRegex(ValueError,'refusing entire'):
                 _range({'size':1000,'download_url':'https://invalid.example'},512,10)
+
+
+class SharedCacheCoordinationTests(unittest.TestCase):
+    def test_concurrent_processes_share_one_download_and_extract_distinct_references(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            archive=root/'fixture-source.tar.gz'
+            references={'first':b'>chr1\nACGT\n','second':b'>chr2\nTGCA\n'}
+            with tarfile.open(archive,'w:gz') as stream:
+                for name,data in references.items():
+                    member=tarfile.TarInfo('reference_genomes/'+name+'.fasta');member.size=len(data)
+                    stream.addfile(member,io.BytesIO(data))
+            payload=archive.read_bytes()
+            requests=[]
+            class Handler(BaseHTTPRequestHandler):
+                def do_GET(self):
+                    requests.append(self.path)
+                    self.send_response(200);self.send_header('Content-Length',str(len(payload)));self.end_headers()
+                    time.sleep(0.15)  # Second process reaches the lock during the first transfer.
+                    self.wfile.write(payload)
+                def log_message(self,*args):
+                    pass
+            server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+            serving=threading.Thread(target=lambda:server.serve_forever(poll_interval=0.01),daemon=True)
+            serving.start()
+            ctx=multiprocessing.get_context('spawn');start=ctx.Event();results=ctx.Queue()
+            processes=[]
+            cache=root/'cache';cache.mkdir()
+            legacy=cache/'.reference-archive.lock';legacy.write_text('retained advisory lock file')
+            try:
+                for name,data in references.items():
+                    target=cache/name;target.mkdir()
+                    manifest={'case':{'id':name},'truth_sha256':hashlib.sha256(data).hexdigest(),
+                        'source_reference_archive':{'name':'reference_genomes.tar.gz','size':len(payload),
+                            'computed_md5':hashlib.md5(payload).hexdigest(),
+                            'download_url':f'http://127.0.0.1:{server.server_port}/archive'}}
+                    p=ctx.Process(target=_reference_worker,args=(manifest,str(target),str(cache),start,results))
+                    p.start();processes.append(p)
+                start.set()
+                outcomes=[results.get(timeout=15) for _ in processes]
+                for p in processes:
+                    p.join(10);self.assertEqual(p.exitcode,0)
+                self.assertEqual(sorted(outcomes),sorted(('ok',value) for value in references.values()))
+                self.assertEqual(requests,['/archive'])
+                self.assertEqual((cache/'reference_genomes.tar.gz').read_bytes(),payload)
+                self.assertEqual(legacy.read_text(),'retained advisory lock file')
+                self.assertFalse((cache/'.reference-archive.lock.d').exists())
+            finally:
+                for p in processes:
+                    if p.is_alive():
+                        p.terminate();p.join(5)
+                server.shutdown();server.server_close();serving.join(5)
+
+    def test_killed_owner_leaves_inspectable_lock_and_partial_without_automatic_steal(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);path=root/'.reference-archive.lock'
+            ctx=multiprocessing.get_context('spawn');ready=ctx.Event()
+            p=ctx.Process(target=_killed_owner,args=(str(path),ready));p.start()
+            try:
+                self.assertTrue(ready.wait(10))
+                owner_path=root/'.reference-archive.lock.d/owner.json'
+                owner=owner_path.read_bytes()
+                self.assertEqual(json.loads(owner)['pid'],p.pid)
+                p.terminate();p.join(5)
+                self.assertFalse(p.is_alive())
+                with self.assertRaisesRegex(TimeoutError,'No stale lock was removed'):
+                    with locked(path,timeout_seconds=0.04,poll_seconds=0.01):
+                        self.fail('Killed holder lock must not be stolen')
+                self.assertEqual(owner_path.read_bytes(),owner)
+                self.assertEqual((root/'interrupted.partial').read_bytes(),b'original interrupted transfer')
+            finally:
+                if p.is_alive():
+                    p.terminate();p.join(5)
+
+    def test_missing_owner_metadata_times_out_fail_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'cache.lock'
+            lock=Path(str(path)+'.d');lock.mkdir()
+            with self.assertRaisesRegex(TimeoutError,'metadata unavailable'):
+                with locked(path,timeout_seconds=0,poll_seconds=0.01):
+                    self.fail('Uncertain lock must not be entered')
+            self.assertTrue(lock.is_dir())
+
+    def test_interrupted_legacy_partial_is_preserved_and_never_admitted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);case,admission,_=GeneralInputTests().fixture(root)
+            candidate=root/'fixture/reads.fastq.gz.partial'
+            candidate.write_bytes(b'old interrupted bytes')
+            prepare_general_input(case,admission,root,root/'out',offline=True)
+            self.assertEqual(candidate.read_bytes(),b'old interrupted bytes')
+            self.assertEqual(digest(root/'fixture/reads.fastq.gz'),admission['manifest']['reads_sha256'])
+
+    def test_failed_transfer_retry_keeps_partial_and_uses_a_new_verified_candidate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);case,admission,_=GeneralInputTests().fixture(root)
+            archive=root/'reads.tar';data=archive.read_bytes();archive.unlink()
+            size=admission['manifest']['read_archive_member']['size']
+            header=data[:512];payload=data[512:512+size]
+            with patch('benchlib.general_inputs._range',side_effect=[io.BytesIO(header),io.BytesIO(payload[:3])]):
+                with self.assertRaisesRegex(ValueError,'Truncated published archive transfer'):
+                    prepare_general_input(case,admission,root,root/'out')
+            candidates=list((root/'fixture').glob('reads.fastq.gz.partial-*'))
+            self.assertEqual(len(candidates),1)
+            self.assertEqual(candidates[0].read_bytes(),payload[:3])
+            self.assertFalse((root/'fixture/reads.fastq.gz').exists())
+            with patch('benchlib.general_inputs._range',side_effect=[io.BytesIO(header),io.BytesIO(payload)]):
+                prepare_general_input(case,admission,root,root/'out')
+            self.assertEqual(candidates[0].read_bytes(),payload[:3])
+            self.assertEqual((root/'fixture/reads.fastq.gz').read_bytes(),payload)
+            self.assertFalse((root/'fixture/.prepare.lock.d').exists())
+
+    def test_publication_cannot_replace_an_existing_conflicting_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);original=root/'input';original.write_bytes(b'original')
+            candidate=root/'input.partial-attempt';candidate.write_bytes(b'new')
+            def validate(path):
+                if path.read_bytes()!=b'new':
+                    raise ValueError('Published input differs')
+            with self.assertRaisesRegex(ValueError,'differs'):
+                _publish(candidate,original,validate)
+            self.assertEqual(original.read_bytes(),b'original')
+            self.assertEqual(candidate.read_bytes(),b'new')
 
 
 if __name__ == '__main__':

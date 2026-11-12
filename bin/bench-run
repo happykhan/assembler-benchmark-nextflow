@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
+# Batch jobs have no terminal; keep tool version checks free of tput warnings.
+export TERM="${TERM:-dumb}"
 case "${BENCH_RUNTIME:-native}" in
   native) exec "$@" ;;
   pixi) exec pixi run --locked --no-install --manifest-path "$BENCH_PIXI_MANIFEST" --environment "${BENCH_PIXI_ENV:-default}" "$@" ;;

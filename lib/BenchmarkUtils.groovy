@@ -1,4 +1,19 @@
 class BenchmarkUtils {
+    static Map readPlan(path) {
+        // LazyMap mutates on its first get(). Initialise the entire document
+        // before broadcasting it to parallel consumers. Keep its value types
+        // and ordering stable so completed scientific tasks retain cache keys.
+        def plan = new groovy.json.JsonSlurper().parseText(new File(path.toString()).getText('UTF-8'))
+        initialiseJson(plan)
+        plan
+    }
+    private static void initialiseJson(value) {
+        if (value instanceof Map) {
+            value.entrySet().each { entry -> initialiseJson(entry.value) }
+        } else if (value instanceof List) {
+            value.each { item -> initialiseJson(item) }
+        }
+    }
     static String shellQuote(value) {
         "'" + value.toString().replace("'", "'\"'\"'") + "'"
     }

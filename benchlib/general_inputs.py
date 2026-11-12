@@ -1,10 +1,13 @@
 """Admit exact published read members and whole reference bytes, online or offline."""
 from collections import Counter
 from contextlib import contextmanager
-import fcntl
 import gzip
 import hashlib
 import json
+import os
+import socket
+import time
+import uuid
 from pathlib import Path
 import tarfile
 import urllib.request
@@ -14,11 +17,72 @@ from .references import read_fasta
 
 
 @contextmanager
-def locked(path):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open('a') as stream:
-        fcntl.flock(stream, fcntl.LOCK_EX)
-        yield
+def locked(path, timeout_seconds=7200, poll_seconds=0.2):
+    """Coordinate shared caches with atomic mkdir, including across cluster nodes.
+
+    Advisory flock was observed not to exclude simultaneous GPFS clients. Never
+    infer that a remote PID or an old timestamp makes a lock safe to steal.
+    A killed owner leaves its directory and metadata for explicit inspection.
+    Legacy advisory-lock files remain untouched.
+    """
+    path = Path(path)
+    directory = path.with_name(path.name + '.d')
+    directory.parent.mkdir(parents=True, exist_ok=True)
+    if timeout_seconds < 0 or poll_seconds <= 0:
+        raise ValueError('Invalid cache lock wait interval')
+    deadline = time.monotonic() + timeout_seconds
+    token = uuid.uuid4().hex
+    owner = {'schema_version': 1, 'token': token, 'hostname': socket.gethostname(),
+             'pid': os.getpid(), 'slurm_job_id': os.environ.get('SLURM_JOB_ID'),
+             'started_unix_seconds': time.time()}
+    while True:
+        try:
+            directory.mkdir()
+            break
+        except FileExistsError:
+            if time.monotonic() >= deadline:
+                try:
+                    evidence = (directory / 'owner.json').read_text()[:2048]
+                except OSError:
+                    evidence = 'Owner metadata unavailable; creation may have been interrupted.'
+                raise TimeoutError('Shared cache lock did not clear: ' + str(directory)
+                    + '; owner=' + evidence + '; verify the owner before explicit recovery. No stale lock was removed.')
+            time.sleep(min(poll_seconds, max(0, deadline - time.monotonic())))
+    owner_path = directory / 'owner.json'
+    # An interruption here also leaves the lock fail-closed, never unlocked.
+    with owner_path.open('x') as stream:
+        json.dump(owner, stream, sort_keys=True)
+        stream.write('\n')
+        stream.flush()
+        os.fsync(stream.fileno())
+    try:
+        yield owner
+    finally:
+        current = json.loads(owner_path.read_text())
+        if current.get('token') != token:
+            raise RuntimeError('Cache lock ownership changed; refusing to remove ' + str(directory))
+        owner_path.unlink()
+        directory.rmdir()
+
+
+def _temporary(destination):
+    """A transfer never truncates or adopts another attempt's partial bytes."""
+    return destination.with_name(destination.name + '.partial-' + uuid.uuid4().hex)
+
+
+def _publish(temporary, destination, check):
+    """Publish verified bytes atomically without replacing an existing input."""
+    check(temporary)
+    try:
+        os.link(temporary, destination)
+    except FileExistsError:
+        # Even an unexpected competing publisher cannot replace admitted bytes.
+        check(destination)
+    else:
+        check(destination)
+    # This removes only the successful temporary name, after verified admission.
+    # Every failed or interrupted candidate is retained for inspection.
+    temporary.unlink()
 
 
 def _check_file(path, expected_sha, size=None):
@@ -64,41 +128,41 @@ def obtain_reads(manifest, directory, cache, offline):
     if reads.exists():
         _check_file(reads, manifest['reads_sha256'], member['size'])
         return reads
-    temporary = directory / 'reads.fastq.gz.partial'
-    if temporary.exists():
-        raise ValueError('Interrupted input preparation exists; inspect ' + str(temporary))
+    temporary = _temporary(reads)
     local_archive = cache / source['name']
-    try:
-        if local_archive.exists():
-            if local_archive.stat().st_size != source['size']:
-                raise ValueError('Offline read archive size differs')
-            with local_archive.open('rb') as stream:
-                stream.seek(member['offset'] - 512)
-                _validate_header(stream.read(512), member)
-                # Reading an exact member from a larger file must not test archive EOF.
-                with temporary.open('xb') as output:
-                    remaining = member['size']
-                    while remaining:
-                        block = stream.read(min(1024 * 1024, remaining))
-                        if not block:
-                            raise ValueError('Truncated offline TAR member')
-                        output.write(block)
-                        remaining -= len(block)
-        else:
-            if offline:
-                raise ValueError('Offline published input absent: prefill ' + str(reads) + ' or ' + str(local_archive))
-            with _range(source, member['offset'] - 512, 512) as response:
-                _validate_header(response.read(513), member)
-            with _range(source, member['offset'], member['size']) as response:
-                _copy_bounded(response, temporary, member['size'])
-        _check_file(temporary, manifest['reads_sha256'], member['size'])
-        temporary.replace(reads)
-    except Exception:
-        # Keep a failed transfer distinct from an admitted read file.
-        if temporary.exists():
-            temporary.rename(temporary.with_name('reads.fastq.gz.rejected'))
-        raise
+    if local_archive.exists():
+        if local_archive.stat().st_size != source['size']:
+            raise ValueError('Offline read archive size differs')
+        with local_archive.open('rb') as stream:
+            stream.seek(member['offset'] - 512)
+            _validate_header(stream.read(512), member)
+            # Reading an exact member from a larger file must not test archive EOF.
+            with temporary.open('xb') as output:
+                remaining = member['size']
+                while remaining:
+                    block = stream.read(min(1024 * 1024, remaining))
+                    if not block:
+                        raise ValueError('Truncated offline TAR member')
+                    output.write(block)
+                    remaining -= len(block)
+    else:
+        if offline:
+            raise ValueError('Offline published input absent: prefill ' + str(reads) + ' or ' + str(local_archive))
+        with _range(source, member['offset'] - 512, 512) as response:
+            _validate_header(response.read(513), member)
+        with _range(source, member['offset'], member['size']) as response:
+            _copy_bounded(response, temporary, member['size'])
+    _publish(temporary, reads, lambda path: _check_file(path, manifest['reads_sha256'], member['size']))
     return reads
+
+
+def _check_reference_archive(path, source):
+    checksum = hashlib.md5()
+    with path.open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            checksum.update(block)
+    if path.stat().st_size != source['size'] or checksum.hexdigest() != source['computed_md5']:
+        raise ValueError('Reference archive differs from published size/MD5: ' + str(path))
 
 
 def obtain_reference(manifest, directory, cache, offline):
@@ -109,37 +173,26 @@ def obtain_reference(manifest, directory, cache, offline):
     source = manifest['source_reference_archive']
     archive = cache / source['name']
     with locked(cache / '.reference-archive.lock'):
+        if reference.exists():
+            _check_file(reference, manifest['truth_sha256'])
+            return reference
         if not archive.exists():
             if offline:
                 raise ValueError('Offline reference absent: prefill ' + str(reference) + ' or ' + str(archive))
-            temporary = archive.with_name(archive.name + '.partial')
-            if temporary.exists():
-                raise ValueError('Interrupted reference download exists: ' + str(temporary))
+            temporary = _temporary(archive)
             with urllib.request.urlopen(source['download_url'], timeout=120) as response:
                 _copy_bounded(response, temporary, source['size'])
-            checksum = hashlib.md5()
-            with temporary.open('rb') as stream:
-                for block in iter(lambda: stream.read(1024 * 1024), b''):
-                    checksum.update(block)
-            if checksum.hexdigest() != source['computed_md5']:
-                raise ValueError('Reference archive published MD5 differs')
-            temporary.replace(archive)
-        checksum = hashlib.md5()
-        with archive.open('rb') as stream:
-            for block in iter(lambda: stream.read(1024 * 1024), b''):
-                checksum.update(block)
-        if archive.stat().st_size != source['size'] or checksum.hexdigest() != source['computed_md5']:
-            raise ValueError('Cached reference archive differs from published bytes')
+            _publish(temporary, archive, lambda path: _check_reference_archive(path, source))
+        _check_reference_archive(archive, source)
         name = manifest['case']['id'] + '.fasta'
         with tarfile.open(archive, 'r:gz') as stream:
             matches = [row for row in stream if row.isfile() and Path(row.name).name == name]
             if len(matches) != 1:
                 raise ValueError('Published reference member missing or duplicated')
-            temporary = directory / 'reference.fasta.partial'
+            temporary = _temporary(reference)
             with stream.extractfile(matches[0]) as original:
                 _copy_bounded(original, temporary, matches[0].size)
-        _check_file(temporary, manifest['truth_sha256'])
-        temporary.replace(reference)
+        _publish(temporary, reference, lambda path: _check_file(path, manifest['truth_sha256']))
     return reference
 
 
@@ -149,9 +202,7 @@ def decompress_verified(reads, destination, manifest):
     if destination.exists():
         _check_file(destination, expected['uncompressed_fastq_sha256'])
         return
-    temporary = destination.with_name(destination.name + '.partial')
-    if temporary.exists():
-        raise ValueError('Interrupted decompression exists: ' + str(temporary))
+    temporary = _temporary(destination)
     lengths = Counter()
     count = total = 0
     sha = hashlib.sha256()
@@ -180,7 +231,7 @@ def decompress_verified(reads, destination, manifest):
               'uncompressed_fastq_sha256': sha.hexdigest()}
     if actual != expected:
         raise ValueError('Published FASTQ statistics or original content checksum differs')
-    temporary.replace(destination)
+    _publish(temporary, destination, lambda path: _check_file(path, expected['uncompressed_fastq_sha256']))
 
 
 def _save_identical(path, value):

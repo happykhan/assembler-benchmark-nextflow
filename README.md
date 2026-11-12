@@ -16,9 +16,9 @@ fixtures, runs Flye and Raven, assesses the outputs and produces the report.
 200 kb linear reference fixture, not a whole bacterial genome.
 
 The replacement implementation now covers selectable general and diagnostic
-tracks, plus import and rendering of frozen results. New scientific executions
-remain paused while [benchmark protocol v1](docs/benchmark-protocol-v1.md) is
-reviewed. Implemented functionality and verified scientific runs are different;
+tracks, plus import and rendering of frozen results. Small end-to-end validation runs on Cluster 3 are now authorised and underway.
+The broader five-seed scientific panel in [benchmark protocol v1](docs/benchmark-protocol-v1.md)
+remains under review. Implemented functionality and verified scientific runs are different;
 see [replacement verification](docs/nextflow-replacement-verification.md).
 
 Inspect available choices with `--list` and command help with `--help`.

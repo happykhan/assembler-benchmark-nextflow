@@ -1,5 +1,5 @@
 nextflow.enable.dsl = 2
-import groovy.json.JsonSlurper
+import static BenchmarkUtils.readPlan
 import static BenchmarkUtils.sourceHash
 import static BenchmarkUtils.sourcesUnder
 include { PREPARE_RUN; PREPARE_REFERENCE; SIMULATE_READS; PREPARE_REAL_READS; PREPARE_COLLECTION_INPUT; REAL_READ_DIAGNOSTICS; LIST_CHOICES } from './modules/local/preparation'
@@ -49,7 +49,7 @@ Profiles: pixi (default), singularity, apptainer, docker; local, slurm, bmrc
         PREPARE_RUN(params.plan ? file(params.plan, checkIfExists: true) : [], selection, validationSource)
         if (!params.plan_only) {
             def spec = PREPARE_RUN.out.plan.map {
-                def plan = new JsonSlurper().parse(it.toFile())
+                def plan = readPlan(it)
                 if (plan.track == 'diagnostic' && plan.cases.any { it.category == 'S7' } && !params.diagnostic_source_dir)
                     error 'S7 requires --diagnostic_source_dir containing its admitted original input. Select other groups or supply that cache.'
                 plan
@@ -75,7 +75,7 @@ Profiles: pixi (default), singularity, apptainer, docker; local, slurm, bmrc
                     plan.slots.findAll { it.case_id == meta.id }.collect { slot ->
                         def definition = new LinkedHashMap(plan.assembler_definitions[slot.assembler])
                         definition.resources = [cpus: meta.threads ?: plan.resource_policy.assembly.cpus,
-                            memory_gb: plan.resource_policy.assembly.memory_gb_by_tool.get(definition.tool, plan.resource_policy.assembly.default_memory_gb),
+                            memory_gb: (plan.resource_policy.assembly.memory_gb_by_tool ?: [:]).get(definition.tool, plan.resource_policy.assembly.default_memory_gb),
                             time_minutes: definition.tool == 'plassembler' ? Math.min(120, plan.resource_policy.assembly.time_minutes as int) : plan.resource_policy.assembly.time_minutes]
                         tuple(meta, reference, provenance, reads, inputMetadata, definition)
                     }
