@@ -87,6 +87,19 @@ class FailureAndExportTests(unittest.TestCase):
                                     'reference_sha256': sha256(self.reference), 'reads_sha256': 'a' * 64,
                                     'reference_provenance_sha256': sha256(self.provenance)})
 
+    def test_runtime_receipt_is_bound_and_retained_in_bundle(self):
+        assess_cli.assess(self.args)
+        plan = self.directory / 'plan.json'
+        receipt = self.directory / 'environment-preparation.json'
+        write_json(plan, {'slots': [{'case_id': 'test', 'assembler': 'flye'}], 'plan_sha256': 'f' * 64})
+        write_json(receipt, {'status': 'prepared', 'plan_sha256': 'f' * 64, 'runtime_image': 'pinned-test-image'})
+        bundle = self.directory / 'bundle'
+        manifest = export_results([self.args.out], bundle, 1, 'test', plan, receipt)
+        self.assertEqual(manifest['files']['environment-preparation.json'], sha256(receipt))
+        write_json(receipt, {'status': 'prepared', 'plan_sha256': 'a' * 64})
+        with self.assertRaisesRegex(ValueError, 'receipt differs'):
+            export_results([self.args.out], self.directory / 'other', 1, 'test', plan, receipt)
+
     def test_standard_baseline_scope_survives_tsv_roundtrip(self):
         self.standard_baseline()
         result = assess_cli.assess(self.args)

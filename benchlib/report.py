@@ -33,11 +33,17 @@ def expected_plan(path):
     return set(pairs)
 
 
-def export_results(paths, output, expected_slots, run_id, plan_path=None):
+def export_results(paths, output, expected_slots, run_id, plan_path=None, runtime_receipt=None):
     if expected_slots < 1:
         raise ValueError('Expected slot count must be positive')
     sources = sorted(map(Path, paths))
     expected = expected_plan(plan_path) if plan_path else None
+    if runtime_receipt:
+        receipt = json.loads(Path(runtime_receipt).read_text())
+        if not plan_path or receipt.get('plan_sha256') != json.loads(Path(plan_path).read_text()).get('plan_sha256'):
+            raise ValueError('Runtime receipt differs from the frozen plan')
+        if receipt.get('status') not in ('prepared', 'externally_prepared'):
+            raise ValueError('Runtime preparation did not complete')
     if expected is not None:
         actual = [(identifier(row['case']['id']), identifier(row['assembler']))
                   for row in (json.loads(p.read_text()) for p in sources)]
@@ -86,6 +92,8 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None):
     write_json(output / 'results.json', {'schema_version': 1, 'run_id': run_id, 'results': records})
     write_table(output / 'results.tsv', records)
     (output / 'index.html').write_text(render_html(records, expected_slots, run_id))
+    if runtime_receipt:
+        shutil.copyfile(runtime_receipt, output / 'environment-preparation.json')
     complete = len(records) == expected_slots and all(
         r['assessment']['status'] == 'completed' or (
             r['assessment']['status'] == 'not_run' and r['execution']['status'] == 'software_error')

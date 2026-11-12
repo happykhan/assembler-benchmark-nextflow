@@ -26,67 +26,73 @@ Real-data admission follows the simulated end-to-end implementation.
 
 ## Run with Nextflow
 
-Requirements: Nextflow 25.10.2 with Java 17–25, and one configured runtime. The
-locked Pixi environment supplies Java 17 and the scientific tools on Linux x86-64.
-Install Nextflow separately using its [official instructions](https://www.nextflow.io/docs/latest/install.html).
-
-Clone the repository and prepare the selected cases and software once:
+On Linux x86-64, install Nextflow 25.10.2 or later, a compatible Java runtime,
+and [Pixi](https://pixi.sh). Then run:
 
 ```bash
-git clone https://github.com/happykhan/assembler-benchmark-nextflow.git
-cd assembler-benchmark-nextflow
-
-pixi run --locked --manifest-path environments/pixi.toml python bin/plan.py \
-  --preset quick --out results/quick-001/selected-plan.json
-pixi run --locked --manifest-path environments/pixi.toml python bin/prepare-environments.py \
-  --plan results/quick-001/selected-plan.json \
-  --out results/quick-001/environment-preparation.json
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick
 ```
 
-**Run the pipeline with Nextflow:**
+**No Python setup commands or manual clone are required.** The pipeline freezes
+and validates the selection, installs the locked tooling and assembler
+environments, downloads and checks the reference, simulates reads, runs the
+assemblers, assesses them and exports the standalone report. The first run needs
+network access and takes longer while software is installed. Outputs default to
+`results/quick/bundle/index.html`; references are cached in the launch directory.
+Nextflow keeps its downloaded pipeline and prepared environments in its asset cache.
+
+Runtime and execution profiles are independent, following the usual
+[nf-core convention](https://nf-co.re/docs/running/configuration/configuration-options):
 
 ```bash
-nextflow run . -profile local,pixi \
-  --plan results/quick-001/selected-plan.json \
-  --run_id quick-001 --outdir results/quick-001 \
-  -work-dir work/quick-001
+# Explicit Pixi runtime on a workstation (the default)
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile pixi
+
+# Cluster 3: Pixi software, Slurm execution
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile bmrc,pixi
+
+# Cluster 3: Singularity software runtime, Slurm execution
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile bmrc,singularity
+
+# Docker workstation (profile provided; not verified on Cluster 3)
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile docker
 ```
 
-Nextflow runs reference preparation, simulation, parallel assembly, assessment
-and report export. Python scripts implement individual tasks and the preparation
-helpers; they do not replace the Nextflow workflow.
+Singularity, Apptainer and Docker use the same digest-pinned Linux Pixi runtime
+image. Locked scientific environments are installed automatically on the shared
+pipeline filesystem and used inside that container; they are not baked into the
+image. Container profiles require the container engine, without a host Pixi
+installation. They need network access for initial image and package preparation.
+Software provisioning runs on the submission host before compute tasks are
+released. Do not combine multiple runtime profiles.
 
-The current release requires a prepared `--plan` and locked environments. A bare
-`nextflow run . --preset quick` does not yet perform those setup steps. Run from
-the cloned checkout so prepared Pixi environments and pipeline sources share the
-same location. If Java is supplied by Pixi, prefix the Nextflow command with
-`pixi run --locked --manifest-path environments/pixi.toml`.
+Generic Slurm sites use `slurm,pixi` or `slurm,singularity` plus their site
+account/partition configuration. `apptainer` is also provided. `native_tools` is
+an advanced profile for externally prepared, version-matched tools; it performs
+no software installation. See [runtime verification](docs/native-entry-verification.md)
+for tested paths and limitations.
 
-For Cluster 3, replace `local,pixi` with `bmrc,pixi`. Generic Slurm users use
-`slurm,pixi` plus their site account/partition configuration. Add `-resume` to the
-same Nextflow command to reuse completed tasks. Queue capacity is 1,000; failed
-assemblers are not automatically retried. Use distinct run IDs and output/work
-directories for separate attempts.
-
-Select existing cases and assemblers independently:
+Select cases and versions directly:
 
 ```bash
-pixi run --locked --manifest-path environments/pixi.toml python bin/plan.py \
+nextflow run happykhan/assembler-benchmark-nextflow --preset quick \
   --cases quick-bimodal --assemblers raven-1.8.3 \
-  --out results/selected-001/selected-plan.json
+  --outdir results/selected-001 --run_id selected-001
 ```
 
-Prepare that plan's environments, then pass it to `nextflow run . --plan ...` as
-above. `bin/plan.py --groups read-quality` selects the implemented Quick group.
-Unsupported selections fail rather than silently running a different panel.
-Source code, input bytes and the dependency lock participate in resume keys.
+`--groups read-quality` selects the implemented Quick group. Unsupported
+selections fail before assembly scheduling. Add `-resume` to reuse completed
+tasks; use `-latest` when deliberately fetching an updated pipeline, or
+`-r <commit-or-tag>` to pin one. Source code, input bytes and the dependency lock
+participate in resume keys. A changed selection requires a new output directory.
+Queue capacity is 1,000; failed assemblers are not automatically retried.
 Purging work prevents resume.
 
-Docker and Apptainer profiles are provided separately from executor profiles.
-They remain unadmitted until each selected assembler has a digest-pinned image
-in the registry. The pipeline rejects these profiles before scheduling when an
-image is absent; these container paths have not yet been integration-tested. The verified initial
-runtime is Linux Pixi on Slurm. Do not combine multiple runtime profiles.
+`selected-plan.json` and `environment-preparation.json` are written beside the
+bundle. The bundle retains the plan and runtime receipt with checksums. Advanced
+users can pass an existing frozen selection with `--plan`; do not combine that
+with selection options. A local development checkout runs identically with
+`nextflow run . --preset quick`.
 
 ## Prepare references before an offline run
 
@@ -181,8 +187,8 @@ python3 bin/plan.py --list
 python3 bin/plan.py --cases quick-bimodal --assemblers flye-2.9.6,raven-1.8.3 --out selected-plan.json
 ```
 
-Pass this plan to `nextflow run . --plan selected-plan.json` after preparing its
-environments. The optional launcher can also accept `--plan selected-plan.json`.
+Pass this plan to `nextflow run . --plan selected-plan.json`; software is prepared
+automatically. The optional launcher can also accept `--plan selected-plan.json`.
 Plans bind exact version IDs, case/reference metadata, manifest/lock hashes,
 resource policy and expected result slots. Typos, duplicate versions, changed
 plans and unadmitted groups stop before assembly scheduling. A dedicated first
@@ -194,11 +200,10 @@ baseline; the remaining candidates and scenario contrasts are not admitted. See
 [reference admission](docs/reference-admission.md) and
 [the Standard baseline](docs/standard-baseline.md).
 
-To prepare software before using compute nodes without network access, freeze a
-plan and run `python bin/prepare-environments.py --plan selected-plan.json --out environment-preparation.json`
-on the shared execution filesystem. Reference preparation remains a separate
-checksummed cache step. Environment provisioning is recorded separately from
-assembly/assessment time.
+For nodes without network access, prepare the reference cache in advance and
+make the selected locked software environments available on the shared execution
+filesystem. Optional preparation helpers support this administrative task;
+they are not required for normal online runs.
 
 ## Interpret the completion criterion
 
@@ -223,15 +228,8 @@ for the initial two assembler versions. It is baseline validation, excluded from
 headline comparisons; structural correctness remains unmeasured.
 
 ```bash
-pixi run --locked --manifest-path environments/pixi.toml python bin/plan.py \
-  --preset standard --out results/standard-001/selected-plan.json
-pixi run --locked --manifest-path environments/pixi.toml python bin/prepare-environments.py \
-  --plan results/standard-001/selected-plan.json \
-  --out results/standard-001/environment-preparation.json
-nextflow run . -profile bmrc,pixi \
-  --plan results/standard-001/selected-plan.json \
-  --run_id standard-001 --outdir results/standard-001 \
-  -work-dir work/standard-001
+nextflow run happykhan/assembler-benchmark-nextflow --preset standard \
+  -profile bmrc,pixi --outdir results/standard-001 --run_id standard-001
 ```
 
 Online mode downloads and validates the admitted source archives. For offline

@@ -15,16 +15,29 @@ def sourceHash(project, names) {
     digest.digest().encodeHex().toString()
 }
 
-process VALIDATE_PLAN {
+process PREPARE_RUN {
+    // Provision on the submission host before any compute tasks need software.
+    executor 'local'
     cpus 1
+    memory '1 GB'
+    time '2 h'
+    publishDir params.outdir, mode: 'copy', overwrite: true
     input:
-    path frozenPlan
+    path suppliedPlan
+    val selection
     val sourceFingerprint
     output:
-    path 'admitted-plan.json'
+    path 'selected-plan.json', emit: plan
+    path 'environment-preparation.json', emit: receipt
     script:
+    def interpreter = params.runtime == 'pixi' ?
+        "pixi run --locked --manifest-path ${shellQuote(projectDir.toString() + '/environments/pixi.toml')} python" : 'python3'
+    def planOption = suppliedPlan ? "--plan ${shellQuote(suppliedPlan)}" : ''
     """
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/plan.py')} --validate ${shellQuote(frozenPlan)} --out admitted-plan.json
+    ${interpreter} ${shellQuote(projectDir.toString() + '/bin/prepare-run.py')} \
+      --selection-json ${shellQuote(JsonOutput.toJson(selection))} ${planOption} \
+      --runtime '${params.runtime}' --runtime-image ${shellQuote(task.container ?: '')} --out selected-plan.json --receipt environment-preparation.json \
+      --existing-plan ${shellQuote(file("${params.outdir}/selected-plan.json").toString())}
     """
 }
 
@@ -113,6 +126,7 @@ process EXPORT_RESULTS {
     path evidence
     val expectedSlots
     path plan
+    path runtimeReceipt
     val sourceFingerprint
     output:
     path 'bundle'
@@ -120,7 +134,7 @@ process EXPORT_RESULTS {
     """
     export BENCH_SOURCE_SHA256='${sourceFingerprint}'
     bench-run python ${shellQuote(projectDir.toString() + '/bin/export-results.py')} --results ${results.collect { shellQuote(it) }.join(' ')} \
-      --out-dir bundle --expected-slots ${expectedSlots} --run-id '${params.run_id}' --plan ${shellQuote(plan)}
+      --out-dir bundle --expected-slots ${expectedSlots} --run-id '${params.run_id}' --plan ${shellQuote(plan)} --runtime-receipt ${shellQuote(runtimeReceipt)}
     """
 }
 
@@ -131,33 +145,35 @@ workflow {
     def assemblySource = sourceHash(projectDir, ['bin/run-assembler.py', 'benchlib/io.py', 'benchlib/process.py', 'benchlib/adapters.py', 'assets/assemblers.json'])
     def assessmentSource = sourceHash(projectDir, ['bin/assess-assembly.py', 'benchlib/assessment.py', 'benchlib/process.py'])
     def exportSource = sourceHash(projectDir, ['bin/export-results.py', 'benchlib/assessment.py', 'benchlib/report.py'])
-    if (!params.plan) error 'Use bin/launch.py to freeze a plan, or provide --plan from bin/plan.py.'
-    def plan = file(params.plan, checkIfExists: true)
-    def spec = new JsonSlurper().parse(plan.toFile())
-    def cases = spec.cases
-    def assemblerDefinitions = spec.assemblers.collect { id ->
-        def definition = new LinkedHashMap(spec.assembler_definitions[id])
-        definition.resources = [cpus: spec.resource_policy.assembly.cpus,
-            memory_gb: spec.resource_policy.assembly.memory_gb_by_tool.get(definition.tool, spec.resource_policy.assembly.default_memory_gb),
-            time_minutes: spec.resource_policy.assembly.time_minutes]
-        def lockName = java.nio.file.Paths.get(definition.manifest).resolveSibling('pixi.lock').toString()
-        definition.manifest_sha256 = spec.source_file_sha256[definition.manifest]
-        definition.lock_sha256 = spec.source_file_sha256[lockName]
-        definition
-    }
-    def runtimeProfiles = workflow.profile.tokenize(',').findAll { it in ['pixi', 'docker', 'apptainer'] }
+    def runtimeProfiles = workflow.profile.tokenize(',').findAll { it in ['pixi', 'docker', 'singularity', 'apptainer', 'native_tools'] }
     if (runtimeProfiles.size() > 1) error 'Choose exactly one runtime profile.'
-    if (runtimeProfiles.any { it in ['docker', 'apptainer'] } && assemblerDefinitions.any { !it.container })
-        error 'Selected versions have no admitted container images. Use the verified Pixi profile.'
-    def validationSource = sourceHash(projectDir, ['bin/plan.py', 'benchlib/planning.py', 'benchlib/adapters.py',
+    if (runtimeProfiles.any { it in ['docker', 'singularity', 'apptainer'] } &&
+        !(params.container_image ==~ /.+@sha256:[a-f0-9]{64}/))
+        error 'Container runtimes require a digest-pinned runtime image.'
+    def validationSource = sourceHash(projectDir, ['bin/prepare-run.py', 'benchlib/bootstrap.py', 'benchlib/runtime.py', 'bin/plan.py', 'benchlib/planning.py', 'benchlib/adapters.py',
         'benchlib/references.py', 'assets/assemblers.json', 'assets/quick.json', 'assets/standard.json', 'assets/references.json', 'assets/groups.json'])
-    VALIDATE_PLAN(plan, validationSource)
-    def admittedReferences = Channel.fromList(spec.reference_ids).combine(VALIDATE_PLAN.out).map { id, admitted -> id }
+    def selection = [preset: params.preset, groups: params.groups, cases: params.cases, assemblers: params.assemblers]
+    PREPARE_RUN(params.plan ? file(params.plan, checkIfExists: true) : [], selection, validationSource)
+    def spec = PREPARE_RUN.out.plan.map { new JsonSlurper().parse(it.toFile()) }
+    def admittedReferences = spec.flatMap { it.reference_ids }
+    def cases = spec.flatMap { it.cases }
+    def assemblerDefinitions = spec.flatMap { plan ->
+        plan.assemblers.collect { id ->
+            def definition = new LinkedHashMap(plan.assembler_definitions[id])
+            definition.resources = [cpus: plan.resource_policy.assembly.cpus,
+                memory_gb: plan.resource_policy.assembly.memory_gb_by_tool.get(definition.tool, plan.resource_policy.assembly.default_memory_gb),
+                time_minutes: plan.resource_policy.assembly.time_minutes]
+            def lockName = java.nio.file.Paths.get(definition.manifest).resolveSibling('pixi.lock').toString()
+            definition.manifest_sha256 = plan.source_file_sha256[definition.manifest]
+            definition.lock_sha256 = plan.source_file_sha256[lockName]
+            definition
+        }
+    }
     PREPARE_REFERENCE(admittedReferences, file("${projectDir}/assets/references.json"), referenceSource)
-    def inputs = Channel.fromList(cases).map { tuple(it.reference_id, it) }
+    def inputs = cases.map { tuple(it.reference_id, it) }
         .combine(PREPARE_REFERENCE.out, by: 0).map { id, meta, reference, provenance -> tuple(meta, reference, provenance) }
-    SIMULATE_READS(inputs, simulationSource, spec.resource_policy.simulation ?: [cpus: 1, time_minutes: 30])
-    ASSEMBLE(SIMULATE_READS.out.combine(Channel.fromList(assemblerDefinitions)), assemblySource)
+    SIMULATE_READS(inputs, simulationSource, spec.map { it.resource_policy.simulation ?: [cpus: 1, time_minutes: 30] })
+    ASSEMBLE(SIMULATE_READS.out.combine(assemblerDefinitions), assemblySource)
     ASSESS(ASSEMBLE.out, assessmentSource)
-    EXPORT_RESULTS(ASSESS.out.results.collect(), ASSESS.out.evidence.collect(), spec.expected_slots, plan, exportSource)
+    EXPORT_RESULTS(ASSESS.out.results.collect(), ASSESS.out.evidence.collect(), spec.map { it.expected_slots }, PREPARE_RUN.out.plan, PREPARE_RUN.out.receipt, exportSource)
 }
