@@ -1,0 +1,1017 @@
+{
+  "groups": [
+    {
+      "default_profile": "baseline-large",
+      "deferred": false,
+      "id": "S1"
+    },
+    {
+      "default_profile": "coverage-large",
+      "deferred": false,
+      "id": "S2"
+    },
+    {
+      "default_profile": "repeatability-large",
+      "deferred": false,
+      "id": "S3"
+    },
+    {
+      "default_profile": "small-plasmids",
+      "deferred": false,
+      "id": "S4"
+    },
+    {
+      "default_profile": "linear-plasmids",
+      "deferred": false,
+      "id": "S5"
+    },
+    {
+      "default_profile": "noisy-large",
+      "deferred": true,
+      "id": "S6"
+    },
+    {
+      "default_profile": "read-order",
+      "deferred": false,
+      "id": "S7"
+    }
+  ],
+  "profiles": [
+    {
+      "case_count": 2,
+      "cases": [
+        {
+          "category": "S1",
+          "fingerprint": "d0154a43a01d3b28c76e9ddf118cd7d6b894d61438ba8731319c38bdcbd5d3f8",
+          "id": "s1-se11-large",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + all plasmids \u226520,000 bp"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "2653371ac3f94e76752e8d31be9465bca20ec1a8a29df9871096bab25ed36259",
+          "id": "s1-mgh78578-large",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1",
+            "NC_009650.1",
+            "NC_009651.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + all plasmids \u226520,000 bp"
+        }
+      ],
+      "categories": [
+        "S1"
+      ],
+      "deferred": false,
+      "id": "baseline-large",
+      "legacy_execution_count": 8,
+      "profile_id": "s1-multiple-large-v3"
+    },
+    {
+      "case_count": 10,
+      "cases": [
+        {
+          "category": "S2",
+          "fingerprint": "8567067de122a1589ad9aa6a9a7b81baa8a3f127b22ffeb6bd2f7d5bc2e07085",
+          "id": "s2-se11-pse11-1-depth-0p8",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 0.8\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "0a49e4b8dfde0164379a626d9d34d86e62ddb160c0a53cf1cff8e55db8f1321e",
+          "id": "s2-se11-pse11-1-depth-1",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 1\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "392d9133a21a146d608ba314c2bd5377662341290c64369bdb0d8ff12fe78232",
+          "id": "s2-se11-pse11-1-depth-1p2",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 1.2\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "5270ed060999789732c494eae7c4d04cba89862bdb978f1bbfe515f460982488",
+          "id": "s2-se11-pse11-1-depth-3",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 3\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "693932e510c438a4ee8f1020bf9cdefa45702178bb3e76196c41e27d7563e050",
+          "id": "s2-se11-pse11-1-depth-5",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 5\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "d330d0ff556ccbb2e74c43a1fcbaaea27363c6f078b449328ef59823e883bbd5",
+          "id": "s2-mgh78578-pkpn3-depth-0p8",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 0.8\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "4f536f314efe61808ac85b622f7604bdbb5cc81428b0c0ee3b62a35b6b01ae6f",
+          "id": "s2-mgh78578-pkpn3-depth-1",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 1\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "6f133f402dff2dca5181e0d9af3cf8eac29ddb74fb0ff1f508cc76326954ac8a",
+          "id": "s2-mgh78578-pkpn3-depth-1p2",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 1.2\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "b4e916b2a23576b478c8ab02ff6f85d947f79e21fcb6487f0557a6758cab5764",
+          "id": "s2-mgh78578-pkpn3-depth-3",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 3\u00d7 relative depth"
+        },
+        {
+          "category": "S2",
+          "fingerprint": "e0fa019caef86cb4c45ff66c4afd82b86aa69ac6621780bc627dff1754b6ce21",
+          "id": "s2-mgh78578-pkpn3-depth-5",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 5\u00d7 relative depth"
+        }
+      ],
+      "categories": [
+        "S2"
+      ],
+      "deferred": false,
+      "id": "coverage-large",
+      "legacy_execution_count": 40,
+      "profile_id": "s2-large-coverage-v3"
+    },
+    {
+      "case_count": 2,
+      "cases": [
+        {
+          "category": "S1",
+          "fingerprint": "f61f1104205083a16224a136fab35c75eac0ae985d9f51d8c756059e955e7945",
+          "id": "s1-w-prk2",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "cd47bb612b9d0c25318ae18ae34baffb362524107438c82d91c041cbc61cdbd0",
+          "id": "s1-mgh78578-pkpn7",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN7"
+        }
+      ],
+      "categories": [
+        "S3"
+      ],
+      "deferred": false,
+      "id": "determinism-modes",
+      "legacy_execution_count": 120,
+      "profile_id": "s3-fixed-input-modes-v2"
+    },
+    {
+      "case_count": 2,
+      "cases": [
+        {
+          "category": "S1",
+          "fingerprint": "d695c6043275267d56bfeb0608069d55ad17deea5df2296db9e11f560d33b962",
+          "id": "s1-w-prk2",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "7446efd04b94bc800169f5f822174fceab25885013680c84891b552305f690b7",
+          "id": "s1-mgh78578-pkpn7",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN7"
+        }
+      ],
+      "categories": [
+        "S3"
+      ],
+      "deferred": false,
+      "id": "determinism",
+      "legacy_execution_count": 80,
+      "profile_id": "s3-fixed-input-repeat-v1"
+    },
+    {
+      "case_count": 4,
+      "cases": [
+        {
+          "category": "S5",
+          "fingerprint": "2aee1e7cdc2ba0635170cc9bf8057307e87b77ff446ea5e12d6c7d8c42cf214a",
+          "id": "s5-scp1-length-standard",
+          "reference_accessions": [
+            "NC_003903.1"
+          ],
+          "title": "SCP1 \u00b7 linear plasmid only \u00b7 standard reads"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "aff59e977ff7008b8fc94723540a87e19fd393659ee3b7ded02f3bac89bb141a",
+          "id": "s5-scp1-length-spanning",
+          "reference_accessions": [
+            "NC_003903.1"
+          ],
+          "title": "SCP1 \u00b7 linear plasmid only \u00b7 repeat-spanning reads"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "9c02f8fabb98ecf7eeb0b9ef6a98fdbf342bb3b5dc6b4dd7fedf70079a0312ad",
+          "id": "s5-slp2-length-standard",
+          "reference_accessions": [
+            "NC_004933.1"
+          ],
+          "title": "SLP2 \u00b7 linear plasmid only \u00b7 standard reads"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "0d0c8889cc03222af72389efbd7a861ac778b9023ab35be80a4d0b01b1c6115e",
+          "id": "s5-slp2-length-spanning",
+          "reference_accessions": [
+            "NC_004933.1"
+          ],
+          "title": "SLP2 \u00b7 linear plasmid only \u00b7 repeat-spanning reads"
+        }
+      ],
+      "categories": [
+        "S5"
+      ],
+      "deferred": false,
+      "id": "linear-isolated-legacy",
+      "legacy_execution_count": 16,
+      "profile_id": "s5-isolated-linear-ends-v1"
+    },
+    {
+      "case_count": 6,
+      "cases": [
+        {
+          "category": "S5",
+          "fingerprint": "78911150639d0e3b22bd1abdbbf95f32ca79126d898ec6098123affcefb2f7ad",
+          "id": "s5-canus-nbc00277-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "cf2bf67dbd5ae9fe35e45ac2fe9c004e9dd6703caa0081fd4b0b07fb38b1728c",
+          "id": "s5-canus-nbc00277-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "c50a6bc2a0c6db4c16f7ea9a4fac71a17c3dc3b81de6ad4ea6f43227eed51000",
+          "id": "s5-prunicolor-nbc01021-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "9560faa3f087d29932a24b801c4bc122ed6ead867864e7ef0ac90c65c44dea27",
+          "id": "s5-prunicolor-nbc01021-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "3d9362a18b5adc3b0abdc19465b1e13280936a64eff06a69f47572402440a631",
+          "id": "s5-albidoflavus-nbc01661-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "a1ea0fdca485c1ab1b61784d1da51a301245750a7a853731981a0ef6464cbe32",
+          "id": "s5-albidoflavus-nbc01661-native-length-long",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 long read-length target"
+        }
+      ],
+      "categories": [
+        "S5"
+      ],
+      "deferred": false,
+      "id": "linear-plasmids",
+      "legacy_execution_count": 24,
+      "profile_id": "s5-native-linear-streptomyces-v2"
+    },
+    {
+      "case_count": 6,
+      "cases": [
+        {
+          "category": "S5",
+          "fingerprint": "78911150639d0e3b22bd1abdbbf95f32ca79126d898ec6098123affcefb2f7ad",
+          "id": "s5-canus-nbc00277-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "cf2bf67dbd5ae9fe35e45ac2fe9c004e9dd6703caa0081fd4b0b07fb38b1728c",
+          "id": "s5-canus-nbc00277-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "c50a6bc2a0c6db4c16f7ea9a4fac71a17c3dc3b81de6ad4ea6f43227eed51000",
+          "id": "s5-prunicolor-nbc01021-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "9560faa3f087d29932a24b801c4bc122ed6ead867864e7ef0ac90c65c44dea27",
+          "id": "s5-prunicolor-nbc01021-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "3d9362a18b5adc3b0abdc19465b1e13280936a64eff06a69f47572402440a631",
+          "id": "s5-albidoflavus-nbc01661-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "a1ea0fdca485c1ab1b61784d1da51a301245750a7a853731981a0ef6464cbe32",
+          "id": "s5-albidoflavus-nbc01661-native-length-long",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 long read-length target"
+        }
+      ],
+      "categories": [
+        "S5"
+      ],
+      "deferred": false,
+      "id": "miniasm-linear",
+      "legacy_execution_count": 6,
+      "profile_id": "s5-native-linear-streptomyces-v2"
+    },
+    {
+      "case_count": 6,
+      "cases": [
+        {
+          "category": "S5",
+          "fingerprint": "78911150639d0e3b22bd1abdbbf95f32ca79126d898ec6098123affcefb2f7ad",
+          "id": "s5-canus-nbc00277-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "cf2bf67dbd5ae9fe35e45ac2fe9c004e9dd6703caa0081fd4b0b07fb38b1728c",
+          "id": "s5-canus-nbc00277-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108065.1",
+            "NZ_CP108066.1"
+          ],
+          "title": "Streptomyces canus NBC_00277 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "c50a6bc2a0c6db4c16f7ea9a4fac71a17c3dc3b81de6ad4ea6f43227eed51000",
+          "id": "s5-prunicolor-nbc01021-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "9560faa3f087d29932a24b801c4bc122ed6ead867864e7ef0ac90c65c44dea27",
+          "id": "s5-prunicolor-nbc01021-native-length-long",
+          "reference_accessions": [
+            "NZ_CP108676.1"
+          ],
+          "title": "Streptomyces prunicolor NBC_01021 \u00b7 Complete linear genome \u00b7 long read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "3d9362a18b5adc3b0abdc19465b1e13280936a64eff06a69f47572402440a631",
+          "id": "s5-albidoflavus-nbc01661-native-length-standard",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 standard read-length target"
+        },
+        {
+          "category": "S5",
+          "fingerprint": "a1ea0fdca485c1ab1b61784d1da51a301245750a7a853731981a0ef6464cbe32",
+          "id": "s5-albidoflavus-nbc01661-native-length-long",
+          "reference_accessions": [
+            "NZ_CP109243.1",
+            "NZ_CP109244.1"
+          ],
+          "title": "Streptomyces albidoflavus NBC 01661 \u00b7 Complete linear genome \u00b7 long read-length target"
+        }
+      ],
+      "categories": [
+        "S5"
+      ],
+      "deferred": false,
+      "id": "miniasm-plus-linear",
+      "legacy_execution_count": 6,
+      "profile_id": "s5-native-linear-streptomyces-v2"
+    },
+    {
+      "case_count": 6,
+      "cases": [
+        {
+          "category": "S6",
+          "fingerprint": "32f221bd776eab8c531fcbe5bb5a1fe869c865b45f36255455155393f1c87ebf",
+          "id": "s6-se11-pse11-1-seed-20261106-matched-exact",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 matched-exact \u00b7 seed 20261106"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "9f817b1cc99d578dc4e49cdb34f7959048f2f0a1945f53eb509c9307d3ca7d29",
+          "id": "s6-se11-pse11-1-seed-20261106-generic-stress",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 generic-stress \u00b7 seed 20261106"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "6ddaffdeca3035e618f438b02724cf4a9c9ff0b236a5175b863208b2158c7598",
+          "id": "s6-se11-pse11-1-seed-20261106-ont2023-shaped",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + pSE11-1 \u00b7 ont2023-shaped \u00b7 seed 20261106"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "1097e21e290b2efb5872632f4a68f6ecc6f6384b89280a956a519dc8de69e215",
+          "id": "s6-mgh78578-pkpn3-seed-20261106-matched-exact",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 matched-exact \u00b7 seed 20261106"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "e53c5d4d5bb1e43f93d40f885b88d74b00655bbca0acbdcc7c94c5aff384adde",
+          "id": "s6-mgh78578-pkpn3-seed-20261106-generic-stress",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 generic-stress \u00b7 seed 20261106"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "e95f36a11aeb1667192635b1808dd34c0510b99ee1700227dd4059764895f1b2",
+          "id": "s6-mgh78578-pkpn3-seed-20261106-ont2023-shaped",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN3 \u00b7 ont2023-shaped \u00b7 seed 20261106"
+        }
+      ],
+      "categories": [
+        "S6"
+      ],
+      "deferred": true,
+      "id": "noisy-large",
+      "legacy_execution_count": 24,
+      "profile_id": "s6-large-frozen-source-v1"
+    },
+    {
+      "case_count": 3,
+      "cases": [
+        {
+          "category": "S6",
+          "fingerprint": "5105c8aa3688550cb3d5e939dc82e29065b4082683c26c035a7fb1cf26c5a48e",
+          "id": "s6-w-prk2-seed-20261105-matched-exact",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 matched-exact \u00b7 seed 20261105"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "bc16390cd595fd2fa924e56363bf56b044ff3dbf531c7f865fb0e4116e63e1d7",
+          "id": "s6-w-prk2-seed-20261105-generic-stress",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 generic-stress \u00b7 seed 20261105"
+        },
+        {
+          "category": "S6",
+          "fingerprint": "dc422e6582cd1060ea8487dd8df0eab4b312afe6faef0f8093f83599cd01d60e",
+          "id": "s6-w-prk2-seed-20261105-ont2023-shaped",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 ont2023-shaped \u00b7 seed 20261105"
+        }
+      ],
+      "categories": [
+        "S6"
+      ],
+      "deferred": true,
+      "id": "noisy-smoke",
+      "legacy_execution_count": 12,
+      "profile_id": "s6-matched-errors-smoke-v1"
+    },
+    {
+      "case_count": 4,
+      "cases": [
+        {
+          "category": "S1",
+          "fingerprint": "88aae39a349a4940f09bc78e3d55d6776ad2d9f98737cc7801ad8bda85acc164",
+          "id": "s1-w-chromosome",
+          "reference_accessions": [
+            "NC_017664.1"
+          ],
+          "title": "W \u00b7 Chromosome only"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "397eb296112bbd3d1a2abc964fc96aa564a492e07c16b691adcbe2d067706782",
+          "id": "s1-w-prk1",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017665.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK1"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "d71f067d3adc2548aa1b793cbf2ba32e15536ffe406184db6ea16c5f4140bb0c",
+          "id": "s1-w-prk2",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "60384a8b53e22f9d3ffcfffd5b2c610404b38c4a92bc47178c9be940ff712a3b",
+          "id": "s1-w-native",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017665.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + all native plasmids"
+        }
+      ],
+      "categories": [
+        "S1"
+      ],
+      "deferred": false,
+      "id": "pilot",
+      "legacy_execution_count": 16,
+      "profile_id": "s1-exact-v1"
+    },
+    {
+      "case_count": 12,
+      "cases": [
+        {
+          "category": "S7",
+          "fingerprint": "118bf4799a98978b0e916c3bda6d6deabecb54d0e1851742fa6783a12e537026",
+          "id": "s7-se11-original-repeat-1",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 original \u00b7 repeat 1"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "8431b293842eafba9bad30a52393f72614780c107cbeb4f7bc36dcb52bdc275c",
+          "id": "s7-se11-original-repeat-2",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 original \u00b7 repeat 2"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "9aaa645c87e7ea8a2559b867b3c82b07e7c4abdc11b693b9720e2971d2d3316f",
+          "id": "s7-se11-original-repeat-3",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 original \u00b7 repeat 3"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "ec9a03af8e3e4e1095b2caa4e96a4661bf2b18f763f5093d1f61a1578ea5cfa7",
+          "id": "s7-se11-shuffle-1-repeat-1",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 1"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "534cce56e0ae2e8a1f7348ef0cd0043f7ab267143d1475639563868ed94af8a7",
+          "id": "s7-se11-shuffle-1-repeat-2",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 2"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "fe80c7d45bdbcef38b518c9c81e7a54763e3e12339b76bc435b16773d9de0666",
+          "id": "s7-se11-shuffle-1-repeat-3",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-1 \u00b7 repeat 3"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "f5c88e276bbb461a579d35e86d02af0f1d28db49a6e838dd8399a78594969067",
+          "id": "s7-se11-shuffle-2-repeat-1",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 1"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "a87048a6acf468a9fc81bfc6aa27cbfef1948e95c071f1ab973489b91df29ef5",
+          "id": "s7-se11-shuffle-2-repeat-2",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 2"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "026f49f514b6c962319e1c161b114085b4961c03dc7063002de25e989788882c",
+          "id": "s7-se11-shuffle-2-repeat-3",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-2 \u00b7 repeat 3"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "839e6653b003fb324dbbb3a21b3bd03dbcfcef894389fd0207b1c2707a2990b0",
+          "id": "s7-se11-shuffle-3-repeat-1",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 1"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "add55203b205c56edb63510fa4cbe0b0c4e162e482405e3e020268f1e4a0c184",
+          "id": "s7-se11-shuffle-3-repeat-2",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 2"
+        },
+        {
+          "category": "S7",
+          "fingerprint": "bdaaca88915f335b5aecfdb0878b6ec80197964aabb84d153a9b47cd3ed3518d",
+          "id": "s7-se11-shuffle-3-repeat-3",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 shuffle-3 \u00b7 repeat 3"
+        }
+      ],
+      "categories": [
+        "S7"
+      ],
+      "deferred": false,
+      "id": "read-order",
+      "legacy_execution_count": 48,
+      "profile_id": "read-order-v1"
+    },
+    {
+      "case_count": 2,
+      "cases": [
+        {
+          "category": "S1",
+          "fingerprint": "a3fbd96de12c753cc0e5f5fdc84da9625f9cfd9b4db5a5e9e1215d4b70c0a40b",
+          "id": "s1-se11-large",
+          "reference_accessions": [
+            "NC_011415.1",
+            "NC_011419.1",
+            "NC_011413.1",
+            "NC_011416.1"
+          ],
+          "title": "SE11 \u00b7 Chromosome + all plasmids \u226520,000 bp"
+        },
+        {
+          "category": "S1",
+          "fingerprint": "9005cf5a4730d95983a1a14a371d84536669621024137c20e596612d85fbc3ca",
+          "id": "s1-mgh78578-large",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1",
+            "NC_009650.1",
+            "NC_009651.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + all plasmids \u226520,000 bp"
+        }
+      ],
+      "categories": [
+        "S3"
+      ],
+      "deferred": false,
+      "id": "repeatability-large",
+      "legacy_execution_count": 120,
+      "profile_id": "s3-large-repeatability-v3"
+    },
+    {
+      "case_count": 12,
+      "cases": [
+        {
+          "category": "S4",
+          "fingerprint": "cf4839a13ffd220309e78d60b5a822e92ef98e89ed70d1b3987ba9bcca1d970e",
+          "id": "s4-w-prk2-length-short",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 Short reads (1.5 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "1adf30d3f5c878a59476514d1b684a70f392487df4d92e339561c949e375f867",
+          "id": "s4-w-prk2-length-baseline",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 Baseline reads (10 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "b7f20bcc573d535022ab47803996094700e7ead920fd0431cc6bd3e06ed8e2a4",
+          "id": "s4-w-prk2-length-long",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + pRK2 \u00b7 Long reads (25 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "7ec3c3ac4a839d4ee9f3e3ff1ff8cfe09bce4600664f701bdf016f8417a88664",
+          "id": "s4-w-native-length-short",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017665.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + all native plasmids \u00b7 Short reads (1.5 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "6ee3ef6791c6b1c20ac096156d4d46ee72dd9e4e8b36e862f702bfe3e52f0b0a",
+          "id": "s4-w-native-length-baseline",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017665.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + all native plasmids \u00b7 Baseline reads (10 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "b0203ed5186567d3f18437732fbd43ec1a2597d99c2b1f84e457121ffa8b8917",
+          "id": "s4-w-native-length-long",
+          "reference_accessions": [
+            "NC_017664.1",
+            "NC_017665.1",
+            "NC_017662.1"
+          ],
+          "title": "W \u00b7 Chromosome + all native plasmids \u00b7 Long reads (25 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "d3a9895d07bb3f63bc677e2c5ce7bea19986d869ed39967188beda829be0da9f",
+          "id": "s4-mgh78578-pkpn7-length-short",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN7 \u00b7 Short reads (1.5 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "146a548ddce25b35b07ef7a3d298df8cbbebee775b475f56e1b2e73a917d25ba",
+          "id": "s4-mgh78578-pkpn7-length-baseline",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN7 \u00b7 Baseline reads (10 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "d177dfe0a50fb75d0ceb3046c90fe836bb0b92fb4d7996031f405029ed36a195",
+          "id": "s4-mgh78578-pkpn7-length-long",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + pKPN7 \u00b7 Long reads (25 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "34c8bb7a9fb7fc515f606e216d046fed7d47d33fd20beb0e979f07c5b7c4e8f1",
+          "id": "s4-mgh78578-native-length-short",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1",
+            "NC_009650.1",
+            "NC_009651.1",
+            "NC_009652.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + all native plasmids \u00b7 Short reads (1.5 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "cd3f0b89eedcec222d5159483a5985e4f1830d24473d59a7b074a83b34ba12df",
+          "id": "s4-mgh78578-native-length-baseline",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1",
+            "NC_009650.1",
+            "NC_009651.1",
+            "NC_009652.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + all native plasmids \u00b7 Baseline reads (10 kb target)"
+        },
+        {
+          "category": "S4",
+          "fingerprint": "c711dfe5b7c03034d5cf9b0b8e90fe735fad2f03b19fc6a9cd899558db412e35",
+          "id": "s4-mgh78578-native-length-long",
+          "reference_accessions": [
+            "NC_009648.1",
+            "NC_009649.1",
+            "NC_009650.1",
+            "NC_009651.1",
+            "NC_009652.1",
+            "NC_009653.1"
+          ],
+          "title": "MGH78578 \u00b7 Chromosome + all native plasmids \u00b7 Long reads (25 kb target)"
+        }
+      ],
+      "categories": [
+        "S4"
+      ],
+      "deferred": false,
+      "id": "small-plasmids",
+      "legacy_execution_count": 48,
+      "profile_id": "s4-exact-lengths-v1"
+    }
+  ],
+  "schema_version": 1
+}

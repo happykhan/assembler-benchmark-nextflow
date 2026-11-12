@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "profile_id": "s5-native-linear-streptomyces-v2",
+  "references": [
+    "GCF_036177905.1",
+    "GCF_045162825.1",
+    "GCF_045210185.1"
+  ],
+  "simulation": {
+    "model": "exact-linear-anchored-v1",
+    "seed": 20261105,
+    "chromosome_depth": 30,
+    "plasmid_relative_depth": 1,
+    "length_mean": 10000,
+    "length_sd": 5000,
+    "length_min": 500,
+    "length_max": 50000,
+    "circular_read_limit": "one_circumference",
+    "fastq_phred": 40,
+    "minimum_breadth": 1.0,
+    "linear_terminal_reads_per_end": 2
+  },
+  "tools": [
+    "miniasm"
+  ],
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "plassembler_chromosome_threshold": 1000000,
+  "scoring": "exact-dedicated-molecule-v1",
+  "scenario_categories": [
+    "S5"
+  ],
+  "plassembler_no_chromosome": false,
+  "linear_panel": {
+    "read_profiles": [
+      {
+        "id": "standard",
+        "title": "standard read-length target",
+        "length_mean": 10000,
+        "length_sd": 5000,
+        "length_min": 500,
+        "length_max": 50000,
+        "linear_terminal_read_length": 10000
+      },
+      {
+        "id": "long",
+        "title": "long read-length target",
+        "length_mean": 100000,
+        "length_sd": 25000,
+        "length_min": 20000,
+        "length_max": 200000,
+        "linear_terminal_read_length": 120000
+      }
+    ],
+    "scope": "native_genome",
+    "reference_panel": "references/streptomyces-linear-panel.json"
+  },
+  "report_scope": "single_batch"
+}

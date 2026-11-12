@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "source_project": "happykhan/ploptimizer/assembly-benchmark",
+  "port_policy": "Original case IDs, endpoints, profiles and pinned reference metadata are retained. Scheduler, submission and legacy report orchestration are not part of this port.",
+  "files": [
+    {
+      "source": "pipeline/common.py",
+      "source_sha256": "dfdf74e2a4c7b09101457ee06a4baf88febab1908b86cf9588fe35b2d86b01d0",
+      "ported_to": "diagnostic_core/common.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "a959a4ee93fc5f028b98ca0dbe07079d97a240e3e78e4891c44b5970fd6fca70"
+    },
+    {
+      "source": "pipeline/cases.py",
+      "source_sha256": "d3ec146ebc8410ec479ba8e343075d1c5e197cfe8f709509168a9a0c338f4657",
+      "ported_to": "diagnostic_core/cases.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "d3ec146ebc8410ec479ba8e343075d1c5e197cfe8f709509168a9a0c338f4657"
+    },
+    {
+      "source": "pipeline/linear_cases.py",
+      "source_sha256": "8aff025a38b6c5782849c1bfbc21e50865bca13da0fbc0f0dc68ea378944f84c",
+      "ported_to": "diagnostic_core/linear_cases.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "8aff025a38b6c5782849c1bfbc21e50865bca13da0fbc0f0dc68ea378944f84c"
+    },
+    {
+      "source": "pipeline/scoring.py",
+      "source_sha256": "73795a6bc484411ff9d2b28670543bb2bb1f148258b83dce573a7a66f80e96a0",
+      "ported_to": "diagnostic_core/scoring.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "73795a6bc484411ff9d2b28670543bb2bb1f148258b83dce573a7a66f80e96a0"
+    },
+    {
+      "source": "pipeline/tolerant.py",
+      "source_sha256": "d0c62ac359f7104ba586a0e1d4383b723c4389ba6e199f41824c2e800ca9dd58",
+      "ported_to": "diagnostic_core/tolerant.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "d0c62ac359f7104ba586a0e1d4383b723c4389ba6e199f41824c2e800ca9dd58"
+    },
+    {
+      "source": "pipeline/diagnostics.py",
+      "source_sha256": "cfc987c103061a567a1ffea2db0e51110e1de80637125a746ed1b5f9d4b9e76f",
+      "ported_to": "diagnostic_core/diagnostics.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "cfc987c103061a567a1ffea2db0e51110e1de80637125a746ed1b5f9d4b9e76f"
+    },
+    {
+      "source": "pipeline/noisy_reads.py",
+      "source_sha256": "9914f61222a54c06b806dc4442ad677d4a6edd8ebf2f4e726055d9e576f68f0a",
+      "ported_to": "diagnostic_core/noisy_reads.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "8ab14c0e18a65eb73fc8da6ec2f00248088b8bfd7c7d7b27cd4a2f64da79a68d"
+    },
+    {
+      "source": "pipeline/reads.py",
+      "source_sha256": "b39498e810a685cc50b382c39d917008d7a9079d9402bde92bb841f25cddc644",
+      "ported_to": "diagnostic_core/reads.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "a8ac70febe1dc54306121095db2afdacb9631a9f9f0e7c326f707aa7f9c27164"
+    },
+    {
+      "source": "pipeline/determinism.py",
+      "source_sha256": "473aa02d1abf0257ce435935d4a11fe3cb4774fad1672ce81b607cb2a9ccec70",
+      "ported_to": "diagnostic_core/determinism.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "9492200e50f24b63c48ccc4e53345ec112f8b3c6a7075095e92c1b5e72df9584"
+    },
+    {
+      "source": "pipeline/read_order.py",
+      "source_sha256": "5fecde9bff84ae6ad8a041bc6b5a8cf8d7070772e88312e68170fc1980cba151",
+      "ported_to": "diagnostic_core/read_order.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "479ad483cf4d9260f0eb615c86aa6e4a5e92a51921684a71ca9f2250d4148e56"
+    },
+    {
+      "source": "pipeline/assessments.py",
+      "source_sha256": "a240226cf26430fdfad0c500344245d5cc059ffc5b9e57afb0588eee9bbecd1a",
+      "ported_to": "diagnostic_core/assessments.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "d431e053a93450398c84a8b8e1b0ff0b36aa318159d671930f44bf639a093bd0"
+    },
+    {
+      "source": "pipeline/noisy_workflow.py",
+      "source_sha256": "32ddc63caea0c8755f0b2497ec5ce0ebc1d8355667ce68a032c296f3012fa9bc",
+      "ported_to": "diagnostic_core/noisy_workflow.py",
+      "scope": "pure scientific logic; custom scheduler/controller excluded",
+      "ported_sha256": "b0cdf1621be945ed33e629d2c524e244119719c1afbd0807c049f3d0d5376b10"
+    },
+    {
+      "source": "references/panel.json",
+      "source_sha256": "6d18f92947750d703aee8b834f6ea4eb44a9238460a766850326161cfc0c9ce8",
+      "ported_to": "assets/diagnostics/references/panel.json",
+      "ported_sha256": "6d18f92947750d703aee8b834f6ea4eb44a9238460a766850326161cfc0c9ce8"
+    },
+    {
+      "source": "references/linear-panel.json",
+      "source_sha256": "c933a74fe62ee631ad489db409704d4c201aae293d89779b6ee6fee9b1388718",
+      "ported_to": "assets/diagnostics/references/linear-panel.json",
+      "ported_sha256": "c933a74fe62ee631ad489db409704d4c201aae293d89779b6ee6fee9b1388718"
+    },
+    {
+      "source": "references/streptomyces-linear-panel.json",
+      "source_sha256": "11ea51f62ed1d962dd4ed83ad323e898aee0d88949e56deac62e2d0c6d57834d",
+      "ported_to": "assets/diagnostics/references/streptomyces-linear-panel.json",
+      "ported_sha256": "11ea51f62ed1d962dd4ed83ad323e898aee0d88949e56deac62e2d0c6d57834d"
+    },
+    {
+      "source": "config/pilot.json",
+      "source_sha256": "e13fe45d06278c560709ba46f39856c4d83bfa6cf5a8b076bd52ebe0a0d85b57",
+      "ported_to": "assets/diagnostics/profiles/pilot.json",
+      "ported_sha256": "e13fe45d06278c560709ba46f39856c4d83bfa6cf5a8b076bd52ebe0a0d85b57"
+    },
+    {
+      "source": "config/baseline-large.json",
+      "source_sha256": "cfe57da741698883726ba453017a4e99e996b104ad693df9aedf5aa607b7e2b9",
+      "ported_to": "assets/diagnostics/profiles/baseline-large.json",
+      "ported_sha256": "cfe57da741698883726ba453017a4e99e996b104ad693df9aedf5aa607b7e2b9"
+    },
+    {
+      "source": "config/coverage-large.json",
+      "source_sha256": "91e2db72abe9b47ed6338baa227b5b5171dd05a02e31546cf70ac5a44a67c71f",
+      "ported_to": "assets/diagnostics/profiles/coverage-large.json",
+      "ported_sha256": "91e2db72abe9b47ed6338baa227b5b5171dd05a02e31546cf70ac5a44a67c71f"
+    },
+    {
+      "source": "config/repeatability-large.json",
+      "source_sha256": "17c62af0784f206a94ff36b40bd1ed729fcf753b013e3f6741e29b4920bab3df",
+      "ported_to": "assets/diagnostics/profiles/repeatability-large.json",
+      "ported_sha256": "17c62af0784f206a94ff36b40bd1ed729fcf753b013e3f6741e29b4920bab3df"
+    },
+    {
+      "source": "config/determinism.json",
+      "source_sha256": "4552b0b5ca5a69e572a9bb2d6b5aaddcb1858917d2d4a27a7dbb930090a74ce2",
+      "ported_to": "assets/diagnostics/profiles/determinism.json",
+      "ported_sha256": "4552b0b5ca5a69e572a9bb2d6b5aaddcb1858917d2d4a27a7dbb930090a74ce2"
+    },
+    {
+      "source": "config/determinism-modes.json",
+      "source_sha256": "61e6bd3f6a41eecc7377b7a127696f649060cec9a327fbe6e4909ff803772324",
+      "ported_to": "assets/diagnostics/profiles/determinism-modes.json",
+      "ported_sha256": "61e6bd3f6a41eecc7377b7a127696f649060cec9a327fbe6e4909ff803772324"
+    },
+    {
+      "source": "config/small-plasmids.json",
+      "source_sha256": "1452da98a7de63269c716c22f1af5138084c2d655d2a41db3fd1d35141dac62e",
+      "ported_to": "assets/diagnostics/profiles/small-plasmids.json",
+      "ported_sha256": "1452da98a7de63269c716c22f1af5138084c2d655d2a41db3fd1d35141dac62e"
+    },
+    {
+      "source": "config/linear-plasmids.json",
+      "source_sha256": "0305ff971f2e8643b127f6dc3455189032450993835fd58cb6d0fca72ad5536f",
+      "ported_to": "assets/diagnostics/profiles/linear-plasmids.json",
+      "ported_sha256": "0305ff971f2e8643b127f6dc3455189032450993835fd58cb6d0fca72ad5536f"
+    },
+    {
+      "source": "config/linear-isolated-legacy.json",
+      "source_sha256": "0cc0b2b2d233603f4c935ccd0f0d2fad7f9514e6ce9e03c7d43da441ce9c40c2",
+      "ported_to": "assets/diagnostics/profiles/linear-isolated-legacy.json",
+      "ported_sha256": "0cc0b2b2d233603f4c935ccd0f0d2fad7f9514e6ce9e03c7d43da441ce9c40c2"
+    },
+    {
+      "source": "config/miniasm-linear.json",
+      "source_sha256": "71f596fa8a2c56bd68e190dcfbe95a3147184a320047bd78229d3736848acf31",
+      "ported_to": "assets/diagnostics/profiles/miniasm-linear.json",
+      "ported_sha256": "71f596fa8a2c56bd68e190dcfbe95a3147184a320047bd78229d3736848acf31"
+    },
+    {
+      "source": "config/miniasm-plus-linear.json",
+      "source_sha256": "b9bf960b00e9e6c748708443a6cf7e11526a88f913f92083b4b4cb9ee180ba4f",
+      "ported_to": "assets/diagnostics/profiles/miniasm-plus-linear.json",
+      "ported_sha256": "b9bf960b00e9e6c748708443a6cf7e11526a88f913f92083b4b4cb9ee180ba4f"
+    },
+    {
+      "source": "config/noisy-smoke.json",
+      "source_sha256": "bc6ac65cb4b6447c3f8ca6be4563d25b5f17a6075b857b113bbd968ca0b15031",
+      "ported_to": "assets/diagnostics/profiles/noisy-smoke.json",
+      "ported_sha256": "bc6ac65cb4b6447c3f8ca6be4563d25b5f17a6075b857b113bbd968ca0b15031"
+    },
+    {
+      "source": "config/noisy-large.json",
+      "source_sha256": "816e3b3fee9f220420273a4f3f0cf23b66092132ad98d54d81b9d7524da94c50",
+      "ported_to": "assets/diagnostics/profiles/noisy-large.json",
+      "ported_sha256": "816e3b3fee9f220420273a4f3f0cf23b66092132ad98d54d81b9d7524da94c50"
+    },
+    {
+      "source": "config/read-order.json",
+      "source_sha256": "46e320de5ec5b298b48121b4a04763a672563314406cf05c24b56f098d806175",
+      "ported_to": "assets/diagnostics/profiles/read-order.json",
+      "ported_sha256": "46e320de5ec5b298b48121b4a04763a672563314406cf05c24b56f098d806175"
+    },
+    {
+      "source": "pipeline/graph_artifacts.py",
+      "source_sha256": "920d1632327e97948b79890fddcb9881c2b2332a074ce17634680502379d2b5d",
+      "ported_to": "diagnostic_core/topology_metadata.py",
+      "scope": "Bounded tool circularity metadata parsers only; no reference-derived circularity claims",
+      "ported_sha256": "dcf0e594df7c0ecba36369392b53428be314b3d68aff5d836e2f4fd1a3118f25"
+    }
+  ]
+}

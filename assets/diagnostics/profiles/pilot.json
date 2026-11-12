@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "profile_id": "s1-exact-v1",
+  "references": ["GCF_000258145.1"],
+  "simulation": {
+    "model": "exact-lognormal-v1",
+    "seed": 20261104,
+    "chromosome_depth": 30,
+    "plasmid_relative_depth": 1,
+    "length_mean": 10000,
+    "length_sd": 5000,
+    "length_min": 500,
+    "length_max": 50000,
+    "circular_read_limit": "one_circumference",
+    "fastq_phred": 40,
+    "minimum_breadth": 0.99
+  },
+  "tools": ["flye", "flye-meta", "raven", "plassembler"],
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "plassembler_chromosome_threshold": 1000000,
+  "scoring": "exact-dedicated-molecule-v1"
+}

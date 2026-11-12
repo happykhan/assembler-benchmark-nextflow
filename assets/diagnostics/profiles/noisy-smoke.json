@@ -1,0 +1,76 @@
+{
+  "noisy_panel": {
+    "profiles": [
+      {
+        "error_model": null,
+        "id": "matched-exact",
+        "qscore_model": "placeholder-q40"
+      },
+      {
+        "error_model": "random",
+        "id": "generic-stress",
+        "identity_beta_percent": {
+          "maximum": 99.5,
+          "mean": 98,
+          "sd": 1
+        },
+        "qscore_model": "ideal"
+      },
+      {
+        "error_model": "nanopore2023",
+        "id": "ont2023-shaped",
+        "identity_beta_percent": {
+          "maximum": 99.5,
+          "mean": 98,
+          "sd": 1
+        },
+        "qscore_model": "nanopore2023"
+      }
+    ],
+    "seeds": [
+      20261105
+    ],
+    "targets": [
+      "s1-w-prk2"
+    ]
+  },
+  "plassembler_chromosome_threshold": 1000000,
+  "profile_id": "s6-matched-errors-smoke-v1",
+  "references": [
+    "GCF_000258145.1"
+  ],
+  "scenario_categories": [
+    "S6"
+  ],
+  "schema_version": 1,
+  "scoring": "exact-dedicated-molecule-v1",
+  "simulation": {
+    "chromosome_depth": 30,
+    "circular_read_limit": "one_circumference",
+    "fastq_phred": 40,
+    "length_max": 50000,
+    "length_mean": 10000,
+    "length_min": 500,
+    "length_sd": 5000,
+    "minimum_breadth": 0.99,
+    "model": "exact-lognormal-v1",
+    "plasmid_relative_depth": 1,
+    "seed": 20261104
+  },
+  "status": "experimental",
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "tolerant_policy": {
+    "maximum_length_ratio": 1.02,
+    "minimum_alignment_identity": 0.995,
+    "minimum_length_ratio": 0.98,
+    "minimum_reference_coverage": 0.99,
+    "second_copy_recovery_threshold": 0.95
+  },
+  "tools": [
+    "flye",
+    "flye-meta",
+    "raven",
+    "plassembler"
+  ]
+}

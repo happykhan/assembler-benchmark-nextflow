@@ -1,0 +1,91 @@
+{
+  "assessment_mode": "continuous-evidence-v1",
+  "minimum_plasmid_bp": 20000,
+  "noisy_panel": {
+    "frozen_sources": {
+      "s1-mgh78578-pkpn3": {
+        "batch": "20261106T042108",
+        "input_manifest_sha256": "045cfa5505793ba3118e811d72cf43bbd3b5076a1c165ab5512d86cecab9bbdf",
+        "origins_sha256": "5583ed925f0169515fd27c59e6cb9b538a2f3c9c6e686559950f51a7289eb10c",
+        "reads_sha256": "3609c5f5023d24022c9aa1f0368ae4b2f789346d3f8e9c031259c89297d837ae",
+        "scenario_id": "s2-mgh78578-pkpn3-depth-1",
+        "truth_sha256": "b3c26001161ae6c9dc8f64c5781631592bb066e07c7ed00fc50c4f1bad03fe6a"
+      },
+      "s1-se11-pse11-1": {
+        "batch": "20261106T042108",
+        "input_manifest_sha256": "c77b9a2f1cfbb1391048039cd9bf28cf021e203d90665e0441019a56efe7aaec",
+        "origins_sha256": "4c8d12dfdf5c308b365bec2d0b98e67a29d4c2a86c9c350360fd125cd3a7aa11",
+        "reads_sha256": "6e4b0c3661f78bd99b8501c1109b285ac6afeb503cc94da67a3f4b0db3d77d3d",
+        "scenario_id": "s2-se11-pse11-1-depth-1",
+        "truth_sha256": "c832da0cec8a590926fb24251cc56336d61bd9c453b2f8c3e89e6fe89a5418db"
+      }
+    },
+    "profiles": [
+      {
+        "error_model": null,
+        "id": "matched-exact",
+        "qscore_model": "placeholder-q40"
+      },
+      {
+        "error_model": "random",
+        "id": "generic-stress",
+        "identity_beta_percent": {
+          "maximum": 99.5,
+          "mean": 98,
+          "sd": 1
+        },
+        "qscore_model": "ideal"
+      },
+      {
+        "error_model": "nanopore2023",
+        "id": "ont2023-shaped",
+        "identity_beta_percent": {
+          "maximum": 99.5,
+          "mean": 98,
+          "sd": 1
+        },
+        "qscore_model": "nanopore2023"
+      }
+    ],
+    "seeds": [
+      20261106
+    ],
+    "targets": [
+      "s1-se11-pse11-1",
+      "s1-mgh78578-pkpn3"
+    ]
+  },
+  "plassembler_chromosome_threshold": 1000000,
+  "profile_id": "s6-large-frozen-source-v1",
+  "references": [
+    "GCF_000010385.1",
+    "GCF_000016305.1"
+  ],
+  "scenario_categories": [
+    "S6"
+  ],
+  "schema_version": 1,
+  "scoring": "exact-dedicated-molecule-v1",
+  "simulation": {
+    "chromosome_depth": 30,
+    "circular_read_limit": "one_circumference",
+    "fastq_phred": 40,
+    "length_max": 50000,
+    "length_mean": 10000,
+    "length_min": 500,
+    "length_sd": 5000,
+    "minimum_breadth": 0.99,
+    "model": "exact-lognormal-v1",
+    "plasmid_relative_depth": 1,
+    "seed": 20261106
+  },
+  "status": "experimental",
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "tools": [
+    "flye",
+    "flye-meta",
+    "raven",
+    "plassembler"
+  ]
+}

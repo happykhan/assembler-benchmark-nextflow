@@ -11,6 +11,7 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from benchlib.assessment import METHOD, outcome, parse_paf, read_fasta, sha256, summarise, write_json
 from benchlib.process import measured_run
+from benchlib.evidence import retain_workflow_evidence
 from benchlib.paper_recovery import assess_paper
 
 
@@ -44,8 +45,9 @@ def assess(args):
     execution = json.loads(args.execution.read_text())
     input_path = getattr(args, 'input_provenance', None) or args.simulation
     real = case.get('track') == 'real'
-    input_name = 'input-provenance.json' if real else 'simulation.json'
-    input_key = 'input_provenance_sha256' if real else 'simulation_sha256'
+    external = case.get('track') in ('real', 'general')
+    input_name = 'input-provenance.json' if external else 'simulation.json'
+    input_key = 'input_provenance_sha256' if external else 'simulation_sha256'
     simulation = json.loads(input_path.read_text())
     provenance = json.loads(args.reference_provenance.read_text())
     output = args.out.resolve()
@@ -55,7 +57,7 @@ def assess(args):
                          (args.reference_provenance, 'reference-provenance.json')):
         shutil.copyfile(source, evidence / name)
     result = {'schema_version': 1, 'case': case, 'assembler': args.assembler,
-              'track': 'real' if real else 'simulated', 'preset': case.get('preset', 'quick'),
+              'track': case.get('track', 'simulated'), 'preset': case.get('preset', 'quick'),
               'headline_eligible': bool(case.get('preset') == 'standard' and case.get('headline_eligible')
                                         and provenance.get('headline_eligible')),
               'execution': execution, 'sequence_outcome': None, 'replicons': [],
@@ -77,7 +79,9 @@ def assess(args):
                              ['Initial whole-genome baseline validation, excluded from headline comparisons.']
                              if case.get('purpose') == 'baseline_validation' else [])}
     try:
-        result['provenance']['retained_graphs'] = retain_tool_evidence(execution, args.execution.parent, evidence)
+        artifacts, workflow_graphs = retain_workflow_evidence(execution, args.execution.parent, evidence)
+        result['provenance']['retained_workflow_files'] = artifacts
+        result['provenance']['retained_graphs'] = retain_tool_evidence(execution, args.execution.parent, evidence) + workflow_graphs
         if execution.get('assembler') != args.assembler:
             raise ValueError('Execution assembler binding differs')
         if provenance.get('reference_sha256') != result['provenance']['reference_sha256']:

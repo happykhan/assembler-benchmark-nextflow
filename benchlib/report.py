@@ -35,7 +35,7 @@ def expected_plan(path):
 
 def record_complete(record):
     if record['assessment']['status'] == 'not_run':
-        return record['execution']['status'] == 'software_error'
+        return record['execution']['status'] in ('software_error', 'resource_error')
     if record['assessment']['status'] != 'completed':
         return False
     if record.get('track') != 'real':
@@ -44,10 +44,30 @@ def record_complete(record):
             and record.get('input_diagnostics', {}).get('status') == 'completed')
 
 
+def verify_plan_binding(record, plan):
+    """A slot ID alone cannot establish that the selected experiment ran."""
+    if 'assembler_definitions' not in plan:
+        return  # Older explicit slot-only contracts have no execution definition.
+    cases = {row['id']: row for row in plan['cases']}
+    if record['case'] != cases.get(record['case']['id']):
+        raise ValueError('Result case differs from frozen scientific selection')
+    definition = plan['assembler_definitions'].get(record['assembler'])
+    execution = record['execution']
+    if not definition or any(execution.get(key) != definition.get(field) for key, field in
+            [('assembler','id'),('tool','tool'),('expected_version','version'),('environment','environment'),('manifest','manifest')]):
+        raise ValueError('Execution differs from frozen assembler definition')
+    manifest = definition['manifest']
+    lock = str(Path(manifest).with_suffix('.lock'))
+    hashes = plan['source_file_sha256']
+    if execution.get('environment_manifest_sha256') != hashes[manifest] or execution.get('environment_lock_sha256') != hashes[lock]:
+        raise ValueError('Execution environment differs from frozen software locks')
+
+
 def export_results(paths, output, expected_slots, run_id, plan_path=None, runtime_receipt=None, input_diagnostics=()):
     if expected_slots < 1:
         raise ValueError('Expected slot count must be positive')
     sources = sorted(map(Path, paths))
+    frozen = json.loads(Path(plan_path).read_text()) if plan_path else None
     expected = expected_plan(plan_path) if plan_path else None
     if runtime_receipt:
         receipt = json.loads(Path(runtime_receipt).read_text())
@@ -71,6 +91,8 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None, runtim
     records, seen, assemblies, graphs = [], set(), [], []
     for source in sources:
         record = json.loads(source.read_text())
+        if frozen:
+            verify_plan_binding(record, frozen)
         case_id = identifier(record['case']['id'])
         assembler = identifier(record['assembler'])
         key = case_id, assembler
@@ -112,6 +134,23 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None, runtim
         shutil.copytree(directory, output / 'input-diagnostics' / case_id)
         for record in matching:
             record['input_diagnostics'] = diagnostic
+    if plan_path and any(r.get('track') == 'diagnostic' for r in records):
+        from diagnostic_core.comparison import compare_results
+        comparison = compare_results(records, json.loads(Path(plan_path).read_text()))
+        write_json(output / 'diagnostic-comparisons.json', comparison)
+        for group in comparison['groups']:
+            members = {r['case_id'] for r in group['runs']}
+            for record in records:
+                if record['case']['id'] in members and record['assembler'] == group['assembler']:
+                    if group['category'] == 'S7':
+                        status = group['end_sensitive']['verdict']
+                    else:
+                        status = '; '.join(label + ': ' + ('Identical' if group[label + '_identical'] is True else 'Different' if group[label + '_identical'] is False else 'Not assessed') for label in ('byte', 'normalised_sequence', 'biological'))
+                    record['agreement'] = {'status': status, 'category': group['category'],
+                        'complete': group['complete'], 'expected_runs': group['expected_runs'],
+                        'endpoint': group['endpoint']}
+    from reporting.native_prepare import prepare_presentation
+    prepare_presentation(output, records)
     write_json(output / 'results.json', {'schema_version': 1, 'run_id': run_id, 'results': records})
     write_table(output / 'results.tsv', records)
     (output / 'index.html').write_text(render_html(records, expected_slots, run_id))
@@ -138,7 +177,7 @@ def export_results(paths, output, expected_slots, run_id, plan_path=None, runtim
 
 def verify_evidence(record, target, assembly_dir):
     provenance = record['provenance']
-    input_name, input_key = ('input-provenance.json', 'input_provenance_sha256') if record.get('track') == 'real' else ('simulation.json', 'simulation_sha256')
+    input_name, input_key = ('input-provenance.json', 'input_provenance_sha256') if record.get('track') in ('real', 'general', 'diagnostic') else ('simulation.json', 'simulation_sha256')
     for name, key in (('execution.json', 'execution_sha256'), (input_name, input_key),
                       ('reference-provenance.json', 'reference_provenance_sha256')):
         if sha256(target / name) != provenance[key]:
@@ -153,6 +192,11 @@ def verify_evidence(record, target, assembly_dir):
             or reference.get('reference_sha256') != provenance['reference_sha256']
             or execution.get('reads_sha256') != simulation.get('reads_sha256')):
         raise ValueError('Retained reference/simulation/execution binding mismatch')
+    for artifact in provenance.get('retained_workflow_files', []):
+        name = identifier(artifact['file'])
+        location = assembly_dir if Path(name).suffix == '.gfa' else target
+        if sha256(location / name) != artifact['sha256']:
+            raise ValueError('Retained workflow artifact binding mismatch')
     graphs = provenance.get('retained_graphs', [])
     if len(graphs) != len({row['file'] for row in graphs}):
         raise ValueError('Duplicate retained graph')
@@ -166,7 +210,9 @@ def verify_evidence(record, target, assembly_dir):
         if sha256(target / 'paper-alignment.paf') != record['paper_assessment']['paf_sha256']:
             raise ValueError('Paper alignment hash mismatch')
     if record['assessment']['status'] == 'completed':
-        if sha256(target / 'alignment.paf') != record['assessment']['paf_sha256']:
+        paf_binding = (record.get('diagnostics', {}).get('paf_sha256') if record.get('track') == 'diagnostic'
+                       else record['assessment']['paf_sha256'])
+        if paf_binding and sha256(target / 'alignment.paf') != paf_binding:
             raise ValueError('Alignment hash mismatch')
         if sha256(assembly_dir / 'assembly.fasta') != provenance['assembly_sha256']:
             raise ValueError('Assembly hash mismatch')
@@ -193,7 +239,12 @@ def rows(records):
                    'reads_sha256': record['execution'].get('reads_sha256'),
                    'assembly_sha256': record['provenance'].get('assembly_sha256'),
                    'assembler_version': record['execution'].get('version'),
-                   'structural_correctness': None}
+                   'structural_correctness': None,
+                   'diagnostic_exact_status': molecule.get('status') if molecule and record.get('track') == 'diagnostic' else None,
+                   'diagnostic_exact_contigs': json.dumps(molecule.get('exact_contigs')) if molecule and record.get('track') == 'diagnostic' else None,
+                   'secondary_reference_status': record.get('secondary_reference_status'),
+                   'output_agreement_status': record.get('agreement', {}).get('status'),
+                   'tolerant_assessment_status': record.get('tolerant_assessment', {}).get('status')}
             paper = next((p for p in record.get('paper_assessment', {}).get('replicons', []) if molecule and p['accession'] == molecule['accession']), {})
             row.update(track=record.get('track', 'simulated'), input_run_accession=record['case'].get('run_accession'),
                 paper_assessment_status=record.get('paper_assessment', {}).get('status'),
@@ -205,7 +256,7 @@ def rows(records):
                 paper_mapper_process_tree_peak_rss_bytes=record['resources'].get('paper_mapper_process_tree_peak_rss_bytes'))
             for key in ('accession', 'molecule_type', 'length_bp', 'contiguity', 'complete',
                         'identity', 'identity_measured', 'max_indel_bp'):
-                row[key] = molecule[key] if molecule else None
+                row[key] = molecule.get(key) if molecule else None
             yield row
 
 
@@ -224,6 +275,9 @@ def display(value, multiplier=1, suffix=''):
 
 
 def render_html(records, expected_slots, run_id):
+    if any(r.get('track') == 'diagnostic' for r in records):
+        from reporting.native_diagnostics import render_diagnostics
+        return render_diagnostics(records, expected_slots, run_id)
     body = []
     for record in records:
         case_id, assembler = record['case']['id'], record['assembler']

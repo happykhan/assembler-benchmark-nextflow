@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "scope": "Sequence admission hashes from frozen historical reference audits, never inferred from failed assemblies. FASTA formatting may change; sequence hashes must not.",
+  "references": {
+    "NC_017664.1": {
+      "refseq_accession": "NC_017664.1",
+      "length_bp": 4897452,
+      "sequence_sha256": "e3f8a1ff2888c01dd0c6057403c49d34c913c80b89bb03d49ddcbe5d54b37a4b",
+      "file_sha256": "8df04da48abf07681b732811f8d8609b74efbee0f40fb74e4d403992f8f60a7b"
+    },
+    "NC_017665.1": {
+      "refseq_accession": "NC_017665.1",
+      "length_bp": 102535,
+      "sequence_sha256": "9c2e074619100cc12a20ad03d76f497ce959e1d87bd9507fee40008fb44e1b6c",
+      "file_sha256": "828dba1962994f43a6ef0a3a3c8fe41fc77cef0a6883b7f105b16149fd72eac4"
+    },
+    "NC_017662.1": {
+      "refseq_accession": "NC_017662.1",
+      "length_bp": 5360,
+      "sequence_sha256": "3d09bcc77a69c606c27d78f490516a55009e4ae1648674298c06aa0bf2f45610",
+      "file_sha256": "681dc45df0f0b0370fda40c0677b756fcc864dc73b411beff2d5c2f95ee8e3a3"
+    },
+    "NC_000913.3": {
+      "refseq_accession": "NC_000913.3",
+      "length_bp": 4641652,
+      "sequence_sha256": "e999dceccb76562d40e49a10d9e6d4cf1c05d184f4f80b92bb32d4a2420c11d0",
+      "file_sha256": "6b195feda4c66140f6762742eb8b30c2652f02b45878b174f5b00ef85ecc95d7"
+    },
+    "NC_011415.1": {
+      "refseq_accession": "NC_011415.1",
+      "length_bp": 4887515,
+      "sequence_sha256": "173027d3549d72f8ea98656fb038a6910dafc6ab6dfc960383157b35ce638a56",
+      "file_sha256": "1b3be2a5e088c605e861597b8a97c908ff63ba76e0d69b88d0c6a8b08c372f1b"
+    },
+    "NC_011419.1": {
+      "refseq_accession": "NC_011419.1",
+      "length_bp": 100021,
+      "sequence_sha256": "92660ddd346e6cdbcd3b8b0a72be799c1aabac654ddbb61d462fa4c380ee06c1",
+      "file_sha256": "2c3d4baf0cfe48d2cf66275a5fb6b5f7e2a1bb92021e08d4dc0a82e60a30c075"
+    },
+    "NC_011413.1": {
+      "refseq_accession": "NC_011413.1",
+      "length_bp": 91158,
+      "sequence_sha256": "b340ce161b4e9d25677b1af921e0f584f45e60d8a5827f824ffc77ff34e48b1a",
+      "file_sha256": "99ac5ba34976d1b59e77d1c9d0c73590abba909a638309e4c9697c6b4d4caea0"
+    },
+    "NC_011416.1": {
+      "refseq_accession": "NC_011416.1",
+      "length_bp": 60555,
+      "sequence_sha256": "563f067e12dd2f4939d0b5f7c2fe4d67673aca88dc8300c160152fdc043b1c87",
+      "file_sha256": "7f417871596d0ee840a551a0859cb00ef88d76dcffb6317db066e1586f89fc97"
+    },
+    "NC_011407.1": {
+      "refseq_accession": "NC_011407.1",
+      "length_bp": 6929,
+      "sequence_sha256": "9d27caf2ce10a31dc14ece8504a68daf96ac58adfaca93c7ff19256a618ad4c5",
+      "file_sha256": "4a6e885ff05bcd1cb137c17a71036fb5d13dfba4944ce02200b0d0ab5ba0c55f"
+    },
+    "NC_011408.1": {
+      "refseq_accession": "NC_011408.1",
+      "length_bp": 5366,
+      "sequence_sha256": "2c277dd7b49db159fe441d9497a96f7b1b1c71631d447603c63e75b86131e4d8",
+      "file_sha256": "abd98b03f5a2caba98c0eef41e61cdc4f796b956d0112dbc7c133bd1ff055dc2"
+    },
+    "NC_011411.1": {
+      "refseq_accession": "NC_011411.1",
+      "length_bp": 4082,
+      "sequence_sha256": "ec27762079de2c4fdcbfb642dcf44277443ba85d5294f01728cfb740372285da",
+      "file_sha256": "9b46a3382913d7f576e823603054338f00969fe066f5932b6415e918b2b1c4df"
+    },
+    "NZ_CP073076.1": {
+      "refseq_accession": "NZ_CP073076.1",
+      "length_bp": 5306902,
+      "sequence_sha256": "b2c6cd9d9b7972fade279b6319702a5793bb42aab0c1a59165418cbeca4f9296",
+      "file_sha256": "bc0dfd9f723b68d4c99670f6d9fc44c26461c9ecd8c6303b71c9b0e8c02a0cd6"
+    },
+    "NZ_CP073077.1": {
+      "refseq_accession": "NZ_CP073077.1",
+      "length_bp": 204698,
+      "sequence_sha256": "a96d64012398a710fe5daf1028d31336eac0c9a92a9c5efca45895f78e6e4e55",
+      "file_sha256": "fcfd170fb633a1725ab59687e928a4c89e8abf5d82b98340b3a0358343c7b970"
+    },
+    "NC_009648.1": {
+      "refseq_accession": "NC_009648.1",
+      "length_bp": 5315120,
+      "sequence_sha256": "40dae23cbcbb87467a905c609b732ebf72ff9100e53458f179ce481e381324f5",
+      "file_sha256": "e08c77a7c4c45f00ed7cbbf357ddf7684167b4e8371182837cdc4516c73039a4"
+    },
+    "NC_009649.1": {
+      "refseq_accession": "NC_009649.1",
+      "length_bp": 175879,
+      "sequence_sha256": "6de59942d77fe0ac70ea6e29c5260d18c23250a63a5a43264087f6dd65ccb95c",
+      "file_sha256": "c7302cd972876b28a87067aae2ff223f2592928213566d4388a8d8b21d387424"
+    },
+    "NC_009650.1": {
+      "refseq_accession": "NC_009650.1",
+      "length_bp": 107576,
+      "sequence_sha256": "7ebb12d227deba2fa15ebb91ac1977545bb12b406cf8173517e6b37251c91520",
+      "file_sha256": "028fcd18d331ff076495f3c3ee059fb6eb26ade8887d638703aad9009d623e0d"
+    },
+    "NC_009651.1": {
+      "refseq_accession": "NC_009651.1",
+      "length_bp": 88582,
+      "sequence_sha256": "831467e2db2856610bb5c7de58bcd710712c97a15d438082895cbc814d20aae0",
+      "file_sha256": "2aa696319dbcbc495e1cd72d9e370dacab43585d0abbd7f15265d055fa1068ef"
+    },
+    "NC_009652.1": {
+      "refseq_accession": "NC_009652.1",
+      "length_bp": 4259,
+      "sequence_sha256": "a66058c6837e7957d90ceb33e632d926448ae3bfebcd8b626354b267ab8039eb",
+      "file_sha256": "bfd972dc6bb5b4360e7b6d65135eec7551083295b652ccf7e29be877004f2786"
+    },
+    "NC_009653.1": {
+      "refseq_accession": "NC_009653.1",
+      "length_bp": 3478,
+      "sequence_sha256": "9622e917f1f02f118dd73637c25ba31abfc8c0aa53f636805c92f71cedf57ad5",
+      "file_sha256": "a326c6cd4582d63fe9bb252c3a34b3b843902e0d88cdde339b8e1b89b216e63c"
+    },
+    "NC_003903.1": {
+      "refseq_accession": "NC_003903.1",
+      "length_bp": 356023,
+      "sequence_sha256": "909d85ee50c1ba31928fddf6559b0b221370e6ad7272ed80218509d316d882f8",
+      "file_sha256": "ec8bf52a876914bcaeb212b0948177d6c78c98f4f0a8dc8f0fe9612876c74467"
+    },
+    "NC_004933.1": {
+      "refseq_accession": "NC_004933.1",
+      "length_bp": 50410,
+      "sequence_sha256": "774bfc70796d39da4ed2673d22ad2c872f3b2318ffc0e7fe5eb33da8bedd2d6c",
+      "file_sha256": "6ca04739cb836efa0b8a1325125e6e03f6ab40c1fae16f26ffc512005374d91e"
+    },
+    "NZ_CP108065.1": {
+      "refseq_accession": "NZ_CP108065.1",
+      "length_bp": 10691412,
+      "sequence_sha256": "0ee8df97abc7a3a4118aef7ea87770b7a61e21601a66de839760a41eb5a373d3",
+      "file_sha256": "9c37ec15dd5e19e00a98374905700cb0174138064663f71e5536eccb8ae7c27f"
+    },
+    "NZ_CP108066.1": {
+      "refseq_accession": "NZ_CP108066.1",
+      "length_bp": 134326,
+      "sequence_sha256": "32f8701582206ff699a4a9be0baa47e951d23756035d4f58c28184356ac52165",
+      "file_sha256": "1d61ec6101401ed126c6a3cc98cd29e82b7cb0b3904bbcae42ebed8e803735fd"
+    },
+    "NZ_CP108676.1": {
+      "refseq_accession": "NZ_CP108676.1",
+      "length_bp": 10948847,
+      "sequence_sha256": "61a7a05815d2b1e8328f5cbcc28034cf16cefeb915fa3f98d68325703ef9c753",
+      "file_sha256": "d94aeaedc6ce52488ec66deffc6fc97a01edbd694b4144bf92862dc5cd862ccc"
+    },
+    "NZ_CP109243.1": {
+      "refseq_accession": "NZ_CP109243.1",
+      "length_bp": 7135774,
+      "sequence_sha256": "5e4b8cd14bfe83008bc5b3c9e4b9c36e655d714e5b2900970216c8ce6f4ea25d",
+      "file_sha256": "45a484f3904768768b0ed04b1df58899de2badac06fd75fcfa58909b9584d7ca"
+    },
+    "NZ_CP109244.1": {
+      "refseq_accession": "NZ_CP109244.1",
+      "length_bp": 172072,
+      "sequence_sha256": "063821360e73103b432f5a1fee3c65b012176005815c593fc6694e74e4a2b483",
+      "file_sha256": "b0c648125a86142d8131e5c1d45e19d005747c6fdae7a8606976df093a19f9a8"
+    }
+  },
+  "sources": [
+    {
+      "source": "runs/20261104T182619/provenance/references.json",
+      "sha256": "8b41ae401875733e8b9a09e8bf03852240061e5e3eb44c23de6319023e1a6f67"
+    },
+    {
+      "source": "runs/20261104T190455/provenance/references.json",
+      "sha256": "e70bea50c1d63aad89f74580b5c4d19acae248bdd3aa62bb2e21b60725f55cb8"
+    },
+    {
+      "source": "runs/20261105T161001/provenance/references.json",
+      "sha256": "94bb73e7bc1145a98e02f0950bdbdea5d54fc9614fe151de6046717849e973e8"
+    },
+    {
+      "source": "runs/20261106T104655/provenance/references.json",
+      "sha256": "485e5f9e6e9fb7f384efca118c3c4d59efc55b89f998eadc4827aa418040f60e"
+    }
+  ]
+}

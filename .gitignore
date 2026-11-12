@@ -13,3 +13,6 @@ evidence/standard-runs/
 
 evidence/real-runs/
 reads-cache/
+
+.cache/
+website/node_modules/

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/happykhan/assembler-benchmark-nextflow/schemas/reporting-archive-v1.schema.json",
+  "title": "Sealed benchmark reporting archive v1",
+  "description": "All producer files except manifest.json are bound by SHA-256. Historical and native Nextflow producer semantics are validated separately. Import preserves bytes, missing values and scientific endpoints.",
+  "type": "object",
+  "required": ["schema_version", "files"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "files": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+  },
+  "oneOf": [
+    {"required": ["kind", "primary_batch", "batches", "sources", "cohort", "producer"], "properties": {"kind": {"const": "ploptimizer-results-bundle"}}},
+    {"required": ["run_id", "expected_slots", "result_count", "complete"], "properties": {"run_id": {"type": "string"}, "expected_slots": {"type": "integer", "minimum": 1}, "result_count": {"type": "integer", "minimum": 0}, "complete": {"type": "boolean"}}}
+  ]
+}

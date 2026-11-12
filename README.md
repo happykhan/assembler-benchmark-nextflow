@@ -1,267 +1,193 @@
 # Isolate long-read assembly benchmarks
 
-A separate Nextflow DSL2 project for selectable **single-isolate bacterial
-long-read assembly** benchmarks. Simulated data come first. Hybrid and metagenomic
-workflows are outside this project's scope.
-
-## Current development slice
-
-Quick runs two read-length cases through actual Badread simulation, Flye and Raven,
-Wick-style assessment, checksummed JSON/TSV export and a standalone HTML report.
-Both cases receive exactly 6,000,000 sequenced bases. The bimodal case allocates
-half the bases to each length mode; read-count proportions are measured separately.
-Read modes are deterministically interleaved.
-
-**Quick checks the workflow, not assembler performance.** Its reference is the
-first 200,000 bases of the checksummed *Bacillus subtilis* 168 chromosome
-NC_000964.3, treated as a linear fixture. It is neither a whole-genome benchmark
-nor part of a scientific ranking. Uniform error-free simulation does not model
-Nanopore sequencing bias. A small Standard whole-genome baseline is now admitted
-for two checked chromosomes; the full scientific panel remains unadmitted.
-
-The five agreed groups for Standard are plasmids, GC/composition, repeats/genome
-structure, read quality/sampling, and reproducibility. The Quick read-quality fixtures and two-reference simulated Standard baseline
-are implemented. A separate real-data small-plasmid pilot now admits one study
-isolate; it is selected explicitly and does not change the default simulated runs.
-
-## Run with Nextflow
-
-On Linux x86-64, install Nextflow 25.10.2 or later, a compatible Java runtime,
-and [Pixi](https://pixi.sh) 0.73.0 or later. Then run:
+One Nextflow workflow for **single-isolate bacterial long-read assembly**:
+reference/input preparation → simulation or deposited reads → assembly →
+assessment → sealed results bundle → standalone website. Hybrid and metagenomic
+assembly are outside the scope.
 
 ```bash
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick
 ```
 
-**No Python setup commands or manual clone are required.** The pipeline freezes
-and validates the selection, installs the locked tooling and assembler
-environments, downloads and checks the reference, simulates reads, runs the
-assemblers, assesses them and exports the standalone report. The first run needs
-network access and takes longer while software is installed. Outputs default to
-`results/quick/bundle/index.html`; references are cached in the launch directory.
-Nextflow keeps its downloaded pipeline and prepared environments in its asset cache.
+No preliminary Python commands or manual clone are needed. Quick downloads and
+checks its reference, prepares pinned environments, simulates two read-length
+fixtures, runs Flye and Raven, assesses the outputs and produces the report.
+**Quick checks the workflow; it is excluded from scientific rankings.** It uses a
+200 kb linear reference fixture, not a whole bacterial genome.
 
-Runtime and execution profiles are independent, following the usual
-[nf-core convention](https://nf-co.re/docs/running/configuration/configuration-options):
+The replacement implementation now covers selectable general and diagnostic
+tracks, plus import and rendering of frozen results. New scientific executions
+remain paused while [benchmark protocol v1](docs/benchmark-protocol-v1.md) is
+reviewed. Implemented functionality and verified scientific runs are different;
+see [replacement verification](docs/nextflow-replacement-verification.md).
+
+Inspect available choices with `--list` and command help with `--help`.
+`--plan_only` freezes a selection without preparing inputs; `--prepare_only`
+prepares the selected inputs without launching assemblies. S7 requires its
+verified original source directories under `--diagnostic_source_dir`.
+
+## Choose what to run
+
+| Selection | Purpose |
+| --- | --- |
+| `--preset quick` | Small simulated workflow check; the default |
+| `--preset standard` | Admitted simulated whole-genome baseline |
+| `--track general --preset standard` | Frozen Wick/Holt 50-dataset general comparison |
+| `--track diagnostic --preset standard --groups S5` | Selected controlled diagnostic family |
+| `--track real --preset standard --cases johnson-atcc25922-full` | Admitted real-data small-plasmid pilot |
+| `--import_bundle /path/to/frozen/bundle` | Verify, admit and render existing results; no assembly |
+
+For the frozen general set, the default four reported workflows are Flye, Raven,
+Plassembler and Miniasm + Minipolish: 50 datasets × 4 = 200 slots. The raw Miniasm
+phase is retained as an intermediate of the polished workflow. General results
+and diagnostic endpoints remain separate.
 
 ```bash
-# Explicit Pixi runtime on a workstation (the default)
+# General comparison: documented execution entry point, pending protocol approval
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --track general --preset standard --outdir results/general --run_id general
+
+# One diagnostic family
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --track diagnostic --preset standard --groups S5 \
+  --outdir results/linear --run_id linear
+```
+
+Diagnostic selectors are comma-separated IDs or aliases:
+
+| ID | Alias | Family |
+| --- | --- | --- |
+| S1 | `plasmids` | Exact recovery controls and native complements |
+| S2 | `coverage` | Relative plasmid coverage |
+| S3 | `reproducibility` | Repeats and thread settings |
+| S4 | `read-length` | Small plasmids and read lengths |
+| S5 | `linear` | Linear plasmids and terminal repeats |
+| S6 | `errors` | Historical noisy-read evidence; **new runs deferred** |
+| S7 | `read-order` | Output agreement across read orders |
+
+Use `--cases` and `--assemblers` for narrower selections. Definitions pin tool
+versions and resources; [adding an assembler](docs/adding-assemblers.md) describes
+the registry and adapter contract. The proposed broader five-group scientific
+panel remains a protocol under review, distinct from these preserved S1–S7 IDs.
+
+## Review a plan without running science
+
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --track diagnostic --preset standard --groups S5 \
+  --plan_only -profile native_tools --outdir results/plan-s5
+
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --track general --preset standard \
+  --plan_only -profile native_tools --outdir results/plan-general
+```
+
+These commands freeze and validate metadata only. They do not download scientific
+inputs, simulate reads, assemble or assess sequences. `native_tools` avoids
+software provisioning for this review path and requires an available Python
+3.11 or later. The output includes `selected-plan.json` and its preparation
+receipt. A frozen plan can subsequently be supplied with `--plan`; it cannot be
+combined with new selection options.
+
+## Render existing results without rerunning assemblies
+
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --import_bundle /path/to/frozen/bundle \
+  --outdir results/import -profile native_tools
+```
+
+The import verifies the complete file inventory and SHA-256 bindings, retains
+source bytes and renders the website from sealed evidence. It does not invoke the
+old controller, query a scheduler, rescore sequences or rerun an assembler. Both
+historical frozen bundles and native Nextflow bundles are supported. Historical
+S5, S6 and S7 evidence remains available, including supplementary results and the
+separate S7 reference verdict.
+
+## Execution profiles
+
+Linux x86-64 requires Nextflow 25.10.2 or later and a compatible Java runtime.
+The default software runtime is [Pixi](https://pixi.sh) 0.73.0 or later.
+Software and execution profiles are independent:
+
+```bash
+# Local execution and automatically prepared Pixi environments
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile pixi
 
-# Cluster 3: Pixi software, Slurm execution
+# Cluster 3: Slurm with Pixi, or Slurm with Singularity
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile bmrc,pixi
-
-# Cluster 3: Singularity software runtime, Slurm execution
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile bmrc,singularity
 
-# Docker workstation (profile provided; not verified on Cluster 3)
+# Workstation container profile
 nextflow run happykhan/assembler-benchmark-nextflow --preset quick -profile docker
 ```
 
-Singularity, Apptainer and Docker use the same digest-pinned Linux Pixi runtime
-image. Locked scientific environments are installed automatically on the shared
-pipeline filesystem and used inside that container; they are not baked into the
-image. Container profiles require the container engine, without a host Pixi
-installation. They need network access for initial image and package preparation.
-Software provisioning runs on the submission host before compute tasks are
-released. Do not combine multiple runtime profiles.
+Generic Slurm sites use `slurm,pixi` or `slurm,singularity` with their own site
+configuration. `apptainer` is also provided. Choose exactly one software runtime.
+Container profiles share a digest-pinned Linux Pixi image and provision locked
+scientific environments on the shared filesystem. The first online run needs
+network access. Docker configuration is provided; Docker execution has not been
+verified on Cluster 3. Pixi and Singularity Quick execution have been verified;
+see [runtime evidence](docs/native-entry-verification.md).
 
-Generic Slurm sites use `slurm,pixi` or `slurm,singularity` plus their site
-account/partition configuration. `apptainer` is also provided. `native_tools` is
-an advanced profile for externally prepared, version-matched tools; it performs
-no software installation. See [runtime verification](docs/native-entry-verification.md)
-for tested paths and limitations.
+The queue capacity is 1,000. Genuine software/resource failures are recorded
+without automatic assembler retries. Use `-resume` to reuse completed tasks;
+reporting changes have separate cache keys from assembly. Pin `-r <commit-or-tag>`
+for reproducibility, or deliberately use `-latest` to fetch updated code.
 
-Select cases and versions directly:
+## Outputs and interpretation
 
-```bash
-nextflow run happykhan/assembler-benchmark-nextflow --preset quick \
-  --cases quick-bimodal --assemblers raven-1.8.3 \
-  --outdir results/selected-001 --run_id selected-001
-```
+A normal run writes:
 
-`--groups read-quality` selects the implemented Quick group. Unsupported
-selections fail before assembly scheduling. Add `-resume` to reuse completed
-tasks; use `-latest` when deliberately fetching an updated pipeline, or
-`-r <commit-or-tag>` to pin one. Source code, input bytes and the dependency lock
-participate in resume keys. A changed selection requires a new output directory.
-Queue capacity is 1,000; failed assemblers are not automatically retried.
-Purging work prevents resume.
+- `selected-plan.json` and `environment-preparation.json`: selection and software receipts.
+- `bundle/`: checksummed JSON/TSV, original execution evidence, retained assemblies
+  and graphs, prepared presentation metadata, and a standalone report.
+- `website/`: presentation pages, interactive saved graph models, figures and TSV downloads.
+- `nextflow-trace.tsv`: scheduler/runtime evidence.
 
-`selected-plan.json` and `environment-preparation.json` are written beside the
-bundle. The bundle retains the plan and runtime receipt with checksums. Advanced
-users can pass an existing frozen selection with `--plan`; do not combine that
-with selection options. A local development checkout runs identically with
-`nextflow run . --preset quick`.
+The bundle is the portable scientific record; the website is a separate view.
+Neither needs a website deployment. General performance and aggregate pages are
+separate from diagnostic scenarios. Missing measurements stay missing. Execution,
+input preparation and assessment errors never establish sequence absence.
 
-## Real-data small-plasmid pilot
+General completion uses the fixed Wick longest-single-alignment criterion against
+tripled references, at 99%, with uncapped contiguity. Diagnostic exact-copy scores,
+real-pilot paper rules and repeatability/output agreement have their own endpoints.
+In particular, S7 secondary reference pass/fail cannot decide its agreement verdict.
+Time and process-tree RAM are reported separately from scientific measurements;
+downloads, software provisioning, simulation and scheduler waiting are excluded
+from workflow time. Shared pages can be counted more than once in sampled RSS.
 
-One isolate from [Johnson et al. (2023)](https://doi.org/10.1099/mgen.0.001024)
-is admitted: ATCC25922, ONT run SRR23290062, one native chromosome and four
-plasmids. This uses all deposited ONT reads, with no filtering, subsampling or
-simulation. It is a modern comparison using the study's data; original historical
-subset IDs are unavailable. No Illumina reads are assembly inputs.
+For offline execution, populate the exact checked reference/read caches and
+locked software environments in advance, then use `--offline`,
+`--reference_dir /shared/references` and `--read_cache /shared/reads`.
+Optional administrative preparation helpers are documented in
+[reference admission](docs/reference-admission.md). They are not prerequisites for
+normal online Nextflow runs. Missing or modified cached inputs stop admission.
 
-```bash
-nextflow run happykhan/assembler-benchmark-nextflow -latest \
-  --track real --preset standard --cases johnson-atcc25922-full \
-  -profile bmrc,pixi --outdir results/real-plasmid-pilot --run_id real-plasmid-pilot
-```
+## Structure, verification and cleanup
 
-Nextflow prepares the locked tools, downloads and verifies the frozen reference
-and 821.5 MB compressed read archive, then runs assembly, read-support diagnostics,
-two separate assessments and report export. Allow space for the 1.74 GB
-uncompressed input, work and retained outputs. Input archives and prepared reads
-are cached without automatic deletion. `--read_cache` and `--reference_dir` select
-shared caches; `--offline` requires the admitted bytes there already.
-
-The report separates the fixed 99% longest-alignment criterion from the paper's
-strict >90% summed-block rule, fragmented recovery, duplicate-contig flag and
-chromosome-incorporation heuristic. Read breadth/depth is a separate input-support
-check. See [pilot design and verification](docs/real-small-plasmid-pilot.md) and
-[study accession mapping](docs/small-plasmid-replication.md). The other study
-isolates remain unadmitted; two have unresolved archive role annotations.
-
-## Prepare references before an offline run
-
-Download and validate the exact source archive on a machine with network access:
-
-```bash
-python3 bin/prepare-reference.py --registry assets/references.json \
-  --id bsub-168-quick --reference-dir references \
-  --out references/quick-reference.fasta --metadata references/quick-reference.json
-```
-
-Copy the `references` directory to the execution host, then add `--offline` and
-`--reference_dir /shared/references` to the Nextflow command.
-Offline preparation rechecks the source checksum; missing or modified files stop
-the workflow. Online mode runs the same preparation stage on the compute executor.
-Python preparation requires Python 3.11 or later; the Pixi environment provides it.
-
-## Outputs and cleanup
-
-`results/<run>/bundle/index.html` is a standalone report. Beside it are
-`results.tsv`, `results.json`, final assemblies/available graphs, evidence and
-`manifest.json`. The manifest binds every retained file by SHA256 and records the
-exact expected case×assembler slots. The website can ingest the bundle without
-running Nextflow. No website publication is required to use the report.
-
-Completeness, measured identity/indels, execution state, time and RAM remain
-separate. Structural correctness is explicitly unmeasured in this first slice.
-Software errors, infrastructure errors and assessment errors are distinguished;
-none establishes sequence absence. Assembly time includes verification; downloads,
-environment provisioning, simulation and scheduler waiting are excluded. RAM is sampled process-tree RSS,
-which can double-count shared pages; mapper RAM is reported separately.
-
-The custom cleanup tool below applies to runs created by the optional guarded
-launcher, which writes ownership markers. Direct Nextflow runs do not create
-those markers; the tool deliberately refuses to delete their work directories.
-Retain direct-run work for `-resume`, and review Nextflow's own
-[`clean` command](https://www.nextflow.io/docs/latest/reference/cli.html#clean)
-when deciding what to remove.
-
-For a guarded-launcher run, inspect cleanup after a complete, verified export:
-
-```bash
-python3 bin/cleanup.py --bundle results/quick-001/bundle --work-dir work/quick-001
-```
-
-This defaults to a dry run. Actual deletion additionally requires
-`--apply --confirm-run-id quick-001`. It removes only the marked work directory,
-blocks active runs, verifies retained evidence and keeps the shared reference
-cache and final report. No cleanup is performed automatically.
-
-## Optional guarded launcher
-
-This convenience command prepares the plan and environments, then calls
-`nextflow run main.nf` itself. It also holds a lifecycle lock, creates ownership
-markers for the custom cleanup tool and independently checks the final bundle.
-
-```bash
-pixi run --locked --manifest-path environments/pixi.toml python bin/launch.py \
-  --run-id quick-guarded-001 \
-  --outdir results/quick-guarded-001 --work-dir work/quick-guarded-001 \
-  -- -profile local,pixi
-```
-
-Launcher selections such as `--preset`, `--cases` and `--assemblers` go before
-the `--` separator; Nextflow options go after it. Choose either entry point when
-starting a run. The guarded launcher does not adopt a non-empty work directory
-created by a direct Nextflow run.
-
-## Development and evidence
+`main.nf` connects modules in `modules/local/preparation.nf`, `execution.nf` and
+`reporting.nf`. Python helpers in `benchlib/` handle pinned planning, input
+admission, adapters and native results; `diagnostic_core/` preserves diagnostic
+scientific methods; `reporting/` and `website/` produce the standalone website.
+Frozen metadata live in `assets/general/` and `assets/diagnostics/`.
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-Scientific dependencies are pinned in `environments/pixi.toml` and fully resolved
-in `environments/pixi.lock`. `assets/assemblers.json` lists the admitted initial
-versions; adapters validate actual executable versions before running. Each immutable version has its own locked named environment. Adding a new
-version of an existing adapter requires a registry entry and pinned environment,
-without editing the pipeline; adding a new tool also requires a tested adapter.
-Arbitrary user-supplied commands are not accepted. See
-[adding assemblers](docs/adding-assemblers.md). Standard-panel expansion remains
-subsequent work.
+[Replacement verification](docs/nextflow-replacement-verification.md) distinguishes
+metadata/render tests from scientific execution. Other evidence includes the
+[Standard baseline](docs/standard-baseline.md), its
+[independent assessment audit](docs/assessment-diagnosis.md), the
+[real small-plasmid pilot](docs/real-small-plasmid-pilot.md), and the
+[literature review](docs/literature-review.md).
 
-See [the literature review](docs/literature-review.md) for Wick/Holt, recent isolate
-long-read studies, multi-assembler workflows and engineering precedents, and
-[development verification](docs/verification.md) for actual run evidence.
-
-## Inspect and freeze a selection
-
-```bash
-python3 bin/plan.py --list
-python3 bin/plan.py --cases quick-bimodal --assemblers flye-2.9.6,raven-1.8.3 --out selected-plan.json
-```
-
-Pass this plan to `nextflow run . --plan selected-plan.json`; software is prepared
-automatically. The optional launcher can also accept `--plan selected-plan.json`.
-Plans bind exact version IDs, case/reference metadata, manifest/lock hashes,
-resource policy and expected result slots. Typos, duplicate versions, changed
-plans and unadmitted groups stop before assembly scheduling. A dedicated first
-Nextflow task independently validates the plan before any reference preparation.
-
-The [Standard proposal](docs/standard-panel-design.md) describes the larger
-five-group panel. Two references are now admitted for a small whole-genome
-baseline; the remaining candidates and scenario contrasts are not admitted. See
-[reference admission](docs/reference-admission.md) and
-[the Standard baseline](docs/standard-baseline.md).
-
-For nodes without network access, prepare the reference cache in advance and
-make the selected locked software environments available on the shared execution
-filesystem. Optional preparation helpers support this administrative task;
-they are not required for normal online runs.
-
-## Interpret the completion criterion
-
-The original `incomplete` outcome means that no single alignment spans 99% of
-the reference. It is a contiguity endpoint, separate from total reference
-coverage. The report now states this explicitly and shows assembly contig counts.
-Identity and maximum indel describe the selected longest alignment, rather than
-every contig in the assembly.
-
-An [independent audit of the first Standard baseline](docs/assessment-diagnosis.md)
-reproduced all four original scores with a different aligner. The saved outputs
-cover over 99% of each reference across multiple contigs; some Bacillus contigs
-also have structural discontinuities. The [workflow review](docs/fragmentation-review.md)
-records input coverage, read-spanning checks and configuration concerns without
-claiming an experimentally established cause. No assembly or simulation was rerun.
-
-## Run the admitted Standard baseline
-
-The baseline uses the full native circular chromosomes of *B. subtilis* 168 and
-*L. lactis* IL1403, with exact 30× error-free read budgets and four result slots
-for the initial two assembler versions. It is baseline validation, excluded from
-headline comparisons; structural correctness remains unmeasured.
-
-```bash
-nextflow run happykhan/assembler-benchmark-nextflow --preset standard \
-  -profile bmrc,pixi --outdir results/standard-001 --run_id standard-001
-```
-
-Online mode downloads and validates the admitted source archives. For offline
-nodes, run the preparation command above once for each ID `bsub-168-whole` and
-`llactis-il1403-whole`, copy the cache to the shared filesystem, and add `--offline`.
-Whole preparation rejects changed hashes, molecule inventories, truncation and
-Quick fragments. Raw sources and admission metadata remain retained.
+Nothing is purged automatically. Keep work for `-resume` and retain sealed
+outputs before considering cleanup. The optional
+[guarded launcher](bin/launch.py) creates ownership markers used by
+`bin/cleanup.py`; that tool defaults to a dry run and refuses unmarked direct
+Nextflow work directories. Direct runs use Nextflow's own reviewed
+[`clean` command](https://www.nextflow.io/docs/latest/reference/cli.html#clean).
+Shared reference/read caches and active inputs are not automatically deleted.

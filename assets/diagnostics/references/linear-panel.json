@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "curated_on": "2026-11-05",
+  "scope": "Isolated computational linear reference controls; native chromosome complements and physical-end chemistry are not admitted.",
+  "replicons": [
+    {
+      "refseq_accession": "NC_003903.1",
+      "replicon_name": "SCP1",
+      "length_bp": 356023,
+      "molecule_type": "plasmid",
+      "topology": "linear",
+      "organism": "Streptomyces coelicolor A3(2)",
+      "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_003903.1",
+      "sequence_sha256": "909d85ee50c1ba31928fddf6559b0b221370e6ad7272ed80218509d316d882f8",
+      "file_sha256_at_curation": "ec8bf52a876914bcaeb212b0948177d6c78c98f4f0a8dc8f0fe9612876c74467",
+      "admission_scope": "isolated_linear_reference_record",
+      "terminal_repeat_evidence": {
+        "type": "terminal_inverted_repeat",
+        "literature_length_bp_approx": 81000,
+        "exact_terminal_prefix_match_bp": 75122,
+        "literature_window_mismatched_positions": 4321,
+        "left_window_0based_half_open": [
+          0,
+          81000
+        ],
+        "right_window_0based_half_open": [
+          275023,
+          356023
+        ],
+        "orientation": "inverted",
+        "curation_scope": "Comparison of pinned reference ends, not independent physical-end validation."
+      }
+    },
+    {
+      "refseq_accession": "NC_004933.1",
+      "replicon_name": "SLP2",
+      "length_bp": 50410,
+      "molecule_type": "plasmid",
+      "topology": "linear",
+      "organism": "Streptomyces lividans 1326",
+      "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_004933.1",
+      "sequence_sha256": "774bfc70796d39da4ed2673d22ad2c872f3b2318ffc0e7fe5eb33da8bedd2d6c",
+      "file_sha256_at_curation": "6ca04739cb836efa0b8a1325125e6e03f6ab40c1fae16f26ffc512005374d91e",
+      "admission_scope": "isolated_linear_reference_record",
+      "terminal_repeat_evidence": {
+        "type": "terminal_inverted_repeat",
+        "literature_length_bp_approx": 44,
+        "exact_terminal_prefix_match_bp": 14,
+        "literature_window_mismatched_positions": 8,
+        "left_window_0based_half_open": [
+          0,
+          44
+        ],
+        "right_window_0based_half_open": [
+          50366,
+          50410
+        ],
+        "orientation": "inverted",
+        "curation_scope": "Comparison of pinned reference ends, not independent physical-end validation."
+      }
+    }
+  ]
+}

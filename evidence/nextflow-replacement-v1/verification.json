@@ -1,0 +1,85 @@
+{
+  "historical_nextflow": {
+    "completed": 2,
+    "failed": 0,
+    "general_outcomes": 200,
+    "new_assemblies": 0,
+    "new_simulations": 0,
+    "source_manifest_sha256": "414ee2f72de705ebbfc75e2a54e06b446f8cec954bc9f6e1d1676126b22e4fe9",
+    "tasks": 2
+  },
+  "historical_website": {
+    "bytes": 63635405,
+    "errors": 0,
+    "html_pages": 711,
+    "limits": {
+      "file_bytes": 5242880,
+      "files": 1500,
+      "total_bytes": 67108864
+    },
+    "local_links_checked": 15117,
+    "total_files": 1419
+  },
+  "limitations": [
+    "The expanded five-seed scientific protocol is a review draft, not an executed panel.",
+    "New S6 error generation is deferred.",
+    "S7 execution requires the admitted original source cache.",
+    "No new deployment or data deletion was performed."
+  ],
+  "native_metadata_plans": {
+    "diagnostic_default_slots": {
+      "S1": 8,
+      "S2": 40,
+      "S3": 120,
+      "S4": 48,
+      "S5": 36,
+      "S7": 48
+    },
+    "general_datasets": 50,
+    "general_reported_slots": 200
+  },
+  "native_nextflow_import": {
+    "archive_published": true,
+    "completed": 2,
+    "failed": 0,
+    "site_gate": {
+      "errors": [],
+      "local_links_checked": 149,
+      "status": "pass",
+      "total_files": 41,
+      "website_bytes": 451643
+    },
+    "source": "Previously sealed real-pilot results; no scientific stages",
+    "tasks": 2
+  },
+  "ordinary_tests": {
+    "passed": 176,
+    "run": 177,
+    "skip_reason": "Full external frozen archive is supplied separately.",
+    "skipped": 1
+  },
+  "runtime": {
+    "nextflow": "25.10.2",
+    "pixi_lock_sha256": "81e508bcc465292ca7ea200169522bfabafba1fecc9ada3d138c84cd26259009",
+    "profiles_executed_in_this_check": [
+      "native_tools"
+    ],
+    "scientific_runtime_revalidation": "Not performed while scientific runs are paused; prior Quick Pixi/Singularity evidence remains separately labelled."
+  },
+  "schema_version": 1,
+  "scope": "Native Nextflow replacement software and immutable historical-report parity; new scientific executions remain paused for protocol review.",
+  "source_sha256": {
+    "lib/BenchmarkUtils.groovy": "f012126618aaee32df3a6cb3c1c7d67fd90a7d69831b0d87693cb9bf751374b2",
+    "modules/local/execution.nf": "5deddf4bd3a6baf519b2914d71d267089e0d5cbb6c4fec5e1797332e00a128a9",
+    "modules/local/preparation.nf": "405505e7829103e855d580523bb3bc7ef302bd054adac48fd6e76bde1164b21a",
+    "modules/local/reporting.nf": "89120240c486cdd26d0a58f5527a1104845eff6c2280d59cacba6aed5393fa4d"
+  },
+  "strict_historical_archive_tests": {
+    "original_source_access_denied_during_render": true,
+    "passed": 9,
+    "public_payloads_equal_verified_previous_site": true,
+    "run": 9,
+    "subprocess_execution_denied_during_render": true
+  },
+  "verified_at": "2026-11-12T15:07:09.580858+00:00"
+}

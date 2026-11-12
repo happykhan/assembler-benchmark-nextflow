@@ -1,51 +1,42 @@
 # Selectable benchmark catalogue
 
-The project covers single-isolate bacterial long-read assembly. Quick is a
-workflow check and is excluded from headline scientific comparisons. Standard
-remains unadmitted until its panel, controls and measurements are curated and
-validated. There are no hybrid or metagenomic tracks.
+Use Nextflow to inspect the admitted choices without downloading inputs or
+scheduling scientific work:
 
-| Group ID | Purpose | Current runnable cases |
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow --list -profile native_tools
+```
+
+| Track | Selection | Scope |
 | --- | --- | --- |
-| `plasmids` | Recovery, copy depth, size and separation of plasmid molecules. | None admitted yet. |
-| `gc-composition` | Separate intrinsic composition effects from sequencing bias. | None admitted yet. |
-| `repeats-structure` | Assembly through repeated sequence and genome structures. | None admitted yet. |
-| `read-quality` | Coverage, length distribution and read quality/sampling. | `quick-baseline`, `quick-bimodal`. |
-| `reproducibility` | Distinguish repeated execution, read order and independent sampling. | None admitted yet. |
+| Simulated | `--preset quick` | Two small read-length fixtures; workflow check only |
+| Simulated | `--preset standard` | Admitted two-chromosome baseline; broader panel remains under review |
+| General | `--track general --preset standard` | Exact published Wick/Holt 50, four reported workflows, 200 slots |
+| Diagnostic | `--track diagnostic --preset standard --groups S1,S5` | Selected controlled scenario families |
+| Real | `--track real --preset standard` | Admitted small-plasmid study pilot |
 
-Quick's two cases use the same 200,000-base linear reference fixture and the same
-6,000,000-base budget. The bimodal case changes the short/long base mixture;
-base proportions and realised read-count proportions are recorded separately.
-This does not establish a whole-genome or realistic Nanopore benchmark.
+Diagnostic aliases are `plasmids` (S1), `coverage` (S2), `reproducibility`
+(S3), `read-length` (S4), `linear` (S5), `errors` (S6), and `read-order` (S7).
+New S6 error generation is deferred. S7 requires the admitted original source
+under `--diagnostic_source_dir`; no substitute is simulated. Default S7 retains
+four workflow configurations × four orders × three repeats = 48 slots.
+Additional adapters or versions require explicit `--assemblers` selection.
 
-Inspect the catalogue without downloading data or scheduling jobs:
+The prospective five-family scientific design is the separate
+[protocol review draft](benchmark-protocol-v1.md). Its low-GC reference,
+five-seed panel and broader repeat/composition scenarios are not silently
+admitted by the migration. There are no hybrid or metagenomic tracks.
 
-```bash
-python3 bin/plan.py --list
-```
-
-Create a frozen selection:
-
-```bash
-python3 bin/plan.py --preset quick --groups read-quality \
-  --cases quick-bimodal --assemblers flye,raven --out selected-plan.json
-```
-
-Aliases resolve to immutable assembler-version IDs in the plan. The plan retains
-exact case/assembler slots, reference accessions and source checksums, selected
-environment declarations and locks, declared resource policy and its canonical
-SHA256. Changed sources, unknown selections, duplicate versions and extra or
-missing slots fail validation before scheduling. An existing plan is never
-silently overwritten. Requested groups without admitted cases are explicitly
-rejected rather than silently omitted.
-
-Validate the saved plan against the current source files:
+Select cases and exact versions, or inspect their frozen slots before execution:
 
 ```bash
-python3 bin/plan.py --validate selected-plan.json --out admitted-plan.json
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --track diagnostic --preset standard --groups S5 --assemblers raven-1.8.3 \
+  --plan_only -profile native_tools --outdir results/plan-linear
 ```
 
-The declared defaults are two assembly CPUs, 30 minutes, 16 GB for Flye and 4 GB
-for Raven, with queue capacity 1,000. These are planned allocations, not observed
-measurements. The workflow must apply them or freeze an explicit updated policy;
-measured process-tree resource use remains separate in the result evidence.
+Unknown selections, changed source metadata, duplicate version identities and
+missing/extra outcome slots fail validation. Every selected plan binds case
+parameters, references, exact environments and resource policy. A new selection
+requires a new output directory. See the [README](../README.md) for execution,
+input-only preparation and sealed-results import.

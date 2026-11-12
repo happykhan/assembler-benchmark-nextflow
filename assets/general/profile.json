@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "profile_id": "wick-subset-50-v1",
+  "track": "broad-performance",
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "tools": ["flye", "raven", "plassembler", "miniasm-plus"],
+  "flye_input_mode": "nano-raw",
+  "plassembler_raw_flag": true,
+  "plassembler_chromosome_threshold": 400000,
+  "assessment": "wick-longest-alignment-v1",
+  "completion_threshold": 0.99,
+  "selection": "references/performance-wick/selection-50.json",
+  "reads_index": "references/performance-wick/reads-index.json",
+  "expected_datasets": 50,
+  "expected_reported_executions": 200,
+  "expected_intermediate_executions": 50
+}

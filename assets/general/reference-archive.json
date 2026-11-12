@@ -1,0 +1,263 @@
+{
+  "archive": {
+    "computed_md5": "b78080dbe56aece943fd5b218f06cdb0",
+    "download_url": "https://ndownloader.figshare.com/files/20188407",
+    "id": 20188407,
+    "name": "reference_genomes.tar.gz",
+    "size": 725085295
+  },
+  "archive_sha256": "bfd8d1828d83d356a625784dea2d50cc523f4757197cea1bb2e7a2f5844140ab",
+  "selected": {
+    "026_GCF_003945385.1": {
+      "bytes": 7535398,
+      "file": "026_GCF_003945385.1.fasta",
+      "sha256": "5cd0d8ff4e41d7d6010e225c83714e1d9597d352d01ca77a825649d3d3aced89"
+    },
+    "047_GCF_003063625.1": {
+      "bytes": 5871242,
+      "file": "047_GCF_003063625.1.fasta",
+      "sha256": "a6eca304e1dbb803ec0523effe0b712344bde8abca3ba3f17d059a15d5adfd99"
+    },
+    "055_GCF_001548055.1": {
+      "bytes": 2698380,
+      "file": "055_GCF_001548055.1.fasta",
+      "sha256": "e7601ce8655ec605fffdb3a301b23b6958d96ec1c57dc86aeddd68bf33551e1b"
+    },
+    "058_GCF_900478165.1": {
+      "bytes": 4384423,
+      "file": "058_GCF_900478165.1.fasta",
+      "sha256": "f6f22dc5cc8daf1844f51ff9fa5795a330e5948ac7d5047aa355a173ae055aa0"
+    },
+    "072_GCF_000471025.2": {
+      "bytes": 1067313,
+      "file": "072_GCF_000471025.2.fasta",
+      "sha256": "1e91c05e04ebf0c40db841c96d0a26ff74d76ae33cadacf9bb125f834e519212"
+    },
+    "079_GCF_006542335.1": {
+      "bytes": 2577114,
+      "file": "079_GCF_006542335.1.fasta",
+      "sha256": "0e5cf6625ff4cee05d4afd86178fc383749bd7dd2689515e501df1e4c3ad768e"
+    },
+    "101_GCF_000016885.1": {
+      "bytes": 2995209,
+      "file": "101_GCF_000016885.1.fasta",
+      "sha256": "e26e8c2739534ab6eef071ebe673d11d1a0437f4ec85f008f97f768bb05a7045"
+    },
+    "112_GCF_006337165.1": {
+      "bytes": 5087050,
+      "file": "112_GCF_006337165.1.fasta",
+      "sha256": "fd71800a184c1ec4311a6d1c41bf3d0396c8b30a2ef0eb66ea3780631fe8266d"
+    },
+    "135_GCF_000344805.1": {
+      "bytes": 8264220,
+      "file": "135_GCF_000344805.1.fasta",
+      "sha256": "abd564c5e669e3c20fef58000b692a1e56df017fb58c1a6dcccb4bace03c6df4"
+    },
+    "138_GCF_003611275.1": {
+      "bytes": 3963443,
+      "file": "138_GCF_003611275.1.fasta",
+      "sha256": "946d4a2a6899c730fcd401483506f410944f9ba32fa5f040b2417fdec80c8aa8"
+    },
+    "154_GCF_000755705.1": {
+      "bytes": 1878792,
+      "file": "154_GCF_000755705.1.fasta",
+      "sha256": "41a3d17364dc7dcd980645864eb557fc9f051139e6f39ffeaf6e0273b469d824"
+    },
+    "175_GCF_000829195.1": {
+      "bytes": 3594675,
+      "file": "175_GCF_000829195.1.fasta",
+      "sha256": "13a8402c594a283e4881cee42553362da55650213b12dbb2c9ef74230289559f"
+    },
+    "193_GCF_000319245.1": {
+      "bytes": 820091,
+      "file": "193_GCF_000319245.1.fasta",
+      "sha256": "37f6700090f956ca366b8769a36939ea61afc3fac0e5b09905f5cee8ee9a2fdc"
+    },
+    "195_GCF_001693335.1": {
+      "bytes": 1594847,
+      "file": "195_GCF_001693335.1.fasta",
+      "sha256": "ea6d533e35bd6b599e256b3461e52b01aab583060316bd712a639dcbe49e7138"
+    },
+    "197_GCF_900070325.1": {
+      "bytes": 2609409,
+      "file": "197_GCF_900070325.1.fasta",
+      "sha256": "9c72798d7c32250691aba0332ce5f4052493b5d06122f27f8e2b32633f272812"
+    },
+    "200_GCF_001696605.3": {
+      "bytes": 3960892,
+      "file": "200_GCF_001696605.3.fasta",
+      "sha256": "327f12e4304b43321464efcef9aec09c619e0844e4ed54551ecbb017dd85758c"
+    },
+    "219_GCF_002284915.1": {
+      "bytes": 1551669,
+      "file": "219_GCF_002284915.1.fasta",
+      "sha256": "26d40e0cfeb97f8859c3b2bf113547189df9239fdfaac4d21563564a187b0092"
+    },
+    "225_GCF_001278035.1": {
+      "bytes": 4664326,
+      "file": "225_GCF_001278035.1.fasta",
+      "sha256": "8ebccfaf1b06f99fbb4ef4ad790bf9975d9bb5b9e8783aa9b080342123dcd03c"
+    },
+    "233_GCF_000775995.1": {
+      "bytes": 2708124,
+      "file": "233_GCF_000775995.1.fasta",
+      "sha256": "751190d55f0ea46353e4c5d07d363496969f4fc9a42a4aba21e8f3fb1f30d913"
+    },
+    "241_GCF_000024605.1": {
+      "bytes": 2157175,
+      "file": "241_GCF_000024605.1.fasta",
+      "sha256": "3c06b6ae4915e19e5f0db86c73ac81b501701e0ac34b2539feb90c79513e4512"
+    },
+    "254_GCF_000471965.1": {
+      "bytes": 626732,
+      "file": "254_GCF_000471965.1.fasta",
+      "sha256": "d8450827129b0af6dcd46d9f24485516dcbad0ff3240bb416fc873643510ee36"
+    },
+    "259_GCF_000007725.1": {
+      "bytes": 618485,
+      "file": "259_GCF_000007725.1.fasta",
+      "sha256": "822051b385ba2bdaa1b5d835420246695d7a6c77337d3b6c710219e04a4b0800"
+    },
+    "269_GCF_000025905.1": {
+      "bytes": 3750826,
+      "file": "269_GCF_000025905.1.fasta",
+      "sha256": "dcdcb4f79e7bd2a7840a3cf61d05506e8099189284525373007fb60c6da1e86e"
+    },
+    "271_GCF_004795855.1": {
+      "bytes": 4850924,
+      "file": "271_GCF_004795855.1.fasta",
+      "sha256": "b059267de229a735653752fc9c6bbf2a4aad072edc504bf1c1009f4cd2f2e4fe"
+    },
+    "281_GCF_002999135.1": {
+      "bytes": 2990947,
+      "file": "281_GCF_002999135.1.fasta",
+      "sha256": "63cc1f468505135898c31482a629f99c60a575d6c4aa189854afe97c495ea18f"
+    },
+    "285_GCF_002356455.1": {
+      "bytes": 4123008,
+      "file": "285_GCF_002356455.1.fasta",
+      "sha256": "39ed97374532dd91ddcd22c3aa2b1cf0d41e5bf0850423e96eff5bf63928f4fc"
+    },
+    "297_GCF_002355275.1": {
+      "bytes": 5541578,
+      "file": "297_GCF_002355275.1.fasta",
+      "sha256": "8f23355aebd82f14107e40d66b5e383c9efcbc5cb248ce7470a54ff4d1d2ef1b"
+    },
+    "312_GCF_002776575.1": {
+      "bytes": 4060868,
+      "file": "312_GCF_002776575.1.fasta",
+      "sha256": "4075aa86a87a6cc082a3c5f1481a3a81144f030f0c0fdc62f03be6e316161d90"
+    },
+    "317_GCF_002287885.2": {
+      "bytes": 1238165,
+      "file": "317_GCF_002287885.2.fasta",
+      "sha256": "77fc43f5c45c317e5d3462771eb1df6f7b6e65a105e96acbc2d4c31f3014a45c"
+    },
+    "320_GCF_000612685.1": {
+      "bytes": 3952875,
+      "file": "320_GCF_000612685.1.fasta",
+      "sha256": "e2dbd9420f85043a1a2107c48f5c5b9f74d8060ed7260848abe04ec59e6fb392"
+    },
+    "338_GCF_000761215.1": {
+      "bytes": 7623887,
+      "file": "338_GCF_000761215.1.fasta",
+      "sha256": "12955dd4adabf83d0621f4c39b0900a2f196acdd17644591f180c09955a7ebf1"
+    },
+    "339_GCF_000755585.2": {
+      "bytes": 4458400,
+      "file": "339_GCF_000755585.2.fasta",
+      "sha256": "520a51f0a3722bd2ee8dd21e9dde464341891c0e5181fadcbc2e3e1209daa5e6"
+    },
+    "349_GCF_000146025.2": {
+      "bytes": 1148783,
+      "file": "349_GCF_000146025.2.fasta",
+      "sha256": "ada26d5cbfc2bdc83aadc96b3f5b9b559d73155285ac161955ec2986342de4f4"
+    },
+    "360_GCF_000067205.1": {
+      "bytes": 5288005,
+      "file": "360_GCF_000067205.1.fasta",
+      "sha256": "abaea9118f21f6e8f7b881571c5ee5b3cc0a9aadadb390c209abdfb88e2090b7"
+    },
+    "370_GCF_000020965.1": {
+      "bytes": 1960042,
+      "file": "370_GCF_000020965.1.fasta",
+      "sha256": "0909fe225f7806ac8339a9cc43a010f9cf959463bfc424eb922bcf8a1bcb71ba"
+    },
+    "374_GCF_001941645.1": {
+      "bytes": 7275497,
+      "file": "374_GCF_001941645.1.fasta",
+      "sha256": "9412a70f4471ab2068fd6cc22956c06d40e75746a0a159dfc869febeb3acf3c6"
+    },
+    "375_GCF_000152925.2": {
+      "bytes": 3302605,
+      "file": "375_GCF_000152925.2.fasta",
+      "sha256": "a82401615ffe4e36c04dacb5728a85d41b2c859134b992b0499bcb4f70f436e3"
+    },
+    "378_GCF_000341395.1": {
+      "bytes": 4023620,
+      "file": "378_GCF_000341395.1.fasta",
+      "sha256": "004ac379b8dc9e65a559ef3f9573b7d65bfc45bd51104286137f299103dfd71a"
+    },
+    "384_GCF_004564215.1": {
+      "bytes": 3326491,
+      "file": "384_GCF_004564215.1.fasta",
+      "sha256": "1375e66d89647aef655add1b2897c3f9502aedd5730c6cdffeb86a4083fdf108"
+    },
+    "424_GCF_000204155.1": {
+      "bytes": 6732379,
+      "file": "424_GCF_000204155.1.fasta",
+      "sha256": "5cd3671a45ee3f0b3195f4c9779c12aa52458b6f6a31902d5a035b1073808357"
+    },
+    "428_GCF_900476435.1": {
+      "bytes": 4353562,
+      "file": "428_GCF_900476435.1.fasta",
+      "sha256": "a9ffc3fbba6e417354d0a0acc88becd061a7cdf17ece50a8fe6b3b5d9daf6595"
+    },
+    "443_GCF_001999945.1": {
+      "bytes": 4255682,
+      "file": "443_GCF_001999945.1.fasta",
+      "sha256": "242573599c1d0646592fd035b5b2054e171e9c6363231bc1249c9f4eb9e8210c"
+    },
+    "444_GCF_004103615.1": {
+      "bytes": 4810338,
+      "file": "444_GCF_004103615.1.fasta",
+      "sha256": "98e41b03babd5a83fd3747080756cec2e183fa9289cc5e7ca2e9f59e4f7b65c7"
+    },
+    "455_GCF_002355315.1": {
+      "bytes": 6595861,
+      "file": "455_GCF_002355315.1.fasta",
+      "sha256": "f66b16e47180ddec39470f07e794b1dc2ff4cc1ec1d0967a42aac1359cdd1525"
+    },
+    "457_GCF_900637165.1": {
+      "bytes": 3148991,
+      "file": "457_GCF_900637165.1.fasta",
+      "sha256": "09a5558ca4ada218ee6f5c21bb917bc0d2b515302ec0119e88c570f8f76654f7"
+    },
+    "458_GCF_002109365.1": {
+      "bytes": 3336111,
+      "file": "458_GCF_002109365.1.fasta",
+      "sha256": "b6ff428f705be74f904f4b1872a9bb7cdf53010ef86a333cdfa8ffe24db88cd0"
+    },
+    "463_GCF_000017485.1": {
+      "bytes": 1845161,
+      "file": "463_GCF_000017485.1.fasta",
+      "sha256": "16dae80543b898d049b7237dd454cf5be9cc8b26d2137175fe573165e2cb09d8"
+    },
+    "470_GCF_002386365.1": {
+      "bytes": 2408882,
+      "file": "470_GCF_002386365.1.fasta",
+      "sha256": "328a7c2e35393e3228e61ac4504593f495542ff019dc9cecf3173e36f80397d6"
+    },
+    "477_GCF_000599545.1": {
+      "bytes": 9169586,
+      "file": "477_GCF_000599545.1.fasta",
+      "sha256": "d22afd82ade025906be1b40f4f44393768f47b74e669122d6604bcc68bcdc741"
+    },
+    "492_GCF_900683755.1": {
+      "bytes": 4419909,
+      "file": "492_GCF_900683755.1.fasta",
+      "sha256": "703071b4918db55d7533f797e5896764d42aa58462f948a5cc8a4315eadb0b03"
+    }
+  },
+  "status": "complete"
+}

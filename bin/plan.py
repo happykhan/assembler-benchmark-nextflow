@@ -12,7 +12,7 @@ from benchlib.planning import build_plan, catalogue, validate_plan
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--project', type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument('--track', choices=('simulated', 'real'), default='simulated')
+    parser.add_argument('--track', choices=('simulated', 'real', 'general', 'diagnostic'), default='simulated')
     parser.add_argument('--preset', choices=('quick', 'standard'), default='quick')
     parser.add_argument('--groups', default='')
     parser.add_argument('--cases', default='')

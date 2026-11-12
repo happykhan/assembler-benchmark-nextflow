@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "profile_id": "s4-exact-lengths-v1",
+  "references": [
+    "GCF_000258145.1",
+    "GCF_000016305.1"
+  ],
+  "simulation": {
+    "model": "exact-lognormal-v1",
+    "seed": 20261104,
+    "chromosome_depth": 30,
+    "plasmid_relative_depth": 1,
+    "length_mean": 10000,
+    "length_sd": 5000,
+    "length_min": 500,
+    "length_max": 50000,
+    "circular_read_limit": "one_circumference",
+    "fastq_phred": 40,
+    "minimum_breadth": 0.99
+  },
+  "tools": [
+    "flye",
+    "flye-meta",
+    "raven",
+    "plassembler"
+  ],
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "plassembler_chromosome_threshold": 1000000,
+  "scoring": "exact-dedicated-molecule-v1",
+  "scenario_categories": [
+    "S4"
+  ],
+  "read_length_panel": {
+    "targets": [
+      {
+        "assembly": "GCF_000258145.1",
+        "plasmid": "NC_017662.1"
+      },
+      {
+        "assembly": "GCF_000016305.1",
+        "plasmid": "NC_009653.1"
+      }
+    ],
+    "contexts": [
+      "individual",
+      "native"
+    ],
+    "profiles": [
+      {
+        "id": "short",
+        "title": "Short reads (1.5 kb target)",
+        "length_mean": 1500,
+        "length_sd": 500,
+        "length_min": 500,
+        "length_max": 2500
+      },
+      {
+        "id": "baseline",
+        "title": "Baseline reads (10 kb target)",
+        "length_mean": 10000,
+        "length_sd": 5000,
+        "length_min": 500,
+        "length_max": 50000
+      },
+      {
+        "id": "long",
+        "title": "Long reads (25 kb target)",
+        "length_mean": 25000,
+        "length_sd": 10000,
+        "length_min": 500,
+        "length_max": 100000
+      }
+    ]
+  }
+}

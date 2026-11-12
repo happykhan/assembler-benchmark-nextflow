@@ -23,8 +23,23 @@ class AdapterTests(unittest.TestCase):
         for adapter in ADAPTERS.values():
             command = adapter.command(reads, 3)
             self.assertIn(str(reads), command)
-            self.assertIn('3', command)
+            if adapter.executable != 'miniasm':
+                self.assertIn('3', command)
             self.assertEqual(command[0], adapter.executable)
+
+    def test_configuration_modes_are_explicit_and_checked(self):
+        from benchlib.adapters import validate_options
+        command = ADAPTERS['flye'].command('reads.fastq', 4, {'flye_input_mode': 'nano-hq', 'flye_meta': True, 'deterministic': True})
+        self.assertIn('--nano-hq', command)
+        self.assertIn('--meta', command)
+        self.assertIn('--deterministic', command)
+        command = ADAPTERS['plassembler'].command('reads.fastq', 4, {'plassembler_raw_flag': True})
+        self.assertIn('--keep_chromosome', command)
+        self.assertIn('--raw_flag', command)
+        self.assertNotIn('--no_chromosome', command)
+        for invalid in ({'tune': 5}, {'deterministic': 'true'}, {'flye_input_mode': 'anything'}, {'plassembler_chromosome_threshold': 0}):
+            with self.assertRaises(ValueError):
+                validate_options(invalid)
 
     def test_environment_must_exist_and_pin_the_declared_version(self):
         registry = load_registry(ROOT / 'assets/assemblers.json')

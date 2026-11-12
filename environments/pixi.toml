@@ -17,7 +17,24 @@ flye = "==2.9.6"
 [feature.raven183.dependencies]
 raven-assembler = "==1.8.3"
 
+[feature.plassembler190.dependencies]
+plassembler = "==1.9.0"
+flye = "==2.9.6"
+raven-assembler = "==1.8.3"
+unicycler = "==0.5.1"
+
+[feature.miniasm03.dependencies]
+miniasm = "==0.3"
+
+[feature.minipolish021.dependencies]
+minipolish = "==0.2.1"
+miniasm = "==0.3"
+racon = "==1.5.0"
+
 [environments]
 default = { features = [], solve-group = "tooling" }
 flye-2-9-6 = { features = ["flye296"], solve-group = "flye296" }
 raven-1-8-3 = { features = ["raven183"], solve-group = "raven183" }
+plassembler-1-9-0 = { features = ["plassembler190"], solve-group = "plassembler190" }
+miniasm-0-3 = { features = ["miniasm03"], solve-group = "miniasm03" }
+miniasm-plus-0-2-1 = { features = ["minipolish021"], solve-group = "minipolish021" }

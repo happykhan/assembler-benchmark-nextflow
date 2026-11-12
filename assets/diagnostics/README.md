@@ -1,0 +1,17 @@
+# Diagnostic designs retained for native Nextflow
+
+These are the frozen diagnostic metadata, configurations and scientific helpers from `ploptimizer/assembly-benchmark`. `source-provenance.json` identifies each original source by SHA256. No old scheduler, submission controller or cluster-specific job wrapper is imported.
+
+The native planner selects S1 plasmid complements, S2 relative depth, S3 fixed-input repeat/mode/thread strata, S4 read-length contexts, S5 complete native linear genomes, or S7 frozen read-order permutations. All original configuration profiles are available to `diagnostic_core.planning.build_plan` by profile name or explicit configuration. Historical S6 error models and continuous/tolerant assessors are retained for reproducibility; new S6 generation is deferred and blocked.
+
+The exact diagnostic endpoint is `exact-dedicated-molecule-v1`. It is independent of Wick longest-alignment completion. Linear molecule ends are preserved; circular exact sequence rotation is allowed. Tolerant pass/fail or continuous evidence is separately named and never replaces strict scores. S7 reference recovery is secondary and cannot determine output agreement.
+
+Preparation checks exact accession, length, ACGT alphabet and pinned sequence SHA256. Linear terminal evidence is rechecked. Online and offline modes use the same admission checks. Frozen read hashes and sequence metadata are retained. Existing frozen inputs are never deleted.
+
+S7 requires the original admitted source, with its original `input.json`, `reads.fastq.gz`, `read_origins.tsv.gz` and `truth.fasta`. `--diagnostic_source_dir` may point directly at that case directory or at a root containing `<case_id>/` directories. The manifest and all source checksums must match the frozen design. Missing source files fail closed; no substitute reads are simulated. Whole FASTQ records, including duplicate multiplicity and qualities, are permuted with the original versioned algorithm and verified.
+
+A preparation task writes `truth.fasta`, `reference.fasta`, `reference.json`, `reads.fastq`, canonical `reads.fastq.gz`, `read_origins.tsv.gz` and `input.json`. Plain FASTQ supports the common assembler interface; both plain and canonical compressed hashes are retained. Repeat and mode options do not enter the simulation seed or alter read bytes.
+
+Assessment writes the current portable result shape and a sibling evidence directory. Original exact scores are retained as `evaluation`; output signatures and source-bound optional PAF diagnostics are separate. Plassembler's dedicated final plasmids determine its historical strict endpoint, while reference-independent output signatures include its verified retained chromosome. Circular representation is normalised only with tool-reported labels; missing labels leave that comparison unavailable.
+
+The native diagnostic assessment CLI also runs the fixed supplementary `minimap2 -x asm5 -c --secondary=yes --seed 11` mapping by default, retaining its version, command, PAF, stderr, wall time and process-tree RAM peak. `--skip-mapping` is available for offline fixture checks; the pure `assess` function has no external mapper side effects unless explicitly requested. Supplementary mapping errors remain a separate diagnostic status and never erase a valid exact score or establish absence. Normalised Plassembler FASTA identifiers are verified against the execution's source roles, source hashes and contig mapping before scoring; original final plasmids retain the historical strict endpoint.

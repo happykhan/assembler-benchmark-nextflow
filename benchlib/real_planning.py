@@ -64,7 +64,7 @@ def build_real_plan(project, preset, groups=None, cases=None, assemblers=None):
         source_names.update((receipt_name, admission_sources(project, ref)))
         reads[case['id']] = definition
     registry = load_registry(project / 'assets/assemblers.json')
-    requested = tokens(assemblers, 'assembler') or sorted(registry['aliases'])
+    requested = tokens(assemblers, 'assembler') or ['flye', 'raven']
     definitions = [resolve_assembler(registry, name) for name in requested]
     ids = [d['id'] for d in definitions]
     if len(set(ids)) != len(ids):

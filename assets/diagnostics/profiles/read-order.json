@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "threads": 4,
+  "timeout_seconds": 14400,
+  "plassembler_chromosome_threshold": 1000000,
+  "tools": [
+    "flye",
+    "flye-meta",
+    "raven",
+    "plassembler"
+  ],
+  "read_order": {
+    "id": "S7",
+    "version": "read-order-v1",
+    "source": {
+      "batch": "20261106T042113",
+      "case_id": "s1-se11-large",
+      "input_manifest_sha256": "6ff018e70e679da32c9acc41fcab7bbc61cf3153d034feace065d0ea4bdd8065",
+      "reads_sha256": "9e684588df304fce50eb7e098fe7d84d8bd2c7a2ba68495a7e709e628a13051c",
+      "truth_sha256_for_provenance_only": "c043f0073af048970d457c777b9f7a52722be72d6ffb6e84c63bb29337917ecb",
+      "minimum_plasmid_bp": 20000
+    },
+    "orders": [
+      {
+        "id": "original",
+        "shuffle_seed": null
+      },
+      {
+        "id": "shuffle-1",
+        "shuffle_seed": 1
+      },
+      {
+        "id": "shuffle-2",
+        "shuffle_seed": 2
+      },
+      {
+        "id": "shuffle-3",
+        "shuffle_seed": 3
+      }
+    ],
+    "repeats_per_order": 3,
+    "expected_executions": 48,
+    "primary_endpoint": "Reference-independent output agreement; end-sensitive and tool-labelled circular representation compared separately."
+  }
+}

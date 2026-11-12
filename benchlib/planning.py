@@ -172,7 +172,9 @@ def catalogue(project):
     real_cases = []
     if (Path(project) / 'assets/real-pilot.json').is_file():
         real_cases = build_plan(project, preset='standard', track='real')['cases']
-    return {'tracks': {'simulated': 'implemented', 'real': 'pilot_admitted' if real_cases else 'not_admitted'},
+    return {'tracks': {'simulated': 'implemented', 'real': 'pilot_admitted' if real_cases else 'not_admitted', 'general': 'published_50_admitted', 'diagnostic': 'selectable_preserved_methods'},
+            'general_collection': {'datasets': 50, 'default_reported_slots': 200, 'preset': 'standard', 'input_policy': 'Published frozen bytes; no resimulation'},
+            'diagnostic_groups': {key: {'new_execution': 'deferred' if key == 'S6' else 'implemented', 'original_source_required': key == 'S7'} for key in ('S1','S2','S3','S4','S5','S6','S7')},
             'real_cases': real_cases, 'schema_version': 1, 'scope': 'single_isolate_bacterial_long_read',
             'presets': {'quick': 'workflow_check', 'standard': standard_status},
             'standard_scope': 'Small simulated baseline validation; full scientific panel is not admitted',
@@ -191,6 +193,12 @@ def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None
     if track == 'real':
         from .real_planning import build_real_plan
         return build_real_plan(project, preset, groups, cases, assemblers)
+    if track == 'general':
+        from .general_planning import build_general_plan
+        return build_general_plan(project, preset, groups, cases, assemblers)
+    if track == 'diagnostic':
+        from .diagnostic_planning import build_diagnostic_plan
+        return build_diagnostic_plan(project, preset, groups, cases, assemblers)
     if track != 'simulated':
         raise ValueError('Unknown input track')
     project = Path(project).resolve()
@@ -213,7 +221,7 @@ def build_plan(project, preset='quick', groups=None, cases=None, assemblers=None
         raise ValueError('Selected cases are excluded by the selected groups')
     if not selected:
         raise ValueError('No admitted cases match the selection')
-    requested_assemblers = tokens(assemblers, 'assembler') or sorted(registry['aliases'] or registry['assemblers'])
+    requested_assemblers = tokens(assemblers, 'assembler') or ['flye', 'raven']
     definitions = [resolve_assembler(registry, value) for value in requested_assemblers]
     assembler_ids = [row['id'] for row in definitions]
     if len(set(assembler_ids)) != len(assembler_ids):

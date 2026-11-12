@@ -1,0 +1,2641 @@
+{
+  "schema_version": 1,
+  "track": "broad-performance",
+  "panel_id": "wick-subset-50-v1",
+  "seed": 20261106,
+  "dataset_count": 50,
+  "with_plasmids": 25,
+  "without_plasmids": 25,
+  "plasmid_count": 50,
+  "sampling_attempts": 53,
+  "source_pool_with_plasmids": 254,
+  "source_pool_without_plasmids": 246,
+  "source_pool_note": "Paper describes 250/250; the frozen workbook labels 254/246. Selection uses the workbook classifications and records this difference.",
+  "sampling_method": "Seeded sample of 25 plasmid-containing genomes, conditioned on 50 plasmids, and 25 without plasmids from the original 500 published simulated inputs.",
+  "source_revision": "4bc676c4a5b01602abf1143bfefcaab4cc0dde97",
+  "datasets": [
+    {
+      "id": "463_GCF_000017485.1",
+      "assembly_accession": "GCF_000017485.1",
+      "organism": "Campylobacter jejuni",
+      "ncbi_taxonomy_as_published": "Campylobacter jejuni",
+      "gtdb_taxonomy_as_published": "Campylobacter_D jejuni",
+      "plasmid_count": 0,
+      "total_size_bp": 1845106,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/463_GCF_000017485.1.fasta --quantity 151.692x --length 14686,4770 --identity 94.454,97.151,1.618 --junk_reads 9.639 --random_reads 0.266 --chimeras 5.136 --glitches 004507,58.503,58.503 --start_adapter_seq 3 --end_adapter_seq 3 | gzip > read_sets/463_GCF_000017485.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 151.692,
+        "length_mean": 14686.0,
+        "length_sd": 4770.0,
+        "identity_mean": 94.454,
+        "identity_max": 97.151,
+        "identity_sd": 1.618,
+        "junk_percent": 9.639,
+        "random_percent": 0.266,
+        "chimera_percent": 5.136,
+        "glitch_rate": 4507.0,
+        "glitch_size_skip": 58.503,
+        "adapter_length": 3.0
+      },
+      "published_read_statistics": {
+        "read_count": 18445,
+        "total_read_bases": 279895080,
+        "read_n50_bp": 16118,
+        "mean_depth": 151.69593508448838
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_009707.1",
+          "replicon_name": "NC_009707.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1845106,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 138.825
+        }
+      ]
+    },
+    {
+      "id": "058_GCF_900478165.1",
+      "assembly_accession": "GCF_900478165.1",
+      "organism": "Bacillus lentus",
+      "ncbi_taxonomy_as_published": "Bacillus lentus",
+      "gtdb_taxonomy_as_published": "Bacillus_AH lentus",
+      "plasmid_count": 0,
+      "total_size_bp": 4384366,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/058_GCF_900478165.1.fasta --quantity 44.196x --length 234,291 --identity 82.452,83.749,1.280 --junk_reads 2.941 --random_reads 0.380 --chimeras 0.834 --glitches 094880,0.992,0.992 --start_adapter_seq 24 --end_adapter_seq 24 | gzip > read_sets/058_GCF_900478165.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 44.196,
+        "length_mean": 234.0,
+        "length_sd": 291.0,
+        "identity_mean": 82.452,
+        "identity_max": 83.749,
+        "identity_sd": 1.28,
+        "junk_percent": 2.941,
+        "random_percent": 0.38,
+        "chimera_percent": 0.834,
+        "glitch_rate": 94880.0,
+        "glitch_size_skip": 0.992,
+        "adapter_length": 24.0
+      },
+      "published_read_statistics": {
+        "read_count": 815897,
+        "total_read_bases": 193771663,
+        "read_n50_bp": 454,
+        "mean_depth": 44.196050922755994
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_LS483476.1",
+          "replicon_name": "NZ_LS483476.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4384366,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 20.852
+        }
+      ]
+    },
+    {
+      "id": "443_GCF_001999945.1",
+      "assembly_accession": "GCF_001999945.1",
+      "organism": "Microbulbifer agarilyticus",
+      "ncbi_taxonomy_as_published": "Microbulbifer agarilyticus",
+      "gtdb_taxonomy_as_published": "Microbulbifer agarilyticus_A",
+      "plasmid_count": 0,
+      "total_size_bp": 4255625,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/443_GCF_001999945.1.fasta --quantity 96.860x --length 7652,7928 --identity 98.745,99.830,1.051 --junk_reads 0.311 --random_reads 1.394 --chimeras 0.453 --glitches 063361,8.613,8.613 --start_adapter_seq 11 --end_adapter_seq 11 | gzip > read_sets/443_GCF_001999945.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 96.86,
+        "length_mean": 7652.0,
+        "length_sd": 7928.0,
+        "identity_mean": 98.745,
+        "identity_max": 99.83,
+        "identity_sd": 1.051,
+        "junk_percent": 0.311,
+        "random_percent": 1.394,
+        "chimera_percent": 0.453,
+        "glitch_rate": 63361.0,
+        "glitch_size_skip": 8.613,
+        "adapter_length": 11.0
+      },
+      "published_read_statistics": {
+        "read_count": 53247,
+        "total_read_bases": 412208756,
+        "read_n50_bp": 13478,
+        "mean_depth": 96.86209569687179
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP019650.1",
+          "replicon_name": "NZ_CP019650.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4255625,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 95.392
+        }
+      ]
+    },
+    {
+      "id": "317_GCF_002287885.2",
+      "assembly_accession": "GCF_002287885.2",
+      "organism": "Candidatus Nanopelagicus limnes",
+      "ncbi_taxonomy_as_published": "Candidatus Nanopelagicus limnes",
+      "gtdb_taxonomy_as_published": "Nanopelagicus limnes",
+      "plasmid_count": 0,
+      "total_size_bp": 1238108,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/317_GCF_002287885.2.fasta --quantity 36.160x --length 10254,5795 --identity 84.311,99.225,10.180 --junk_reads 5.446 --random_reads 2.336 --chimeras 4.411 --glitches 041557,16.574,16.574 --start_adapter_seq 19 --end_adapter_seq 19 | gzip > read_sets/317_GCF_002287885.2.fastq.gz",
+      "badread_parameters": {
+        "depth": 36.16,
+        "length_mean": 10254.0,
+        "length_sd": 5795.0,
+        "identity_mean": 84.311,
+        "identity_max": 99.225,
+        "identity_sd": 10.18,
+        "junk_percent": 5.446,
+        "random_percent": 2.336,
+        "chimera_percent": 4.411,
+        "glitch_rate": 41557.0,
+        "glitch_size_skip": 16.574,
+        "adapter_length": 19.0
+      },
+      "published_read_statistics": {
+        "read_count": 4412,
+        "total_read_bases": 44782600,
+        "read_n50_bp": 12319,
+        "mean_depth": 36.17018870728563
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP016768.2",
+          "replicon_name": "NZ_CP016768.2",
+          "molecule_type": "chromosome",
+          "length_bp": 1238108,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 29.825
+        }
+      ]
+    },
+    {
+      "id": "384_GCF_004564215.1",
+      "assembly_accession": "GCF_004564215.1",
+      "organism": "Methylocapsa",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Methylocapsa",
+      "plasmid_count": 0,
+      "total_size_bp": 3326434,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/384_GCF_004564215.1.fasta --quantity 91.332x --length 10841,7324 --identity 94.635,98.424,3.639 --junk_reads 14.382 --random_reads 0.465 --chimeras 6.101 --glitches 080989,3.980,3.980 --start_adapter_seq 53 --end_adapter_seq 53 | gzip > read_sets/384_GCF_004564215.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 91.332,
+        "length_mean": 10841.0,
+        "length_sd": 7324.0,
+        "identity_mean": 94.635,
+        "identity_max": 98.424,
+        "identity_sd": 3.639,
+        "junk_percent": 14.382,
+        "random_percent": 0.465,
+        "chimera_percent": 6.101,
+        "glitch_rate": 80989.0,
+        "glitch_size_skip": 3.98,
+        "adapter_length": 53.0
+      },
+      "published_read_statistics": {
+        "read_count": 26571,
+        "total_read_bases": 303812757,
+        "read_n50_bp": 15072,
+        "mean_depth": 91.33286786991715
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP024846.1",
+          "replicon_name": "NZ_CP024846.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3326434,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 78.84
+        }
+      ]
+    },
+    {
+      "id": "254_GCF_000471965.1",
+      "assembly_accession": "GCF_000471965.1",
+      "organism": "Blattabacterium sp000471965",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Blattabacterium sp000471965",
+      "plasmid_count": 1,
+      "total_size_bp": 626626,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/254_GCF_000471965.1.fasta --quantity 160.669x --length 14524,25217 --identity 84.991,90.611,3.736 --junk_reads 10.547 --random_reads 5.430 --chimeras 4.730 --glitches 003087,65.644,65.644 --start_adapter_seq 22 --end_adapter_seq 22 | gzip > read_sets/254_GCF_000471965.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 160.669,
+        "length_mean": 14524.0,
+        "length_sd": 25217.0,
+        "identity_mean": 84.991,
+        "identity_max": 90.611,
+        "identity_sd": 3.736,
+        "junk_percent": 10.547,
+        "random_percent": 5.43,
+        "chimera_percent": 4.73,
+        "glitch_rate": 3087.0,
+        "glitch_size_skip": 65.644,
+        "adapter_length": 22.0
+      },
+      "published_read_statistics": {
+        "read_count": 6976,
+        "total_read_bases": 100702694,
+        "read_n50_bp": 45014,
+        "mean_depth": 160.70621710557813
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_022550.1",
+          "replicon_name": "NC_022550.1",
+          "molecule_type": "chromosome",
+          "length_bp": 622952,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 140.854
+        },
+        {
+          "refseq_accession": "NC_022551.1",
+          "replicon_name": "NC_022551.1",
+          "molecule_type": "plasmid",
+          "length_bp": 3674,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.27,
+          "published_achieved_depth": 121.556
+        }
+      ]
+    },
+    {
+      "id": "026_GCF_003945385.1",
+      "assembly_accession": "GCF_003945385.1",
+      "organism": "Pseudonocardia autotrophica",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Pseudonocardia autotrophica",
+      "plasmid_count": 1,
+      "total_size_bp": 7535285,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/026_GCF_003945385.1.fasta --quantity 151.723x --length 12360,18345 --identity 82.119,92.081,4.019 --junk_reads 0.074 --random_reads 0.116 --chimeras 5.629 --glitches 002893,66.870,66.870 --start_adapter_seq 151 --end_adapter_seq 151 | gzip > read_sets/026_GCF_003945385.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 151.723,
+        "length_mean": 12360.0,
+        "length_sd": 18345.0,
+        "identity_mean": 82.119,
+        "identity_max": 92.081,
+        "identity_sd": 4.019,
+        "junk_percent": 0.074,
+        "random_percent": 0.116,
+        "chimera_percent": 5.629,
+        "glitch_rate": 2893.0,
+        "glitch_size_skip": 66.87,
+        "adapter_length": 151.0
+      },
+      "published_read_statistics": {
+        "read_count": 91384,
+        "total_read_bases": 1143314854,
+        "read_n50_bp": 30344,
+        "mean_depth": 151.7281501628671
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_AP018920.1",
+          "replicon_name": "NZ_AP018920.1",
+          "molecule_type": "chromosome",
+          "length_bp": 7246130,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 154.297
+        },
+        {
+          "refseq_accession": "NZ_AP018921.1",
+          "replicon_name": "NZ_AP018921.1",
+          "molecule_type": "plasmid",
+          "length_bp": 289155,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.49,
+          "published_achieved_depth": 79.638
+        }
+      ]
+    },
+    {
+      "id": "457_GCF_900637165.1",
+      "assembly_accession": "GCF_900637165.1",
+      "organism": "Actinomyces",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Actinomyces",
+      "plasmid_count": 0,
+      "total_size_bp": 3148934,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/457_GCF_900637165.1.fasta --quantity 34.772x --length 6668,12431 --identity 93.083,95.315,1.051 --junk_reads 1.068 --random_reads 3.371 --chimeras 4.207 --glitches 001175,83.878,83.878 --start_adapter_seq 125 --end_adapter_seq 125 | gzip > read_sets/457_GCF_900637165.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 34.772,
+        "length_mean": 6668.0,
+        "length_sd": 12431.0,
+        "identity_mean": 93.083,
+        "identity_max": 95.315,
+        "identity_sd": 1.051,
+        "junk_percent": 1.068,
+        "random_percent": 3.371,
+        "chimera_percent": 4.207,
+        "glitch_rate": 1175.0,
+        "glitch_size_skip": 83.878,
+        "adapter_length": 125.0
+      },
+      "published_read_statistics": {
+        "read_count": 15867,
+        "total_read_bases": 109504651,
+        "read_n50_bp": 22781,
+        "mean_depth": 34.77514962206258
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_LR134350.1",
+          "replicon_name": "NZ_LR134350.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3148934,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 33.495
+        }
+      ]
+    },
+    {
+      "id": "470_GCF_002386365.1",
+      "assembly_accession": "GCF_002386365.1",
+      "organism": "Rothia mucilaginosa",
+      "ncbi_taxonomy_as_published": "Rothia mucilaginosa",
+      "gtdb_taxonomy_as_published": "Rothia sp001808955",
+      "plasmid_count": 1,
+      "total_size_bp": 2408770,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/470_GCF_002386365.1.fasta --quantity 138.263x --length 14051,23649 --identity 97.207,99.773,1.811 --junk_reads 0.817 --random_reads 1.478 --chimeras 0.493 --glitches 008738,46.007,46.007 --start_adapter_seq 28 --end_adapter_seq 28 | gzip > read_sets/470_GCF_002386365.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 138.263,
+        "length_mean": 14051.0,
+        "length_sd": 23649.0,
+        "identity_mean": 97.207,
+        "identity_max": 99.773,
+        "identity_sd": 1.811,
+        "junk_percent": 0.817,
+        "random_percent": 1.478,
+        "chimera_percent": 0.493,
+        "glitch_rate": 8738.0,
+        "glitch_size_skip": 46.007,
+        "adapter_length": 28.0
+      },
+      "published_read_statistics": {
+        "read_count": 23787,
+        "total_read_bases": 333073384,
+        "read_n50_bp": 41084,
+        "mean_depth": 138.27529569033157
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP023510.1",
+          "replicon_name": "NZ_CP023510.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2369230,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 135.954
+        },
+        {
+          "refseq_accession": "NZ_CP023509.1",
+          "replicon_name": "NZ_CP023509.1",
+          "molecule_type": "plasmid",
+          "length_bp": 39540,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.04,
+          "published_achieved_depth": 137.294
+        }
+      ]
+    },
+    {
+      "id": "320_GCF_000612685.1",
+      "assembly_accession": "GCF_000612685.1",
+      "organism": "Castellaniella defragrans",
+      "ncbi_taxonomy_as_published": "Castellaniella defragrans",
+      "gtdb_taxonomy_as_published": "Castellaniella defragrans",
+      "plasmid_count": 0,
+      "total_size_bp": 3952818,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/320_GCF_000612685.1.fasta --quantity 90.069x --length 2477,3037 --identity 88.655,99.551,5.971 --junk_reads 2.263 --random_reads 1.962 --chimeras 3.426 --glitches 004815,57.254,57.254 --start_adapter_seq 43 --end_adapter_seq 43 | gzip > read_sets/320_GCF_000612685.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 90.069,
+        "length_mean": 2477.0,
+        "length_sd": 3037.0,
+        "identity_mean": 88.655,
+        "identity_max": 99.551,
+        "identity_sd": 5.971,
+        "junk_percent": 2.263,
+        "random_percent": 1.962,
+        "chimera_percent": 3.426,
+        "glitch_rate": 4815.0,
+        "glitch_size_skip": 57.254,
+        "adapter_length": 43.0
+      },
+      "published_read_statistics": {
+        "read_count": 141928,
+        "total_read_bases": 356027127,
+        "read_n50_bp": 4972,
+        "mean_depth": 90.06919291502923
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_HG916765.1",
+          "replicon_name": "NZ_HG916765.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3952818,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 83.527
+        }
+      ]
+    },
+    {
+      "id": "200_GCF_001696605.3",
+      "assembly_accession": "GCF_001696605.3",
+      "organism": "Acinetobacter sp001696605",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Acinetobacter sp001696605",
+      "plasmid_count": 7,
+      "total_size_bp": 3960451,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/200_GCF_001696605.3.fasta --quantity 196.000x --length 11163,3967 --identity 93.976,96.365,1.057 --junk_reads 0.502 --random_reads 1.746 --chimeras 3.362 --glitches 077895,4.715,4.715 --start_adapter_seq 72 --end_adapter_seq 72 | gzip > read_sets/200_GCF_001696605.3.fastq.gz",
+      "badread_parameters": {
+        "depth": 196.0,
+        "length_mean": 11163.0,
+        "length_sd": 3967.0,
+        "identity_mean": 93.976,
+        "identity_max": 96.365,
+        "identity_sd": 1.057,
+        "junk_percent": 0.502,
+        "random_percent": 1.746,
+        "chimera_percent": 3.362,
+        "glitch_rate": 77895.0,
+        "glitch_size_skip": 4.715,
+        "adapter_length": 72.0
+      },
+      "published_read_statistics": {
+        "read_count": 67784,
+        "total_read_bases": 776252138,
+        "read_n50_bp": 12360,
+        "mean_depth": 196.00094484188796
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP031716.1",
+          "replicon_name": "NZ_CP031716.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3851088,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 182.055
+        },
+        {
+          "refseq_accession": "NZ_CP031709.1",
+          "replicon_name": "NZ_CP031709.1",
+          "molecule_type": "plasmid",
+          "length_bp": 38671,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.42,
+          "published_achieved_depth": 73.927
+        },
+        {
+          "refseq_accession": "NZ_CP031710.1",
+          "replicon_name": "NZ_CP031710.1",
+          "molecule_type": "plasmid",
+          "length_bp": 30787,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 6.33,
+          "published_achieved_depth": 1133.34
+        },
+        {
+          "refseq_accession": "NZ_CP031712.1",
+          "replicon_name": "NZ_CP031712.1",
+          "molecule_type": "plasmid",
+          "length_bp": 12273,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.39,
+          "published_achieved_depth": 652.828
+        },
+        {
+          "refseq_accession": "NZ_CP031711.1",
+          "replicon_name": "NZ_CP031711.1",
+          "molecule_type": "plasmid",
+          "length_bp": 12086,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 5.69,
+          "published_achieved_depth": 945.462
+        },
+        {
+          "refseq_accession": "NZ_CP031713.1",
+          "replicon_name": "NZ_CP031713.1",
+          "molecule_type": "plasmid",
+          "length_bp": 5424,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 22.77,
+          "published_achieved_depth": 1066.771
+        },
+        {
+          "refseq_accession": "NZ_CP031714.1",
+          "replicon_name": "NZ_CP031714.1",
+          "molecule_type": "plasmid",
+          "length_bp": 5113,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 21.35,
+          "published_achieved_depth": 824.725
+        },
+        {
+          "refseq_accession": "NZ_CP031715.1",
+          "replicon_name": "NZ_CP031715.1",
+          "molecule_type": "plasmid",
+          "length_bp": 5009,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.29,
+          "published_achieved_depth": 8.973
+        }
+      ]
+    },
+    {
+      "id": "195_GCF_001693335.1",
+      "assembly_accession": "GCF_001693335.1",
+      "organism": "Helicobacter_G sp001693335",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Helicobacter_G sp001693335",
+      "plasmid_count": 0,
+      "total_size_bp": 1594790,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/195_GCF_001693335.1.fasta --quantity 156.903x --length 6225,9960 --identity 96.444,97.669,1.216 --junk_reads 0.944 --random_reads 0.252 --chimeras 12.071 --glitches 000687,93.998,93.998 --start_adapter_seq 227 --end_adapter_seq 227 | gzip > read_sets/195_GCF_001693335.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 156.903,
+        "length_mean": 6225.0,
+        "length_sd": 9960.0,
+        "identity_mean": 96.444,
+        "identity_max": 97.669,
+        "identity_sd": 1.216,
+        "junk_percent": 0.944,
+        "random_percent": 0.252,
+        "chimera_percent": 12.071,
+        "glitch_rate": 687.0,
+        "glitch_size_skip": 93.998,
+        "adapter_length": 227.0
+      },
+      "published_read_statistics": {
+        "read_count": 34773,
+        "total_read_bases": 250231622,
+        "read_n50_bp": 18566,
+        "mean_depth": 156.90568789621204
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP016503.1",
+          "replicon_name": "NZ_CP016503.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1594790,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 155.727
+        }
+      ]
+    },
+    {
+      "id": "233_GCF_000775995.1",
+      "assembly_accession": "GCF_000775995.1",
+      "organism": "Treponema_A sp000775995",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Treponema_A sp000775995",
+      "plasmid_count": 0,
+      "total_size_bp": 2708067,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/233_GCF_000775995.1.fasta --quantity 96.851x --length 3169,4557 --identity 87.175,89.546,2.187 --junk_reads 2.333 --random_reads 1.278 --chimeras 1.643 --glitches 000529,98.954,98.954 --start_adapter_seq 69 --end_adapter_seq 69 | gzip > read_sets/233_GCF_000775995.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 96.851,
+        "length_mean": 3169.0,
+        "length_sd": 4557.0,
+        "identity_mean": 87.175,
+        "identity_max": 89.546,
+        "identity_sd": 2.187,
+        "junk_percent": 2.333,
+        "random_percent": 1.278,
+        "chimera_percent": 1.643,
+        "glitch_rate": 529.0,
+        "glitch_size_skip": 98.954,
+        "adapter_length": 69.0
+      },
+      "published_read_statistics": {
+        "read_count": 82185,
+        "total_read_bases": 262280529,
+        "read_n50_bp": 7461,
+        "mean_depth": 96.85156571089267
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP009227.1",
+          "replicon_name": "NZ_CP009227.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2708067,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 91.036
+        }
+      ]
+    },
+    {
+      "id": "047_GCF_003063625.1",
+      "assembly_accession": "GCF_003063625.1",
+      "organism": "RQJ05 sp003063625",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "RQJ05 sp003063625",
+      "plasmid_count": 1,
+      "total_size_bp": 5871129,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/047_GCF_003063625.1.fasta --quantity 188.063x --length 10941,3623 --identity 86.027,94.664,2.818 --junk_reads 0.058 --random_reads 1.985 --chimeras 1.615 --glitches 001066,85.710,85.710 --start_adapter_seq 86 --end_adapter_seq 86 | gzip > read_sets/047_GCF_003063625.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 188.063,
+        "length_mean": 10941.0,
+        "length_sd": 3623.0,
+        "identity_mean": 86.027,
+        "identity_max": 94.664,
+        "identity_sd": 2.818,
+        "junk_percent": 0.058,
+        "random_percent": 1.985,
+        "chimera_percent": 1.615,
+        "glitch_rate": 1066.0,
+        "glitch_size_skip": 85.71,
+        "adapter_length": 86.0
+      },
+      "published_read_statistics": {
+        "read_count": 102216,
+        "total_read_bases": 1104145539,
+        "read_n50_bp": 11551,
+        "mean_depth": 188.0635801052915
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP026604.1",
+          "replicon_name": "NZ_CP026604.1",
+          "molecule_type": "chromosome",
+          "length_bp": 5663044,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 188.147
+        },
+        {
+          "refseq_accession": "NZ_CP026605.1",
+          "replicon_name": "NZ_CP026605.1",
+          "molecule_type": "plasmid",
+          "length_bp": 208085,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.97,
+          "published_achieved_depth": 178.262
+        }
+      ]
+    },
+    {
+      "id": "241_GCF_000024605.1",
+      "assembly_accession": "GCF_000024605.1",
+      "organism": "Ammonifex degensii",
+      "ncbi_taxonomy_as_published": "Ammonifex degensii",
+      "gtdb_taxonomy_as_published": "Ammonifex degensii",
+      "plasmid_count": 1,
+      "total_size_bp": 2157067,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/241_GCF_000024605.1.fasta --quantity 45.575x --length 603,1147 --identity 81.742,90.899,7.012 --junk_reads 3.265 --random_reads 0.027 --chimeras 0.103 --glitches 005177,55.887,55.887 --start_adapter_seq 8 --end_adapter_seq 8 | gzip > read_sets/241_GCF_000024605.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 45.575,
+        "length_mean": 603.0,
+        "length_sd": 1147.0,
+        "identity_mean": 81.742,
+        "identity_max": 90.899,
+        "identity_sd": 7.012,
+        "junk_percent": 3.265,
+        "random_percent": 0.027,
+        "chimera_percent": 0.103,
+        "glitch_rate": 5177.0,
+        "glitch_size_skip": 55.887,
+        "adapter_length": 8.0
+      },
+      "published_read_statistics": {
+        "read_count": 173110,
+        "total_read_bases": 98309736,
+        "read_n50_bp": 1952,
+        "mean_depth": 45.57565249479965
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_013385.1",
+          "replicon_name": "NC_013385.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2129237,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 32.39
+        },
+        {
+          "refseq_accession": "NC_013386.1",
+          "replicon_name": "NC_013386.1",
+          "molecule_type": "plasmid",
+          "length_bp": 27830,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.91,
+          "published_achieved_depth": 116.285
+        }
+      ]
+    },
+    {
+      "id": "312_GCF_002776575.1",
+      "assembly_accession": "GCF_002776575.1",
+      "organism": "Sphingorhabdus sp002776575",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Sphingorhabdus sp002776575",
+      "plasmid_count": 1,
+      "total_size_bp": 4060755,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/312_GCF_002776575.1.fasta --quantity 7.214x --length 5452,8702 --identity 93.629,96.764,2.059 --junk_reads 3.443 --random_reads 0.656 --chimeras 1.713 --glitches 001782,76.022,76.022 --start_adapter_seq 12 --end_adapter_seq 12 | gzip > read_sets/312_GCF_002776575.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 7.214,
+        "length_mean": 5452.0,
+        "length_sd": 8702.0,
+        "identity_mean": 93.629,
+        "identity_max": 96.764,
+        "identity_sd": 2.059,
+        "junk_percent": 3.443,
+        "random_percent": 0.656,
+        "chimera_percent": 1.713,
+        "glitch_rate": 1782.0,
+        "glitch_size_skip": 76.022,
+        "adapter_length": 12.0
+      },
+      "published_read_statistics": {
+        "read_count": 5290,
+        "total_read_bases": 29294758,
+        "read_n50_bp": 15634,
+        "mean_depth": 7.214116094174606
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP022548.1",
+          "replicon_name": "NZ_CP022548.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3864176,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 6.843
+        },
+        {
+          "refseq_accession": "NZ_CP022549.1",
+          "replicon_name": "NZ_CP022549.1",
+          "molecule_type": "plasmid",
+          "length_bp": 196579,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.48,
+          "published_achieved_depth": 10.181
+        }
+      ]
+    },
+    {
+      "id": "455_GCF_002355315.1",
+      "assembly_accession": "GCF_002355315.1",
+      "organism": "Pseudomonas frederiksbergensis",
+      "ncbi_taxonomy_as_published": "Pseudomonas frederiksbergensis",
+      "gtdb_taxonomy_as_published": "Pseudomonas_E sp001655615",
+      "plasmid_count": 0,
+      "total_size_bp": 6595804,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/455_GCF_002355315.1.fasta --quantity 31.526x --length 3346,3021 --identity 97.569,99.067,1.490 --junk_reads 0.468 --random_reads 2.814 --chimeras 0.290 --glitches 001148,84.315,84.315 --start_adapter_seq 8 --end_adapter_seq 8 | gzip > read_sets/455_GCF_002355315.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 31.526,
+        "length_mean": 3346.0,
+        "length_sd": 3021.0,
+        "identity_mean": 97.569,
+        "identity_max": 99.067,
+        "identity_sd": 1.49,
+        "junk_percent": 0.468,
+        "random_percent": 2.814,
+        "chimera_percent": 0.29,
+        "glitch_rate": 1148.0,
+        "glitch_size_skip": 84.315,
+        "adapter_length": 8.0
+      },
+      "published_read_statistics": {
+        "read_count": 62356,
+        "total_read_bases": 207940200,
+        "read_n50_bp": 5195,
+        "mean_depth": 31.526133887544262
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP023466.1",
+          "replicon_name": "NZ_CP023466.1",
+          "molecule_type": "chromosome",
+          "length_bp": 6595804,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 30.719
+        }
+      ]
+    },
+    {
+      "id": "154_GCF_000755705.1",
+      "assembly_accession": "GCF_000755705.1",
+      "organism": "Izemoplasma_B sp000755705",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Izemoplasma_B sp000755705",
+      "plasmid_count": 0,
+      "total_size_bp": 1878735,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/154_GCF_000755705.1.fasta --quantity 78.367x --length 13893,26266 --identity 90.685,96.306,2.174 --junk_reads 0.165 --random_reads 0.891 --chimeras 4.548 --glitches 009985,43.490,43.490 --start_adapter_seq 11 --end_adapter_seq 11 | gzip > read_sets/154_GCF_000755705.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 78.367,
+        "length_mean": 13893.0,
+        "length_sd": 26266.0,
+        "identity_mean": 90.685,
+        "identity_max": 96.306,
+        "identity_sd": 2.174,
+        "junk_percent": 0.165,
+        "random_percent": 0.891,
+        "chimera_percent": 4.548,
+        "glitch_rate": 9985.0,
+        "glitch_size_skip": 43.49,
+        "adapter_length": 11.0
+      },
+      "published_read_statistics": {
+        "read_count": 10445,
+        "total_read_bases": 147322337,
+        "read_n50_bp": 48404,
+        "mean_depth": 78.41570897438969
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP009415.1",
+          "replicon_name": "NZ_CP009415.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1878735,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 79.094
+        }
+      ]
+    },
+    {
+      "id": "374_GCF_001941645.1",
+      "assembly_accession": "GCF_001941645.1",
+      "organism": "Actinoalloteichus sp001941625",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Actinoalloteichus sp001941625",
+      "plasmid_count": 1,
+      "total_size_bp": 7275385,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/374_GCF_001941645.1.fasta --quantity 170.768x --length 274,420 --identity 90.468,97.975,2.089 --junk_reads 0.241 --random_reads 2.260 --chimeras 1.127 --glitches 038781,17.879,17.879 --start_adapter_seq 80 --end_adapter_seq 80 | gzip > read_sets/374_GCF_001941645.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 170.768,
+        "length_mean": 274.0,
+        "length_sd": 420.0,
+        "identity_mean": 90.468,
+        "identity_max": 97.975,
+        "identity_sd": 2.089,
+        "junk_percent": 0.241,
+        "random_percent": 2.26,
+        "chimera_percent": 1.127,
+        "glitch_rate": 38781.0,
+        "glitch_size_skip": 17.879,
+        "adapter_length": 80.0
+      },
+      "published_read_statistics": {
+        "read_count": 3882069,
+        "total_read_bases": 1242403002,
+        "read_n50_bp": 653,
+        "mean_depth": 170.7680077411711
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP016077.1",
+          "replicon_name": "NZ_CP016077.1",
+          "molecule_type": "chromosome",
+          "length_bp": 7215977,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 121.786
+        },
+        {
+          "refseq_accession": "NZ_CP016078.1",
+          "replicon_name": "NZ_CP016078.1",
+          "molecule_type": "plasmid",
+          "length_bp": 59408,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.98,
+          "published_achieved_depth": 579.269
+        }
+      ]
+    },
+    {
+      "id": "375_GCF_000152925.2",
+      "assembly_accession": "GCF_000152925.2",
+      "organism": "Dokdonia donghaensis",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Dokdonia donghaensis",
+      "plasmid_count": 0,
+      "total_size_bp": 3302548,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/375_GCF_000152925.2.fasta --quantity 136.637x --length 10212,17449 --identity 98.010,99.416,1.327 --junk_reads 0.728 --random_reads 0.357 --chimeras 3.402 --glitches 039039,17.754,17.754 --start_adapter_seq 65 --end_adapter_seq 65 | gzip > read_sets/375_GCF_000152925.2.fastq.gz",
+      "badread_parameters": {
+        "depth": 136.637,
+        "length_mean": 10212.0,
+        "length_sd": 17449.0,
+        "identity_mean": 98.01,
+        "identity_max": 99.416,
+        "identity_sd": 1.327,
+        "junk_percent": 0.728,
+        "random_percent": 0.357,
+        "chimera_percent": 3.402,
+        "glitch_rate": 39039.0,
+        "glitch_size_skip": 17.754,
+        "adapter_length": 65.0
+      },
+      "published_read_statistics": {
+        "read_count": 43031,
+        "total_read_bases": 451270472,
+        "read_n50_bp": 30487,
+        "mean_depth": 136.64312282516408
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP009301.1",
+          "replicon_name": "NZ_CP009301.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3302548,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 135.24
+        }
+      ]
+    },
+    {
+      "id": "428_GCF_900476435.1",
+      "assembly_accession": "GCF_900476435.1",
+      "organism": "Shewanella benthica",
+      "ncbi_taxonomy_as_published": "Shewanella benthica",
+      "gtdb_taxonomy_as_published": "Shewanella benthica",
+      "plasmid_count": 0,
+      "total_size_bp": 4353505,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/428_GCF_900476435.1.fasta --quantity 42.005x --length 4280,5672 --identity 81.056,99.840,14.966 --junk_reads 0.871 --random_reads 1.161 --chimeras 0.986 --glitches 000746,92.460,92.460 --start_adapter_seq 61 --end_adapter_seq 61 | gzip > read_sets/428_GCF_900476435.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 42.005,
+        "length_mean": 4280.0,
+        "length_sd": 5672.0,
+        "identity_mean": 81.056,
+        "identity_max": 99.84,
+        "identity_sd": 14.966,
+        "junk_percent": 0.871,
+        "random_percent": 1.161,
+        "chimera_percent": 0.986,
+        "glitch_rate": 746.0,
+        "glitch_size_skip": 92.46,
+        "adapter_length": 61.0
+      },
+      "published_read_statistics": {
+        "read_count": 44134,
+        "total_read_bases": 182877781,
+        "read_n50_bp": 8906,
+        "mean_depth": 42.00702215800832
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_LS483452.1",
+          "replicon_name": "NZ_LS483452.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4353505,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 30.628
+        }
+      ]
+    },
+    {
+      "id": "492_GCF_900683755.1",
+      "assembly_accession": "GCF_900683755.1",
+      "organism": "Ruthenibacterium lactatiformans",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Ruthenibacterium lactatiformans",
+      "plasmid_count": 0,
+      "total_size_bp": 4419852,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/492_GCF_900683755.1.fasta --quantity 145.900x --length 16245,9002 --identity 91.533,93.897,2.363 --junk_reads 0.684 --random_reads 2.807 --chimeras 1.300 --glitches 016465,34.049,34.049 --start_adapter_seq 78 --end_adapter_seq 78 | gzip > read_sets/492_GCF_900683755.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 145.9,
+        "length_mean": 16245.0,
+        "length_sd": 9002.0,
+        "identity_mean": 91.533,
+        "identity_max": 93.897,
+        "identity_sd": 2.363,
+        "junk_percent": 0.684,
+        "random_percent": 2.807,
+        "chimera_percent": 1.3,
+        "glitch_rate": 16465.0,
+        "glitch_size_skip": 34.049,
+        "adapter_length": 78.0
+      },
+      "published_read_statistics": {
+        "read_count": 39974,
+        "total_read_bases": 644864047,
+        "read_n50_bp": 19417,
+        "mean_depth": 145.90172860991726
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_LR215981.1",
+          "replicon_name": "NZ_LR215981.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4419852,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 143.416
+        }
+      ]
+    },
+    {
+      "id": "281_GCF_002999135.1",
+      "assembly_accession": "GCF_002999135.1",
+      "organism": "Capnocytophaga sp002999135",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Capnocytophaga sp002999135",
+      "plasmid_count": 1,
+      "total_size_bp": 2990835,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/281_GCF_002999135.1.fasta --quantity 105.818x --length 15468,10499 --identity 87.958,96.627,6.120 --junk_reads 0.608 --random_reads 0.599 --chimeras 1.400 --glitches 035499,19.548,19.548 --start_adapter_seq 15 --end_adapter_seq 15 | gzip > read_sets/281_GCF_002999135.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 105.818,
+        "length_mean": 15468.0,
+        "length_sd": 10499.0,
+        "identity_mean": 87.958,
+        "identity_max": 96.627,
+        "identity_sd": 6.12,
+        "junk_percent": 0.608,
+        "random_percent": 0.599,
+        "chimera_percent": 1.4,
+        "glitch_rate": 35499.0,
+        "glitch_size_skip": 19.548,
+        "adapter_length": 15.0
+      },
+      "published_read_statistics": {
+        "read_count": 21052,
+        "total_read_bases": 316494673,
+        "read_n50_bp": 19786,
+        "mean_depth": 105.8215090434611
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP027229.1",
+          "replicon_name": "NZ_CP027229.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2962157,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 106.269
+        },
+        {
+          "refseq_accession": "NZ_CP027230.1",
+          "replicon_name": "NZ_CP027230.1",
+          "molecule_type": "plasmid",
+          "length_bp": 28678,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.63,
+          "published_achieved_depth": 66.289
+        }
+      ]
+    },
+    {
+      "id": "138_GCF_003611275.1",
+      "assembly_accession": "GCF_003611275.1",
+      "organism": "Sulfitobacter sp001634775",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Sulfitobacter sp001634775",
+      "plasmid_count": 5,
+      "total_size_bp": 3963108,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/138_GCF_003611275.1.fasta --quantity 77.794x --length 11468,19061 --identity 82.989,93.751,1.800 --junk_reads 0.921 --random_reads 0.530 --chimeras 1.242 --glitches 007312,49.369,49.369 --start_adapter_seq 51 --end_adapter_seq 51 | gzip > read_sets/138_GCF_003611275.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 77.794,
+        "length_mean": 11468.0,
+        "length_sd": 19061.0,
+        "identity_mean": 82.989,
+        "identity_max": 93.751,
+        "identity_sd": 1.8,
+        "junk_percent": 0.921,
+        "random_percent": 0.53,
+        "chimera_percent": 1.242,
+        "glitch_rate": 7312.0,
+        "glitch_size_skip": 49.369,
+        "adapter_length": 51.0
+      },
+      "published_read_statistics": {
+        "read_count": 27935,
+        "total_read_bases": 308327604,
+        "read_n50_bp": 32141,
+        "mean_depth": 77.79944528385298
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP020694.1",
+          "replicon_name": "NZ_CP020694.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3371091,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 75.11
+        },
+        {
+          "refseq_accession": "NZ_CP020695.1",
+          "replicon_name": "NZ_CP020695.1",
+          "molecule_type": "plasmid",
+          "length_bp": 193276,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.82,
+          "published_achieved_depth": 62.456
+        },
+        {
+          "refseq_accession": "NZ_CP020696.1",
+          "replicon_name": "NZ_CP020696.1",
+          "molecule_type": "plasmid",
+          "length_bp": 126656,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 2.47,
+          "published_achieved_depth": 177.036
+        },
+        {
+          "refseq_accession": "NZ_CP020697.1",
+          "replicon_name": "NZ_CP020697.1",
+          "molecule_type": "plasmid",
+          "length_bp": 104922,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.32,
+          "published_achieved_depth": 107.188
+        },
+        {
+          "refseq_accession": "NZ_CP020698.1",
+          "replicon_name": "NZ_CP020698.1",
+          "molecule_type": "plasmid",
+          "length_bp": 85454,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.26,
+          "published_achieved_depth": 91.897
+        },
+        {
+          "refseq_accession": "NZ_CP020699.1",
+          "replicon_name": "NZ_CP020699.1",
+          "molecule_type": "plasmid",
+          "length_bp": 81709,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.1,
+          "published_achieved_depth": 79.118
+        }
+      ]
+    },
+    {
+      "id": "259_GCF_000007725.1",
+      "assembly_accession": "GCF_000007725.1",
+      "organism": "Buchnera aphidicola",
+      "ncbi_taxonomy_as_published": "Buchnera aphidicola",
+      "gtdb_taxonomy_as_published": "Buchnera aphidicola_H",
+      "plasmid_count": 1,
+      "total_size_bp": 618379,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/259_GCF_000007725.1.fasta --quantity 190.798x --length 11386,11441 --identity 80.792,85.066,1.043 --junk_reads 2.736 --random_reads 0.066 --chimeras 0.256 --glitches 001565,78.471,78.471 --start_adapter_seq 21 --end_adapter_seq 21 | gzip > read_sets/259_GCF_000007725.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 190.798,
+        "length_mean": 11386.0,
+        "length_sd": 11441.0,
+        "identity_mean": 80.792,
+        "identity_max": 85.066,
+        "identity_sd": 1.043,
+        "junk_percent": 2.736,
+        "random_percent": 0.066,
+        "chimera_percent": 0.256,
+        "glitch_rate": 1565.0,
+        "glitch_size_skip": 78.471,
+        "adapter_length": 21.0
+      },
+      "published_read_statistics": {
+        "read_count": 10921,
+        "total_read_bases": 117991360,
+        "read_n50_bp": 18228,
+        "mean_depth": 190.80751448545308
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_004545.1",
+          "replicon_name": "NC_004545.1",
+          "molecule_type": "chromosome",
+          "length_bp": 615980,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 191.651
+        },
+        {
+          "refseq_accession": "NC_004555.1",
+          "replicon_name": "NC_004555.1",
+          "molecule_type": "plasmid",
+          "length_bp": 2399,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 9.19,
+          "published_achieved_depth": 410.126
+        }
+      ]
+    },
+    {
+      "id": "079_GCF_006542335.1",
+      "assembly_accession": "GCF_006542335.1",
+      "organism": "Neokomagataea",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Neokomagataea",
+      "plasmid_count": 1,
+      "total_size_bp": 2577002,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/079_GCF_006542335.1.fasta --quantity 89.586x --length 7924,3052 --identity 93.088,98.801,3.752 --junk_reads 1.823 --random_reads 3.988 --chimeras 1.333 --glitches 013317,38.054,38.054 --start_adapter_seq 42 --end_adapter_seq 42 | gzip > read_sets/079_GCF_006542335.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 89.586,
+        "length_mean": 7924.0,
+        "length_sd": 3052.0,
+        "identity_mean": 93.088,
+        "identity_max": 98.801,
+        "identity_sd": 3.752,
+        "junk_percent": 1.823,
+        "random_percent": 3.988,
+        "chimera_percent": 1.333,
+        "glitch_rate": 13317.0,
+        "glitch_size_skip": 38.054,
+        "adapter_length": 42.0
+      },
+      "published_read_statistics": {
+        "read_count": 29061,
+        "total_read_bases": 230866756,
+        "read_n50_bp": 8702,
+        "mean_depth": 89.58734063846283
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP032485.1",
+          "replicon_name": "NZ_CP032485.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2477279,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 85.883
+        },
+        {
+          "refseq_accession": "NZ_CP032486.1",
+          "replicon_name": "NZ_CP032486.1",
+          "molecule_type": "plasmid",
+          "length_bp": 99723,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.97,
+          "published_achieved_depth": 82.149
+        }
+      ]
+    },
+    {
+      "id": "360_GCF_000067205.1",
+      "assembly_accession": "GCF_000067205.1",
+      "organism": "Bordetella petrii",
+      "ncbi_taxonomy_as_published": "Bordetella petrii",
+      "gtdb_taxonomy_as_published": "Bordetella_A petrii",
+      "plasmid_count": 0,
+      "total_size_bp": 5287950,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/360_GCF_000067205.1.fasta --quantity 77.934x --length 15969,12279 --identity 86.470,99.450,1.215 --junk_reads 1.603 --random_reads 1.340 --chimeras 0.793 --glitches 013556,37.719,37.719 --start_adapter_seq 110 --end_adapter_seq 110 | gzip > read_sets/360_GCF_000067205.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 77.934,
+        "length_mean": 15969.0,
+        "length_sd": 12279.0,
+        "identity_mean": 86.47,
+        "identity_max": 99.45,
+        "identity_sd": 1.215,
+        "junk_percent": 1.603,
+        "random_percent": 1.34,
+        "chimera_percent": 0.793,
+        "glitch_rate": 13556.0,
+        "glitch_size_skip": 37.719,
+        "adapter_length": 110.0
+      },
+      "published_read_statistics": {
+        "read_count": 26658,
+        "total_read_bases": 412149394,
+        "read_n50_bp": 21662,
+        "mean_depth": 77.94124263656049
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_010170.1",
+          "replicon_name": "NC_010170.1",
+          "molecule_type": "chromosome",
+          "length_bp": 5287950,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 77.499
+        }
+      ]
+    },
+    {
+      "id": "378_GCF_000341395.1",
+      "assembly_accession": "GCF_000341395.1",
+      "organism": "Desulfocapsa sulfexigens",
+      "ncbi_taxonomy_as_published": "Desulfocapsa sulfexigens",
+      "gtdb_taxonomy_as_published": "Desulfocapsa sulfexigens",
+      "plasmid_count": 1,
+      "total_size_bp": 4023512,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/378_GCF_000341395.1.fasta --quantity 77.232x --length 15263,8286 --identity 95.720,98.197,1.744 --junk_reads 3.183 --random_reads 3.515 --chimeras 0.522 --glitches 086980,2.633,2.633 --start_adapter_seq 217 --end_adapter_seq 217 | gzip > read_sets/378_GCF_000341395.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 77.232,
+        "length_mean": 15263.0,
+        "length_sd": 8286.0,
+        "identity_mean": 95.72,
+        "identity_max": 98.197,
+        "identity_sd": 1.744,
+        "junk_percent": 3.183,
+        "random_percent": 3.515,
+        "chimera_percent": 0.522,
+        "glitch_rate": 86980.0,
+        "glitch_size_skip": 2.633,
+        "adapter_length": 217.0
+      },
+      "published_read_statistics": {
+        "read_count": 20311,
+        "total_read_bases": 310752678,
+        "read_n50_bp": 18331,
+        "mean_depth": 77.23418694911311
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_020304.1",
+          "replicon_name": "NC_020304.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3986761,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 71.081
+        },
+        {
+          "refseq_accession": "NC_020305.1",
+          "replicon_name": "NC_020305.1",
+          "molecule_type": "plasmid",
+          "length_bp": 36751,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.32,
+          "published_achieved_depth": 216.782
+        }
+      ]
+    },
+    {
+      "id": "444_GCF_004103615.1",
+      "assembly_accession": "GCF_004103615.1",
+      "organism": "Bacillus glycinifermentans",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Bacillus glycinifermentans",
+      "plasmid_count": 1,
+      "total_size_bp": 4810226,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/444_GCF_004103615.1.fasta --quantity 52.780x --length 6289,1099 --identity 95.554,99.804,3.966 --junk_reads 0.253 --random_reads 1.098 --chimeras 0.636 --glitches 003471,63.436,63.436 --start_adapter_seq 3 --end_adapter_seq 3 | gzip > read_sets/444_GCF_004103615.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 52.78,
+        "length_mean": 6289.0,
+        "length_sd": 1099.0,
+        "identity_mean": 95.554,
+        "identity_max": 99.804,
+        "identity_sd": 3.966,
+        "junk_percent": 0.253,
+        "random_percent": 1.098,
+        "chimera_percent": 0.636,
+        "glitch_rate": 3471.0,
+        "glitch_size_skip": 63.436,
+        "adapter_length": 3.0
+      },
+      "published_read_statistics": {
+        "read_count": 40578,
+        "total_read_bases": 253883886,
+        "read_n50_bp": 6367,
+        "mean_depth": 52.780032788480206
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP035232.1",
+          "replicon_name": "NZ_CP035232.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4744953,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 51.773
+        },
+        {
+          "refseq_accession": "NZ_CP035233.1",
+          "replicon_name": "NZ_CP035233.1",
+          "molecule_type": "plasmid",
+          "length_bp": 65273,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 2.35,
+          "published_achieved_depth": 124.752
+        }
+      ]
+    },
+    {
+      "id": "112_GCF_006337165.1",
+      "assembly_accession": "GCF_006337165.1",
+      "organism": "Hymenobacter",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Hymenobacter",
+      "plasmid_count": 0,
+      "total_size_bp": 5086993,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/112_GCF_006337165.1.fasta --quantity 24.391x --length 8804,4476 --identity 90.088,93.409,3.055 --junk_reads 1.302 --random_reads 8.160 --chimeras 0.511 --glitches 041840,16.446,16.446 --start_adapter_seq 18 --end_adapter_seq 18 | gzip > read_sets/112_GCF_006337165.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 24.391,
+        "length_mean": 8804.0,
+        "length_sd": 4476.0,
+        "identity_mean": 90.088,
+        "identity_max": 93.409,
+        "identity_sd": 3.055,
+        "junk_percent": 1.302,
+        "random_percent": 8.16,
+        "chimera_percent": 0.511,
+        "glitch_rate": 41840.0,
+        "glitch_size_skip": 16.446,
+        "adapter_length": 18.0
+      },
+      "published_read_statistics": {
+        "read_count": 14386,
+        "total_read_bases": 124082727,
+        "read_n50_bp": 10123,
+        "mean_depth": 24.39215603402639
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP040896.1",
+          "replicon_name": "NZ_CP040896.1",
+          "molecule_type": "chromosome",
+          "length_bp": 5086993,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 22.461
+        }
+      ]
+    },
+    {
+      "id": "225_GCF_001278035.1",
+      "assembly_accession": "GCF_001278035.1",
+      "organism": "Sphingopyxis sp001278035",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Sphingopyxis sp001278035",
+      "plasmid_count": 1,
+      "total_size_bp": 4664213,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/225_GCF_001278035.1.fasta --quantity 69.387x --length 18966,14278 --identity 93.455,99.005,2.887 --junk_reads 1.840 --random_reads 1.045 --chimeras 1.200 --glitches 022979,27.757,27.757 --start_adapter_seq 6 --end_adapter_seq 6 | gzip > read_sets/225_GCF_001278035.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 69.387,
+        "length_mean": 18966.0,
+        "length_sd": 14278.0,
+        "identity_mean": 93.455,
+        "identity_max": 99.005,
+        "identity_sd": 2.887,
+        "junk_percent": 1.84,
+        "random_percent": 1.045,
+        "chimera_percent": 1.2,
+        "glitch_rate": 22979.0,
+        "glitch_size_skip": 27.757,
+        "adapter_length": 6.0
+      },
+      "published_read_statistics": {
+        "read_count": 17276,
+        "total_read_bases": 323657855,
+        "read_n50_bp": 25761,
+        "mean_depth": 69.39173982834832
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP009452.1",
+          "replicon_name": "NZ_CP009452.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4420776,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 68.796
+        },
+        {
+          "refseq_accession": "NZ_CP009453.1",
+          "replicon_name": "NZ_CP009453.1",
+          "molecule_type": "plasmid",
+          "length_bp": 243437,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.89,
+          "published_achieved_depth": 60.432
+        }
+      ]
+    },
+    {
+      "id": "219_GCF_002284915.1",
+      "assembly_accession": "GCF_002284915.1",
+      "organism": "IMCC26077 sp002284915",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "IMCC26077 sp002284915",
+      "plasmid_count": 0,
+      "total_size_bp": 1551612,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/219_GCF_002284915.1.fasta --quantity 166.916x --length 17118,16225 --identity 80.675,86.828,1.868 --junk_reads 0.161 --random_reads 4.058 --chimeras 8.772 --glitches 005217,55.742,55.742 --start_adapter_seq 105 --end_adapter_seq 105 | gzip > read_sets/219_GCF_002284915.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 166.916,
+        "length_mean": 17118.0,
+        "length_sd": 16225.0,
+        "identity_mean": 80.675,
+        "identity_max": 86.828,
+        "identity_sd": 1.868,
+        "junk_percent": 0.161,
+        "random_percent": 4.058,
+        "chimera_percent": 8.772,
+        "glitch_rate": 5217.0,
+        "glitch_size_skip": 55.742,
+        "adapter_length": 105.0
+      },
+      "published_read_statistics": {
+        "read_count": 14143,
+        "total_read_bases": 258992583,
+        "read_n50_bp": 29465,
+        "mean_depth": 166.91839390259935
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP015606.1",
+          "replicon_name": "NZ_CP015606.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1551612,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 164.067
+        }
+      ]
+    },
+    {
+      "id": "349_GCF_000146025.2",
+      "assembly_accession": "GCF_000146025.2",
+      "organism": "Endomicrobium_A trichonymphae",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Endomicrobium_A trichonymphae",
+      "plasmid_count": 3,
+      "total_size_bp": 1148570,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/349_GCF_000146025.2.fasta --quantity 21.066x --length 7733,14779 --identity 81.180,96.681,12.004 --junk_reads 1.060 --random_reads 1.280 --chimeras 0.124 --glitches 030225,22.584,22.584 --start_adapter_seq 57 --end_adapter_seq 57 | gzip > read_sets/349_GCF_000146025.2.fastq.gz",
+      "badread_parameters": {
+        "depth": 21.066,
+        "length_mean": 7733.0,
+        "length_sd": 14779.0,
+        "identity_mean": 81.18,
+        "identity_max": 96.681,
+        "identity_sd": 12.004,
+        "junk_percent": 1.06,
+        "random_percent": 1.28,
+        "chimera_percent": 0.124,
+        "glitch_rate": 30225.0,
+        "glitch_size_skip": 22.584,
+        "adapter_length": 57.0
+      },
+      "published_read_statistics": {
+        "read_count": 3443,
+        "total_read_bases": 24208857,
+        "read_n50_bp": 24028,
+        "mean_depth": 21.077389275359796
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_020419.1",
+          "replicon_name": "NC_020419.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1125857,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 16.123
+        },
+        {
+          "refseq_accession": "NC_020420.1",
+          "replicon_name": "NC_020420.1",
+          "molecule_type": "plasmid",
+          "length_bp": 11650,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.29,
+          "published_achieved_depth": 16.305
+        },
+        {
+          "refseq_accession": "NC_020421.1",
+          "replicon_name": "NC_020421.1",
+          "molecule_type": "plasmid",
+          "length_bp": 5701,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 25.62,
+          "published_achieved_depth": 159.377
+        },
+        {
+          "refseq_accession": "NC_020422.1",
+          "replicon_name": "NC_020422.1",
+          "molecule_type": "plasmid",
+          "length_bp": 5362,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.26,
+          "published_achieved_depth": 1.385
+        }
+      ]
+    },
+    {
+      "id": "370_GCF_000020965.1",
+      "assembly_accession": "GCF_000020965.1",
+      "organism": "Dictyoglomus thermophilum",
+      "ncbi_taxonomy_as_published": "Dictyoglomus thermophilum",
+      "gtdb_taxonomy_as_published": "Dictyoglomus thermophilum",
+      "plasmid_count": 0,
+      "total_size_bp": 1959987,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/370_GCF_000020965.1.fasta --quantity 158.490x --length 10558,6050 --identity 92.235,95.312,2.169 --junk_reads 0.336 --random_reads 0.366 --chimeras 0.650 --glitches 001055,85.915,85.915 --start_adapter_seq 73 --end_adapter_seq 73 | gzip > read_sets/370_GCF_000020965.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 158.49,
+        "length_mean": 10558.0,
+        "length_sd": 6050.0,
+        "identity_mean": 92.235,
+        "identity_max": 95.312,
+        "identity_sd": 2.169,
+        "junk_percent": 0.336,
+        "random_percent": 0.366,
+        "chimera_percent": 0.65,
+        "glitch_rate": 1055.0,
+        "glitch_size_skip": 85.915,
+        "adapter_length": 73.0
+      },
+      "published_read_statistics": {
+        "read_count": 29793,
+        "total_read_bases": 310638409,
+        "read_n50_bp": 12683,
+        "mean_depth": 158.4900353930919
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_011297.1",
+          "replicon_name": "NC_011297.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1959987,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 159.693
+        }
+      ]
+    },
+    {
+      "id": "197_GCF_900070325.1",
+      "assembly_accession": "GCF_900070325.1",
+      "organism": "Herbinix luporum",
+      "ncbi_taxonomy_as_published": "Herbinix luporum",
+      "gtdb_taxonomy_as_published": "Herbinix luporum",
+      "plasmid_count": 0,
+      "total_size_bp": 2609352,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/197_GCF_900070325.1.fasta --quantity 12.536x --length 19940,13139 --identity 93.914,97.960,3.194 --junk_reads 8.836 --random_reads 3.095 --chimeras 1.292 --glitches 002858,67.103,67.103 --start_adapter_seq 136 --end_adapter_seq 136 | gzip > read_sets/197_GCF_900070325.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 12.536,
+        "length_mean": 19940.0,
+        "length_sd": 13139.0,
+        "identity_mean": 93.914,
+        "identity_max": 97.96,
+        "identity_sd": 3.194,
+        "junk_percent": 8.836,
+        "random_percent": 3.095,
+        "chimera_percent": 1.292,
+        "glitch_rate": 2858.0,
+        "glitch_size_skip": 67.103,
+        "adapter_length": 136.0
+      },
+      "published_read_statistics": {
+        "read_count": 1600,
+        "total_read_bases": 32720570,
+        "read_n50_bp": 25714,
+        "mean_depth": 12.539730170555755
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_LN879430.1",
+          "replicon_name": "NZ_LN879430.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2609352,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 11.113
+        }
+      ]
+    },
+    {
+      "id": "271_GCF_004795855.1",
+      "assembly_accession": "GCF_004795855.1",
+      "organism": "Hydrogenophaga",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Hydrogenophaga",
+      "plasmid_count": 0,
+      "total_size_bp": 4850867,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/271_GCF_004795855.1.fasta --quantity 146.559x --length 19115,19527 --identity 80.174,85.501,4.394 --junk_reads 0.803 --random_reads 0.108 --chimeras 0.373 --glitches 002131,72.639,72.639 --start_adapter_seq 46 --end_adapter_seq 46 | gzip > read_sets/271_GCF_004795855.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 146.559,
+        "length_mean": 19115.0,
+        "length_sd": 19527.0,
+        "identity_mean": 80.174,
+        "identity_max": 85.501,
+        "identity_sd": 4.394,
+        "junk_percent": 0.803,
+        "random_percent": 0.108,
+        "chimera_percent": 0.373,
+        "glitch_rate": 2131.0,
+        "glitch_size_skip": 72.639,
+        "adapter_length": 46.0
+      },
+      "published_read_statistics": {
+        "read_count": 39225,
+        "total_read_bases": 710952910,
+        "read_n50_bp": 31196,
+        "mean_depth": 146.56202901460708
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP039252.1",
+          "replicon_name": "NZ_CP039252.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4850867,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 141.539
+        }
+      ]
+    },
+    {
+      "id": "338_GCF_000761215.1",
+      "assembly_accession": "GCF_000761215.1",
+      "organism": "Streptomyces glaucescens",
+      "ncbi_taxonomy_as_published": "Streptomyces glaucescens",
+      "gtdb_taxonomy_as_published": "Streptomyces glaucescens",
+      "plasmid_count": 1,
+      "total_size_bp": 7623774,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/338_GCF_000761215.1.fasta --quantity 183.664x --length 15080,21289 --identity 96.220,98.820,2.292 --junk_reads 1.555 --random_reads 1.963 --chimeras 1.126 --glitches 015962,34.635,34.635 --start_adapter_seq 2 --end_adapter_seq 2 | gzip > read_sets/338_GCF_000761215.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 183.664,
+        "length_mean": 15080.0,
+        "length_sd": 21289.0,
+        "identity_mean": 96.22,
+        "identity_max": 98.82,
+        "identity_sd": 2.292,
+        "junk_percent": 1.555,
+        "random_percent": 1.963,
+        "chimera_percent": 1.126,
+        "glitch_rate": 15962.0,
+        "glitch_size_skip": 34.635,
+        "adapter_length": 2.0
+      },
+      "published_read_statistics": {
+        "read_count": 92687,
+        "total_read_bases": 1400273994,
+        "read_n50_bp": 35593,
+        "mean_depth": 183.6720230688895
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP009438.1",
+          "replicon_name": "NZ_CP009438.1",
+          "molecule_type": "chromosome",
+          "length_bp": 7453200,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 178.869
+        },
+        {
+          "refseq_accession": "NZ_CP009439.1",
+          "replicon_name": "NZ_CP009439.1",
+          "molecule_type": "plasmid",
+          "length_bp": 170574,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.11,
+          "published_achieved_depth": 195.521
+        }
+      ]
+    },
+    {
+      "id": "072_GCF_000471025.2",
+      "assembly_accession": "GCF_000471025.2",
+      "organism": "Chlamydia gallinacea",
+      "ncbi_taxonomy_as_published": "Chlamydia gallinacea",
+      "gtdb_taxonomy_as_published": "Chlamydophila gallinacea",
+      "plasmid_count": 1,
+      "total_size_bp": 1067202,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/072_GCF_000471025.2.fasta --quantity 164.704x --length 254,242 --identity 88.674,92.065,2.874 --junk_reads 0.342 --random_reads 3.342 --chimeras 7.927 --glitches 011146,41.414,41.414 --start_adapter_seq 62 --end_adapter_seq 62 | gzip > read_sets/072_GCF_000471025.2.fastq.gz",
+      "badread_parameters": {
+        "depth": 164.704,
+        "length_mean": 254.0,
+        "length_sd": 242.0,
+        "identity_mean": 88.674,
+        "identity_max": 92.065,
+        "identity_sd": 2.874,
+        "junk_percent": 0.342,
+        "random_percent": 3.342,
+        "chimera_percent": 7.927,
+        "glitch_rate": 11146.0,
+        "glitch_size_skip": 41.414,
+        "adapter_length": 62.0
+      },
+      "published_read_statistics": {
+        "read_count": 573561,
+        "total_read_bases": 175772456,
+        "read_n50_bp": 444,
+        "mean_depth": 164.70401667163293
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP015840.1",
+          "replicon_name": "NZ_CP015840.1",
+          "molecule_type": "chromosome",
+          "length_bp": 1059583,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 101.125
+        },
+        {
+          "refseq_accession": "NZ_CP015841.1",
+          "replicon_name": "NZ_CP015841.1",
+          "molecule_type": "plasmid",
+          "length_bp": 7619,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.34,
+          "published_achieved_depth": 35.061
+        }
+      ]
+    },
+    {
+      "id": "297_GCF_002355275.1",
+      "assembly_accession": "GCF_002355275.1",
+      "organism": "Rhizorhabdus dicambivorans",
+      "ncbi_taxonomy_as_published": "Rhizorhabdus dicambivorans",
+      "gtdb_taxonomy_as_published": "Rhizorhabdus dicambivorans",
+      "plasmid_count": 4,
+      "total_size_bp": 5541299,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/297_GCF_002355275.1.fasta --quantity 38.466x --length 7444,13294 --identity 96.244,99.539,1.051 --junk_reads 0.124 --random_reads 0.774 --chimeras 1.600 --glitches 007220,49.608,49.608 --start_adapter_seq 78 --end_adapter_seq 78 | gzip > read_sets/297_GCF_002355275.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 38.466,
+        "length_mean": 7444.0,
+        "length_sd": 13294.0,
+        "identity_mean": 96.244,
+        "identity_max": 99.539,
+        "identity_sd": 1.051,
+        "junk_percent": 0.124,
+        "random_percent": 0.774,
+        "chimera_percent": 1.6,
+        "glitch_rate": 7220.0,
+        "glitch_size_skip": 49.608,
+        "adapter_length": 78.0
+      },
+      "published_read_statistics": {
+        "read_count": 27984,
+        "total_read_bases": 213162821,
+        "read_n50_bp": 23997,
+        "mean_depth": 38.468023652937696
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP023449.1",
+          "replicon_name": "NZ_CP023449.1",
+          "molecule_type": "chromosome",
+          "length_bp": 5026772,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 38.675
+        },
+        {
+          "refseq_accession": "NZ_CP023451.1",
+          "replicon_name": "NZ_CP023451.1",
+          "molecule_type": "plasmid",
+          "length_bp": 256400,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.97,
+          "published_achieved_depth": 34.918
+        },
+        {
+          "refseq_accession": "NZ_CP023450.1",
+          "replicon_name": "NZ_CP023450.1",
+          "molecule_type": "plasmid",
+          "length_bp": 163626,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.67,
+          "published_achieved_depth": 26.984
+        },
+        {
+          "refseq_accession": "NZ_CP023453.1",
+          "replicon_name": "NZ_CP023453.1",
+          "molecule_type": "plasmid",
+          "length_bp": 53636,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.52,
+          "published_achieved_depth": 28.433
+        },
+        {
+          "refseq_accession": "NZ_CP023452.1",
+          "replicon_name": "NZ_CP023452.1",
+          "molecule_type": "plasmid",
+          "length_bp": 40865,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.61,
+          "published_achieved_depth": 125.451
+        }
+      ]
+    },
+    {
+      "id": "193_GCF_000319245.1",
+      "assembly_accession": "GCF_000319245.1",
+      "organism": "Candidatus Kinetoplastibacterium blastocrithidii",
+      "ncbi_taxonomy_as_published": "Candidatus Kinetoplastibacterium blastocrithidii",
+      "gtdb_taxonomy_as_published": "Kinetoplastibacterium blastocrithidii",
+      "plasmid_count": 0,
+      "total_size_bp": 820037,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/193_GCF_000319245.1.fasta --quantity 65.207x --length 16085,5087 --identity 86.097,96.845,1.498 --junk_reads 1.573 --random_reads 0.125 --chimeras 0.329 --glitches 027438,24.410,24.410 --start_adapter_seq 9 --end_adapter_seq 9 | gzip > read_sets/193_GCF_000319245.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 65.207,
+        "length_mean": 16085.0,
+        "length_sd": 5087.0,
+        "identity_mean": 86.097,
+        "identity_max": 96.845,
+        "identity_sd": 1.498,
+        "junk_percent": 1.573,
+        "random_percent": 0.125,
+        "chimera_percent": 0.329,
+        "glitch_rate": 27438.0,
+        "glitch_size_skip": 24.41,
+        "adapter_length": 9.0
+      },
+      "published_read_statistics": {
+        "read_count": 3434,
+        "total_read_bases": 53482491,
+        "read_n50_bp": 16701,
+        "mean_depth": 65.21960716406699
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_019814.1",
+          "replicon_name": "NC_019814.1",
+          "molecule_type": "chromosome",
+          "length_bp": 820037,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 66.3
+        }
+      ]
+    },
+    {
+      "id": "055_GCF_001548055.1",
+      "assembly_accession": "GCF_001548055.1",
+      "organism": "Sulfurospirillum cavolei",
+      "ncbi_taxonomy_as_published": "Sulfurospirillum cavolei",
+      "gtdb_taxonomy_as_published": "Sulfurospirillum cavolei",
+      "plasmid_count": 0,
+      "total_size_bp": 2698323,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/055_GCF_001548055.1.fasta --quantity 100.709x --length 19651,23361 --identity 97.126,99.920,2.294 --junk_reads 2.629 --random_reads 1.043 --chimeras 5.046 --glitches 062019,9.017,9.017 --start_adapter_seq 51 --end_adapter_seq 51 | gzip > read_sets/055_GCF_001548055.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 100.709,
+        "length_mean": 19651.0,
+        "length_sd": 23361.0,
+        "identity_mean": 97.126,
+        "identity_max": 99.92,
+        "identity_sd": 2.294,
+        "junk_percent": 2.629,
+        "random_percent": 1.043,
+        "chimera_percent": 5.046,
+        "glitch_rate": 62019.0,
+        "glitch_size_skip": 9.017,
+        "adapter_length": 51.0
+      },
+      "published_read_statistics": {
+        "read_count": 13300,
+        "total_read_bases": 271754738,
+        "read_n50_bp": 39841,
+        "mean_depth": 100.71245658877754
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_AP014724.1",
+          "replicon_name": "NZ_AP014724.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2698323,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 97.637
+        }
+      ]
+    },
+    {
+      "id": "458_GCF_002109365.1",
+      "assembly_accession": "GCF_002109365.1",
+      "organism": "Sporosarcina sp002077155",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Sporosarcina sp002077155",
+      "plasmid_count": 1,
+      "total_size_bp": 3335999,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/458_GCF_002109365.1.fasta --quantity 96.799x --length 12083,5758 --identity 85.994,91.222,4.477 --junk_reads 0.012 --random_reads 0.205 --chimeras 6.815 --glitches 004990,56.581,56.581 --start_adapter_seq 27 --end_adapter_seq 27 | gzip > read_sets/458_GCF_002109365.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 96.799,
+        "length_mean": 12083.0,
+        "length_sd": 5758.0,
+        "identity_mean": 85.994,
+        "identity_max": 91.222,
+        "identity_sd": 4.477,
+        "junk_percent": 0.012,
+        "random_percent": 0.205,
+        "chimera_percent": 6.815,
+        "glitch_rate": 4990.0,
+        "glitch_size_skip": 56.581,
+        "adapter_length": 27.0
+      },
+      "published_read_statistics": {
+        "read_count": 25748,
+        "total_read_bases": 322945932,
+        "read_n50_bp": 14523,
+        "mean_depth": 96.80636355106822
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP015349.1",
+          "replicon_name": "NZ_CP015349.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3271521,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 96.969
+        },
+        {
+          "refseq_accession": "NZ_CP018869.1",
+          "replicon_name": "NZ_CP018869.1",
+          "molecule_type": "plasmid",
+          "length_bp": 64478,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.23,
+          "published_achieved_depth": 123.692
+        }
+      ]
+    },
+    {
+      "id": "135_GCF_000344805.1",
+      "assembly_accession": "GCF_000344805.1",
+      "organism": "Bradyrhizobium oligotrophicum",
+      "ncbi_taxonomy_as_published": "Bradyrhizobium oligotrophicum",
+      "gtdb_taxonomy_as_published": "Bradyrhizobium oligotrophicum",
+      "plasmid_count": 0,
+      "total_size_bp": 8264165,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/135_GCF_000344805.1.fasta --quantity 197.951x --length 8947,5871 --identity 80.764,95.751,12.481 --junk_reads 0.577 --random_reads 1.162 --chimeras 0.398 --glitches 043414,15.749,15.749 --start_adapter_seq 29 --end_adapter_seq 29 | gzip > read_sets/135_GCF_000344805.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 197.951,
+        "length_mean": 8947.0,
+        "length_sd": 5871.0,
+        "identity_mean": 80.764,
+        "identity_max": 95.751,
+        "identity_sd": 12.481,
+        "junk_percent": 0.577,
+        "random_percent": 1.162,
+        "chimera_percent": 0.398,
+        "glitch_rate": 43414.0,
+        "glitch_size_skip": 15.749,
+        "adapter_length": 29.0
+      },
+      "published_read_statistics": {
+        "read_count": 191314,
+        "total_read_bases": 1635900385,
+        "read_n50_bp": 11017,
+        "mean_depth": 197.95107975215888
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_020453.1",
+          "replicon_name": "NC_020453.1",
+          "molecule_type": "chromosome",
+          "length_bp": 8264165,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 155.71
+        }
+      ]
+    },
+    {
+      "id": "269_GCF_000025905.1",
+      "assembly_accession": "GCF_000025905.1",
+      "organism": "Coraliomargarita akajimensis",
+      "ncbi_taxonomy_as_published": "Coraliomargarita akajimensis",
+      "gtdb_taxonomy_as_published": "Coraliomargarita akajimensis",
+      "plasmid_count": 0,
+      "total_size_bp": 3750771,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/269_GCF_000025905.1.fasta --quantity 100.511x --length 8405,7427 --identity 94.252,95.575,1.005 --junk_reads 1.940 --random_reads 1.485 --chimeras 0.807 --glitches 001540,78.767,78.767 --start_adapter_seq 15 --end_adapter_seq 15 | gzip > read_sets/269_GCF_000025905.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 100.511,
+        "length_mean": 8405.0,
+        "length_sd": 7427.0,
+        "identity_mean": 94.252,
+        "identity_max": 95.575,
+        "identity_sd": 1.005,
+        "junk_percent": 1.94,
+        "random_percent": 1.485,
+        "chimera_percent": 0.807,
+        "glitch_rate": 1540.0,
+        "glitch_size_skip": 78.767,
+        "adapter_length": 15.0
+      },
+      "published_read_statistics": {
+        "read_count": 45110,
+        "total_read_bases": 376996033,
+        "read_n50_bp": 12773,
+        "mean_depth": 100.51161027959319
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_014008.1",
+          "replicon_name": "NC_014008.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3750771,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 97.786
+        }
+      ]
+    },
+    {
+      "id": "101_GCF_000016885.1",
+      "assembly_accession": "GCF_000016885.1",
+      "organism": "Psychrobacter sp000016885",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "Psychrobacter sp000016885",
+      "plasmid_count": 2,
+      "total_size_bp": 2995049,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/101_GCF_000016885.1.fasta --quantity 162.920x --length 3606,6788 --identity 86.594,96.490,8.607 --junk_reads 1.599 --random_reads 3.661 --chimeras 2.631 --glitches 065863,7.882,7.882 --start_adapter_seq 113 --end_adapter_seq 113 | gzip > read_sets/101_GCF_000016885.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 162.92,
+        "length_mean": 3606.0,
+        "length_sd": 6788.0,
+        "identity_mean": 86.594,
+        "identity_max": 96.49,
+        "identity_sd": 8.607,
+        "junk_percent": 1.599,
+        "random_percent": 3.661,
+        "chimera_percent": 2.631,
+        "glitch_rate": 65863.0,
+        "glitch_size_skip": 7.882,
+        "adapter_length": 113.0
+      },
+      "published_read_statistics": {
+        "read_count": 134158,
+        "total_read_bases": 487963769,
+        "read_n50_bp": 12007,
+        "mean_depth": 162.92346769618794
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_009524.1",
+          "replicon_name": "NC_009524.1",
+          "molecule_type": "chromosome",
+          "length_bp": 2978976,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 141.793
+        },
+        {
+          "refseq_accession": "NC_009516.1",
+          "replicon_name": "NC_009516.1",
+          "molecule_type": "plasmid",
+          "length_bp": 13956,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.61,
+          "published_achieved_depth": 196.814
+        },
+        {
+          "refseq_accession": "NC_009517.1",
+          "replicon_name": "NC_009517.1",
+          "molecule_type": "plasmid",
+          "length_bp": 2117,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.74,
+          "published_achieved_depth": 186.985
+        }
+      ]
+    },
+    {
+      "id": "285_GCF_002356455.1",
+      "assembly_accession": "GCF_002356455.1",
+      "organism": "Fusobacterium varium",
+      "ncbi_taxonomy_as_published": "Fusobacterium varium",
+      "gtdb_taxonomy_as_published": "Fusobacterium_A varium_A",
+      "plasmid_count": 2,
+      "total_size_bp": 4122841,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/285_GCF_002356455.1.fasta --quantity 193.436x --length 8621,5138 --identity 95.686,98.514,2.227 --junk_reads 0.324 --random_reads 0.156 --chimeras 1.260 --glitches 003337,64.175,64.175 --start_adapter_seq 16 --end_adapter_seq 16 | gzip > read_sets/285_GCF_002356455.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 193.436,
+        "length_mean": 8621.0,
+        "length_sd": 5138.0,
+        "identity_mean": 95.686,
+        "identity_max": 98.514,
+        "identity_sd": 2.227,
+        "junk_percent": 0.324,
+        "random_percent": 0.156,
+        "chimera_percent": 1.26,
+        "glitch_rate": 3337.0,
+        "glitch_size_skip": 64.175,
+        "adapter_length": 16.0
+      },
+      "published_read_statistics": {
+        "read_count": 92324,
+        "total_read_bases": 797513333,
+        "read_n50_bp": 10710,
+        "mean_depth": 193.43780975303196
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_AP017968.1",
+          "replicon_name": "NZ_AP017968.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3965155,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 194.316
+        },
+        {
+          "refseq_accession": "NZ_AP017969.1",
+          "replicon_name": "NZ_AP017969.1",
+          "molecule_type": "plasmid",
+          "length_bp": 89623,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.3,
+          "published_achieved_depth": 248.525
+        },
+        {
+          "refseq_accession": "NZ_AP017970.1",
+          "replicon_name": "NZ_AP017970.1",
+          "molecule_type": "plasmid",
+          "length_bp": 68063,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.01,
+          "published_achieved_depth": 193.452
+        }
+      ]
+    },
+    {
+      "id": "339_GCF_000755585.2",
+      "assembly_accession": "GCF_000755585.2",
+      "organism": "Arthrobacter alpinus",
+      "ncbi_taxonomy_as_published": "Arthrobacter alpinus",
+      "gtdb_taxonomy_as_published": "Arthrobacter_A alpinus",
+      "plasmid_count": 1,
+      "total_size_bp": 4458287,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/339_GCF_000755585.2.fasta --quantity 188.167x --length 11716,9429 --identity 93.112,97.410,2.744 --junk_reads 4.277 --random_reads 0.417 --chimeras 0.371 --glitches 013193,38.231,38.231 --start_adapter_seq 17 --end_adapter_seq 17 | gzip > read_sets/339_GCF_000755585.2.fastq.gz",
+      "badread_parameters": {
+        "depth": 188.167,
+        "length_mean": 11716.0,
+        "length_sd": 9429.0,
+        "identity_mean": 93.112,
+        "identity_max": 97.41,
+        "identity_sd": 2.744,
+        "junk_percent": 4.277,
+        "random_percent": 0.417,
+        "chimera_percent": 0.371,
+        "glitch_rate": 13193.0,
+        "glitch_size_skip": 38.231,
+        "adapter_length": 17.0
+      },
+      "published_read_statistics": {
+        "read_count": 72707,
+        "total_read_bases": 838946965,
+        "read_n50_bp": 16547,
+        "mean_depth": 188.17697582053376
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP013745.1",
+          "replicon_name": "NZ_CP013745.1",
+          "molecule_type": "chromosome",
+          "length_bp": 4264061,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 186.183
+        },
+        {
+          "refseq_accession": "NZ_CP013746.1",
+          "replicon_name": "NZ_CP013746.1",
+          "molecule_type": "plasmid",
+          "length_bp": 194226,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.69,
+          "published_achieved_depth": 135.67
+        }
+      ]
+    },
+    {
+      "id": "175_GCF_000829195.1",
+      "assembly_accession": "GCF_000829195.1",
+      "organism": "OxB-1 sp000829195",
+      "ncbi_taxonomy_as_published": "none",
+      "gtdb_taxonomy_as_published": "OxB-1 sp000829195",
+      "plasmid_count": 0,
+      "total_size_bp": 3594618,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/175_GCF_000829195.1.fasta --quantity 80.777x --length 14792,5280 --identity 82.870,88.757,1.235 --junk_reads 2.135 --random_reads 4.361 --chimeras 0.464 --glitches 001594,78.124,78.124 --start_adapter_seq 0 --end_adapter_seq 0 | gzip > read_sets/175_GCF_000829195.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 80.777,
+        "length_mean": 14792.0,
+        "length_sd": 5280.0,
+        "identity_mean": 82.87,
+        "identity_max": 88.757,
+        "identity_sd": 1.235,
+        "junk_percent": 2.135,
+        "random_percent": 4.361,
+        "chimera_percent": 0.464,
+        "glitch_rate": 1594.0,
+        "glitch_size_skip": 78.124,
+        "adapter_length": 0.0
+      },
+      "published_read_statistics": {
+        "read_count": 20634,
+        "total_read_bases": 290373541,
+        "read_n50_bp": 15324,
+        "mean_depth": 80.78008316878177
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_AP013294.1",
+          "replicon_name": "NZ_AP013294.1",
+          "molecule_type": "chromosome",
+          "length_bp": 3594618,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 78.252
+        }
+      ]
+    },
+    {
+      "id": "424_GCF_000204155.1",
+      "assembly_accession": "GCF_000204155.1",
+      "organism": "Verrucosispora maris",
+      "ncbi_taxonomy_as_published": "Verrucosispora maris",
+      "gtdb_taxonomy_as_published": "Micromonospora maris",
+      "plasmid_count": 1,
+      "total_size_bp": 6732271,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/424_GCF_000204155.1.fasta --quantity 118.950x --length 5167,8112 --identity 93.931,95.216,1.024 --junk_reads 8.033 --random_reads 3.026 --chimeras 0.283 --glitches 004461,58.698,58.698 --start_adapter_seq 29 --end_adapter_seq 29 | gzip > read_sets/424_GCF_000204155.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 118.95,
+        "length_mean": 5167.0,
+        "length_sd": 8112.0,
+        "identity_mean": 93.931,
+        "identity_max": 95.216,
+        "identity_sd": 1.024,
+        "junk_percent": 8.033,
+        "random_percent": 3.026,
+        "chimera_percent": 0.283,
+        "glitch_rate": 4461.0,
+        "glitch_size_skip": 58.698,
+        "adapter_length": 29.0
+      },
+      "published_read_statistics": {
+        "read_count": 157148,
+        "total_read_bases": 800809913,
+        "read_n50_bp": 13631,
+        "mean_depth": 118.95093245652173
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NC_015434.1",
+          "replicon_name": "NC_015434.1",
+          "molecule_type": "chromosome",
+          "length_bp": 6673976,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 107.215
+        },
+        {
+          "refseq_accession": "NC_015409.1",
+          "replicon_name": "NC_015409.1",
+          "molecule_type": "plasmid",
+          "length_bp": 58295,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.46,
+          "published_achieved_depth": 51.955
+        }
+      ]
+    },
+    {
+      "id": "477_GCF_000599545.1",
+      "assembly_accession": "GCF_000599545.1",
+      "organism": "Rhodococcus opacus",
+      "ncbi_taxonomy_as_published": "Rhodococcus opacus",
+      "gtdb_taxonomy_as_published": "Rhodococcus opacus",
+      "plasmid_count": 9,
+      "total_size_bp": 9169032,
+      "badread_command_as_published": "badread simulate --reference reference_genomes/477_GCF_000599545.1.fasta --quantity 17.911x --length 12829,13922 --identity 94.379,96.848,2.416 --junk_reads 1.788 --random_reads 0.036 --chimeras 2.267 --glitches 005482,54.807,54.807 --start_adapter_seq 10 --end_adapter_seq 10 | gzip > read_sets/477_GCF_000599545.1.fastq.gz",
+      "badread_parameters": {
+        "depth": 17.911,
+        "length_mean": 12829.0,
+        "length_sd": 13922.0,
+        "identity_mean": 94.379,
+        "identity_max": 96.848,
+        "identity_sd": 2.416,
+        "junk_percent": 1.788,
+        "random_percent": 0.036,
+        "chimera_percent": 2.267,
+        "glitch_rate": 5482.0,
+        "glitch_size_skip": 54.807,
+        "adapter_length": 10.0
+      },
+      "published_read_statistics": {
+        "read_count": 12587,
+        "total_read_bases": 164252885,
+        "read_n50_bp": 23588,
+        "mean_depth": 17.913874114519395
+      },
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP003949.1",
+          "replicon_name": "NZ_CP003949.1",
+          "molecule_type": "chromosome",
+          "length_bp": 8376953,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.0,
+          "published_achieved_depth": 16.794
+        },
+        {
+          "refseq_accession": "NZ_CP003950.1",
+          "replicon_name": "NZ_CP003950.1",
+          "molecule_type": "plasmid",
+          "length_bp": 172218,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.66,
+          "published_achieved_depth": 12.841
+        },
+        {
+          "refseq_accession": "NZ_CP003957.1",
+          "replicon_name": "NZ_CP003957.1",
+          "molecule_type": "plasmid",
+          "length_bp": 158587,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.98,
+          "published_achieved_depth": 32.569
+        },
+        {
+          "refseq_accession": "NZ_CP003951.1",
+          "replicon_name": "NZ_CP003951.1",
+          "molecule_type": "plasmid",
+          "length_bp": 97588,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.93,
+          "published_achieved_depth": 20.611
+        },
+        {
+          "refseq_accession": "NZ_CP003954.1",
+          "replicon_name": "NZ_CP003954.1",
+          "molecule_type": "plasmid",
+          "length_bp": 95987,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 2.57,
+          "published_achieved_depth": 42.592
+        },
+        {
+          "refseq_accession": "NZ_CP003952.1",
+          "replicon_name": "NZ_CP003952.1",
+          "molecule_type": "plasmid",
+          "length_bp": 82420,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.59,
+          "published_achieved_depth": 27.076
+        },
+        {
+          "refseq_accession": "NZ_CP003953.1",
+          "replicon_name": "NZ_CP003953.1",
+          "molecule_type": "plasmid",
+          "length_bp": 62932,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 3.03,
+          "published_achieved_depth": 57.411
+        },
+        {
+          "refseq_accession": "NZ_CP003955.1",
+          "replicon_name": "NZ_CP003955.1",
+          "molecule_type": "plasmid",
+          "length_bp": 45950,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 2.59,
+          "published_achieved_depth": 44.022
+        },
+        {
+          "refseq_accession": "NZ_CP003958.1",
+          "replicon_name": "NZ_CP003958.1",
+          "molecule_type": "plasmid",
+          "length_bp": 39302,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 0.62,
+          "published_achieved_depth": 14.089
+        },
+        {
+          "refseq_accession": "NZ_CP003956.1",
+          "replicon_name": "NZ_CP003956.1",
+          "molecule_type": "plasmid",
+          "length_bp": 37095,
+          "topology": "circular",
+          "topology_scope": "Original study simulation assumption; not a native-topology claim.",
+          "source_relative_depth": 1.62,
+          "published_achieved_depth": 23.538
+        }
+      ]
+    }
+  ],
+  "archives": {
+    "reads": {
+      "id": 20188401,
+      "name": "simulated_read_sets.tar",
+      "size": 207989719040,
+      "download_url": "https://ndownloader.figshare.com/files/20188401",
+      "computed_md5": "e34a360b75e3543bed0879bff07f4f5e"
+    },
+    "references": {
+      "id": 20188407,
+      "name": "reference_genomes.tar.gz",
+      "size": 725085295,
+      "download_url": "https://ndownloader.figshare.com/files/20188407",
+      "computed_md5": "b78080dbe56aece943fd5b218f06cdb0"
+    }
+  },
+  "sources": {
+    "workbook_sha256": "70e58b3d32ec6fed30a86ec9f7bdd1f486a467b5f44b6c46d0fb6094acad4df0",
+    "read_article_id": 11369952,
+    "reference_article_id": 11369970,
+    "licence": "CC BY 4.0",
+    "attribution": "Ryan R. Wick and Kathryn E. Holt, Long-read-assembler-comparison."
+  }
+}

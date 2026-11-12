@@ -1,0 +1,488 @@
+{
+  "schema_version": "1.0",
+  "checked_date": "2026-11-04",
+  "scope": "RefSeq accession and metadata shortlist; no sequence audit or assembly run",
+  "assemblies": [
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000005845.2",
+        "genbank_assembly_accession": "GCA_000005845.2",
+        "organism": "Escherichia coli str. K-12 substr. MG1655",
+        "tax_id": 511145,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "preferred_candidate",
+        "chromosome_count": 1,
+        "plasmid_count": 0,
+        "total_length_bp": 4641652,
+        "metadata_non_acgt_count": 0,
+        "biosample": "SAMN02604091",
+        "bioproject": "PRJNA225",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "SRS6067201",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000005845.2/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000005845.2",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_000913.3",
+          "genbank_accession": "U00096.3",
+          "length_bp": 4641652,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000913.3"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000005845.2/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000005845.2/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000258145.1",
+        "genbank_assembly_accession": "GCA_000258145.1",
+        "organism": "Escherichia coli W",
+        "tax_id": 566546,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "preferred_candidate",
+        "chromosome_count": 1,
+        "plasmid_count": 2,
+        "total_length_bp": 5005347,
+        "metadata_non_acgt_count": 0,
+        "biosample": "SAMN02604169",
+        "bioproject": "PRJNA62301",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "not_verified",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000258145.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000258145.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_017664.1",
+          "genbank_accession": "CP002967.1",
+          "length_bp": 4897452,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017664.1"
+        },
+        {
+          "assembly_accession": "GCF_000258145.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pRK1",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_017665.1",
+          "genbank_accession": "CP002968.1",
+          "length_bp": 102535,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017665.1"
+        },
+        {
+          "assembly_accession": "GCF_000258145.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pRK2",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_017662.1",
+          "genbank_accession": "CP002969.1",
+          "length_bp": 5360,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017662.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000258145.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000258145.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000010385.1",
+        "genbank_assembly_accession": "GCA_000010385.1",
+        "organism": "Escherichia coli SE11",
+        "tax_id": 409438,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "preferred_candidate",
+        "chromosome_count": 1,
+        "plasmid_count": 6,
+        "total_length_bp": 5155626,
+        "metadata_non_acgt_count": 0,
+        "biosample": "SAMD00061087",
+        "bioproject": "PRJNA18057",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "not_verified",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000010385.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_011415.1",
+          "genbank_accession": "AP009240.1",
+          "length_bp": 4887515,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011415.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-1",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011419.1",
+          "genbank_accession": "AP009241.1",
+          "length_bp": 100021,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011419.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-2",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011413.1",
+          "genbank_accession": "AP009242.1",
+          "length_bp": 91158,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011413.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-3",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011416.1",
+          "genbank_accession": "AP009243.1",
+          "length_bp": 60555,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011416.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-4",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011407.1",
+          "genbank_accession": "AP009244.1",
+          "length_bp": 6929,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011407.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-5",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011408.1",
+          "genbank_accession": "AP009245.1",
+          "length_bp": 5366,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011408.1"
+        },
+        {
+          "assembly_accession": "GCF_000010385.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pSE11-6",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_011411.1",
+          "genbank_accession": "AP009246.1",
+          "length_bp": 4082,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_011411.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000010385.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000010385.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_024397815.1",
+        "genbank_assembly_accession": "GCA_024397815.1",
+        "organism": "Klebsiella pneumoniae subsp. pneumoniae Ecl8",
+        "tax_id": 1226680,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "preferred_candidate",
+        "chromosome_count": 1,
+        "plasmid_count": 1,
+        "total_length_bp": 5511600,
+        "metadata_non_acgt_count": 0,
+        "biosample": "SAMN18721477",
+        "bioproject": "PRJNA721588",
+        "sequencing_technology": "PacBio Sequel; Illumina NovaSeq",
+        "assembly_method": "Unicycler v. 0.4.8",
+        "linked_sra_samples": "SRS8746562",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_024397815.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_024397815.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NZ_CP073076.1",
+          "genbank_accession": "CP073076.1",
+          "length_bp": 5306902,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP073076.1"
+        },
+        {
+          "assembly_accession": "GCF_024397815.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pEcl8",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NZ_CP073077.1",
+          "genbank_accession": "CP073077.1",
+          "length_bp": 204698,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP073077.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_024397815.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_024397815.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000016305.1",
+        "genbank_assembly_accession": "GCA_000016305.1",
+        "organism": "Klebsiella pneumoniae subsp. pneumoniae MGH 78578",
+        "tax_id": 272620,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "preferred_candidate",
+        "chromosome_count": 1,
+        "plasmid_count": 5,
+        "total_length_bp": 5694894,
+        "metadata_non_acgt_count": 0,
+        "biosample": "SAMN02603941",
+        "bioproject": "PRJNA31",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "not_verified",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000016305.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_009648.1",
+          "genbank_accession": "CP000647.1",
+          "length_bp": 5315120,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009648.1"
+        },
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pKPN3",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_009649.1",
+          "genbank_accession": "CP000648.1",
+          "length_bp": 175879,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009649.1"
+        },
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pKPN4",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_009650.1",
+          "genbank_accession": "CP000649.1",
+          "length_bp": 107576,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009650.1"
+        },
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pKPN5",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_009651.1",
+          "genbank_accession": "CP000650.1",
+          "length_bp": 88582,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009651.1"
+        },
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pKPN6",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_009652.1",
+          "genbank_accession": "CP000651.1",
+          "length_bp": 4259,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009652.1"
+        },
+        {
+          "assembly_accession": "GCF_000016305.1",
+          "selection_status": "preferred_candidate",
+          "replicon_name": "pKPN7",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_009653.1",
+          "genbank_accession": "CP000652.1",
+          "length_bp": 3478,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_009653.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000016305.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000016305.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000184185.1",
+        "genbank_assembly_accession": "GCA_000184185.1",
+        "organism": "Escherichia coli W",
+        "tax_id": 566546,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "hold_non_acgt",
+        "chromosome_count": 1,
+        "plasmid_count": 2,
+        "total_length_bp": 5008864,
+        "metadata_non_acgt_count": 1,
+        "biosample": "SAMN02602978",
+        "bioproject": "PRJNA48011",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "not_verified",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000184185.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000184185.1",
+          "selection_status": "hold_non_acgt",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_017635.1",
+          "genbank_accession": "CP002185.1",
+          "length_bp": 4900968,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017635.1"
+        },
+        {
+          "assembly_accession": "GCF_000184185.1",
+          "selection_status": "hold_non_acgt",
+          "replicon_name": "pRK1",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_017637.1",
+          "genbank_accession": "CP002186.1",
+          "length_bp": 102536,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017637.1"
+        },
+        {
+          "assembly_accession": "GCF_000184185.1",
+          "selection_status": "hold_non_acgt",
+          "replicon_name": "pRK2",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_017636.1",
+          "genbank_accession": "CP002187.1",
+          "length_bp": 5360,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017636.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000184185.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000184185.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    },
+    {
+      "assembly": {
+        "assembly_accession": "GCF_000220485.1",
+        "genbank_assembly_accession": "GCA_000220485.1",
+        "organism": "Klebsiella pneumoniae KCTC 2242",
+        "tax_id": 1049565,
+        "assembly_level": "Complete Genome",
+        "assembly_status": "current",
+        "selection_status": "hold_non_acgt",
+        "chromosome_count": 1,
+        "plasmid_count": 1,
+        "total_length_bp": 5462423,
+        "metadata_non_acgt_count": 7,
+        "biosample": "SAMN02603582",
+        "bioproject": "PRJNA67293",
+        "sequencing_technology": "not_reported",
+        "assembly_method": "not_reported",
+        "linked_sra_samples": "not_verified",
+        "checked_date": "2026-11-04",
+        "assembly_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000220485.1/"
+      },
+      "replicons": [
+        {
+          "assembly_accession": "GCF_000220485.1",
+          "selection_status": "hold_non_acgt",
+          "replicon_name": "chromosome",
+          "molecule_type": "chromosome",
+          "refseq_accession": "NC_017540.1",
+          "genbank_accession": "CP002910.1",
+          "length_bp": 5259571,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017540.1"
+        },
+        {
+          "assembly_accession": "GCF_000220485.1",
+          "selection_status": "hold_non_acgt",
+          "replicon_name": "pKCTC2242",
+          "molecule_type": "plasmid",
+          "refseq_accession": "NC_017541.1",
+          "genbank_accession": "CP002911.1",
+          "length_bp": 202852,
+          "topology": "circular",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_017541.1"
+        }
+      ],
+      "metadata_sources": [
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000220485.1/dataset_report",
+        "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000220485.1/sequence_reports"
+      ],
+      "sequence_file_sha256": null,
+      "sequence_audit_status": "not_performed",
+      "benchmark_admission_status": "pending_sequence_audit_and_evidence_review"
+    }
+  ]
+}

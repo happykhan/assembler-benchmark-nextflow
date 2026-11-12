@@ -1,0 +1,4 @@
+@genomicx/ui 0.10.1: GPL-3.0; source https://www.npmjs.com/package/@genomicx/ui
+React and React DOM: MIT. React Router: MIT. IBM Plex fonts: SIL Open Font License.
+Bundled notices are retained in genomicx.js.LEGAL.txt.
+Benchmark source: https://github.com/SPREAD-Hackathon/ploptimizer/tree/main/assembly-benchmark

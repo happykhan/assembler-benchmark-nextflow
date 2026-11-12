@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "curated_on": "2026-11-06",
+  "scope": "Three complete deposited Streptomyces assemblies selected by the user; all deposited replicons included.",
+  "metadata_sources": "references/ncbi/streptomyces-linear-20261106",
+  "terminal_repeat_scope": "Pinned-sequence inter-arm alignments measured with NUCmer 4.0.1; boundaries are alignment endpoints. Offset right ends and lower identity retained explicitly; not a tandem-array census.",
+  "assemblies": [
+    {
+      "assembly_accession": "GCF_036177905.1",
+      "genbank_assembly_accession": "GCA_036177905.1",
+      "requested_chromosome_accession": "CP108065.1",
+      "organism": "Streptomyces canus",
+      "strain": "NBC_00277",
+      "label": "canus-nbc00277",
+      "assembly_status": "Complete Genome",
+      "record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_036177905.1/",
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP108065.1",
+          "genbank_accession": "CP108065.1",
+          "assembly_accession": "GCF_036177905.1",
+          "replicon_name": "chromosome",
+          "length_bp": 10691412,
+          "molecule_type": "chromosome",
+          "topology": "linear",
+          "organism": "Streptomyces canus",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/CP108065.1",
+          "selection_status": "preferred_candidate",
+          "admission_scope": "native_linear_genome_record",
+          "sequence_sha256": "0ee8df97abc7a3a4118aef7ea87770b7a61e21601a66de839760a41eb5a373d3",
+          "file_sha256_at_curation": "9c37ec15dd5e19e00a98374905700cb0174138064663f71e5536eccb8ae7c27f",
+          "terminal_repeat_evidence": {
+            "method": "literal_terminal_inverted_prefix-v1",
+            "exact_terminal_inverted_prefix_bp": 35,
+            "repeat_classification": "inverted_terminal_alignment",
+            "repeat_coordinates_status": "alignment_boundaries_recorded",
+            "scope": "Literal exact-prefix measurement retained separately from unfiltered NUCmer inter-arm alignment boundaries.",
+            "inter_arm_alignment": {
+              "method": "nucmer-inter-arm-v1",
+              "mapper_version": "4.0.1",
+              "coordinate_system": "0-based half-open on the original reference",
+              "evidence_path": "evidence/s5-native-v2/reference-repeat-alignments.json",
+              "alignment_count": 227,
+              "selected_left_terminal_inverted_alignment": {
+                "aligned_left_bp": 15164,
+                "aligned_right_bp": 15162,
+                "identity_percent": 99.99,
+                "left_interval": [
+                  0,
+                  15164
+                ],
+                "left_terminal_offset_bp": 0,
+                "orientation": "inverted",
+                "right_interval": [
+                  10676250,
+                  10691412
+                ],
+                "right_terminal_offset_bp": 0,
+                "source_row": 1
+              }
+            }
+          }
+        },
+        {
+          "refseq_accession": "NZ_CP108066.1",
+          "genbank_accession": "CP108066.1",
+          "assembly_accession": "GCF_036177905.1",
+          "replicon_name": "CP108066.1",
+          "length_bp": 134326,
+          "molecule_type": "plasmid",
+          "topology": "linear",
+          "organism": "Streptomyces canus",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/CP108066.1",
+          "selection_status": "preferred_candidate",
+          "admission_scope": "native_linear_genome_record",
+          "sequence_sha256": "32f8701582206ff699a4a9be0baa47e951d23756035d4f58c28184356ac52165",
+          "file_sha256_at_curation": "1d61ec6101401ed126c6a3cc98cd29e82b7cb0b3904bbcae42ebed8e803735fd",
+          "terminal_repeat_evidence": {
+            "method": "literal_terminal_inverted_prefix-v1",
+            "exact_terminal_inverted_prefix_bp": 3,
+            "repeat_classification": "inverted_terminal_alignment",
+            "repeat_coordinates_status": "alignment_boundaries_recorded",
+            "scope": "Literal exact-prefix measurement retained separately from unfiltered NUCmer inter-arm alignment boundaries.",
+            "inter_arm_alignment": {
+              "method": "nucmer-inter-arm-v1",
+              "mapper_version": "4.0.1",
+              "coordinate_system": "0-based half-open on the original reference",
+              "evidence_path": "evidence/s5-native-v2/reference-repeat-alignments.json",
+              "alignment_count": 1,
+              "selected_left_terminal_inverted_alignment": {
+                "aligned_left_bp": 502,
+                "aligned_right_bp": 510,
+                "identity_percent": 86.13,
+                "left_interval": [
+                  0,
+                  502
+                ],
+                "left_terminal_offset_bp": 0,
+                "orientation": "inverted",
+                "right_interval": [
+                  133816,
+                  134326
+                ],
+                "right_terminal_offset_bp": 0,
+                "source_row": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "assembly_accession": "GCF_045162825.1",
+      "genbank_assembly_accession": "GCA_045162825.1",
+      "requested_chromosome_accession": "CP108676.1",
+      "organism": "Streptomyces prunicolor",
+      "strain": "NBC_01021",
+      "label": "prunicolor-nbc01021",
+      "assembly_status": "Complete Genome",
+      "record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_045162825.1/",
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP108676.1",
+          "genbank_accession": "CP108676.1",
+          "assembly_accession": "GCF_045162825.1",
+          "replicon_name": "chromosome",
+          "length_bp": 10948847,
+          "molecule_type": "chromosome",
+          "topology": "linear",
+          "organism": "Streptomyces prunicolor",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/CP108676.1",
+          "selection_status": "preferred_candidate",
+          "admission_scope": "native_linear_genome_record",
+          "sequence_sha256": "61a7a05815d2b1e8328f5cbcc28034cf16cefeb915fa3f98d68325703ef9c753",
+          "file_sha256_at_curation": "d94aeaedc6ce52488ec66deffc6fc97a01edbd694b4144bf92862dc5cd862ccc",
+          "terminal_repeat_evidence": {
+            "method": "literal_terminal_inverted_prefix-v1",
+            "exact_terminal_inverted_prefix_bp": 48,
+            "repeat_classification": "inverted_terminal_alignment",
+            "repeat_coordinates_status": "alignment_boundaries_recorded",
+            "scope": "Literal exact-prefix measurement retained separately from unfiltered NUCmer inter-arm alignment boundaries.",
+            "inter_arm_alignment": {
+              "method": "nucmer-inter-arm-v1",
+              "mapper_version": "4.0.1",
+              "coordinate_system": "0-based half-open on the original reference",
+              "evidence_path": "evidence/s5-native-v2/reference-repeat-alignments.json",
+              "alignment_count": 162,
+              "selected_left_terminal_inverted_alignment": {
+                "aligned_left_bp": 65571,
+                "aligned_right_bp": 65565,
+                "identity_percent": 99.99,
+                "left_interval": [
+                  0,
+                  65571
+                ],
+                "left_terminal_offset_bp": 0,
+                "orientation": "inverted",
+                "right_interval": [
+                  10883282,
+                  10948847
+                ],
+                "right_terminal_offset_bp": 0,
+                "source_row": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "assembly_accession": "GCF_045210185.1",
+      "genbank_assembly_accession": "GCA_045210185.1",
+      "requested_chromosome_accession": "CP109243.1",
+      "organism": "Streptomyces albidoflavus",
+      "strain": "NBC 01661",
+      "label": "albidoflavus-nbc01661",
+      "assembly_status": "Complete Genome",
+      "record_url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_045210185.1/",
+      "replicons": [
+        {
+          "refseq_accession": "NZ_CP109243.1",
+          "genbank_accession": "CP109243.1",
+          "assembly_accession": "GCF_045210185.1",
+          "replicon_name": "chromosome",
+          "length_bp": 7135774,
+          "molecule_type": "chromosome",
+          "topology": "linear",
+          "organism": "Streptomyces albidoflavus",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/CP109243.1",
+          "selection_status": "preferred_candidate",
+          "admission_scope": "native_linear_genome_record",
+          "sequence_sha256": "5e4b8cd14bfe83008bc5b3c9e4b9c36e655d714e5b2900970216c8ce6f4ea25d",
+          "file_sha256_at_curation": "45a484f3904768768b0ed04b1df58899de2badac06fd75fcfa58909b9584d7ca",
+          "terminal_repeat_evidence": {
+            "method": "literal_terminal_inverted_prefix-v1",
+            "exact_terminal_inverted_prefix_bp": 0,
+            "repeat_classification": "inverted_subterminal_alignment",
+            "repeat_coordinates_status": "alignment_boundaries_recorded",
+            "scope": "Literal exact-prefix measurement retained separately from unfiltered NUCmer inter-arm alignment boundaries.",
+            "inter_arm_alignment": {
+              "method": "nucmer-inter-arm-v1",
+              "mapper_version": "4.0.1",
+              "coordinate_system": "0-based half-open on the original reference",
+              "evidence_path": "evidence/s5-native-v2/reference-repeat-alignments.json",
+              "alignment_count": 442,
+              "selected_left_terminal_inverted_alignment": {
+                "aligned_left_bp": 25460,
+                "aligned_right_bp": 25461,
+                "identity_percent": 99.99,
+                "left_interval": [
+                  0,
+                  25460
+                ],
+                "left_terminal_offset_bp": 0,
+                "orientation": "inverted",
+                "right_interval": [
+                  7109023,
+                  7134484
+                ],
+                "right_terminal_offset_bp": 1290,
+                "source_row": 1
+              }
+            }
+          }
+        },
+        {
+          "refseq_accession": "NZ_CP109244.1",
+          "genbank_accession": "CP109244.1",
+          "assembly_accession": "GCF_045210185.1",
+          "replicon_name": "CP109244.1",
+          "length_bp": 172072,
+          "molecule_type": "plasmid",
+          "topology": "linear",
+          "organism": "Streptomyces albidoflavus",
+          "record_url": "https://www.ncbi.nlm.nih.gov/nuccore/CP109244.1",
+          "selection_status": "preferred_candidate",
+          "admission_scope": "native_linear_genome_record",
+          "sequence_sha256": "063821360e73103b432f5a1fee3c65b012176005815c593fc6694e74e4a2b483",
+          "file_sha256_at_curation": "b0c648125a86142d8131e5c1d45e19d005747c6fdae7a8606976df093a19f9a8",
+          "terminal_repeat_evidence": {
+            "method": "literal_terminal_inverted_prefix-v1",
+            "exact_terminal_inverted_prefix_bp": 0,
+            "repeat_classification": "no_inter_arm_alignment_at_recorded_settings",
+            "repeat_coordinates_status": "alignment_boundaries_recorded",
+            "scope": "Literal exact-prefix measurement retained separately from unfiltered NUCmer inter-arm alignment boundaries.",
+            "inter_arm_alignment": {
+              "method": "nucmer-inter-arm-v1",
+              "mapper_version": "4.0.1",
+              "coordinate_system": "0-based half-open on the original reference",
+              "evidence_path": "evidence/s5-native-v2/reference-repeat-alignments.json",
+              "alignment_count": 0,
+              "selected_left_terminal_inverted_alignment": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
