@@ -1,5 +1,7 @@
-# Shared reference cache
+# Reference records and shared cache
 
-This directory holds prepared, checksummed source archives. It is ignored by Git
-and is never a cleanup target. Sources, accessions, hashes and Quick fixture
-intervals are declared in `assets/references.json`.
+`assets/references.json` retains admitted reference records and source attribution.
+The common `assets/catalogue.json` selects datasets and their dependencies.
+Runtime data are stored under the explicit `--cache_dir`, with source archives
+in `references/archives/` and canonical shared references in `references/prepared/`.
+Owned-work cleanup never deletes this scientific cache.

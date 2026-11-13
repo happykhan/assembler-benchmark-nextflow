@@ -1,0 +1,24 @@
+{
+  "original_root_inaccessible_during_validation": true,
+  "standalone_records": 5,
+  "standalone_relative_links_checked": 67,
+  "shared_dependency_directories": 5,
+  "no_symlinks": true,
+  "website": {
+    "status": "pass",
+    "files": 45,
+    "bytes": 331960,
+    "local_links_checked": 204,
+    "errors": []
+  },
+  "largest_public_file_bytes": 48609,
+  "limits": {
+    "bytes": 67108864,
+    "files": 1500,
+    "per_file_bytes": 5242880
+  },
+  "statuses": {
+    "measured": 3,
+    "not_applicable": 2
+  }
+}

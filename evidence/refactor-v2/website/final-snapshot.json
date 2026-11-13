@@ -1,0 +1,54 @@
+{
+  "status": "verified",
+  "current_entries": 18,
+  "status_counts": {
+    "not_applicable": 11,
+    "measured": 7
+  },
+  "measured_input_count": 3,
+  "scientific_repeats": [
+    {
+      "id": "technical-2",
+      "index": 2,
+      "kind": "technical"
+    },
+    {
+      "id": "technical-1",
+      "index": 1,
+      "kind": "technical"
+    },
+    {
+      "id": "technical-3",
+      "index": 3,
+      "kind": "technical"
+    }
+  ],
+  "real_measured_count": 1,
+  "website": {
+    "status": "pass",
+    "files": 103,
+    "bytes": 598086,
+    "local_links_checked": 452,
+    "errors": []
+  },
+  "maximum_public_file_bytes": 51537,
+  "pre_marker_website_validation": {
+    "bytes": 597782,
+    "errors": [],
+    "files": 102,
+    "local_links_checked": 452,
+    "status": "pass"
+  },
+  "portable_export": {
+    "original_root_absent": true,
+    "standalone_links_checked": 187,
+    "no_symlinks": true,
+    "website": {
+      "status": "pass",
+      "files": 102,
+      "bytes": 597730,
+      "local_links_checked": 452,
+      "errors": []
+    }
+  }
+}

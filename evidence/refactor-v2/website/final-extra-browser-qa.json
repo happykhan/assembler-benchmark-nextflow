@@ -1,0 +1,146 @@
+[
+  {
+    "device": "desktop",
+    "theme": "light",
+    "path": "/broad/reproducibility-validation.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "light",
+    "path": "/scenarios/reproducibility.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "light",
+    "path": "/scenarios/plasmids.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "light",
+    "path": "/results/result-9e65aa528fcaa97b5832c339.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 5
+  },
+  {
+    "device": "desktop",
+    "theme": "dark",
+    "path": "/broad/reproducibility-validation.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "dark",
+    "path": "/scenarios/reproducibility.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "dark",
+    "path": "/scenarios/plasmids.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "desktop",
+    "theme": "dark",
+    "path": "/results/result-9e65aa528fcaa97b5832c339.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 5
+  },
+  {
+    "device": "mobile",
+    "theme": "light",
+    "path": "/broad/reproducibility-validation.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "light",
+    "path": "/scenarios/reproducibility.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "light",
+    "path": "/scenarios/plasmids.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "light",
+    "path": "/results/result-9e65aa528fcaa97b5832c339.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 5
+  },
+  {
+    "device": "mobile",
+    "theme": "dark",
+    "path": "/broad/reproducibility-validation.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "dark",
+    "path": "/scenarios/reproducibility.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "dark",
+    "path": "/scenarios/plasmids.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 1
+  },
+  {
+    "device": "mobile",
+    "theme": "dark",
+    "path": "/results/result-9e65aa528fcaa97b5832c339.html",
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "downloads": 5
+  }
+]

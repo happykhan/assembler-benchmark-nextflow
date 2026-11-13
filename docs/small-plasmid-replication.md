@@ -1,11 +1,13 @@
 # Real-data small-plasmid study: admission proposal
 
-**Cohort metadata mapped; one-isolate pilot admitted separately.** The full 14-isolate
-manifest remains a proposal. The [ATCC25922 pilot](real-small-plasmid-pilot.md) now
-has byte-verified reads and references and a native Nextflow real-input branch.
-This is a separate real-data
-case within the plasmids group, alongside the simulated cases. It does not change
-Quick, the simulated Standard baseline, or their results.
+**Source-study design notes, not current execution instructions.** The full
+14-isolate manifest remains a proposal. The common catalogue currently separates
+an explicit ATCC 25922 local validation subset from its full deposited run.
+Use `assets/catalogue.json` and the current protocol to select workloads.
+Current end-to-end scoring uses labelled longest-alignment/reference-breadth
+methods; it does not claim historical replication of the study's settings or
+rankings. The pure Johnson summed-block rule remains tested in
+`benchlib/paper_recovery.py` for a separately declared future comparison.
 
 [Johnson, Soehnlen and Blankenship (2023), *Long read genome assemblers struggle
 with small plasmids*](https://doi.org/10.1099/mgen.0.001024) provides relevant

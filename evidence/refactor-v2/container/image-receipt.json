@@ -1,0 +1,5 @@
+{
+  "schema_version": 2,
+  "sha256": "24d34a7f025b453c8367f10dd3eb104ed6726b26f6ebba7bf58c211ac6812682",
+  "source": "ghcr.io/prefix-dev/pixi@sha256:702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8"
+}

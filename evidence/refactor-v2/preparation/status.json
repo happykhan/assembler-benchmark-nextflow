@@ -1,0 +1,58 @@
+{
+  "status": "verified",
+  "scope": "Small preparation/runtime checks only; no assemblies or scientific panel by this agent",
+  "cluster_root": "/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/preparation-probe",
+  "preparation_tests": {
+    "passed": 15,
+    "failed": 0,
+    "filesystem": "GPFS"
+  },
+  "runtime_tests": {
+    "passed": 16,
+    "failed": 0,
+    "filesystem": "GPFS",
+    "docker": "mocked daemon contract, not scientific Docker execution"
+  },
+  "cross_node_cache": {
+    "job_id": "35501791",
+    "nodes": [
+      "compa029.hpc.in.bmrc.ox.ac.uk",
+      "compa030.hpc.in.bmrc.ox.ac.uk"
+    ],
+    "online_requesters": 2,
+    "http_downloads": 1,
+    "offline_network_blocked_requesters": 2,
+    "bytes": 77824
+  },
+  "network_blocker": {
+    "method": "Linux seccomp inherited socket(AF_INET/AF_INET6) denial; AF_UNIX permitted",
+    "source": "tests/fixtures/network_blocker.c",
+    "sha256": "f375bdf2962cead5c12ca0827a009e65327ea370b3fc2152f14d8fe22fd03f09",
+    "binary": "/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/preparation-probe/network-blocker",
+    "errno": 97,
+    "exec_child_verified": true,
+    "unshare_submission_host": "Operation not permitted",
+    "scope": "Apply to task commands; keep scheduler/controller outside filter"
+  },
+  "initial_transport_probes": [
+    {
+      "job_id": "35501727",
+      "status": "failed",
+      "reason": "HTTP 403 before cache admission"
+    },
+    {
+      "job_id": "35501739",
+      "status": "failed",
+      "reason": "HTTP 403 before cache admission"
+    }
+  ],
+  "fixture_transport_fix": "Internal sibling-node probe explicitly uses ProxyHandler({}); normal production source handling unchanged",
+  "existing_sif_cache_search": "Before acquisition, no .sif found in scoped project/user cache searches; actual pinned SIF preparation is now verified separately.",
+  "not_claimed": [
+    "Full scientific panel execution",
+    "Full pipeline offline verification by this agent",
+    "Scientific Docker execution",
+    "Full scientific workflow inside SIF"
+  ],
+  "container_verification": "evidence/refactor-v2/container/verification.json; real cached SIF execution plus inside-container seccomp probe passed in job35502501"
+}

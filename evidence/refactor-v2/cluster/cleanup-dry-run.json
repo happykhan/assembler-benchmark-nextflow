@@ -1,0 +1,12 @@
+{
+  "current_results_protected": "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/current-final",
+  "logical_file_bytes": 52794136,
+  "regular_files": 1189,
+  "run_id": "ca54087a-af85-4b1a-8260-cbae17c3ba39",
+  "schema_version": 2,
+  "shared_cache_protected": "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/cache",
+  "status": "planned",
+  "symlinks": 128,
+  "warning": "Removing owned work disables Nextflow resume for these task directories. Shared-cache symlink targets are never traversed.",
+  "work_dir": "/gpfs3/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/work-final"
+}

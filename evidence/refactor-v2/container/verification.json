@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "source": "ghcr.io/prefix-dev/pixi@sha256:702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8",
+  "image": "/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/cache/images/702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8.sif",
+  "size_bytes": 64069632,
+  "sha256": "24d34a7f025b453c8367f10dd3eb104ed6726b26f6ebba7bf58c211ac6812682",
+  "offline_cached": true,
+  "before_status": "missing",
+  "elapsed_seconds": 1.0385501384735107,
+  "engine_version": "apptainer version 1.5.3-3.el8",
+  "transport": "Apptainer pull of pinned OCI source; engine may reuse its own OCI cache",
+  "job_id": "35502501",
+  "node": "compa036.hpc.in.bmrc.ox.ac.uk",
+  "pixi_version": "pixi 0.73.0",
+  "image_pixi_path": "/usr/local/bin/pixi",
+  "blocked_pixi_version": "pixi 0.73.0",
+  "network_blocker_position": "inside cached SIF, after Apptainer mount/exec",
+  "network_probe": {
+    "ipv4_errno": 97,
+    "ipv6_errno": 97,
+    "unix_available": true
+  }
+}

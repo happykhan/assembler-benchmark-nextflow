@@ -7,9 +7,13 @@ platforms = ["linux-64"]
 [dependencies]
 python = "3.11.*"
 psutil = "==7.0.0"
-badread = "==0.4.2"
 minimap2 = "==2.31"
-openjdk = "17.*"
+
+[feature.art20160605.dependencies]
+art = "==2016.06.05"
+
+[feature.skesa251.dependencies]
+skesa = "==2.5.1"
 
 [feature.flye296.dependencies]
 flye = "==2.9.6"
@@ -33,6 +37,8 @@ racon = "==1.5.0"
 
 [environments]
 default = { features = [], solve-group = "tooling" }
+art-2016-06-05 = { features = ["art20160605"], solve-group = "art20160605" }
+skesa-2-5-1 = { features = ["skesa251"], solve-group = "skesa251" }
 flye-2-9-6 = { features = ["flye296"], solve-group = "flye296" }
 raven-1-8-3 = { features = ["raven183"], solve-group = "raven183" }
 plassembler-1-9-0 = { features = ["plassembler190"], solve-group = "plassembler190" }

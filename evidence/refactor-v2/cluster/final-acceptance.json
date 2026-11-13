@@ -1,0 +1,309 @@
+{
+  "cache_checks": {
+    "cache-added": {
+      "ASSEMBLE (quick-long/flye-default)": "COMPLETED",
+      "ASSEMBLE (quick-long/raven-default)": "CACHED",
+      "ASSEMBLE (quick-short/skesa-default)": "CACHED",
+      "ASSESS (quick-long/flye-default)": "COMPLETED",
+      "ASSESS (quick-long/raven-default)": "CACHED",
+      "ASSESS (quick-short/skesa-default)": "CACHED",
+      "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)": "CACHED",
+      "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)": "CACHED"
+    },
+    "cache-assessment": {
+      "ASSEMBLE (quick-long/raven-default)": "CACHED",
+      "ASSEMBLE (quick-short/skesa-default)": "CACHED",
+      "ASSESS (quick-long/raven-default)": "COMPLETED",
+      "ASSESS (quick-short/skesa-default)": "COMPLETED",
+      "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)": "CACHED",
+      "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)": "CACHED"
+    },
+    "cache-input-wrapper": {
+      "ASSEMBLE (quick-long/raven-default)": "CACHED",
+      "ASSEMBLE (quick-short/skesa-default)": "CACHED",
+      "ASSESS (quick-long/raven-default)": "CACHED",
+      "ASSESS (quick-short/skesa-default)": "CACHED",
+      "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)": "COMPLETED",
+      "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)": "COMPLETED"
+    },
+    "cache-publication": {
+      "ASSEMBLE (quick-long/raven-default)": "CACHED",
+      "ASSEMBLE (quick-short/skesa-default)": "CACHED",
+      "ASSESS (quick-long/raven-default)": "CACHED",
+      "ASSESS (quick-short/skesa-default)": "CACHED",
+      "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)": "CACHED",
+      "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)": "CACHED"
+    },
+    "cache-render": {
+      "ASSEMBLE (quick-long/raven-default)": "CACHED",
+      "ASSEMBLE (quick-short/skesa-default)": "CACHED",
+      "ASSESS (quick-long/raven-default)": "CACHED",
+      "ASSESS (quick-short/skesa-default)": "CACHED",
+      "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)": "CACHED",
+      "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)": "CACHED"
+    }
+  },
+  "mixed": {
+    "eligible": 7,
+    "inputs": 3,
+    "not_applicable": 11,
+    "scheduler_allocations": 40,
+    "status_counts": {
+      "measured": 7,
+      "not_applicable": 11
+    },
+    "task_count": 41
+  },
+  "note": "Technical repeat file hashes are evidence only; reference completeness is not an output-agreement verdict.",
+  "schema_version": 2,
+  "scope": "Small engineering/matched-real validation only; no full scientific panel",
+  "status": "pass",
+  "terminal_scheduler_states": {
+    "35503437": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503438": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503439": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503440": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503441": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503442": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503443": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503444": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503445": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503446": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503447": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503448": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503449": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503450": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503451": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503452": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503453": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503473": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503474": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503475": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503476": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503477": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503478": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503479": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503480": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503481": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503482": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503483": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503484": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503485": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503486": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503487": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503505": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503506": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503529": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503530": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503565": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503566": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503567": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    },
+    "35503590": {
+      "exit": "0:0",
+      "state": "COMPLETED"
+    }
+  },
+  "verified_bindings": [
+    {
+      "assembly_sha256": "fadc94cd68c8ee2775796e0f5b070d897517cbfe741cd611c6f0d7210b5580df",
+      "case_id": "quick-long-repeatability",
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "read_technology": "long",
+      "result_id": "result-26a07f187111e96ada40f194",
+      "scientific_repeat_id": "technical-2",
+      "sequence_outcome": "incomplete",
+      "source_kind": "simulated",
+      "version": "1.8.3",
+      "workflow_id": "raven-default"
+    },
+    {
+      "assembly_sha256": "fadc94cd68c8ee2775796e0f5b070d897517cbfe741cd611c6f0d7210b5580df",
+      "case_id": "quick-long",
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "read_technology": "long",
+      "result_id": "result-5fe4d2f53c22e93c1772cb4e",
+      "scientific_repeat_id": null,
+      "sequence_outcome": "incomplete",
+      "source_kind": "simulated",
+      "version": "1.8.3",
+      "workflow_id": "raven-default"
+    },
+    {
+      "assembly_sha256": "fadc94cd68c8ee2775796e0f5b070d897517cbfe741cd611c6f0d7210b5580df",
+      "case_id": "quick-long-repeatability",
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "read_technology": "long",
+      "result_id": "result-632f77b70378d3322c990d36",
+      "scientific_repeat_id": "technical-1",
+      "sequence_outcome": "incomplete",
+      "source_kind": "simulated",
+      "version": "1.8.3",
+      "workflow_id": "raven-default"
+    },
+    {
+      "assembly_sha256": "ac5b72188bbe0cad926e78388083f1946a0a22187195b55bb2298b126e2f0acc",
+      "case_id": "quick-short",
+      "input_id": "input-93e5144d04e6148bfc393ec4",
+      "read_technology": "short",
+      "result_id": "result-77a1104ef4c750152cc07f88",
+      "scientific_repeat_id": null,
+      "sequence_outcome": null,
+      "source_kind": "simulated",
+      "version": "2.5.1",
+      "workflow_id": "skesa-default"
+    },
+    {
+      "assembly_sha256": "f80ca9a813d14f685d62dc4411df6067adb3ebd33b4137a97091ecaf5f7ad142",
+      "case_id": "quick-long",
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "read_technology": "long",
+      "result_id": "result-7bba52866cb138184705c373",
+      "scientific_repeat_id": null,
+      "sequence_outcome": "incomplete",
+      "source_kind": "simulated",
+      "version": "2.9.6",
+      "workflow_id": "flye-default"
+    },
+    {
+      "assembly_sha256": "fadc94cd68c8ee2775796e0f5b070d897517cbfe741cd611c6f0d7210b5580df",
+      "case_id": "quick-long-repeatability",
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "read_technology": "long",
+      "result_id": "result-9479f6c0d9ec2b88ebf159d9",
+      "scientific_repeat_id": "technical-3",
+      "sequence_outcome": "incomplete",
+      "source_kind": "simulated",
+      "version": "1.8.3",
+      "workflow_id": "raven-default"
+    },
+    {
+      "assembly_sha256": "db98f7d996f00a4a880992600fa9f21ebbfe644623e2f9b3b11abe46b424d479",
+      "case_id": "real-local-validation",
+      "input_id": "input-8ad2d9ea31467a655367710e",
+      "read_technology": "long",
+      "result_id": "result-9e65aa528fcaa97b5832c339",
+      "scientific_repeat_id": null,
+      "sequence_outcome": "incomplete",
+      "source_kind": "real",
+      "version": "1.8.3",
+      "workflow_id": "raven-default"
+    }
+  ]
+}

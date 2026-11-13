@@ -31,7 +31,9 @@ class BenchmarkUtils {
         def digest = java.security.MessageDigest.getInstance('SHA-256')
         (names + ['environments/pixi.toml', 'environments/pixi.lock', 'bin/bench-run']).unique().sort().each { name ->
             digest.update(name.getBytes('UTF-8'))
-            digest.update(new File(project.toString(), name).bytes)
+            def source = new File(name)
+            if (!source.isAbsolute()) source = new File(project.toString(), name)
+            digest.update(source.bytes)
         }
         digest.digest().encodeHex().toString()
     }

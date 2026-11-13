@@ -57,8 +57,9 @@ from the compressed and decompressed source hashes.
 Each receipt binds source URLs, publisher checksums, payload hashes, canonical
 FASTA hash, the exact molecule inventory, topology evidence and attribution.
 Registry entries bind the receipt file's SHA256. Raw source archives are cached
-as `references/<reference-id>.source.gz`; supporting original metadata are kept
-under `references/admission-evidence/`. These cache files are outside Git.
+by the common preparation program under `<cache_dir>/references/archives/`;
+supporting original metadata remain in the admission receipts. Cache files are
+outside Git. The original admission directory layout is historical evidence.
 
 The existing `bsub-168-quick` entry and its 200 kb linear fixture remain unchanged
 and separate from the admitted whole chromosome.

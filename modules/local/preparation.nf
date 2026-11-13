@@ -1,144 +1,64 @@
 import groovy.json.JsonOutput
 import static BenchmarkUtils.shellQuote
 
-process PREPARE_RUN {
-    // Provision on the submission host before any compute tasks need software.
+process SETUP {
     executor 'local'
     cpus 1
     memory '1 GB'
     time '2 h'
-    publishDir params.outdir, mode: 'copy', overwrite: true
     input:
-    path suppliedPlan
     val selection
+    path catalogue
     val sourceFingerprint
     output:
-    path 'selected-plan.json', emit: plan
-    path 'environment-preparation.json', emit: receipt
+    path 'plan.json', emit: plan
+    path 'preparation.json', emit: inventory
     script:
-    def interpreter = params.runtime == 'pixi' ?
-        "pixi run --locked --manifest-path ${shellQuote(projectDir.toString() + '/environments/pixi.toml')} python" : 'python3'
-    def planOption = suppliedPlan ? "--plan ${shellQuote(suppliedPlan)}" : ''
+    def flags = (params.offline ? ' --offline' : '') + (params.plan_only ? ' --plan-only' : '') + ' --runtime '+shellQuote(params.runtime)
+    if (params.container_runtime) flags += ' --container-runtime '+shellQuote(params.container_runtime)+' --container-image '+shellQuote(params.container_image)
+    def prefix = params.network_blocker ? shellQuote(params.network_blocker)+' ' : ''
     """
-    ${interpreter} ${shellQuote(projectDir.toString() + '/bin/prepare-run.py')} \
-      --selection-json ${shellQuote(JsonOutput.toJson(selection))} ${planOption} \
-      --runtime '${params.runtime}' --runtime-image ${shellQuote(task.container ?: '')} --out selected-plan.json --receipt environment-preparation.json \
-      --existing-plan ${shellQuote(file("${params.outdir}/selected-plan.json").toString())}
+    ${prefix}${shellQuote(params.bootstrap_python)} ${shellQuote(projectDir.toString()+'/bin/setup.py')} \
+      --selection ${shellQuote(JsonOutput.toJson(selection))} --catalogue ${shellQuote(catalogue)} --cache-dir ${shellQuote(file(params.cache_dir).toString())} ${flags}
     """
 }
 
-process PREPARE_REFERENCE {
-    tag "${referenceId}"
+process ADMIT_INPUT {
+    tag "${input.id}"
     cpus 1
-    input:
-    val referenceId
-    path registry
-    val sourceFingerprint
-    output:
-    tuple val(referenceId), path('reference.fasta'), path('reference.json')
-    script:
-    def offline = params.offline ? '--offline' : ''
-    """
-    export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/prepare-reference.py')} --registry ${shellQuote(registry)} \
-      --id '${referenceId}' --reference-dir ${shellQuote(params.reference_dir)} ${offline}
-    """
-}
-
-process SIMULATE_READS {
-    publishDir { "${params.outdir}/prepared/${meta.id}" }, mode: 'copy', enabled: params.prepare_only
-    tag "${meta.id}"
-    cpus { simulationPolicy.cpus }
-    time { "${simulationPolicy.time_minutes} min" }
-    input:
-    tuple val(meta), path(reference), path(provenance)
-    val sourceFingerprint
-    val simulationPolicy
-    output:
-    tuple val(meta), path(reference), path(provenance), path('reads.fastq'), path('simulation.json')
-    script:
-    def spec = shellQuote(JsonOutput.toJson(meta))
-    """
-    export BENCH_SOURCE_SHA256='${sourceFingerprint}'
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/simulate-reads.py')} --reference ${shellQuote(reference)} \
-      --case-json ${spec} --reference-provenance ${shellQuote(provenance)} --out reads.fastq --metadata simulation.json
-    """
-}
-
-process PREPARE_REAL_READS {
-    publishDir { "${params.outdir}/prepared/${meta.id}" }, mode: 'copy', enabled: params.prepare_only
-    tag "${meta.id}"
-    cpus 1
+    memory '1 GB'
     time '2 h'
     input:
-    tuple val(meta), path(reference), path(provenance)
-    path plan
+    tuple val(input), val(dependencies)
     val sourceFingerprint
     output:
-    tuple val(meta), path(reference), path(provenance), path('reads.fastq'), path('input.json')
+    tuple val(input), val(dependencies), path('admitted.json')
     script:
-    def offline = params.offline ? '--offline' : ''
+    def prefix = params.network_blocker ? shellQuote(params.network_blocker)+' ' : ''
     """
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/prepare-real-reads.py')} \
-      --case-json ${shellQuote(JsonOutput.toJson(meta))} --plan ${shellQuote(plan)} \
-      --reference ${shellQuote(reference)} --reference-provenance ${shellQuote(provenance)} \
-      --cache ${shellQuote(params.read_cache)} ${offline}
+    ${prefix}${shellQuote(params.bootstrap_python)} ${shellQuote(projectDir.toString()+'/bin/admit.py')} \
+      --input ${shellQuote(JsonOutput.toJson(input))} --dependencies ${shellQuote(JsonOutput.toJson(dependencies))} \
+      --cache-dir ${shellQuote(file(params.cache_dir).toString())} ${params.offline ? '--offline' : ''}
     """
 }
 
-process PREPARE_COLLECTION_INPUT {
-    publishDir { "${params.outdir}/prepared/${meta.id}" }, mode: 'copy', enabled: params.prepare_only
-    tag "${meta.id}"
+process PREPARE_INPUT {
+    tag "${input.id}"
     cpus 1
+    memory '4 GB'
     time '2 h'
     input:
-    val meta
-    path plan
+    tuple val(input), val(dependencies), path(admitted)
     val sourceFingerprint
     output:
-    tuple val(meta), path('reference.fasta'), path('reference.json'), path('reads.fastq'), path('input.json')
+    tuple val(input), val(dependencies), path(admitted), path('prepared')
     script:
-    def offline = params.offline ? '--offline' : ''
-    def helper = meta.track == 'general' ? 'prepare-general-input.py' : 'prepare-diagnostic-input.py'
-    def frozenSource = meta.input_recipe?.source?.case_id
-    def sourceOption = meta.track == 'diagnostic' && frozenSource && params.diagnostic_source_dir ?
-        " --frozen-input-dir ${shellQuote(file(params.diagnostic_source_dir).resolve(frozenSource))}" : ''
-    def options = meta.track == 'general' ? "--plan ${shellQuote(plan)} --cache ${shellQuote(params.read_cache)}" :
-        "--reference-dir ${shellQuote(params.reference_dir)} --out-dir ."
+    def environment = input.recipe.method == 'art-illumina-v1' ? 'art-2016-06-05' : 'default'
+    def prefix = params.network_blocker ? shellQuote(params.network_blocker)+' ' : ''
     """
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/' + helper)} ${options} \
-      --case-json ${shellQuote(JsonOutput.toJson(meta))} ${offline} ${sourceOption}
-    """
-}
-
-process REAL_READ_DIAGNOSTICS {
-    tag "${meta.id}"
-    cpus 4
-    memory '8 GB'
-    time '1 h'
-    input:
-    tuple val(meta), path(reference), path(provenance), path(reads), path(inputMetadata)
-    val sourceFingerprint
-    output:
-    path "${meta.id}.read-diagnostics"
-    script:
-    """
-    bench-run python ${shellQuote(projectDir.toString() + '/bin/diagnose-real-reads.py')} \
-      --reference ${shellQuote(reference)} --reads ${shellQuote(reads)} \
-      --input-provenance ${shellQuote(inputMetadata)} --cpus ${task.cpus}
-    mv read-diagnostics ${shellQuote(meta.id + ".read-diagnostics")}
-    """
-}
-
-process LIST_CHOICES {
-    executor 'local'
-    cpus 1
-    publishDir params.outdir, mode: 'copy', overwrite: true
-    output:
-    path 'catalogue.json'
-    script:
-    def interpreter = params.runtime == 'pixi' ? "pixi run --locked --manifest-path ${shellQuote(projectDir.toString() + '/environments/pixi.toml')} python" : 'python3'
-    """
-    ${interpreter} ${shellQuote(projectDir.toString() + '/bin/plan.py')} --list > catalogue.json
+    export BENCH_PIXI_ENV='${environment}'
+    ${prefix}bench-run python ${shellQuote(projectDir.toString()+'/bin/prepare-input.py')} \
+      --input ${shellQuote(JsonOutput.toJson(input))} --dependencies ${shellQuote(JsonOutput.toJson(dependencies))} \
+      --cache-dir ${shellQuote(file(params.cache_dir).toString())}
     """
 }

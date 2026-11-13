@@ -46,25 +46,3 @@ def summarise_paper(path, references, assembly, molecule_types):
                        'per_draft_contig_block_bp': dict(hits),
                        'note': 'Strict >90% summed PAF blocks; overlapping/secondary contributions are not deduplicated. Not a sequence-breadth or structural-correctness test.'})
     return output
-
-
-def assess_paper(reference, assembly_path, evidence, references, queries, molecule_types, cpus, version):
-    """Keep measurement failures distinct from both recovery and the core score."""
-    import subprocess
-    from .assessment import sha256
-    from .process import measured_run
-    paf = evidence / 'paper-alignment.paf'
-    command = ['minimap2', '-t', str(cpus), '-x', 'asm5', '--paf-no-hit',
-               str(assembly_path.resolve()), str(reference.resolve())]
-    result = {'method': METHOD, 'status': 'error', 'command': command,
-              'mapper_version': version, 'replicons': []}
-    try:
-        measurement = measured_run(command, paf, evidence / 'paper-minimap2.stderr.log', evidence)
-        result['measurement'] = measurement
-        if measurement['exit_code'] != 0:
-            raise ValueError('Mapper failed; no paper-rule recovery verdict')
-        rows = summarise_paper(paf, references, queries, molecule_types)
-        result.update(status='completed', replicons=rows, paf_sha256=sha256(paf))
-    except (ValueError, OSError, subprocess.SubprocessError) as error:
-        result['error'] = f'{type(error).__name__}: {error}'
-    return result

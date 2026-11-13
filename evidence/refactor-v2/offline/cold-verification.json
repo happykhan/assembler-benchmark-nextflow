@@ -1,0 +1,328 @@
+{
+  "schema_version": 2,
+  "scope": "Two Quick simulated inputs only; no full panel",
+  "exit": 0,
+  "cache": "/well/aanensen/users/rva470/assembler-benchmark-refactor-20261113/cache-offline-cold",
+  "initial_cache": {
+    "prepared_inputs_present": false,
+    "reference_entries": [
+      "references/archives"
+    ],
+    "files": [
+      ".receipts/93d720a24d749594545491ab991be5bacc5b9e706e7787f97fac96238edb4062.json",
+      ".receipts/79362ca16f7827752a5e8ea5ef1b2e2c6170ff702855c460d37f216b31931f61.json",
+      "software/pixi/art-2016-06-05",
+      "software/pixi/skesa-2-5-1",
+      "software/pixi/raven-1-8-3",
+      "software/pixi/default",
+      "images/702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8.sif.receipt.json",
+      "images/702f3a3c966aa63a0a57906466ec33ce9a463b532446f5584498fa429d069fd8.sif",
+      "references/archives/79c505e307dc0cdecbce2068d6b5ac59ed3ee6d8b8a8cd660184330fe476d801",
+      "references/archives/1a9e4f66533db783e9ecb6727355993a16a00ef36fa512dcac2de39eff1ae8c5"
+    ]
+  },
+  "task_count": 15,
+  "tasks": [
+    {
+      "process": "SETUP",
+      "scheduler_id": "3422380",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "4.7s",
+      "peak_rss": "35.1 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "f81ae2ed8e20aa7cb778d2fcd3ee5e577e20b5668d708454d9ccf9b2b6eec560",
+      "wrapper_sha256": "09653a2b1add5f7200c9c6100a5dcf92cce46d1380459f7b55b3faa4545990ff"
+    },
+    {
+      "process": "NOT_APPLICABLE (quick-long/skesa-default)",
+      "scheduler_id": "35503061",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "187ms",
+      "peak_rss": "3.1 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "0635328c6e50e9e21731306b96f191328bdbc3cb0886d0a0ec1a7722c3b418ed",
+      "wrapper_sha256": "b5a0d0b84c7deabea5d76a28d16944e4ae58ec3e84b63d2c0284ed3db1dd8eeb"
+    },
+    {
+      "process": "NOT_APPLICABLE (quick-short/raven-default)",
+      "scheduler_id": "35503062",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "780ms",
+      "peak_rss": "3.1 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "4ca2a00218a0400c54a5f95105dd960e02a4bc15258c78c32ebc7481681a8140",
+      "wrapper_sha256": "3af440c50e7357631ef462cfb5f5efe06b46eb99cd8dffebdf8ed863cb9999dd"
+    },
+    {
+      "process": "ADMIT_INPUT (input-bbedc4873df15783b1b3dba3)",
+      "scheduler_id": "35503063",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "1.5s",
+      "peak_rss": "21.3 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "8fba41f27fc4ce3df8ef512961f70344575b261cd2ff30be2009e0dcbef0ecdf",
+      "wrapper_sha256": "7efe4e18ae3956d1ddf03253846a9bdd33fd44224420cc0a033cb692887d681f"
+    },
+    {
+      "process": "ADMIT_INPUT (input-93e5144d04e6148bfc393ec4)",
+      "scheduler_id": "35503064",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "1.4s",
+      "peak_rss": "21.4 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "383bf006ae54305a63a1428ed5a9c3960655da5e25971b49a8285ffff08d8be3",
+      "wrapper_sha256": "fd7e15cc5bf9149d1543cd6619b2d8116f8980e081e29a162e60fb6f25722334"
+    },
+    {
+      "process": "PREPARE_INPUT (input-bbedc4873df15783b1b3dba3)",
+      "scheduler_id": "35503065",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "1.3s",
+      "peak_rss": "34.7 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "a4dfb5a2eaac4c8e4d0db62c9ecfbfeba43108ff37acf05ca047b440e66dd1d0",
+      "wrapper_sha256": "3821b4237d8e8bfee8f86048cd6d216abebd1a9abf4e89925e19d7bfc5234fd1"
+    },
+    {
+      "process": "PREPARE_INPUT (input-93e5144d04e6148bfc393ec4)",
+      "scheduler_id": "35503066",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "4.7s",
+      "peak_rss": "63.2 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "46096b30e0a543fbd9a6457365c6698ae91b125501ff54e1fce670d836bf7e09",
+      "wrapper_sha256": "ff1400a55c044b6b70326667156bf7c8d807305c4f28e21ccf7bb5db538bbb93"
+    },
+    {
+      "process": "ASSEMBLE (quick-long/raven-default)",
+      "scheduler_id": "35503067",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "6.2s",
+      "peak_rss": "174.3 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "f829a08e639ef1eaac18b28f1ccc7b5daaad7905aa728ed1a005f92ee1b19941",
+      "wrapper_sha256": "80ccf6766b2bf98a5861b57048a648381230d5ae47292014f5cfdd2e5b1ed654"
+    },
+    {
+      "process": "ASSESS (quick-long/raven-default)",
+      "scheduler_id": "35503079",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "1.4s",
+      "peak_rss": "34.8 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "572c82f0c4c09fa5c92bd3f7f1645fb211f32f9be3b20200a10b1bfc4f7aeb1e",
+      "wrapper_sha256": "63cc6df83488dc271eb829bfd6df556a4521f208600c2a8b64aece2a5bc734c7"
+    },
+    {
+      "process": "PUBLISH (quick-long/raven-default)",
+      "scheduler_id": "35503080",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "227ms",
+      "peak_rss": "3.1 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "c37ce108323d5e4dbf27f3e4ceedfce00a919087b5d1f8843fa1fbff5adf021c",
+      "wrapper_sha256": "cdf24ffe5d5009b4db0b66c6fd8bc12de5d7a01abbd089654a6c22701341706a"
+    },
+    {
+      "process": "ASSEMBLE (quick-short/skesa-default)",
+      "scheduler_id": "35503076",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "37.8s",
+      "peak_rss": "197.3 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "5fc07e93bbee56aa831c352c7019fccb197752e6608d87e02847c7a13c89bd5b",
+      "wrapper_sha256": "27145f86f5eb4c3fd939ab4682a9180d244c3bc6ca17a676cc9986bb19ebdfdd"
+    },
+    {
+      "process": "ASSESS (quick-short/skesa-default)",
+      "scheduler_id": "35503088",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "889ms",
+      "peak_rss": "27.8 MB",
+      "network_blocker_in_command": true,
+      "containerised": true,
+      "command_sha256": "7e02ebcf371fa22b9ce8be5973114d231da3e7c22860fa87923bd533b5b5fcd6",
+      "wrapper_sha256": "b1d3a336043a847b3066a99bd2768ccd39cbc3d4e1011a0f91f7085f44e540b3"
+    },
+    {
+      "process": "PUBLISH (quick-short/skesa-default)",
+      "scheduler_id": "35503089",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "190ms",
+      "peak_rss": "3.2 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "cbbb006360f8b5175515fdcc18b391b04c12d4a08286eef86e96097a3ab0777c",
+      "wrapper_sha256": "749f1c671dffc1797f6670d81ed3141e2defc8c26bf0e57642b4ecb35dc863b2"
+    },
+    {
+      "process": "AGGREGATE",
+      "scheduler_id": "35503090",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "189ms",
+      "peak_rss": "3.1 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "e1f6a516649fc17d8786336c751442ff8212f802ea3f4d26dc6c3d78f281c1ed",
+      "wrapper_sha256": "3e5b6eb1a0819562a109d06b0e760e5df4df0e7f5a2ed03eb11f7c896725b227"
+    },
+    {
+      "process": "RENDER_WEBSITE",
+      "scheduler_id": "35503091",
+      "status": "COMPLETED",
+      "exit": "0",
+      "runtime": "250ms",
+      "peak_rss": "3.2 MB",
+      "network_blocker_in_command": true,
+      "containerised": false,
+      "command_sha256": "7f9b5fdddebc043b99989d5e6f0102aaf310edb0ba04a56c2bda540306e785cf",
+      "wrapper_sha256": "27773038875e3392db6082acb0ca6edf5133f2aa6835359abbffc6680c775009"
+    }
+  ],
+  "inputs": [
+    {
+      "input_id": "input-bbedc4873df15783b1b3dba3",
+      "method": "native-error-free-v2",
+      "receipt_sha256": "a83b04eb9fdcd9465adfb8a408f37bf2233ebcb6328c7149f3cf11ee4d149fc3",
+      "file_sha256": {
+        "molecule-0.fasta": "2289dee29a3d312bd161499c5febefd0eb15fea9c35f3ed3eb91e7ca2533c2f9",
+        "reads.fastq": "3394981a3c82f58c0fecffdbb19a64d6e39df171cd496739f489857093182f1a",
+        "reference.fasta": "c6ab8cb706bdb6b3aff3252c3d818d0ab9a289ada39cbb251bb5aa7ef455ecdb",
+        "reference.json": "6f1cf4c46e5281ff490bcc90a41d1ab3842fe7a700688ad422093b8887998892"
+      },
+      "observed": {
+        "max_length": 16760,
+        "mean_length": 10084.033613445377,
+        "min_length": 4933,
+        "modes": {
+          "long": {
+            "read_count": 595,
+            "total_bases": 6000000
+          }
+        },
+        "n50": 10354,
+        "per_replicon": [
+          {
+            "accession": "bsub-168-quick",
+            "max_length": 16760,
+            "mean_length": 10084.033613445377,
+            "min_length": 4933,
+            "n50": 10354,
+            "native_length_or_budget_trim_count": 1,
+            "observed_bases": 6000000,
+            "read_count": 595,
+            "realised_coverage": 30.0,
+            "target_bases": 6000000,
+            "topology": "linear",
+            "total_bases": 6000000
+          }
+        ],
+        "read_count": 595,
+        "short_mode_base_fraction": 0.0,
+        "short_mode_read_fraction": 0.0,
+        "total_bases": 6000000
+      },
+      "software_versions": {
+        "native-error-free-v2": "2"
+      }
+    },
+    {
+      "input_id": "input-93e5144d04e6148bfc393ec4",
+      "method": "art-illumina-v1",
+      "receipt_sha256": "22399261bf997b85b77fe54d6d6004954c15f6f7f1c838c5a5545b0bf2ae4eed",
+      "file_sha256": {
+        "art-0-log": "b75e36b2bf1323e009961c8c24f0d6d8433f795dd5e801556f5147237da6be93",
+        "molecule-0.fasta": "2289dee29a3d312bd161499c5febefd0eb15fea9c35f3ed3eb91e7ca2533c2f9",
+        "reads_1.fastq": "0dcc99ca5cfdb330f4ad660299e6c26898edcb50c4381fbc20a0c024584ecea4",
+        "reads_2.fastq": "fc9232c25e895164b9a1f55f842eff1d14ae0c6f58944f30c73bc19cd817f855",
+        "reference.fasta": "c6ab8cb706bdb6b3aff3252c3d818d0ab9a289ada39cbb251bb5aa7ef455ecdb",
+        "reference.json": "6f1cf4c46e5281ff490bcc90a41d1ab3842fe7a700688ad422093b8887998892"
+      },
+      "observed": {
+        "max_length": 150,
+        "mean_length": 150.0,
+        "min_length": 150,
+        "n50": 150,
+        "pair_count": 19995,
+        "per_replicon": [
+          {
+            "accession": "bsub-168-quick",
+            "boundary_policy": "linear_no_wrap",
+            "max_length": 150,
+            "mean_length": 150.0,
+            "min_length": 150,
+            "n50": 150,
+            "pair_count": 19995,
+            "read_count": 39990,
+            "realised_coverage": 29.9925,
+            "target_coverage": 30,
+            "total_bases": 5998500
+          }
+        ],
+        "read_count": 39990,
+        "total_bases": 5998500
+      },
+      "software_versions": {
+        "art_binary": "2.5.8",
+        "art_package": "2016.06.05"
+      }
+    }
+  ],
+  "result_status_counts": {
+    "measured": 2,
+    "not_applicable": 2
+  },
+  "results": [
+    {
+      "case": "quick-short",
+      "workflow": "skesa-default",
+      "status": "measured",
+      "sequence_outcome": null
+    },
+    {
+      "case": "quick-short",
+      "workflow": "raven-default",
+      "status": "not_applicable",
+      "sequence_outcome": null
+    },
+    {
+      "case": "quick-long",
+      "workflow": "skesa-default",
+      "status": "not_applicable",
+      "sequence_outcome": null
+    },
+    {
+      "case": "quick-long",
+      "workflow": "raven-default",
+      "status": "measured",
+      "sequence_outcome": "incomplete"
+    }
+  ],
+  "network_evidence": "Every task command starts its substantive program through inherited seccomp network-blocker; scientific tasks execute inside the admitted SIF. Controller is not blocked because Slurm requires network.",
+  "limitation": "Quick uses a 200kb reference slice; this proves cold scientific preparation and execution, not Standard performance or full-panel scientific validity."
+}

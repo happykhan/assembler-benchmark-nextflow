@@ -16,3 +16,5 @@ reads-cache/
 
 .cache/
 website/node_modules/
+
+nextflow-trace.tsv

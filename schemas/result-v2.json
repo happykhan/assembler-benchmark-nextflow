@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Current genome assembly case result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "case",
+    "workflow",
+    "status",
+    "metrics"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "result_id": {
+      "type": "string",
+      "pattern": "^result-[0-9a-f]{24}$"
+    },
+    "case": {
+      "type": "object",
+      "required": [
+        "id",
+        "science_key",
+        "dataset_id",
+        "input_id",
+        "read_technology",
+        "source_kind",
+        "collections",
+        "scenarios"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "science_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_id": {
+          "$ref": "#/$defs/id"
+        },
+        "input_id": {
+          "$ref": "#/$defs/id"
+        },
+        "read_technology": {
+          "enum": [
+            "short",
+            "long"
+          ]
+        },
+        "source_kind": {
+          "enum": [
+            "real",
+            "simulated"
+          ]
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "scenarios": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "scientific_repeat_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scientific_repeat": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "id",
+                "kind",
+                "index"
+              ],
+              "properties": {
+                "id": {
+                  "$ref": "#/$defs/id"
+                },
+                "kind": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "index": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "version_order"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version_order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "configuration": {
+          "type": "object"
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "measured",
+        "execution_failure",
+        "assessment_failure",
+        "not_applicable",
+        "not_run"
+      ]
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "unit",
+          "method"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "experiment": {
+      "type": "object"
+    },
+    "input": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "dependency_packages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^\\.\\./\\.\\./\\.\\./dependencies/"
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "size_bytes"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^artifacts/"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    }
+  }
+}

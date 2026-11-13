@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "nodes": [
+    "compa029.hpc.in.bmrc.ox.ac.uk",
+    "compa030.hpc.in.bmrc.ox.ac.uk"
+  ],
+  "http_downloads": 1,
+  "online_requesters": 2,
+  "offline_blocked_requesters": 2,
+  "sha256": "ab4f61509650d3bc45070bec2c5a5bf0fdfcae422fb8b847d1bfa688792db7c6",
+  "lock": "atomic mkdir on GPFS; post-lock target recheck"
+}

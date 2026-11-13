@@ -1,46 +1,33 @@
-# Add an assembler or version
+# Add an assembler or update its version
 
-Every admitted definition has an immutable ID such as `flye-2.9.6`. Short aliases
-are resolved when a plan is frozen; results always retain the immutable ID.
-Definitions never contain arbitrary shell commands.
+`assets/catalogue.json` is the single workflow catalogue. Each stable workflow
+ID represents a tested scientific configuration (for example `raven-default`),
+with explicit supported read technologies, source kinds and case eligibility.
+Its current result stores the actual software version.
 
-## A new version of an existing adapter
+For a new version, update that workflow's version and monotonic `version_order`,
+add its exact Pixi package pin and named environment, then regenerate and commit
+the lock. Do not change the stable ID merely to retain operational history.
+The current-result store rejects downgrades and changes to the tool or scientific
+configuration under an existing ID. A different configuration needs its own ID.
+Existing scientific repeats retain their separate identities.
 
-1. Add a Pixi feature with an exact package pin and a distinct named environment
-   in `environments/pixi.toml`. Keep earlier environments and definitions.
-2. Add the new `tool-version` definition in `assets/assemblers.json`, pointing at
-   that environment and its tested adapter. A convenience alias may point to the
-   new version, but existing frozen plans remain unchanged.
-3. Resolve and commit the updated lock. Run the contract tests, then inspect a
-   plan selecting the exact new ID with `bin/plan.py`. Validate a small actual
-   Quick run in the new environment before treating the version as admitted.
+For a new tool, add a tested argv-based adapter in `benchlib/adapters.py`, declare
+its final FASTA and optional graph, then add the workflow and software dependency
+to the catalogue. Declare supported options in `benchlib/workflow_options.py`;
+new input layouts or compound outputs need an explicitly tested typed runner. Paired-end and long-read interfaces are explicit; incompatible
+case/workflow combinations become `not_applicable` without scheduling assembly.
+Test both successful output and genuine failures. Never turn a failed execution
+or failed measurement into a claim that a sequence is absent.
 
-No Nextflow process or assembler command function needs to change when an
-existing adapter supports the new version's interface. If the interface changed,
-add and test a separate adapter rather than silently changing earlier behaviour.
+First inspect the intended small selection:
 
-## A different assembler
+```bash
+nextflow run . --cases quick-long --workflows raven-default --plan_only
+nextflow run . --cases quick-long --workflows raven-default -profile bmrc,pixi -resume
+```
 
-Add a small adapter in `benchlib/adapters.py` declaring the executable, package,
-argv builder and expected final FASTA/optional graph paths. Register it in
-`ADAPTERS`, add the pinned environment and immutable declaration, and test both
-successful outputs and genuine failures. The workflow handles fan-out,
-assessment, retention and export without tool-specific branching.
-
-Versions are checked at execution time. Missing environments, loose version
-pins, unknown IDs and unsupported adapters are rejected. Each execution records
-its definition, environment, actual version, commands and source/lock hashes.
-
-## Runtime and plan boundaries
-
-The verified initial runtime is Linux Pixi. Each assembler stage selects its
-own named environment; simulation, assessment and export use the tooling
-environment. The current container profiles use a shared digest-pinned Pixi
-runtime and the same locked named environments. The per-definition `container`
-field is reserved for future self-contained tool images; `null` does not prevent
-using the shared runtime. See [runtime verification](native-entry-verification.md).
-
-Changes to registry/reference/case metadata or environment locks require a new
-frozen plan. Use a new run ID and output/work directories for changed selections.
-To resume an earlier frozen definition after further development, use its
-original checkout and lock rather than rewriting its plan or results.
+Adding a workflow reuses unchanged prepared inputs. Updating assessment or
+presentation reuses retained assemblies; only deliberate `--rerun` bypasses the
+selected assembly cache. A replacement failure removes stale success artifacts.
+Unrelated current results stay in the same output directory.

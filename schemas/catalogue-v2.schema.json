@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/happykhan/assembler-benchmark-nextflow/schemas/catalogue-v2.schema.json",
+  "title": "Single-isolate assembly benchmark current catalogue",
+  "type": "object",
+  "required": ["schema_version", "datasets", "cases", "workflows", "collections", "scenarios", "dependencies"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "scope": {"const": "single-isolate-bacterial-assembly"},
+    "defaults": {"type": "object", "properties": {"collections": {"$ref": "#/$defs/ids"}, "workflows": {"$ref": "#/$defs/ids"}}},
+    "reference_registry": {"type": ["string", "null"]},
+    "references": {"type": "array", "items": {"type": "object", "required": ["id"]}},
+    "datasets": {"type": "array", "items": {"$ref": "#/$defs/dataset"}},
+    "cases": {"type": "array", "items": {"$ref": "#/$defs/case"}},
+    "workflows": {"type": "array", "items": {"$ref": "#/$defs/workflow"}},
+    "collections": {"type": "array", "items": {"$ref": "#/$defs/comparison"}},
+    "scenarios": {"type": "array", "items": {"$ref": "#/$defs/comparison"}},
+    "dependencies": {"type": "array", "items": {"$ref": "#/$defs/dependency"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "comparison": {"type": "object", "required": ["id", "title", "question"], "properties": {"id": {"$ref": "#/$defs/id"}, "title": {"type": "string"}, "question": {"type": "string"}, "scientific_scope": {"type": "string"}}},
+    "dataset": {"type": "object", "required": ["id", "read_technology", "source_kind", "reference_id", "dependencies"], "properties": {"id": {"$ref": "#/$defs/id"}, "read_technology": {"enum": ["short", "long"]}, "source_kind": {"enum": ["real", "simulated"]}, "reference_id": {"$ref": "#/$defs/id"}, "dependencies": {"$ref": "#/$defs/ids"}, "files": {"type": "object"}, "sample_id": {"type": "string"}, "reference_sample_id": {"type": "string"}}},
+    "case": {"type": "object", "required": ["id", "dataset_id", "collections", "scenarios", "recipe", "science_key"], "properties": {"id": {"$ref": "#/$defs/id"}, "dataset_id": {"$ref": "#/$defs/id"}, "collections": {"$ref": "#/$defs/ids"}, "scenarios": {"$ref": "#/$defs/ids"}, "recipe": {"type": "object", "required": ["method"], "properties": {"method": {"type": "string"}}}, "science_key": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "eligible_workflows": {"$ref": "#/$defs/ids"}, "scientific_repeats": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/repeat"}}}},
+    "repeat": {"type": ["object", "null"], "required": ["id", "kind", "index"], "properties": {"id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["technical", "sampling", "read-order"]}, "index": {"type": "integer", "minimum": 1}}},
+    "workflow": {"type": "object", "required": ["id", "tool", "adapter", "version", "version_order", "read_technologies", "source_kinds", "dependencies"], "properties": {"id": {"$ref": "#/$defs/id"}, "configuration_id": {"$ref": "#/$defs/id"}, "version": {"type": "string", "minLength": 1}, "version_order": {"type": "integer", "minimum": 0}, "read_technologies": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["short", "long"]}}, "source_kinds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["real", "simulated"]}}, "dependencies": {"$ref": "#/$defs/ids"}}},
+    "dependency": {"type": "object", "required": ["id", "kind", "target"], "properties": {"id": {"$ref": "#/$defs/id"}, "kind": {"type": "string"}, "target": {"type": "string", "minLength": 1}, "source": {"type": "object", "properties": {"url": {"type": "string"}, "path": {"type": "string"}}}, "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}, "size_bytes": {"type": ["integer", "null"], "minimum": 0}}}
+  }
+}

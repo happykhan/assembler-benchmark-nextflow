@@ -1,40 +1,22 @@
-# Standalone result archives and website
+# Current-result reporting
 
-`reporting` replaces the historical presentation backend. It contains no Slurm
-controller, job submission, polling or assembler invocation. The presentation
-code was extracted from the frozen Ploptimizer report implementation; historical
-scientific method labels and attribution remain intact.
+`current_site.py` builds a portable static website from the current-result catalogue. It reads stored measurements and prepared visual artefacts; it never runs assemblers or recomputes scientific assessments.
 
-```
-python3 bin/import-results.py --source /path/to/sealed-bundle --out-dir results/imported
-python3 bin/render-website.py --bundle results/imported --out-dir results/website
+```bash
+python3 bin/render-current.py --results results --outdir site
 ```
 
-Admission verifies all SHA-256 bindings and producer identities, copies every
-source file byte for byte and places its receipt **beside** the immutable archive.
-It rejects extra files, symlinks, changed evidence, duplicated identities and
-changed frozen native slots. Two producers are supported: the frozen historical
-bundle and native Nextflow exports. Rendering cannot discover additional source
-runs or recompute missing measurements.
+The results store is the primary output. Website generation is optional and reads whatever current results are available. Broad benchmark collections and targeted scenarios reference the same result packages. Pages show the scientific question, conditions, typed filters, separate scientific and resource measurements, and links to result details.
 
-Native export parses retained GFA into bounded, sequence-free interactive graph
-models. It prepares figures and TSVs from source-bound saved PAF coordinates;
-tripled reference coordinates remain labelled as tripled. Missing origin evidence
-stays unassigned. The website consumes these sealed models and copies prepared
-figures; it never aligns or evaluates sequences. Diagnostic exact-copy, general
-Wick completion, supplementary paper recovery and S7 output agreement remain
-separate endpoints.
+The public site contains compact JSON, TSV, prepared graphs and alignment plots. Reads, raw logs, large sequence files and workflow work directories remain outside the public copy. Its links are relative, so it can be copied without the workflow checkout or original results store.
 
-Historical rendering retains all batch/result routes, S1–S7, general performance
-and aggregate pages, diagnostic plots, graphs, saved coordinates and TSVs. The
-complete archive remains separate from the public website. The shared release
-gate checks links, graph/evidence bindings and the 64 MiB / 1,500 file / 5 MiB per
-file limits. Frontend sources and verified built assets are included; regenerating
-assets uses the pinned versions in `website/package.json`.
+The standalone scientific packages, replacement rules and subset exports are documented in [the output contract](../docs/output-contract.md). Presentation assets are in `current_assets/`; the established typeface and light/dark colour system are retained.
 
-Run `python3 -m unittest discover -s tests -p 'test_*presentation.py'` and
-`python3 -m unittest discover -s tests -p test_website_parity.py`. For the full
-historical equivalence check, set `BENCHMARK_HISTORICAL_BUNDLE` to a frozen archive
-and optionally `BENCHMARK_HISTORICAL_SITE` to the verified reference website.
-The test imports evidence, prevents the renderer reading the original source,
-prohibits subprocess execution and compares every public payload file hash.
+Validation:
+
+```bash
+python3 -m unittest tests.test_current_results tests.test_current_site
+node tests/browser/validate-current-site.mjs site browser-qa
+```
+
+The browser check requires Playwright and Chromium; set `PLAYWRIGHT_MODULE_PATH` and `CHROMIUM_EXECUTABLE` when they are not installed in the default locations.
