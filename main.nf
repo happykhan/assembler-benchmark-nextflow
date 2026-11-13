@@ -47,6 +47,7 @@ Single-isolate bacterial genome assembly benchmarks
   --offline                       Require prepared data/software; never fetch
   --results_only                  Scientific packages, no hosted site build
   --render_only                   Render existing current packages without science
+  --pilot_reports                 Label the optional website and exports as pilot validation
   --rerun                         Rerun selected assemblies, replacing current results
 Profiles: local, bmrc, slurm; pixi/native_tools; singularity/apptainer/docker.
 transfer_host places downloads on the submission host; simulation stays on compute.

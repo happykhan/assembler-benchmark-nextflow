@@ -15,3 +15,5 @@ button,input,select{font:inherit;font-size:14px;color:var(--ink);background:var(
 input::placeholder{color:var(--muted);opacity:1}
 
 .table-scroll,.scroll{position:relative}.filters>div{min-width:0;grid-template-columns:minmax(0,1fr)}.filters input,.filters select{min-width:0;width:100%}
+
+.pilot-notice{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:16px 20px;margin:0 0 28px;max-width:78ch}.pilot-notice strong{font-weight:650}.pilot-notice p{font-size:14px;margin:7px 0 0;max-width:74ch}

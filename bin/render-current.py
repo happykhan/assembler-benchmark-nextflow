@@ -10,5 +10,6 @@ from reporting.current_site import render_current
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--results',type=Path,required=True)
 p.add_argument('--outdir',type=Path,required=True)
+p.add_argument('--pilot',action='store_true',help='Label every page and measurements export as a small pilot validation selection')
 a=p.parse_args()
-print(json.dumps(render_current(a.results,a.outdir),sort_keys=True))
+print(json.dumps(render_current(a.results,a.outdir,pilot=a.pilot),sort_keys=True))

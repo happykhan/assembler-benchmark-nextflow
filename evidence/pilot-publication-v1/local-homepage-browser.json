@@ -1,0 +1,30 @@
+[
+  {
+    "device": "desktop",
+    "theme": "light",
+    "url": "http://127.0.0.1:8755/pilot/",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "device": "desktop",
+    "theme": "dark",
+    "url": "http://127.0.0.1:8755/pilot/",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "theme": "light",
+    "url": "http://127.0.0.1:8755/pilot/",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "theme": "dark",
+    "url": "http://127.0.0.1:8755/pilot/",
+    "overflow": false,
+    "errors": []
+  }
+]

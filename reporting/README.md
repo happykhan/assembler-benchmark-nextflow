@@ -20,3 +20,20 @@ node tests/browser/validate-current-site.mjs site browser-qa
 ```
 
 The browser check requires Playwright and Chromium; set `PLAYWRIGHT_MODULE_PATH` and `CHROMIUM_EXECUTABLE` when they are not installed in the default locations.
+
+
+Pilot publication uses an explicit display flag; scientific result packages are unchanged:
+
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow --render_only --pilot_reports --outdir current
+python3 bin/render-current.py --results current --outdir pilot-site --pilot
+python3 bin/compose-pilot.py --base /path/to/verified-live-site --pilot pilot-site \
+  --outdir publication --report publication-check.json
+```
+
+Pilot labels appear on every page and in catalogue/result JSON and TSV exports.
+The static composer preserves existing reports, adds a homepage entry and mounts
+the pilot at `/pilot/`. It shares byte-identical pilot figures/downloads, rewrites
+relative links, and checks the combined 64 MiB, 1,500-file and 5 MiB/file limits.
+The rendering-only `publication.json` sidecar is omitted from the compact composed
+site; its complete declaration remains in the served catalogue and result JSON.

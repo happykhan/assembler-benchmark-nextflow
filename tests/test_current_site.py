@@ -81,3 +81,20 @@ class CurrentSiteTests(unittest.TestCase):
         self.assertEqual((self.site/'unrelated.txt').read_text(),'keep')
         with self.assertRaisesRegex(ValueError,'scientific results'):render_current(self.root,self.root)
         self.assertEqual(len(load_current(self.root)),4)
+
+    def test_pilot_label_is_present_on_pages_and_downloads_and_is_opt_in(self):
+        render_current(self.root,self.site,pilot=True)
+        publication=json.loads((self.site/'publication.json').read_text())
+        self.assertEqual(publication['kind'],'pilot')
+        self.assertEqual(publication['measured_results'],2)
+        for page in self.site.rglob('*.html'):
+            self.assertIn('Nextflow pilot validation',page.read_text())
+            self.assertIn('not a full scientific panel',page.read_text())
+        self.assertEqual(json.loads((self.site/'catalogue.json').read_text())['publication'],publication)
+        for result in (self.site/'results').glob('*.json'):
+            self.assertEqual(json.loads(result.read_text())['publication'],publication)
+        self.assertIn('publication_kind',(self.site/'data/measurements.tsv').read_text())
+        self.assertIn('pilot',(self.site/'data/measurements.tsv').read_text())
+        render_current(self.root,self.site)
+        self.assertFalse((self.site/'publication.json').exists())
+        self.assertNotIn('Nextflow pilot validation',(self.site/'index.html').read_text())

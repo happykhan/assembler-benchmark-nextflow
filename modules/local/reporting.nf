@@ -31,7 +31,7 @@ process RENDER_WEBSITE {
     def prefix=params.network_blocker ? shellQuote(params.network_blocker)+' ' : ''
     """
     ${prefix}${shellQuote(params.bootstrap_python)} ${shellQuote(projectDir.toString()+'/bin/render-current.py')} \
-      --results ${shellQuote(file(params.outdir).toString())} --outdir ${shellQuote(file(params.outdir).resolve('website').toString())}
+      --results ${shellQuote(file(params.outdir).toString())} --outdir ${shellQuote(file(params.outdir).resolve('website').toString())} ${params.pilot_reports ? '--pilot' : ''}
     ${prefix}${shellQuote(params.bootstrap_python)} -c 'import json;json.dump({"status":"rendered"},open("rendered.json","w"))'
     """
 }

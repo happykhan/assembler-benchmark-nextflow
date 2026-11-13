@@ -72,23 +72,30 @@ def _summary(record):
     return '<br>'.join('<span>'+escape(_metric_name(m['name']))+': <strong>'+escape(_number(m.get('value')))+'</strong> '+escape(m['unit'])+'</span>' for m in metrics[:3])
 
 
-def _page(title,body,prefix='',active=''):
+def _page(title,body,prefix='',active='',publication=None):
+    notice=''
+    if publication:
+        title += ' · Nextflow pilot'
+        notice='<aside class="pilot-notice" aria-label="Pilot validation scope"><strong>Nextflow pilot validation</strong><p>'+escape(publication['summary'])+'</p><p>'+escape(publication['scope'])+'</p></aside>'
     nav=''.join('<a '+('aria-current="page" ' if key==active else '')+'href="'+prefix+url+'">'+label+'</a>' for key,url,label in [('broad','broad/index.html','Broad benchmarks'),('scenarios','scenarios/index.html','Targeted scenarios'),('assemblers','assemblers/index.html','Assemblers')])
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(title)+' · Assembly Benchmarks</title><script>try{let t=localStorage.getItem("gx-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="'+prefix+'assets/site.css"><script defer src="'+prefix+'assets/site.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="'+prefix+'index.html">Assembly Benchmarks</a><nav aria-label="Main navigation">'+nav+'</nav><button class="theme-button" type="button" data-theme-toggle>Dark theme</button></header><main id="main">'+body+'</main><footer>Single-isolate bacterial genomes · Current measurements, explicit methods</footer></body></html>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(title)+' · Assembly Benchmarks</title><script>try{let t=localStorage.getItem("gx-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="'+prefix+'assets/site.css"><script defer src="'+prefix+'assets/site.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="'+prefix+'index.html">Assembly Benchmarks</a><nav aria-label="Main navigation">'+nav+'</nav><button class="theme-button" type="button" data-theme-toggle>Dark theme</button></header><main id="main">'+notice+body+'</main><footer>Single-isolate bacterial genomes · Current measurements, explicit methods</footer></body></html>'
 
 
 def _write_page(output,route,title,body,active=''):
     path=output/route;path.parent.mkdir(parents=True,exist_ok=True)
-    prefix='../'*len(Path(route).parts[:-1]);path.write_text(_page(title,body,prefix,active))
+    prefix='../'*len(Path(route).parts[:-1])
+    publication=json.loads((output/'publication.json').read_text()) if (output/'publication.json').is_file() else None
+    path.write_text(_page(title,body,prefix,active,publication))
 
 
 def _tsv(records):
     stream=io.StringIO();writer=csv.writer(stream,delimiter='\t')
-    writer.writerow(['result_id','case_id','dataset_id','workflow_id','version','read_technology','source_kind','scientific_repeat_id','status','metric','value','unit','method','context'])
+    pilot=any(r.get('publication') for r in records)
+    writer.writerow(['result_id','case_id','dataset_id','workflow_id','version','read_technology','source_kind','scientific_repeat_id','status','metric','value','unit','method','context']+(['publication_kind','publication_scope'] if pilot else []))
     for record in records:
         for metric in record['metrics'] or [{}]:
             context={k:v for k,v in metric.items() if k not in ('name','value','unit','method')}
-            writer.writerow([record['result_id'],record['case']['id'],record['case']['dataset_id'],record['workflow']['id'],record['workflow']['version'],record['case']['read_technology'],record['case']['source_kind'],record['case'].get('scientific_repeat_id'),record['status'],metric.get('name'),metric.get('value'),metric.get('unit'),metric.get('method'),json.dumps(context,sort_keys=True)])
+            writer.writerow([record['result_id'],record['case']['id'],record['case']['dataset_id'],record['workflow']['id'],record['workflow']['version'],record['case']['read_technology'],record['case']['source_kind'],record['case'].get('scientific_repeat_id'),record['status'],metric.get('name'),metric.get('value'),metric.get('unit'),metric.get('method'),json.dumps(context,sort_keys=True)]+([record.get('publication',{}).get('kind',''),record.get('publication',{}).get('scope','')] if pilot else []))
     return stream.getvalue()
 
 
@@ -280,13 +287,27 @@ def validate_site(directory):
     return {'status':'pass' if not errors else 'fail','files':len(files),'bytes':total,'local_links_checked':checked,'errors':errors}
 
 
-def _render(root,output):
+def _render(root,output,pilot=False):
     catalogue=json.loads((root/'catalogue.json').read_text());records=load_current(root,with_packages=True)
     records.sort(key=lambda r:(_dataset(r),_case(r),r['workflow']['id'],r['case'].get('scientific_repeat_id') or ''))
+    publication=None
+    if pilot:
+        measured=[r for r in records if r['status']=='measured']
+        inputs={r['case']['input_id'] for r in records}
+        repeats=sum(bool(r['case'].get('scientific_repeat_id')) for r in measured)
+        publication={'kind':'pilot','measured_results':len(measured),'not_applicable':sum(r['status']=='not_applicable' for r in records),'unique_inputs':len(inputs),'technical_repeat_results':repeats,
+            'summary':f"{len(measured)} measured results · {sum(r['status']=='not_applicable' for r in records)} not applicable combinations · {len(inputs)} inputs.",
+            'scope':'Small workflow-validation selection; not a full scientific panel or an assembler ranking.'}
+        if repeats:publication['scope']+=f' {repeats} technical-repeat results reuse the same prepared input; they are not independent biological samples.'
+        if any(r['case'].get('recipe',{}).get('input_policy')=='declared_real_subset' for r in measured):
+            publication['scope']+=' The real-read pilot uses a declared subset and a matched reference comparator, not independently established error-free truth.'
+        _save(output/'publication.json',publication)
     (output/'assets').mkdir(parents=True)
     for source in ASSETS.iterdir():
         if source.is_file():shutil.copyfile(source,output/'assets'/source.name)
     public=[_public_record(root,output,r) for r in records]
+    if publication:
+        for record in public:record['publication']=publication
     definitions={field:copy.deepcopy(catalogue.get(field,{})) for field in ['collections','scenarios']}
     for field in definitions:
         for identity in sorted({identity for r in records for identity in r['case'][field]}):
@@ -294,7 +315,9 @@ def _render(root,output):
     body='<header class="page-heading home-heading"><h1>Genome assembly benchmarks</h1><p class="intro">Compare current results across dataset collections and focused assembly challenges.</p><p>Single-isolate bacterial genomes. Short and long reads, real and simulated inputs, with explicit methods and applicable workflows.</p></header>'
     body+='<section><h2><a href="broad/index.html">Broad benchmarks</a></h2><p class="section-description">Performance across declared dataset collections.</p>'+_listing(definitions['collections'],public,'collections','broad/')+'</section>'
     body+='<section><h2><a href="scenarios/index.html">Targeted scenarios</a></h2><p class="section-description">Specific scientific questions, controlled conditions and shared baselines.</p>'+_listing(definitions['scenarios'],public,'scenarios','scenarios/')+'</section>'
-    _write_page(output,'index.html','Genome assembly benchmarks',body)
+    if publication:
+        body=body.replace('<h1>Genome assembly benchmarks</h1>','<h1>Nextflow pilot reports</h1>').replace('Compare current results across dataset collections and focused assembly challenges.','Small-scale validation of the new Nextflow workflow, with measured outputs and explicit scope.')
+    _write_page(output,'index.html','Nextflow pilot reports' if publication else 'Genome assembly benchmarks',body)
     for field,kind,route,title in [('collections','collection','broad','Broad benchmarks'),('scenarios','scenario','scenarios','Targeted scenarios')]:
         body='<header class="page-heading"><h1>'+title+'</h1><p class="intro">'+('Collections retain their own dataset scope and eligible workflows.' if field=='collections' else 'Choose a focused question to inspect its conditions and current measurements.')+'</p></header>'+_listing(definitions[field],public,field,'')
         _write_page(output,route+'/index.html',title,body,route)
@@ -311,6 +334,7 @@ def _render(root,output):
     for record in public:_details(root,output,record)
     index={'schema_version':2,'kind':'current_site','collections':definitions['collections'],'scenarios':definitions['scenarios'],
         'results':[{'result_id':r['result_id'],'case_id':r['case']['id'],'workflow_id':r['workflow']['id'],'record':'results/'+r['result_id']+'.json','report':'results/'+r['result_id']+'.html'} for r in public]}
+    if publication:index['publication']=publication
     _save(output/'catalogue.json',index)
     import hashlib
     report=validate_site(output)
@@ -319,7 +343,7 @@ def _render(root,output):
     return report
 
 
-def render_current(results,outdir):
+def render_current(results,outdir,*,pilot=False):
     """Render current packages only; an optional scientific-output-independent step."""
     root,output=Path(results).resolve(),Path(outdir).resolve()
     if root==output or output in root.parents:raise ValueError('Website cannot overwrite its scientific results')
@@ -331,7 +355,7 @@ def render_current(results,outdir):
             raise ValueError('Existing website directory is not owned by this renderer')
     output.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.current-site-',dir=output.parent) as temporary:
-        staged=Path(temporary)/'site';staged.mkdir();report=_render(root,staged)
+        staged=Path(temporary)/'site';staged.mkdir();report=_render(root,staged,pilot=pilot)
         previous=output.with_name('.'+output.name+'-obsolete-'+uuid.uuid4().hex)
         if output.exists():output.rename(previous)
         try:staged.rename(output)
