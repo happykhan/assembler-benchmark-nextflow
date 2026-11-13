@@ -2,8 +2,9 @@
 
 These checks validate the new catalogue, preparation, execution and current-result
 contract with small inputs on Cluster 3. They do not establish full-panel assembler
-performance. No production website was overwritten or deployed with validation
-fixtures.
+performance. These refactor checks preceded the separate labelled pilot publication.
+The pilot reports are now [live](https://ploptimizer-assembly-benchmark.vercel.app/pilot/),
+with the existing benchmark reports preserved.
 
 | Acceptance area | Result | Evidence and scope |
 | --- | --- | --- |
@@ -47,5 +48,5 @@ fragmentation metrics remain separate from long-read single-alignment completion
 
 No full scientific panel was launched for these checks. Whole-genome Standard
 performance, every declared collection, every optional assembler configuration and
-scientific Docker execution are not claimed by this validation. The existing live
-website remains separate from these local/cluster validation outputs.
+scientific Docker execution are not claimed by this validation. The labelled pilot website is separate from the established scientific report
+denominators; publication evidence is in `evidence/pilot-publication-v1/`.

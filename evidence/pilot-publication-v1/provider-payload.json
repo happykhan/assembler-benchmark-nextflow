@@ -1,0 +1,10 @@
+{
+  "deployment_id": "dpl_13Pmcb3FZkDWPTDra9wJvJU1WmLF",
+  "existing_base_files_preserved": 1409,
+  "extra_source_metadata": [
+    ".vercelignore"
+  ],
+  "public_file_policy": "Non-hidden static build files, including routing configuration; Vercel internal build metadata is not public payload.",
+  "source_payload_files_verified": 1500,
+  "status": "pass"
+}

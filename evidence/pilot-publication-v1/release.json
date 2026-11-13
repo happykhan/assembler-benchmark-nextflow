@@ -1,0 +1,50 @@
+{
+  "build_bytes": 64486710,
+  "deployment_id": "dpl_13Pmcb3FZkDWPTDra9wJvJU1WmLF",
+  "deployment_url": "https://ploptimizer-assembly-benchmark-hffvun2ds-happykhans-projects.vercel.app",
+  "existing_base_files_preserved": 1409,
+  "largest_public_file_bytes": 2024664,
+  "live_http_files_verified": 99,
+  "local_links_checked": 15585,
+  "pilot_reports": {
+    "current_entries": 18,
+    "desktop_mobile_checks": 16,
+    "full_panel": false,
+    "http_files_verified": 90,
+    "kind": "pilot",
+    "measured_results": 7,
+    "not_applicable": 11,
+    "public_files": 90,
+    "scientific_source_catalogue_sha256": "0bae4bb4229919f92c4e5f9200f97aa5168ce35770eb80f510ea4efa452443c6",
+    "scope": "Small workflow-validation selection; not a full scientific panel or an assembler ranking. 3 technical-repeat results reuse the same prepared input; they are not independent biological samples. The real-read pilot uses a declared subset and a matched reference comparator, not independently established error-free truth.",
+    "site_catalogue_sha256": "2bd4bcfe01b68980c1d0e3ef69ff1cc3225fb701a300baba7fe7615a3f05d758",
+    "source_commit": "3ea435079c5fb41d21d6a700aa6c47bdba9f17d1",
+    "source_repository": "https://github.com/happykhan/assembler-benchmark-nextflow",
+    "status": "live_verified",
+    "technical_repeat_results": 3,
+    "unique_inputs": 3,
+    "url": "https://ploptimizer-assembly-benchmark.vercel.app/pilot/"
+  },
+  "project_id": "prj_1K8chKGnjcBelLyGOPgQ3cScvbiH",
+  "provider_source_payload_files_verified": 1500,
+  "public_files": 1500,
+  "public_url": "https://ploptimizer-assembly-benchmark.vercel.app/",
+  "python_tests": 115,
+  "retained_ready_deployments": [
+    {
+      "id": "dpl_13Pmcb3FZkDWPTDra9wJvJU1WmLF",
+      "url": "https://ploptimizer-assembly-benchmark-hffvun2ds-happykhans-projects.vercel.app"
+    },
+    {
+      "id": "dpl_9yg7qWm43YrJWjXCL38YbPcaivTR",
+      "url": "https://ploptimizer-assembly-benchmark-kik70logi-happykhans-projects.vercel.app"
+    },
+    {
+      "id": "dpl_E1YYePmpy2M9CsPSdyoUB24gQ2az",
+      "url": "https://ploptimizer-assembly-benchmark-yo2wwo76e-happykhans-projects.vercel.app"
+    }
+  ],
+  "source_commit": "3ea435079c5fb41d21d6a700aa6c47bdba9f17d1",
+  "verification_failures": 0,
+  "verified_at": "2026-11-13T11:50:00.644866+00:00"
+}
