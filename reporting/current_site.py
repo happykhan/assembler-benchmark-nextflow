@@ -75,8 +75,9 @@ def _summary(record):
 def _page(title,body,prefix='',active='',publication=None):
     notice=''
     if publication:
-        title += ' · Nextflow pilot'
-        notice='<aside class="pilot-notice" aria-label="Pilot validation scope"><strong>Nextflow pilot validation</strong><p>'+escape(publication['summary'])+'</p><p>'+escape(publication['scope'])+'</p></aside>'
+        label='Nextflow Standard simulated benchmark' if publication['kind']=='standard' else 'Nextflow pilot validation'
+        title += ' · '+label
+        notice='<aside class="pilot-notice" aria-label="Publication scope"><strong>'+label+'</strong><p>'+escape(publication['summary'])+'</p><p>'+escape(publication['scope'])+'</p></aside>'
     nav=''.join('<a '+('aria-current="page" ' if key==active else '')+'href="'+prefix+url+'">'+label+'</a>' for key,url,label in [('broad','broad/index.html','Broad benchmarks'),('scenarios','scenarios/index.html','Targeted scenarios'),('assemblers','assemblers/index.html','Assemblers')])
     return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(title)+' · Assembly Benchmarks</title><script>try{let t=localStorage.getItem("gx-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script><link rel="stylesheet" href="'+prefix+'assets/site.css"><script defer src="'+prefix+'assets/site.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="'+prefix+'index.html">Assembly Benchmarks</a><nav aria-label="Main navigation">'+nav+'</nav><button class="theme-button" type="button" data-theme-toggle>Dark theme</button></header><main id="main">'+notice+body+'</main><footer>Single-isolate bacterial genomes · Current measurements, explicit methods</footer></body></html>'
 
@@ -287,7 +288,26 @@ def validate_site(directory):
     return {'status':'pass' if not errors else 'fail','files':len(files),'bytes':total,'local_links_checked':checked,'errors':errors}
 
 
-def _render(root,output,pilot=False):
+def _standard_publication(root,records):
+    """A Standard declaration must describe a complete, assessed selection."""
+    selection=json.loads((root/'selection.json').read_text())
+    expected=set(selection['expected_result_ids'])
+    if not selection.get('complete') or not selection.get('assessment_complete') or expected!={r['result_id'] for r in records}:
+        raise ValueError('Standard publication requires the complete assessed selection')
+    if any(r['status'] not in ('measured','execution_failure') for r in records):
+        raise ValueError('Standard publication contains unresolved or ineligible outcomes')
+    if not records or any(r['case']['source_kind']!='simulated' or r['case']['read_technology']!='long' or r['case']['recipe'].get('method')!='native-error-free-v2' for r in records):
+        raise ValueError('Standard publication requires declared native error-free long-read inputs')
+    inputs={r['case']['input_id'] for r in records};references={r['case']['dataset_id'] for r in records}
+    workflows={r['workflow']['id'] for r in records};seeds=sorted({r['case']['recipe']['seed'] for r in records})
+    measured=sum(r['status']=='measured' for r in records);failed=len(records)-measured
+    return {'kind':'standard','recorded_results':len(records),'measured_results':measured,'execution_failures':failed,
+        'not_applicable':0,'unique_inputs':len(inputs),'reference_genomes':len(references),'workflow_configurations':len(workflows),'sampling_seeds':seeds,
+        'summary':f'{len(records)} recorded outcomes: {measured} measured, {failed} assembly failures · {len(inputs)} inputs · {len(references)} reference genomes · {len(workflows)} assembler configurations.',
+        'scope':f'Error-free simulated long reads from native reference genomes, with {len(seeds)} sampling seeds. Seeds are repeated samples of the same references, not independent isolates. GC and composition comparisons describe this panel; they do not establish sequencing bias. Real-read and short-read pilot results remain separate. An assembly failure is not evidence of sequence absence.'}
+
+
+def _render(root,output,pilot=False,standard=False):
     catalogue=json.loads((root/'catalogue.json').read_text());records=load_current(root,with_packages=True)
     records.sort(key=lambda r:(_dataset(r),_case(r),r['workflow']['id'],r['case'].get('scientific_repeat_id') or ''))
     publication=None
@@ -301,7 +321,9 @@ def _render(root,output,pilot=False):
         if repeats:publication['scope']+=f' {repeats} technical-repeat results reuse the same prepared input; they are not independent biological samples.'
         if any(r['case'].get('recipe',{}).get('input_policy')=='declared_real_subset' for r in measured):
             publication['scope']+=' The real-read pilot uses a declared subset and a matched reference comparator, not independently established error-free truth.'
-        _save(output/'publication.json',publication)
+    elif standard:
+        publication=_standard_publication(root,records)
+    if publication:_save(output/'publication.json',publication)
     (output/'assets').mkdir(parents=True)
     for source in ASSETS.iterdir():
         if source.is_file():shutil.copyfile(source,output/'assets'/source.name)
@@ -315,9 +337,11 @@ def _render(root,output,pilot=False):
     body='<header class="page-heading home-heading"><h1>Genome assembly benchmarks</h1><p class="intro">Compare current results across dataset collections and focused assembly challenges.</p><p>Single-isolate bacterial genomes. Short and long reads, real and simulated inputs, with explicit methods and applicable workflows.</p></header>'
     body+='<section><h2><a href="broad/index.html">Broad benchmarks</a></h2><p class="section-description">Performance across declared dataset collections.</p>'+_listing(definitions['collections'],public,'collections','broad/')+'</section>'
     body+='<section><h2><a href="scenarios/index.html">Targeted scenarios</a></h2><p class="section-description">Specific scientific questions, controlled conditions and shared baselines.</p>'+_listing(definitions['scenarios'],public,'scenarios','scenarios/')+'</section>'
-    if publication:
+    if pilot:
         body=body.replace('<h1>Genome assembly benchmarks</h1>','<h1>Nextflow pilot reports</h1>').replace('Compare current results across dataset collections and focused assembly challenges.','Small-scale validation of the new Nextflow workflow, with measured outputs and explicit scope.')
-    _write_page(output,'index.html','Nextflow pilot reports' if publication else 'Genome assembly benchmarks',body)
+    elif standard:
+        body=body.replace('<h1>Genome assembly benchmarks</h1>','<h1>Standard simulated benchmark</h1>').replace('Compare current results across dataset collections and focused assembly challenges.','Explore the complete Standard selection across native reference genomes and declared sampling conditions.')
+    _write_page(output,'index.html','Standard simulated benchmark' if standard else 'Nextflow pilot reports' if pilot else 'Genome assembly benchmarks',body)
     for field,kind,route,title in [('collections','collection','broad','Broad benchmarks'),('scenarios','scenario','scenarios','Targeted scenarios')]:
         body='<header class="page-heading"><h1>'+title+'</h1><p class="intro">'+('Collections retain their own dataset scope and eligible workflows.' if field=='collections' else 'Choose a focused question to inspect its conditions and current measurements.')+'</p></header>'+_listing(definitions[field],public,field,'')
         _write_page(output,route+'/index.html',title,body,route)
@@ -343,9 +367,10 @@ def _render(root,output,pilot=False):
     return report
 
 
-def render_current(results,outdir,*,pilot=False):
+def render_current(results,outdir,*,pilot=False,standard=False):
     """Render current packages only; an optional scientific-output-independent step."""
     root,output=Path(results).resolve(),Path(outdir).resolve()
+    if pilot and standard:raise ValueError('Choose one publication scope')
     if root==output or output in root.parents:raise ValueError('Website cannot overwrite its scientific results')
     if root in output.parents and output.relative_to(root).parts[0] in ('packages','dependencies'):
         raise ValueError('Website cannot overwrite owned scientific packages')
@@ -355,7 +380,7 @@ def render_current(results,outdir,*,pilot=False):
             raise ValueError('Existing website directory is not owned by this renderer')
     output.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.current-site-',dir=output.parent) as temporary:
-        staged=Path(temporary)/'site';staged.mkdir();report=_render(root,staged,pilot=pilot)
+        staged=Path(temporary)/'site';staged.mkdir();report=_render(root,staged,pilot=pilot,standard=standard)
         previous=output.with_name('.'+output.name+'-obsolete-'+uuid.uuid4().hex)
         if output.exists():output.rename(previous)
         try:staged.rename(output)

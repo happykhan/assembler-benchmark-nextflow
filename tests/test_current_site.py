@@ -98,3 +98,23 @@ class CurrentSiteTests(unittest.TestCase):
         render_current(self.root,self.site)
         self.assertFalse((self.site/'publication.json').exists())
         self.assertNotIn('Nextflow pilot validation',(self.site/'index.html').read_text())
+
+    def test_standard_requires_a_complete_selection_and_keeps_scope_in_downloads(self):
+        root=self.directory/'standard-results'
+        record=copy.deepcopy(self.records[0]);record['case']['recipe']['method']='native-error-free-v2'
+        item=publish_result(root,record)
+        current=load_current(root)
+        selection={'complete':True,'assessment_complete':True,'expected_result_ids':[r['result_id'] for r in current]}
+        (root/'selection.json').write_text(json.dumps(selection))
+        render_current(root,self.site,standard=True)
+        publication=json.loads((self.site/'catalogue.json').read_text())['publication']
+        self.assertEqual(publication['kind'],'standard');self.assertEqual(publication['recorded_results'],1)
+        for page in self.site.rglob('*.html'):
+            self.assertIn('Nextflow Standard simulated benchmark',page.read_text())
+            self.assertNotIn('Nextflow pilot validation',page.read_text())
+        self.assertIn('standard',(self.site/'data/measurements.tsv').read_text())
+        selection['assessment_complete']=False;(root/'selection.json').write_text(json.dumps(selection))
+        before=(self.site/'catalogue.json').read_bytes()
+        with self.assertRaisesRegex(ValueError,'complete assessed selection'):render_current(root,self.site,standard=True)
+        self.assertEqual(before,(self.site/'catalogue.json').read_bytes())
+        with self.assertRaisesRegex(ValueError,'one publication scope'):render_current(root,self.site,pilot=True,standard=True)

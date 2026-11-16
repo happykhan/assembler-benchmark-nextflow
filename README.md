@@ -49,7 +49,7 @@ blocked, including native long-read and ART paired-end simulation, assembly,
 assessment, packages and website rendering. Cache reuse and portable desktop/mobile
 reports are verified. The final narrow mixed selection has seven measured results
 and eleven inapplicable combinations across three prepared inputs, including real
-reads and three technical repeats. No full panel or production deployment is claimed. See the [acceptance matrix and evidence](docs/refactor-verification.md).
+reads and three technical repeats. These pilot reports are [published separately](https://ploptimizer-assembly-benchmark.vercel.app/pilot/). They do not establish whole-panel scientific performance. See the [acceptance matrix and evidence](docs/refactor-verification.md).
 
 ## Choose the scientific workload
 
@@ -57,6 +57,21 @@ reads and three technical repeats. No full panel or production deployment is cla
 `--preset standard` selects `simulated-native-genomes`; it can be a large
 scientific workload, so inspect it with `--plan_only` first. Preset collections
 combine with explicitly selected cases, collections and scenarios by union.
+
+For the Standard native long-read collection, select compatible assembler
+configurations explicitly (the Quick defaults also include short-read SKESA):
+
+```bash
+nextflow run happykhan/assembler-benchmark-nextflow \
+  --preset standard --workflows flye-default,raven-default \
+  --cache_dir cache --outdir current -profile bmrc,pixi,transfer_host
+```
+
+This selection has **55 simulated inputs and 110 assembly outcomes**: five native
+reference genomes, five sampling seeds, and the declared coverage, read-length
+and plasmid-depth conditions. It contains no sequencing-error, hybrid or
+metagenomic scenarios. Seeds are repeated samples of the same references, not
+independent isolates. A full run is a separate scientific workload from Quick.
 
 ```bash
 # Inspect everything declared; no download, installation or scientific execution.

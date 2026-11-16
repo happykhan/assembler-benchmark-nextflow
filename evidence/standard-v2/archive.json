@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-16T19:03:09.137863+00:00",
+  "deployment_id": "dpl_13Pmcb3FZkDWPTDra9wJvJU1WmLF",
+  "expected_homepage_sha256": "e64cb16d60a0efaafedba3c4d1e6eb60d3ab6e623e715a03beafb5e66df037b2",
+  "homepage_sha256": "e64cb16d60a0efaafedba3c4d1e6eb60d3ab6e623e715a03beafb5e66df037b2",
+  "origin": "https://ploptimizer-assembly-benchmark-archive.vercel.app",
+  "purpose": "Pinned immutable source of previously public supplementary /batches files. Keep this deployment in the retention set.",
+  "status": "public_alias_verified"
+}

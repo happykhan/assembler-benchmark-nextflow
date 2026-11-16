@@ -1,0 +1,37 @@
+{
+  "configurations": {
+    "flye-default": "2.9.6",
+    "raven-default": "1.8.3"
+  },
+  "controller_pid": 820847,
+  "expected_outcomes": 110,
+  "inputs": 55,
+  "last_confirmed": {
+    "measured_outcomes": 15,
+    "prepared_inputs": 55,
+    "scope": "Earlier checkpoint only; current progress is unverified while SSH times out."
+  },
+  "launched_at": "2026-11-16T15:41:26.094583+00:00",
+  "nextflow_session": "637eb163-3f06-47ae-9a3a-3a533d59caeb",
+  "publication_status": "not_published",
+  "queue_cap": 1000,
+  "remote_root": "/well/aanensen/users/rva470/assembler-benchmark-standard-v2-20261116",
+  "resources_per_assembly": {
+    "cpus": 4,
+    "memory_gb": 16,
+    "time_minutes": 240
+  },
+  "resume_policy": "Inspect controller, trace, run.exit and scoped scheduler job IDs before any resume. Do not launch another Standard run. Retain original executions and software failures.",
+  "reviewed_scientific_plan_sha256": "dd066407cfb722ecebacacb97d9b0b437d8a21cbb54ab913349229b94a6371ce",
+  "runtime_plan_sha256": "9d39bedec2eec139aded7a716fc3947d7b0b8a5428004b5b902c1f2d4047e885",
+  "sampling_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "source_archive_sha256": "56600362cf9402fd8542dc084334bdbe53f598feede0ad739e77b0eef3f0ad18",
+  "source_commit": "aa7862dc0ec60e3b6ad78a2488db802c97702d02",
+  "status": "launched_awaiting_terminal_verification"
+}

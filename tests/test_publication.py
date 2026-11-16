@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from reporting.publication import compose_pilot
+from reporting.publication import compose_pilot,compose_standard
 from reporting.current_site import validate_site
 
 
@@ -36,3 +36,21 @@ class PublicationTests(unittest.TestCase):
         (self.pilot/'publication.json').write_text('{"kind":"unlabelled"}')
         with self.assertRaisesRegex(ValueError,'explicit pilot'):compose_pilot(self.base,self.pilot,self.output)
         with self.assertRaisesRegex(ValueError,'fresh directory'):compose_pilot(self.base,self.pilot,self.base)
+
+    def test_standard_preserves_pilot_and_pins_batch_rewrite_without_copying_it(self):
+        pilot_entry='<section id="nextflow-pilot-entry"><h2>Pilot reports</h2></section>'
+        (self.base/'index.html').write_text('<h1>Established benchmark</h1>'+pilot_entry)
+        (self.base/'pilot').mkdir();(self.base/'pilot/index.html').write_text('unchanged pilot')
+        (self.base/'batches').mkdir();(self.base/'batches/saved.tsv').write_text('retained archive bytes')
+        declaration={'kind':'standard','measured_results':2,'recorded_results':2,'unique_inputs':1,'not_applicable':0,'summary':'Two measured outcomes.','sampling_seeds':[101]}
+        (self.pilot/'publication.json').write_text(json.dumps(declaration))
+        archive={'origin':'https://archive.example.org','deployment_id':'immutable-deployment'}
+        result=compose_standard(self.base,self.pilot,self.output,archive=archive)
+        home=(self.output/'index.html').read_text()
+        self.assertIn(pilot_entry,home);self.assertIn('nextflow-standard-entry',home)
+        self.assertEqual((self.output/'pilot/index.html').read_text(),'unchanged pilot')
+        self.assertFalse((self.output/'batches').exists());self.assertTrue((self.base/'batches/saved.tsv').is_file())
+        self.assertIn('batches/saved.tsv',result['archived_files'])
+        config=json.loads((self.output/'vercel.json').read_text())
+        self.assertEqual(config['rewrites'],[{'source':'/batches/:path*','destination':'https://archive.example.org/batches/:path*'}])
+        self.assertEqual(result['changed_base_files'],['index.html','vercel.json'])
